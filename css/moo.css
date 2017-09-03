@@ -45,6 +45,52 @@ div.tab button.active {
     height: 300px;
 }
 
+
+/* Style the tab */
+div.tab2 {
+    float: left;
+    border: none;
+    background-color: rgb(64, 128, 192);
+    width: 20%;
+    height: 100%;
+}
+
+/* Style the buttons inside the tab */
+div.tab2 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab2 button:hover {
+    background-color: rgb(64, 192, 192);
+}
+
+/* Create an active/current "tab button" class */
+div.tab2 button.active {
+    background-color: rgb(64, 192, 192);
+}
+
+/* Style the tab content */
+.tabcontent2 {
+    float: left;
+    padding: 0px 12px;
+    border: none;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+
 body {
     background-color: rgb(128, 192, 256);
 }
