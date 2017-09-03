@@ -12,9 +12,9 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-openCity(event, 'Home')
+openCity(event, 'Home');
 
-function openCity2(evt, cityName) {
+function clear_subs(evt) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent2");
     for (i = 0; i != tabcontent.length; i++) {
@@ -24,6 +24,13 @@ function openCity2(evt, cityName) {
     for (i = 0; i != tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
+}
+
+function openCity2(evt, cityName) {
+    clear_subs(evt);
+
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+clear_subs(evt);
