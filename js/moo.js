@@ -1,38 +1,24 @@
-function clear_subs(evt) {
+function clear_tabs(evt, depth) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent2");
+    tabcontent = document.getElementsByClassName("tabcontent" + depth);
     for (i = 0; i != tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks2");
+    tablinks = document.getElementsByClassName("tablinks" + depth);
     for (i = 0; i != tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 }
 
-function openCity2(evt, cityName) {
-    clear_subs(evt);
+function open_tab(evt, tab_name, depth) {
+    clear_tabs(evt, depth);
 
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i != tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i != tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tab_name).style.display = "block";
     evt.currentTarget.className += " active";
 
-    clear_subs(event);
+    if (depth==0) {
+        clear_tabs(evt, 1);
+    }
 }
 
-openCity(event, 'Home');
-
-
+open_tab(event, 'Home', 0);
