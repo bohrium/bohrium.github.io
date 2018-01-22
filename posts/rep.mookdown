@@ -1,0 +1,84 @@
+# author: samtenka
+# change: 2017-12-22 
+# create: 2017-12-22 
+# descrp: A Representation Theory example of Mookdown
+
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\CC}{\mathbb{C}}$
+
+! Representation Theory
+!!!! Notes by Sam Tenka based on courses by Andrew Snowden and Jessica Fintzen
+
+!! What are Representations?
+!!! Yeah, What are They?
+    A *representation* is a group homomorphism $\pi:G\to \Aut(V)$ from a group to the linear
+    automorphisms of a vector space.  We say that $\pi$ *represents $G$* or
+    *is a representation of $G$ on $V$*.  We will often abuse terminology by speaking of
+    "the representation $V$", even though $V$ technically lacks the information of $\pi$; in doing
+    so, we sin as heinously yet conveniently as when we refer to a group by its underlying set.
+    We thus speak of a representation's *dimension* (i.e. the dimension of its underlying vector
+    space $V$) and subspaces and so forth.  This document will treat % complex % representations
+    only, i.e. those such that $V$ is a vector space over $\CC$.
+
+    For example, if $G$ acts on a set $X$, then this action induces a representation of $G$ on the
+    free vector space $\CC^X$.  Concretely, this means that each element
+    $g\in G$ maps to a permutation matrix.  Thus, though every vector space is a set (via the
+    forgetful functor) and thus representation theory a special case of group action theory, 
+    we can also say that, because every set generates a vectorspace (via the free functor), that
+    group action theory is a special case of representation theory.  As a special case, if $X=G$
+    and $G$ acts on $X$ by left multiplication, then we obtain a representation of $G$ on $\CC^G$
+    --- this is the *regular representation*. 
+
+!!! Finite Cyclic Groups
+    Not all representations have permutation-matrix form: let $G = \ZZ/n\ZZ$ act on the
+    1-dimensional complex vectorspace $V=\CC^1$ by $\pi_\eta(g)(v) = \eta^g v$, where $\eta$ is a fixed
+    $n$th
+    root of unity.  The corresponding matrices have shape 1-by-1 and entry $\eta^g$.  It's easy to
+    show that the representations of $\ZZ/n\ZZ$ on 1-dimensional complex vector spaces are in
+    correspondence with the $n$ different $n$th roots of unity. 
+
+    From the $\pi_\eta$ s, we can form higher-dimensional representations via direct sum.  To perform
+    *direct sum* on representations of a fixed group $G$, just perform it on their underlying vector
+    spaces and let $G$ act componentwise.  In fact, all finite-dimensional representations
+    of $\ZZ/n\ZZ$ arise this way!  Of course, to understand what the previous sentence means, we
+    must define what it means for two representations to be the same.  Well,  a *homomorphism* of
+    representations is just a homomorphism of vector spaces that commutes with the group action.
+    And an *isomorphism* is a bijective homomorphism --- it's easy to show that its inverse will
+    also be a homomorphism.  Then the *direct sum* we defined earlier is just a coproduct in the
+    resulting category.  In short, we claim:
+
+    *Theorem M*:
+    % Each finite-dimensional representation $\pi$ of $G=\ZZ/n\ZZ$ is isomorphic to some %
+    % $\bigoplus_i \pi_{\eta_i}$. % 
+
+    *Proof*: 
+        If $g\in G$, then $\pi(g)^n=I$ is the identity.  However, a consideration of
+        Jordan Normal Form shows that this is possible only if $\pi(g)$ is diagonalizable.
+        Moreover, since $G$ is abelian, the $\pi(g)$s all commute.
+        Now, if a set of diagonalizable operators all commute, then there exists a basis that 
+        simultaneously diagonalizes all of them.  This basis gives the decomposition we seek.
+    (end of Proof)
+
+    In fact, the proof shows that whenever $G$ is a finite abelian group, then its finite-dimensional
+    representations into 1-dimensional representations.
+
+!!! Irreducible Representations and Maschke's Theorem 
+      
+
+!!! Some Basic Questions and Answers
+    *How many irreducible representations does $G$ have?* If $G$ is finite, then finitely many;
+    this we will see soon. 
+
+
+!! Characters
+!!! Schur Orthogonality
+    What are the irreps of a given group? 
+
+!!! Penrose String Notation
+
+!! Harmonic Theory 
+!! Compact Groups and Haar Measure 
+!! Applications to Chemistry
+!! Applications to Particle Physics 
+!! Applications to Number Theory 

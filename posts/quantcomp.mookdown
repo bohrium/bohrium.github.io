@@ -1,0 +1,14 @@
+# author: samtenka
+# change: 2018-01-21 
+# create: 2018-01-21
+# descrp: Quantum Computing 
+
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! Algebraic Topology
+!!!! Notes by Sam Tenka based on a a reading group based on Kitaev's text.  
+
+!! Quantum Computing

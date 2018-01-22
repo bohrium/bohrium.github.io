@@ -1,0 +1,43 @@
+# author: samtenka
+# change: 2017-12-31 
+# create: 2017-12-31 
+# descrp: Notes on Generating Functions
+
+$\newcommand{\NN}{\mathbb{N}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! Generating Functions 
+!!!! Notes by Sam Tenka based on courses by Sergei Fomin and Laura Balzano
+
+!! Generating Functions for Counting
+    If $a\in \NN^\NN$ is a sequence of non-negative integers, then its associated
+    *generating series* is $F_a(z) = \sum \in \sum_{n\in \NN}a_n z^n \in \CC[[z]]$, an element of
+    the formal power series ring.  For many interesting $a$, $F_a$ has positive radius of
+    convergence and hence may be viewed as a function. 
+
+!!! Example: Fun with Geometric Series 
+    For instance, $a_n=1$ imples that $F_a=1/(1-z)$.  Then $a_n=n+1$ implies
+    that $F_a=1/(1-z)^2$.
+
+!!! Example: Solving Linear Recurrences
+    For instance, let $a$ be defined by a linear recurrence:
+    $a_n = s_n$ for $0\leq n \le N$ and $a_{n+N} = \sum_{0\leq i\le N} c_i a_{n+i}$ for $n\in \NN$.
+    Then $F_a$ obeys the relation:  
+    $F_a(z) = \sum_{0\leq n\le N} a_n z^n + \sum_{0\leq i\le N} c_i z^{N-i} = S(z) + C(z) F_a(z)$.
+    So the following equality of functions holds when both sides are defined: 
+        $$F_a(z) = \frac{S(z)}{1-C(z)}$$
+    Via partial fraction decomposition, we write $F_a(z) = \sum_{0\leq i\le N} p_i(z)/(z-\lambda_i)$  
+    with each $p_i\in \CC[z]$ and $\lambda_i\in \CC$.  We recognize this as a sum of geometric 
+    series.  We conclude that $F_a$'s coefficients $a_n$ will eventually be a sum of exponentials!
+    We could also have seen this by diagonalizing the relevant linear transform.  But generating
+    functions emphasize the sequential nature of the problem; they can thus give more specific
+    insights. 
+ 
+!! Blass' 7 Trees in 1  
+!! Algebraic Data Types
+!! Combinatorial Species
+!! Asymptotics 
+!! Fourier and Laplace 

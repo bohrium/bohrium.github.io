@@ -1,0 +1,146 @@
+# author: samtenka
+# change: 2018-01-12
+# create: 2018-01-12
+# descrp: Survey of science 
+
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! Rocks %Ab Initio%
+!!!! Notes on Geology by Samuel Tenka
+
+!! Hello
+    Look around your apartment, and you'll see many rocks.  From chalk's porous limestone to the smooth slate
+    of blackboards, *rocks* --- that is, solid mineral aggregates --- abound.  Now scan beyond your window: notice a
+    passerby slipping on compacted snow; observe the machinations of an empire built on the energy of coal; imagine
+    the obsidian arrowheads veiled from view by grass and soil and millenia.  Rocks are Nature's building blocks.
+
+    But rocks are not static: in their constant flows and fluxes they are the very scroll on which Nature writes her
+    history.  Hold a rock, and feel the weight of its age, the wisdom of its dimpled skin.  Its molecules may well have
+    witnessed the birth of life itself.  In their eternal dance of deposition and erosion, those molecules endure the
+    cruel pressures of inner earth, rising only as tortured tectonic plates screech and wrestle and belch their innards
+    out.  As exiles, they drift from dune to dune across ancient deserts.  Some even dissolve in animal stomachs only
+    to reincarnate as the sheen of a beautiful shell.  *Geology*, then, distinguishes itself in the pace and subtle
+    violence of the processes it studies.
+
+    These notes tour the many facets of rocks and their history.  Assuming no background, we build from the basics:
+    quantum field theory to explain the material properties of rock, particle physics and cosmology to describe the 
+    origins of rock, neo darwinian theory to understand the interactions of rock and life, and fluid dynamics to model
+    the climate that so affects surface geology.  From here, we briefly describe a diverse set of processes such as the
+    saltation of sand and the life cycle of hoodoos.  We finally survey two major applications of rocks: the
+    construction of Turing-complete machines from silicon and rock-based survival skills.
+
+    All said, geology is a central science.  If Aristotle's earth tended to sink below water, air, and fire, so too 
+    does geology tend to motivate the more applied sciences of physics, chemistry, and biology.  But to call geology
+    impractical is to err.  While our technical preparations may petrify the uninitiated, just think, dear reader,
+    whenever you waver, of the dominion of human above rock in that grandest of engineering triumphs: Khufu's pyramid.  
+    Oriented thus with curiosity and pluck, let us climb our own pyramid.  We begin at the beginning: with field
+    theory.
+
+!! Inside Rocks
+    To study a whole, we study its parts.   
+    Rocks are made of minerals, and minerals are made of molecules, and molecules are made of electrons and quarks.   
+    Thus, let us study rocks by understanding electrons and quarks.  In order to do so, we must  
+
+!!! Quantum Field Theory  
+!!!! Nature is Random
+    Though the soul of science lies in experiment, it turns out that an experiment's initial conditions do not
+    determine its outcome.  Indeed, as scientists, we might work with *pure states*, each of which encodes the state 
+    of the universe via a maximal amount of knowledge about future experiments.
+
+If $a$ and $b$ are pure states and $E$
+    is an experiment, let us write $P(a|E|b)$ for the probability of arriving at $a$ via $E$ from $b$.
+
+    Quantum physics postulates that the pure states correspond to the unit-norm vectors in a complex Hilbert space and
+    that each experiment can be encoded in a linear map such that $P(a|E|b) = \left| \langle a | E(b)\rangle \right|^2$
+    whenever $a$ is a possible outcome of $E$.  In fact, the experimental outcomes form an orthonormal basis for the
+    whole Hilbert space.  Then a sequence of experiments with final result $a$, intermediate result $b$, and initial
+    result $c$ has outcome probability $P(a|E|b|F|c) = \left| \langle a|E(b)\rangle \langle b|F(c)\rangle \right|^2$
+    However, if we don't measure the intermediate result, we sum over possible intermediate states inside the norm: 
+    $$P(a|EF|c) = \left|\sum_b \langle a|E(b)\rangle \langle b|F(c) \rangle \right|^2 = \left|\langle a|EF(c)\right|^2$$
+    Those are the rules of quantum physics.
+
+    The inner products are called *amplitudes*.
+
+    We will now illustrate these ideas for a quantum system whose associated Hilbert space has two complex dimensions.
+    Let us choose $u, d$ as an orthonormal basis of pure states.  Then every other pure state has form
+    $s = \alpha u + \beta d$ where $|\alpha|^2 + |\beta|^2 = 1$.  CONTINUE 
+
+!!!! Path Integral Formalism
+    For instance, consider an electron, which has classical internal states $up$ and $down$.  A classical path over a
+    duration $[0,T]$ is then a piecewise constant function $\phi: [0,T]\to\{up, down\}=\{\pm 1\}$.  The electron
+    evolves in a vertical magnetic field $B$ according to the following action:
+        $$\text{action}(\phi) := \frac{qB\hbar}{2m} \int_{[0,T]} \phi(t)$$
+    Then the amplitude to go from $up$ to $up$ after $T$ steps is   
+
+    We often care about the    
+    Now, the amplitudes for experiments of form ``measure-after-waiting-after-preparing'' are given by a formula
+    $$\langle a | b \rangle = \int_\phi \exp((i/\hbar) \, \text{action}(\phi)) $$
+    where $\phi$ ranges 
+    
+!!!! Lagrangian for Classical Phonons
+!!!! Lagrangian for Quantum Electrodynamics
+!!!! Dirac Equation
+!!!! Schrodinger Equation as Non-Relativistic Limit
+!!! Atomic Structure
+!!! Molecular Structure 
+!!!! Putting together two metal crystals
+!!! Chemistry
+!!! Material Science 
+
+!! Rocks and Time 
+!!! General Relativity 
+!!! Cosmology and the Unification of Forces
+!!! Stellar Formation and Element Production 
+!!! Carbon Dating
+!!! Erosion Processes
+!!! Saltation of Sand
+!!! Example: Hoodoos of Bryce Canyon
+
+!! Weather
+
+!! Biology of Rocks
+!!! Are Rocks Alive?
+    What does it mean to *live*?  What is *life*?  These are some of the central questions of biology, and hence by
+    extension geology.  Toward a definition, we note these characteristics of life as we intuitively understand it: 
+
+    (A) Life reproduces (potentially with mutation) and hence undergoes natural selection. 
+
+    (B) The information that reproduces is encoded chemically.
+
+    Taking the above as a definition of life, we ask %can rocks reproduce% and
+    %is a rock's salient genetic informationi encoded chemically%?
+
+    FILL IN ABOUT crystal growth.
+
+    References: See %What is Life?% by E. Schrodinger, 1944.
+
+!!! Are Living Things Rocks?
+    Tobacco Mosaic Crystals
+
+!!! Rock Lifecycle
+
+!!! What Lives in Rocks?
+
+!!! Are Rocks Food?
+!!!! Rocks for Digestion
+
+!!! Example: Fossil Records of Cows
+!!! How Do Living Things Affect Rock?  Limestone
+
+!! Meteorology and Astronomy
+
+!! Advanced Application: Transistor Machines
+!!! Statistical Mechanics
+!!! Transistors
+!!! Tips for the Industrialist
+!!! Silicon and its Applications 
+    Armed with a grasp of  
+
+!! Advanced Application: Survival Skills
+!!! Shelter via Rocks
+!!!! Rules of Thumb for Concrete 
+!!! Fire via Rocks
+!!! Hunting via Rocks

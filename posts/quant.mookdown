@@ -1,0 +1,52 @@
+# author: samtenka
+# change: 2017-12-30 
+# create: 2017-12-22 
+# descrp: Quantum Mechanics
+
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\CC}{\mathbb{C}}$
+
+! Quantum Mechanics
+!!!! Notes by Sam Tenka based on courses by Aaron Pierce and Henriette Elvang 
+
+!! Quantum Effects
+!!! States, Operators, and Measurements
+    We start with light, polarizers, and cameras.  Our experiments will shine light into a camera
+    and record brightness.  We will potentially insert a sequence of polarizers in between.
+
+    First, shine some light directly into the camera.  If the light source is very dim, then the
+    camera will register a blip every now and then.  From this, we conclude that light comes in 
+    particles --- %photons%.  We can thus imagine the outcome of each experiment in terms of an
+    individual photon's journey or in aggregate --- say the average intensity over many blips is
+    $1$.
+
+    Let's now insert a polarizer.  The detected intensity becomes $1/4$.  So this polarizer seems
+    to absorb most of the photons.  If we rotate this polarizer, the intensity does not change.
+    In fact, the same happens with all the polarizing filters we have on hand.  Fix one of them
+    and call it Polarizer A. 
+
+    After Polarizer A, let's insert another polarizer B.  But this time, as we vary the orientation
+    of B, the intensity varies from $0$ to $1/4$.  It seems that B is absorbing some of the photons
+    that come out of A.  If we try another polarizer instead of B, then the intensity varies
+    from $1/36$ to $1/9$; yet another polarizer stays constant at $1/16$.  In fact, every intensity   
+    interval of form $[(-\epsilon+1/4)^2, (+\epsilon+1/4)^2]$ is represented.  But let's keep th
+    original B and keep it at an angle that blocks all light.
+
+    It seems that there are different flavors of light.  The light source gives off light that 
+    is filtered the same way by all filters at all angles.  The light coming out of A is filtered
+    the different ways. 
+ 
+    We then insert another polarizer, this time perpendicular to
+    the original.  The detected intensity becomes $0$.  
+
+
+!!! No Hidden Local Variables
+
+!! Schrodinger Evolution
+
+!! Spectrum of Hydrogen
+
+!! Radiation 
+
+!! Quantum Field Theory

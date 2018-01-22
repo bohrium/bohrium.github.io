@@ -1,0 +1,9 @@
+body {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: justify;
+}

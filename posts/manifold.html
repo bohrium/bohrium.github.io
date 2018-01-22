@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        
+<p>
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h1>  Manifolds  </h1>
+<h4>  Notes by Sam Tenka based on courses by Ralf Spatzier </h4>
+<p>
+<h2>  Overview of Manifolds  </h2>
+    Manifolds are spaces locally "like" Euclidean space $\RR^n$.  We use the ambiguous word "like"
+    because there are multiple types of Euclidean structure we may care about mimicking and thus
+    multiple notions of manifold.  Each type of structure is encoded in a notion of "isomorphism".  
+    When "isomorphism" means "homeomorphism", we obtain the notion of <b>topological manifold</b>.  
+    When "isomorphism" means "diffeomorphism", we obtain the notion of <b>smooth manifold</b>.  
+    When "isomorphism" means "isometry", we obtain the notion of <b>flat manifold</b>.  
+    Then:
+<p>
+    <b>Definition</b>: an $n$-<b>manifold</b> is a set of bijections $\phi_i:U_i\from \RR^n$
+    such that each $\phi_i^{-1} \circ \phi_j |_{\phi_j^{-1}(U_i)}$ is an "isomorphism".
+<p>
+    <b>Definition</b>: Manifolds form a concrete category as follows.  It is the union $X=\bigcup_i U_i$
+    that we consider each manifold's underlying set.  If $M, M'$ are $m$- and $m'$- manifolds, then
+    $f:M'\from M$ is a <b>morphism</b> when each
+    ${\phi'}_i^{-1} \circ f \circ \phi_j |_{(f\circ \phi_j)^{-1}({U'}_i)}$ is a "morphism". 
+<p>
+    The topological notion is most general.  In fact, we may imbue $X$ with the unique topology
+    that makes each $\phi_i$ a homeomorphism.  Then $X$ is a topological space.  It is easy to
+    check that the morphisms between topological manifolds are the continuous maps.  Because we
+    aim to do calculus on manifolds, we would like unique limits and therefore prefer the case that
+    $X$ is Hausdorff.  Classification questions also interest us; however, even the classification
+    of $0$-manifolds is non-trivial as stated, since there is a $0$-manifold for each cardinality.
+    So let us consider only manageably small manifolds: the ones with countable basis.  In short,
+    we will require henceforth that manifolds be <b>Hausdorff</b> and <b>second-countable</b>.
+<p>
+<h2>  Smooth Manifolds </h2>
+<p>
+<h3>  Sard's Theorem </h3>
+<h3>  Tangent and Cotangent Bundles </h3>
+<h3>  Inverse and Implict Function Theorems </h3>
+<h3>  Partitions of Unity and Embedding Theorems  </h3>
+<h3>  Differential Forms and Stoke's Theorem </h3>
+<p>
+<h2>  Differential Topology </h2>
+<p>
+<h3>  Constant Rank Theorem </h3>
+<h3>  Degrees of Maps </h3>
+<h3>  Visualizing some Bundles  </h3>
+<p>
+<h2>  Riemann Manifolds </h2>
+<p>
+    To move from topology to geometry, we need concepts such as <b>length</b>, <b>angle</b>, and <b>volume</b>.
+    It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
+    isometry of Euclidean space also preserves angles and has determinant 1.
+    We can explicitly solve for angles (between two vectors) in terms of lengths from the
+    generalized Pythagorean Theorem: 
+    $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
+    Once equipped with length and angle, we can recognize which parallelepipeds are right-angled,
+    define their volumes as the products of their side-lengths, and thus recover volume.
+<p>
+    The previous paragraph dealt with vectors and hence local, "microscopic" geometry.  However,
+    we may also wonder about global geometric concepts such as the distance between two points.
+    One can move from local to global distance as follows: define the length of a curve as the
+    sum of the lengths of its microscopic segments; define the distance between two points as the
+    infimum of lengths of curves between them.  Curves that achieve that infimum are <b>geodesics</b>. 
+<p>
+    A final amazing bit of geometry:  the notion of geodesic allows us to compare 
+    disparate points.  For instance, suppose a quadrilateral of geodesics is a rhombus, that is,
+    opposite sides have equal lengths.  Then we might say that the opposite sides are <b>parallel</b>.  
+    This definition suffers as stated.  For example, consider $S^2$ with the usual geometry, and
+    choose two north-pointing vectors at points $a, b$ on the equator.  They generate geodesics that go all the
+    way to the North Pole $n$.  Then $a, b, n$ form a triangle whose north-pointing sides are <tt></tt>parallel''
+    from the equatorial segment $ab$'s perspective, but not at all from the rhombus definition.    
+    It turns out that the rhombus picture only makes sense for infinitesimal sides.  This still allows
+    us to compare infinitesimally distant tangent spaces.  By integrating, we may <b>parallel transport</b>
+    vectors along a curve.  And by subtracting, we may <b>covariantly differentiate</b> a vector field
+    with respect to another vector. 
+<p>
+<h3>  Metric: Globally and Locally </h3>
+<p>
+<h3>  Is Every Space Flat? </h3>
+    $\RR$ and $S^1$ have flat structures, so $\RR^n \times (S^1)^m$ has flat structure.
+    But the sphere $S^2$ has no flat structure.  Moreover, though every metric structure on $\RR^1$ is
+    flat, some metric structures on $\RR^2$ are <b>curved</b>.
+<p>
+<h2>  Differential Geometry  </h2>
+<p>
+    </body>
+</html>

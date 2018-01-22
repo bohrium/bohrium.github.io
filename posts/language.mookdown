@@ -1,0 +1,21 @@
+# author: samtenka
+# change: 2017-12-22 
+# create: 2017-12-22 
+# descrp: Mookdown: a Specification by Example 
+
+! The `Mookdown` Guide 
+!! A Specification by Example
+
+Mookdown permits various text styles, including *bold*, %italicized%, `monospaced`, and ~struckthrough~ text.
+All 16 combinations are available, too.  For instance, *%`~this text has all 4 styles at once~`%*!
+Even if you mistakenly *forget to close a style, 
+it will reset on the next source line.
+
+Newlines in the source do not imply newlines in the generated html.
+So, to start a new paragraph, try two newlines.
+Comments are line-based: start a line with `#` to comment the whole line out. 
+For now, links such as
+[url][text]
+must be on their own line.
+
+

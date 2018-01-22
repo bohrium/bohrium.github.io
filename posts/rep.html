@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        
+<p>
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\CC}{\mathbb{C}}$
+<p>
+<h1>  Representation Theory </h1>
+<h4>  Notes by Sam Tenka based on courses by Andrew Snowden and Jessica Fintzen </h4>
+<p>
+<h2>  What are Representations? </h2>
+<h3>  Yeah, What are They? </h3>
+    A <b>representation</b> is a group homomorphism $\pi:G\to \Aut(V)$ from a group to the linear
+    automorphisms of a vector space.  We say that $\pi$ <b>represents $G$</b> or
+    <b>is a representation of $G$ on $V$</b>.  We will often abuse terminology by speaking of
+    "the representation $V$", even though $V$ technically lacks the information of $\pi$; in doing
+    so, we sin as heinously yet conveniently as when we refer to a group by its underlying set.
+    We thus speak of a representation's <b>dimension</b> (i.e. the dimension of its underlying vector
+    space $V$) and subspaces and so forth.  This document will treat <em> complex </em> representations
+    only, i.e. those such that $V$ is a vector space over $\CC$.
+<p>
+    For example, if $G$ acts on a set $X$, then this action induces a representation of $G$ on the
+    free vector space $\CC^X$.  Concretely, this means that each element
+    $g\in G$ maps to a permutation matrix.  Thus, though every vector space is a set (via the
+    forgetful functor) and thus representation theory a special case of group action theory, 
+    we can also say that, because every set generates a vectorspace (via the free functor), that
+    group action theory is a special case of representation theory.  As a special case, if $X=G$
+    and $G$ acts on $X$ by left multiplication, then we obtain a representation of $G$ on $\CC^G$
+    --- this is the <b>regular representation</b>. 
+<p>
+<h3>  Finite Cyclic Groups </h3>
+    Not all representations have permutation-matrix form: let $G = \ZZ/n\ZZ$ act on the
+    1-dimensional complex vectorspace $V=\CC^1$ by $\pi_\eta(g)(v) = \eta^g v$, where $\eta$ is a fixed
+    $n$th
+    root of unity.  The corresponding matrices have shape 1-by-1 and entry $\eta^g$.  It's easy to
+    show that the representations of $\ZZ/n\ZZ$ on 1-dimensional complex vector spaces are in
+    correspondence with the $n$ different $n$th roots of unity. 
+<p>
+    From the $\pi_\eta$ s, we can form higher-dimensional representations via direct sum.  To perform
+    <b>direct sum</b> on representations of a fixed group $G$, just perform it on their underlying vector
+    spaces and let $G$ act componentwise.  In fact, all finite-dimensional representations
+    of $\ZZ/n\ZZ$ arise this way!  Of course, to understand what the previous sentence means, we
+    must define what it means for two representations to be the same.  Well,  a <b>homomorphism</b> of
+    representations is just a homomorphism of vector spaces that commutes with the group action.
+    And an <b>isomorphism</b> is a bijective homomorphism --- it's easy to show that its inverse will
+    also be a homomorphism.  Then the <b>direct sum</b> we defined earlier is just a coproduct in the
+    resulting category.  In short, we claim:
+<p>
+    <b>Theorem M</b>:
+    <em> Each finite-dimensional representation $\pi$ of $G=\ZZ/n\ZZ$ is isomorphic to some </em>
+    <em> $\bigoplus_i \pi_{\eta_i}$. </em> 
+<p>
+    <b>Proof</b>: 
+        If $g\in G$, then $\pi(g)^n=I$ is the identity.  However, a consideration of
+        Jordan Normal Form shows that this is possible only if $\pi(g)$ is diagonalizable.
+        Moreover, since $G$ is abelian, the $\pi(g)$s all commute.
+        Now, if a set of diagonalizable operators all commute, then there exists a basis that 
+        simultaneously diagonalizes all of them.  This basis gives the decomposition we seek.
+    (end of Proof)
+<p>
+    In fact, the proof shows that whenever $G$ is a finite abelian group, then its finite-dimensional
+    representations into 1-dimensional representations.
+<p>
+<h3>  Irreducible Representations and Maschke's Theorem  </h3>
+<p>
+<p>
+<h3>  Some Basic Questions and Answers </h3>
+    <b>How many irreducible representations does $G$ have?</b> If $G$ is finite, then finitely many;
+    this we will see soon. 
+<p>
+<p>
+<h2>  Characters </h2>
+<h3>  Schur Orthogonality </h3>
+    What are the irreps of a given group? 
+<p>
+<h3>  Penrose String Notation </h3>
+<p>
+<h2>  Harmonic Theory  </h2>
+<h2>  Compact Groups and Haar Measure  </h2>
+<h2>  Applications to Chemistry </h2>
+<h2>  Applications to Particle Physics  </h2>
+<h2>  Applications to Number Theory  </h2>
+<p>
+    </body>
+</html>

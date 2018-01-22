@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        
+<p>
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h1>  Rocks <em>Ab Initio</em> </h1>
+<h4>  Notes on Geology by Samuel Tenka </h4>
+<p>
+<h2>  Hello </h2>
+    Look around your apartment, and you'll see many rocks.  From chalk's porous limestone to the smooth slate
+    of blackboards, <b>rocks</b> --- that is, solid mineral aggregates --- abound.  Now scan beyond your window: notice a
+    passerby slipping on compacted snow; observe the machinations of an empire built on the energy of coal; imagine
+    the obsidian arrowheads veiled from view by grass and soil and millenia.  Rocks are Nature's building blocks.
+<p>
+    But rocks are not static: in their constant flows and fluxes they are the very scroll on which Nature writes her
+    history.  Hold a rock, and feel the weight of its age, the wisdom of its dimpled skin.  Its molecules may well have
+    witnessed the birth of life itself.  In their eternal dance of deposition and erosion, those molecules endure the
+    cruel pressures of inner earth, rising only as tortured tectonic plates screech and wrestle and belch their innards
+    out.  As exiles, they drift from dune to dune across ancient deserts.  Some even dissolve in animal stomachs only
+    to reincarnate as the sheen of a beautiful shell.  <b>Geology</b>, then, distinguishes itself in the pace and subtle
+    violence of the processes it studies.
+<p>
+    These notes tour the many facets of rocks and their history.  Assuming no background, we build from the basics:
+    quantum field theory to explain the material properties of rock, particle physics and cosmology to describe the 
+    origins of rock, neo darwinian theory to understand the interactions of rock and life, and fluid dynamics to model
+    the climate that so affects surface geology.  From here, we briefly describe a diverse set of processes such as the
+    saltation of sand and the life cycle of hoodoos.  We finally survey two major applications of rocks: the
+    construction of Turing-complete machines from silicon and rock-based survival skills.
+<p>
+    All said, geology is a central science.  If Aristotle's earth tended to sink below water, air, and fire, so too 
+    does geology tend to motivate the more applied sciences of physics, chemistry, and biology.  But to call geology
+    impractical is to err.  While our technical preparations may petrify the uninitiated, just think, dear reader,
+    whenever you waver, of the dominion of human above rock in that grandest of engineering triumphs: Khufu's pyramid.  
+    Oriented thus with curiosity and pluck, let us climb our own pyramid.  We begin at the beginning: with field
+    theory.
+<p>
+<h2>  Inside Rocks </h2>
+    To study a whole, we study its parts.   
+    Rocks are made of minerals, and minerals are made of molecules, and molecules are made of electrons and quarks.   
+    Thus, let us study rocks by understanding electrons and quarks.  In order to do so, we must  
+<p>
+<h3>  Quantum Field Theory   </h3>
+<h4>  Nature is Random </h4>
+    Though the soul of science lies in experiment, it turns out that an experiment's initial conditions do not
+    determine its outcome.  Indeed, as scientists, we might work with <b>pure states</b>, each of which encodes the state 
+    of the universe via a maximal amount of knowledge about future experiments.
+<p>
+If $a$ and $b$ are pure states and $E$
+    is an experiment, let us write $P(a|E|b)$ for the probability of arriving at $a$ via $E$ from $b$.
+<p>
+    Quantum physics postulates that the pure states correspond to the unit-norm vectors in a complex Hilbert space and
+    that each experiment can be encoded in a linear map such that $P(a|E|b) = \left| \langle a | E(b)\rangle \right|^2$
+    whenever $a$ is a possible outcome of $E$.  In fact, the experimental outcomes form an orthonormal basis for the
+    whole Hilbert space.  Then a sequence of experiments with final result $a$, intermediate result $b$, and initial
+    result $c$ has outcome probability $P(a|E|b|F|c) = \left| \langle a|E(b)\rangle \langle b|F(c)\rangle \right|^2$
+    However, if we don't measure the intermediate result, we sum over possible intermediate states inside the norm: 
+    $$P(a|EF|c) = \left|\sum_b \langle a|E(b)\rangle \langle b|F(c) \rangle \right|^2 = \left|\langle a|EF(c)\right|^2$$
+    Those are the rules of quantum physics.
+<p>
+    The inner products are called <b>amplitudes</b>.
+<p>
+    We will now illustrate these ideas for a quantum system whose associated Hilbert space has two complex dimensions.
+    Let us choose $u, d$ as an orthonormal basis of pure states.  Then every other pure state has form
+    $s = \alpha u + \beta d$ where $|\alpha|^2 + |\beta|^2 = 1$.  CONTINUE 
+<p>
+<h4>  Path Integral Formalism </h4>
+    For instance, consider an electron, which has classical internal states $up$ and $down$.  A classical path over a
+    duration $[0,T]$ is then a piecewise constant function $\phi: [0,T]\to\{up, down\}=\{\pm 1\}$.  The electron
+    evolves in a vertical magnetic field $B$ according to the following action:
+        $$\text{action}(\phi) := \frac{qB\hbar}{2m} \int_{[0,T]} \phi(t)$$
+    Then the amplitude to go from $up$ to $up$ after $T$ steps is   
+<p>
+    We often care about the    
+    Now, the amplitudes for experiments of form <tt></tt>measure-after-waiting-after-preparing'' are given by a formula
+    $$\langle a | b \rangle = \int_\phi \exp((i/\hbar) \, \text{action}(\phi)) $$
+    where $\phi$ ranges 
+<p>
+<h4>  Lagrangian for Classical Phonons </h4>
+<h4>  Lagrangian for Quantum Electrodynamics </h4>
+<h4>  Dirac Equation </h4>
+<h4>  Schrodinger Equation as Non-Relativistic Limit </h4>
+<h3>  Atomic Structure </h3>
+<h3>  Molecular Structure  </h3>
+<h4>  Putting together two metal crystals </h4>
+<h3>  Chemistry </h3>
+<h3>  Material Science  </h3>
+<p>
+<h2>  Rocks and Time  </h2>
+<h3>  General Relativity  </h3>
+<h3>  Cosmology and the Unification of Forces </h3>
+<h3>  Stellar Formation and Element Production  </h3>
+<h3>  Carbon Dating </h3>
+<h3>  Erosion Processes </h3>
+<h3>  Saltation of Sand </h3>
+<h3>  Example: Hoodoos of Bryce Canyon </h3>
+<p>
+<h2>  Weather </h2>
+<p>
+<h2>  Biology of Rocks </h2>
+<h3>  Are Rocks Alive? </h3>
+    What does it mean to <b>live</b>?  What is <b>life</b>?  These are some of the central questions of biology, and hence by
+    extension geology.  Toward a definition, we note these characteristics of life as we intuitively understand it: 
+<p>
+    (A) Life reproduces (potentially with mutation) and hence undergoes natural selection. 
+<p>
+    (B) The information that reproduces is encoded chemically.
+<p>
+    Taking the above as a definition of life, we ask <em>can rocks reproduce</em> and
+    <em>is a rock's salient genetic informationi encoded chemically</em>?
+<p>
+    FILL IN ABOUT crystal growth.
+<p>
+    References: See <em>What is Life?</em> by E. Schrodinger, 1944.
+<p>
+<h3>  Are Living Things Rocks? </h3>
+    Tobacco Mosaic Crystals
+<p>
+<h3>  Rock Lifecycle </h3>
+<p>
+<h3>  What Lives in Rocks? </h3>
+<p>
+<h3>  Are Rocks Food? </h3>
+<h4>  Rocks for Digestion </h4>
+<p>
+<h3>  Example: Fossil Records of Cows </h3>
+<h3>  How Do Living Things Affect Rock?  Limestone </h3>
+<p>
+<h2>  Meteorology and Astronomy </h2>
+<p>
+<h2>  Advanced Application: Transistor Machines </h2>
+<h3>  Statistical Mechanics </h3>
+<h3>  Transistors </h3>
+<h3>  Tips for the Industrialist </h3>
+<h3>  Silicon and its Applications  </h3>
+    Armed with a grasp of  
+<p>
+<h2>  Advanced Application: Survival Skills </h2>
+<h3>  Shelter via Rocks </h3>
+<h4>  Rules of Thumb for Concrete  </h4>
+<h3>  Fire via Rocks </h3>
+<h3>  Hunting via Rocks </h3>
+<p>
+    </body>
+</html>
