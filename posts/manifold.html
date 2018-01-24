@@ -19,7 +19,7 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 <p>
-<h1>  Manifolds  </h1>
+<h1>  Differential Geometry  </h1>
 <h4>  Notes by Sam Tenka based on courses by Ralf Spatzier </h4>
 <p>
 <h2>  Overview of Manifolds  </h2>
@@ -28,10 +28,12 @@ $\newcommand{\from}{\leftarrow}$
     multiple notions of manifold.  Each type of structure is encoded in a notion of "isomorphism".  
     When "isomorphism" means "homeomorphism", we obtain the notion of <b>topological manifold</b>.  
     When "isomorphism" means "diffeomorphism", we obtain the notion of <b>smooth manifold</b>.  
+    When "isomorphism" means "invertible affine map", we obtain the notion of <b>affine manifold</b>. 
     When "isomorphism" means "isometry", we obtain the notion of <b>flat manifold</b>.  
     Then:
 <p>
-    <b>Definition</b>: an $n$-<b>manifold</b> is a set of bijections $\phi_i:U_i\from \RR^n$
+    <b>Definition</b>: an $n$-<b>manifold</b> is a set of bijections $\phi_i:U_i\from R_i \subseteq \RR^n$
+    from open sets $R_i\subseteq \RR^n$
     such that each $\phi_i^{-1} \circ \phi_j |_{\phi_j^{-1}(U_i)}$ is an "isomorphism".
 <p>
     <b>Definition</b>: Manifolds form a concrete category as follows.  It is the union $X=\bigcup_i U_i$
@@ -48,19 +50,41 @@ $\newcommand{\from}{\leftarrow}$
     So let us consider only manageably small manifolds: the ones with countable basis.  In short,
     we will require henceforth that manifolds be <b>Hausdorff</b> and <b>second-countable</b>.
 <p>
+<h3>  Examples of Manifolds  </h3>
+    To classify manifolds, it's enough to classify connected manifolds --- every general manifold will be a countable
+    union of connected manifolds.  The only connected $0$-manifold is the point.  There's only one topological
+    structure, only one smooth structure, only one affine structure, and only one flat structure. 
+<p>
+    The only connected topological or smooth $1$-manifolds are the circle and the open interval.  But!  There are
+    uncountably many affine $1$-manifolds: a single open interval and an uncountable family of circles (parameterized
+    by how tangent vectors stretch as we go around).  And there are uncountably many flat $1$-manifolds: each finite
+    size of circle, each finite size of open interval, and a single open line, and a single open ray.  
+<p>
+    ILLUSTRATIONS 
+<p>
+    Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, the idea of  
+<p>
+    $2$-manifolds...
+<p>
 <h2>  Smooth Manifolds </h2>
 <p>
 <h3>  Sard's Theorem </h3>
+    <b>Theorem</b> (Sard): if $f:M\from N$ is smooth, then its set of critical values has measure $0$. 
+<p>
+<p>
+<p>
 <h3>  Tangent and Cotangent Bundles </h3>
 <h3>  Inverse and Implict Function Theorems </h3>
 <h3>  Partitions of Unity and Embedding Theorems  </h3>
 <h3>  Differential Forms and Stoke's Theorem </h3>
+<h3>  Differential Equations and Frobenius </h3>
 <p>
 <h2>  Differential Topology </h2>
 <p>
 <h3>  Constant Rank Theorem </h3>
 <h3>  Degrees of Maps </h3>
 <h3>  Visualizing some Bundles  </h3>
+<h3>  Poincare Hopf Index Formula  </h3>
 <p>
 <h2>  Riemann Manifolds </h2>
 <p>
@@ -69,7 +93,7 @@ $\newcommand{\from}{\leftarrow}$
     isometry of Euclidean space also preserves angles and has determinant 1.
     We can explicitly solve for angles (between two vectors) in terms of lengths from the
     generalized Pythagorean Theorem: 
-    $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
+        $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
     Once equipped with length and angle, we can recognize which parallelepipeds are right-angled,
     define their volumes as the products of their side-lengths, and thus recover volume.
 <p>
@@ -99,6 +123,7 @@ $\newcommand{\from}{\leftarrow}$
     flat, some metric structures on $\RR^2$ are <b>curved</b>.
 <p>
 <h2>  Differential Geometry  </h2>
+<h3>  The Levi Civita Connection </h3>
 <p>
     </body>
 </html>

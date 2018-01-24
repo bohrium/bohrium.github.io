@@ -9,7 +9,7 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
-! Manifolds 
+! Differential Geometry 
 !!!! Notes by Sam Tenka based on courses by Ralf Spatzier
 
 !! Overview of Manifolds 
@@ -18,10 +18,12 @@ $\newcommand{\from}{\leftarrow}$
     multiple notions of manifold.  Each type of structure is encoded in a notion of "isomorphism".  
     When "isomorphism" means "homeomorphism", we obtain the notion of *topological manifold*.  
     When "isomorphism" means "diffeomorphism", we obtain the notion of *smooth manifold*.  
+    When "isomorphism" means "invertible affine map", we obtain the notion of *affine manifold*. 
     When "isomorphism" means "isometry", we obtain the notion of *flat manifold*.  
     Then:
 
-    *Definition*: an $n$-*manifold* is a set of bijections $\phi_i:U_i\from \RR^n$
+    *Definition*: an $n$-*manifold* is a set of bijections $\phi_i:U_i\from R_i \subseteq \RR^n$
+    from open sets $R_i\subseteq \RR^n$
     such that each $\phi_i^{-1} \circ \phi_j |_{\phi_j^{-1}(U_i)}$ is an "isomorphism".
 
     *Definition*: Manifolds form a concrete category as follows.  It is the union $X=\bigcup_i U_i$
@@ -38,19 +40,46 @@ $\newcommand{\from}{\leftarrow}$
     So let us consider only manageably small manifolds: the ones with countable basis.  In short,
     we will require henceforth that manifolds be *Hausdorff* and *second-countable*.
 
+!!! Examples of Manifolds 
+    To classify manifolds, it's enough to classify connected manifolds --- every general manifold will be a countable
+    union of connected manifolds.  The only connected $0$-manifold is the point.  There's only one topological
+    structure, only one smooth structure, only one affine structure, and only one flat structure. 
+
+    The only connected topological or smooth $1$-manifolds are the circle and the open interval.  But!  There are
+    uncountably many affine $1$-manifolds: a single open interval and an uncountable family of circles (parameterized
+    by how tangent vectors stretch as we go around).  And there are uncountably many flat $1$-manifolds: each finite
+    size of circle, each finite size of open interval, and a single open line, and a single open ray.  
+
+    ILLUSTRATIONS 
+
+    Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, the idea of  
+
+    $2$-manifolds...
+
 !! Smooth Manifolds
 
 !!! Sard's Theorem
+    *Theorem* (Sard): if $f:M\from N$ is smooth, then its set of critical values has measure $0$. 
+    
+    The theorem implies, for instance, that every embedding of a lower-dimensional manifold into
+    a higher-dimensional manifold has measure $0$ image.
+    
+    *Proof*: Let $C\subseteq N$ be the set of critical points of $f$. 
+    Let $C^k\subseteq N$ be the set of points where all derivatives up through the $k$th vanish.
+    We may classify the points of $c$ according to the order . 
+
 !!! Tangent and Cotangent Bundles
 !!! Inverse and Implict Function Theorems
 !!! Partitions of Unity and Embedding Theorems 
 !!! Differential Forms and Stoke's Theorem
+!!! Differential Equations and Frobenius
 
 !! Differential Topology
 
 !!! Constant Rank Theorem
 !!! Degrees of Maps
 !!! Visualizing some Bundles 
+!!! Poincare Hopf Index Formula 
 
 !! Riemann Manifolds
 
@@ -59,7 +88,7 @@ $\newcommand{\from}{\leftarrow}$
     isometry of Euclidean space also preserves angles and has determinant 1.
     We can explicitly solve for angles (between two vectors) in terms of lengths from the
     generalized Pythagorean Theorem: 
-    $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
+        $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
     Once equipped with length and angle, we can recognize which parallelepipeds are right-angled,
     define their volumes as the products of their side-lengths, and thus recover volume.
 
@@ -91,3 +120,5 @@ $\newcommand{\from}{\leftarrow}$
     flat, some metric structures on $\RR^2$ are *curved*.
 
 !! Differential Geometry 
+!!! The Levi Civita Connection
+

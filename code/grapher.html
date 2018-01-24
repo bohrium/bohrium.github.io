@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css">
+        <script type="text/x-mathjax-config">   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"> </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+            <h2>Grapher</h2>
+
+                This is just an intermediate step in my desire to understand <a href="https://en.wikipedia.org/wiki/Nomogram" target="_blank">Nomogram</a>s.
+                Inputs should be in <a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation" target="_blank">reverse polish notation</a>:
+                for example, type <span style="background-color: #f3f3f3; font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">x x sin +</span>
+                for $x+\sin(x)$, and <span style="background-color: #f3f3f3; font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">x x * log 2 / exp</span>
+                for $\exp(\log(x*x)/2) = |x|$.
+                <br></br>
+
+                <div class="separator" style="clear: both; text-align: center;">
+                
+                <input id="myText" size="64" type="text" value="x x +" />
+                <button id="myBtn" onclick="gosam()" type="button">Try it</button><br />
+                
+                <canvas height="480" id="myCanvas" style="border: 1px solid #c3c3c3;" width="640"></canvas>
+                <div id="jsErr1">
+                    no error yet...
+                </div>
+                <div id="jsErr2">
+                    no error yet...
+                </div>
+
+                The hardest part was to write a parser.  Check out this page's Javascript code for details!
+                <br></br>
+                <br></br>
+
+
+
+                <script>
+                    function complain(mystring, which) {
+                      document.getElementById("jsErr"+which).innerHTML = mystring;
+                    }
+                    function parse(polish) {
+                       /*eats an array e.g. ['x','x','sin','+'],
+                         and outputs an operator on stacks,
+                      as well as a new array e.g. ['x','sin','+']*/
+                       if(polish.length==0) {
+                          return function(mystack,myx) {
+                          return mystack;
+                       }
+                       }
+                       var eaten=parse(polish.slice(1,polish.length));
+                       //TODO: generalize to nonaries,unaries,binaries,trinaries,etc. then can uniformly implement below by looping over arg.s
+                       var unaries = {"sin":Math.sin,"cos":Math.cos,"log":Math.log,"exp":Math.exp};
+                       var binaries = {"+":function(x,y){return x+y;},"*":function(x,y){return x*y;},
+                                       "-":function(x,y){return y-x;},"/":function(x,y){return y/x;}}; //TODO: figure out intuitive order!
+                           //sqrt is x log 2 / exp
+                           //absolute value is x x * log 2 / exp
+                       if(polish[0]=="x") {
+                          return function(mystack,myx) {
+                          return eaten(mystack.concat([myx]), myx);
+                       }
+                       } if(polish[0]==Number(polish[0])) {
+                          return function(mystack,myx) {
+                          return eaten(mystack.concat([Number(polish[0])]), myx);
+                       }
+                       } else if(polish[0] in unaries) {
+                          var func=unaries[polish[0]];
+                          return function(mystack,myx) {
+                          var top=mystack[mystack.length-1];
+                          var popped=mystack.slice(0,mystack.length-1);
+                          return eaten(popped.concat([func(top)]), myx);
+                       }
+                       } else if(polish[0] in binaries) {
+                          var func=binaries[polish[0]];
+                          return function(mystack,myx) {
+                          var top1=mystack[mystack.length-1];
+                       var top2=mystack[mystack.length-2];
+                       var popped2=mystack.slice(0,mystack.length-2);
+                          return eaten(popped2.concat([func(top1,top2)]), myx);
+                       }
+                       } else {complain("(error: unknown component in expression)",1); /*e.g. trigger by x x woah*/}
+                    }
+                    function getfunc() {
+                       polish=document.getElementById("myText").value.split(" ");
+                       stackoperator=parse(polish);
+                       return function(myx) {
+                          var mystack=stackoperator([],myx);
+                       if(mystack.length!=1) {complain("(error: nongrammatical expression)",2); /*e.g. trigger by x x x +*/}
+                       return mystack[0];
+                       }
+                    }
+                    function clearcanvas(canvas, context) {
+                       context.clearRect(0, 0, canvas.width, canvas.height); //for chrome
+                       var w=canvas.width; canvas.width=1; canvas.width=w;   //for devious, noncompliant browsers
+                    }
+                    function graph(myfunc) {
+                       var c = document.getElementById("myCanvas");
+                       context = c.getContext("2d");
+                       clearcanvas(c,context);
+                       context.moveTo(0,480-myfunc(0-320)-240);
+                       for(i=1; i<640;++i) {
+                          context.lineTo(i,480-myfunc(i-320)-240);
+                       }
+                       context.strokeStyle="#ff0000";
+                       context.stroke();
+                    }
+                    function gosam() {
+                       graph(getfunc());
+                    }
+                </script>
+    </body>
+</html>

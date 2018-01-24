@@ -24,14 +24,6 @@ tr:nth-child(even) {
   width: 26em;
 }
 
-h1 {
-  font-size: 200%;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-
 .left {
   float: left;
   width: 5em;
@@ -73,6 +65,10 @@ body {
 
 h1 {
     color: rgb(0, 0, 64);
+    font-size: 200%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
     font-size: 40px;
     text-align: center;
 }
@@ -99,6 +95,8 @@ a:hover {
     color: rgb(64, 64, 256);
     text-decoration: none;
 }
+
+
 
 
 
