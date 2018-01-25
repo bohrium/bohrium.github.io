@@ -9,60 +9,106 @@
 
             <h2>Interpolator</h2>
 
-                Here are some experiments with image magnification by linear scale 3.  We avoid learning image priors
-                from data; instead, we hand-craft heuristics.  For instance, <b>nearest neighbor</b> interpolation
-                produces jagged squares:
-                <div style="text-align: center">
-                <figure>
-                    <img src="../images/interpolator/cow_neighbor.bmp">
-                    <figcaption> Nearest neighbors.  </figcaption>
-                </figure>
-                </div>
+                <h3> Repeated Magnification </h3>
+                    Here are some experiments with image magnification by linear scale 3.  We avoid learning image priors
+                    from data; instead, we hand-craft heuristics.  For instance, <b>nearest neighbor</b> interpolation
+                    produces jagged squares:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/cow_neighbor.bmp">
+                        <figcaption> Nearest neighbors.  </figcaption>
+                    </figure>
+                    </div>
 
-                An alternative is <b>bilinear</b> interpolation.  But this overly blurs edges:
-                <div style="text-align: center">
-                <figure>
-                    <img src="../images/interpolator/cow_bilinear.bmp">
-                    <figcaption> <b>Bilinear</b>.  </figcaption>
-                </figure>
-                </div>
+                    An alternative is <b>bilinear</b> interpolation.  But this overly blurs edges:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/cow_bilinear.bmp">
+                        <figcaption> <b>Bilinear</b>.  </figcaption>
+                    </figure>
+                    </div>
 
-                As a compromise, we propose to <b>round</b> each pixel of the bilinearly interpolated image to the
-                neighbor of the original image (among 4 neighbors) that is closest in color.  Here, we use euclidean
-                distance in RGB space:
-                <div style="text-align: center">
-                <figure>
-                    <img src="../images/interpolator/cow_rounding.bmp">
-                    <figcaption>
-                        <b>Rounding</b>.  Overall, edges are sharply defined yet possess smooth contours:
-                        witness the background cow's horns and the foreground cow's eyes.
-                    </figcaption>
-                </figure>
-                </div>
+                    As a compromise, we propose to <b>round</b> each pixel of the bilinearly interpolated image to the
+                    neighbor of the original image (among 4 neighbors) that is closest in color.  Here, we use euclidean
+                    distance in RGB space:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/cow_rounding.bmp">
+                        <figcaption>
+                            <b>Rounding</b>.  Overall, edges are sharply defined yet possess smooth contours:
+                            witness the background cow's horns and the foreground cow's eyes.
+                        </figcaption>
+                    </figure>
+                    </div>
 
-                <div style="text-align: center">
-                <figure>
-                    <img src="../images/interpolator/comparison.bmp">
-                    <figcaption> Left to right: <b>nearest neighbors</b>; <b>bilinear</b>; <b>rounding</b>; <b>regression</b> </figcaption>
-                </figure>
-                </div>
+                    The basic idea is: regress a sigmoidal function (to represent an "edge") on each small neighborhood of
+                    pixels.  Then sample from this function to interpolate.  At this point, the algorithm is analogous to
+                    bilinear interpolation (except for the functional form of the regression).  However, the key step in
+                    the proposed algorithm is that we scale the sigmoidal function's input before sampling in order to keep
+                    the represented edge sharp.  The results on some natural image patches are quite promising!  For
+                    instance, observe the sharpness and non-jaggedness of edges in the photographs of text and of
+                    window-shade-banner-things below.
 
-                The basic idea is: regress a sigmoidal function (to represent an "edge") on each small neighborhood of
-                pixels.  Then sample from this function to interpolate.  At this point, the algorithm is analogous to
-                bilinear interpolation (except for the functional form of the regression).  However, the key step in
-                the proposed algorithm is that we scale the sigmoidal function's input before sampling in order to keep
-                the represented edge sharp.  The results on some natural image patches are quite promising!  For
-                instance, observe the sharpness and non-jaggedness of edges in the photographs of text and of
-                window-shade-banner-things below.
+                <h3> Comparison of Methods </h3>
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/comparison.bmp">
+                        <figcaption> Left to right: <b>nearest neighbors</b>; <b>bilinear</b>; <b>rounding</b>; <b>regression</b> </figcaption>
+                    </figure>
+                    </div>
 
-                <div style="text-align: center">
-                <figure>
-                    <img src="../images/interpolator/comparison_failuremodes.bmp">
-                    <figcaption> Left to right: <b>nearest neighbors</b>; <b>bilinear</b>; <b>rounding</b>; <b>regression</b> </figcaption>
-                </figure>
-                </div>
+                    On the other hand, the proposed algorithm suffers from over-smoothing due to the regression.  See how
+                    the textures in fruit and fur get smoothed out below:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/comparison_failuremodes.bmp">
+                        <figcaption> Left to right: <b>nearest neighbors</b>; <b>bilinear</b>; <b>rounding</b>; <b>regression</b> </figcaption>
+                    </figure>
+                    </div>
 
+                <h3> Repeated Magnification </h3>
+                    I've found a good application of the rounding interpolator's sometimes artificial-looking output:
+                    art!  Take the following hat image, for example.  If we downsample it, then interpolate it, we 
+                    get a nice glassy effect:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/hat-big.jpg">
+                        <img src="../images/interpolator/hat-tiny.jpg">
+                        <img src="../images/interpolator/hat-restored.jpg">
+                        <figcaption> Left to right: original image; shrunk by linear factor 8; restored via repeated interpolation </figcaption>
+                    </figure>
+                    </div>
 
+                    Here's a small smiley-face I drew:
+                        <img src="../images/interpolator/smile-tiny.jpg">.
+                    And here's a magnified version:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/smile-restored.jpg">
+                        <figcaption> Smile magnified by linear scale 8 </figcaption>
+                    </figure>
+                    </div>
+
+                    It's fun to repeatedly magnify noise: 
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/noise-0.jpg">
+                        <img src="../images/interpolator/noise-1.jpg">
+                        <img src="../images/interpolator/noise-2.jpg">
+                        <img src="../images/interpolator/noise-3.jpg">
+                        <figcaption> Texture generated by repeatedly magnifying uniform noise </figcaption>
+                    </figure>
+                    </div>
+
+                    Cool! This actually looks like a nice desktop background.  Let's magnify noise of a different aspect ratio
+                        (say, <img src="../images/interpolator/background-tiny.jpg">)
+                    to get this nice wallpaper:
+                    <div style="text-align: center">
+                    <figure>
+                        <img src="../images/interpolator/background.jpg">
+                        <figcaption> Wallpaper generated by magnifying uniform noise by linear scale 16 </figcaption>
+                    </figure>
+                    </div>
 
     </body>
 </html>
