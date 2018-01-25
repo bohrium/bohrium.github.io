@@ -36,7 +36,7 @@ def translate(text):
         elif line[0]=='!':
             for i,c in enumerate(line):
                 if c!='!': break
-            html += '\n<h%d> %s </h%d>' % (i, translate_line(line[i:]), i)
+            html += '\n<h%d> %s </h%d>' % (i+1, translate_line(line[i:]), i+1)
         elif line[0]=='[':
             url, text = line[1:-1].split('][')
             if url.split('.')[-1] in ('jpg', 'png'):

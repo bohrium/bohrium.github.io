@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
                 tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -11,6 +11,8 @@
         </script>
     </head>
     <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
         
 <p>
 $\newcommand{\NN}{\mathbb{N}}$
@@ -19,20 +21,20 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 <p>
-<h1>  Generating Functions  </h1>
-<h4>  Notes by Sam Tenka based on courses by Sergei Fomin and Laura Balzano </h4>
+<h2>  Generating Functions  </h2>
+<h5>  Notes by Sam Tenka based on courses by Sergei Fomin and Laura Balzano </h5>
 <p>
-<h2>  Generating Functions for Counting </h2>
+<h3>  Generating Functions for Counting </h3>
     If $a\in \NN^\NN$ is a sequence of non-negative integers, then its associated
     <b>generating series</b> is $F_a(z) = \sum \in \sum_{n\in \NN}a_n z^n \in \CC[[z]]$, an element of
     the formal power series ring.  For many interesting $a$, $F_a$ has positive radius of
     convergence and hence may be viewed as a function. 
 <p>
-<h3>  Example: Fun with Geometric Series  </h3>
+<h4>  Example: Fun with Geometric Series  </h4>
     For instance, $a_n=1$ imples that $F_a=1/(1-z)$.  Then $a_n=n+1$ implies
     that $F_a=1/(1-z)^2$.
 <p>
-<h3>  Example: Solving Linear Recurrences </h3>
+<h4>  Example: Solving Linear Recurrences </h4>
     For instance, let $a$ be defined by a linear recurrence:
     $a_n = s_n$ for $0\leq n \le N$ and $a_{n+N} = \sum_{0\leq i\le N} c_i a_{n+i}$ for $n\in \NN$.
     Then $F_a$ obeys the relation:  
@@ -46,11 +48,11 @@ $\newcommand{\from}{\leftarrow}$
     functions emphasize the sequential nature of the problem; they can thus give more specific
     insights. 
 <p>
-<h2>  Blass' 7 Trees in 1   </h2>
-<h2>  Algebraic Data Types </h2>
-<h2>  Combinatorial Species </h2>
-<h2>  Asymptotics  </h2>
-<h2>  Fourier and Laplace  </h2>
+<h3>  Blass' 7 Trees in 1   </h3>
+<h3>  Algebraic Data Types </h3>
+<h3>  Combinatorial Species </h3>
+<h3>  Asymptotics  </h3>
+<h3>  Fourier and Laplace  </h3>
 <p>
     </body>
 </html>

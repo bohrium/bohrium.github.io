@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
                 tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -11,6 +11,8 @@
         </script>
     </head>
     <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
         
 <p>
 $\newcommand{\Aut}{\text{Aut}}$
@@ -19,10 +21,10 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 <p>
-<h1>  Differential Geometry  </h1>
-<h4>  Notes by Sam Tenka based on courses by Ralf Spatzier </h4>
+<h2>  Differential Geometry  </h2>
+<h5>  Notes by Sam Tenka based on courses by Ralf Spatzier </h5>
 <p>
-<h2>  Overview of Manifolds  </h2>
+<h3>  Overview of Manifolds  </h3>
     Manifolds are spaces locally "like" Euclidean space $\RR^n$.  We use the ambiguous word "like"
     because there are multiple types of Euclidean structure we may care about mimicking and thus
     multiple notions of manifold.  Each type of structure is encoded in a notion of "isomorphism".  
@@ -50,7 +52,7 @@ $\newcommand{\from}{\leftarrow}$
     So let us consider only manageably small manifolds: the ones with countable basis.  In short,
     we will require henceforth that manifolds be <b>Hausdorff</b> and <b>second-countable</b>.
 <p>
-<h3>  Examples of Manifolds  </h3>
+<h4>  Examples of Manifolds  </h4>
     To classify manifolds, it's enough to classify connected manifolds --- every general manifold will be a countable
     union of connected manifolds.  The only connected $0$-manifold is the point.  There's only one topological
     structure, only one smooth structure, only one affine structure, and only one flat structure. 
@@ -66,27 +68,32 @@ $\newcommand{\from}{\leftarrow}$
 <p>
     $2$-manifolds...
 <p>
-<h2>  Smooth Manifolds </h2>
+<h3>  Smooth Manifolds </h3>
 <p>
-<h3>  Sard's Theorem </h3>
+<h4>  Sard's Theorem </h4>
     <b>Theorem</b> (Sard): if $f:M\from N$ is smooth, then its set of critical values has measure $0$. 
 <p>
+    The theorem implies, for instance, that every embedding of a lower-dimensional manifold into
+    a higher-dimensional manifold has measure $0$ image.
 <p>
+    <b>Proof</b>: Let $C\subseteq N$ be the set of critical points of $f$. 
+    Let $C^k\subseteq N$ be the set of points where all derivatives up through the $k$th vanish.
+    We may classify the points of $c$ according to the order . 
 <p>
-<h3>  Tangent and Cotangent Bundles </h3>
-<h3>  Inverse and Implict Function Theorems </h3>
-<h3>  Partitions of Unity and Embedding Theorems  </h3>
-<h3>  Differential Forms and Stoke's Theorem </h3>
-<h3>  Differential Equations and Frobenius </h3>
+<h4>  Tangent and Cotangent Bundles </h4>
+<h4>  Inverse and Implict Function Theorems </h4>
+<h4>  Partitions of Unity and Embedding Theorems  </h4>
+<h4>  Differential Forms and Stoke's Theorem </h4>
+<h4>  Differential Equations and Frobenius </h4>
 <p>
-<h2>  Differential Topology </h2>
+<h3>  Differential Topology </h3>
 <p>
-<h3>  Constant Rank Theorem </h3>
-<h3>  Degrees of Maps </h3>
-<h3>  Visualizing some Bundles  </h3>
-<h3>  Poincare Hopf Index Formula  </h3>
+<h4>  Constant Rank Theorem </h4>
+<h4>  Degrees of Maps </h4>
+<h4>  Visualizing some Bundles  </h4>
+<h4>  Poincare Hopf Index Formula  </h4>
 <p>
-<h2>  Riemann Manifolds </h2>
+<h3>  Riemann Manifolds </h3>
 <p>
     To move from topology to geometry, we need concepts such as <b>length</b>, <b>angle</b>, and <b>volume</b>.
     It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
@@ -115,15 +122,16 @@ $\newcommand{\from}{\leftarrow}$
     vectors along a curve.  And by subtracting, we may <b>covariantly differentiate</b> a vector field
     with respect to another vector. 
 <p>
-<h3>  Metric: Globally and Locally </h3>
+<h4>  Metric: Globally and Locally </h4>
 <p>
-<h3>  Is Every Space Flat? </h3>
+<h4>  Is Every Space Flat? </h4>
     $\RR$ and $S^1$ have flat structures, so $\RR^n \times (S^1)^m$ has flat structure.
     But the sphere $S^2$ has no flat structure.  Moreover, though every metric structure on $\RR^1$ is
     flat, some metric structures on $\RR^2$ are <b>curved</b>.
 <p>
-<h2>  Differential Geometry  </h2>
-<h3>  The Levi Civita Connection </h3>
+<h3>  Differential Geometry  </h3>
+<h4>  The Levi Civita Connection </h4>
+<p>
 <p>
     </body>
 </html>
