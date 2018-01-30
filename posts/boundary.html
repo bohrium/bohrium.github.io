@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+        
+<p>
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h2>  Boundary Axioms for Topology  </h2>
+    Can we axiomatize point-set topology in terms of topological boundaries rather than open or closed sets?  We
+    describe such a formulation, invented with Dean Young, Noah Luntzlara, Eric Winsor, Leo Izen, and Brian Pinsky.
+<p>
+    We later learned of previous work by Lesniak [0].  Lesniak’s Example 2 shows the forward and backward
+    correspondences developed here not to be bijective.  In particular, our axiom set is missing the logically
+    independent $ddU \subseteq dU$ necessary to make unique the boundary operator associated with a topological
+    space.  We nevertheless present topology from a boundary point of view, for whatever insight it may give.
+<p>
+<h3>  Introduction </h3>
+<p>
+    As scientists studying space, we might begin with this observation: a region of space has an inside and an outside
+    separated by a boundary.  What can we say then, about boundaries?  We note that space on whole has empty boundary:
+    space is entirely inside with no outside.  Moreover, a region and its complement have the same boundary.
+<p>
+    Yet, those observations fail to capture the essence of a boundary as a thin tissue separating a region and its
+    complement. We express this essence by considering the boundary of an intersection.  As we see in Figure 0, the
+    boundary of the depicted intersection is a union of three terms, akin to the product rule for finite differences:
+        $$d(ab) = dab + adb + dadb$$
+    Let us collect our intuitions into a definition:
+<p>
+    <b>Definition</b>: A map $d: \mathcal{P}T\from \mathcal{P}T$ on a set $T$ is a <b>boundary operator</b> provided that,
+    for all $U, V \subseteq T$:
+        $T$ has no boundary: $dT = \{\}$;
+        $d$ is symmetric: $d(T \ U) = dU$; and
+        $d$ obeys the product rule: $d(UV) \subseteq dUV \cup U dV \cup dU dV$
+<p>
+    We then call T a boundary space. Here, we concatenate to denote intersection: $UV = U \cap V$.
+    If $T$ is a topological space, its topology can be recovered from its boundary structure:
+<p>
+    <b>Definition</b>:  If $T$ is a boundary space and $U\subseteq T$, then we call $U$ <em>boundless</em> when $dU=\{\}$;
+    <em>open</em> when $dU \subseteq T\setminus U$, and <em>closed</em> when $dU \subseteq U$.
+<p>
+    The boundless sets are precisely the open closed sets.  Our main result is a correspondence between boundary
+    spaces and topological spaces:
+<p>
+    <b>Theorem</b>: The open sets of a boundary space form a topology, and the standard boundary map of a
+    topological space is a boundary operator.
+<p>
+<h3>  Continuity, Connectedness, Compactness </h3>
+    A map $f:S \from T$ between boundary spaces is <em>continuous</em> when $df^{-1} \subseteq df^{-1}$ as maps $:\mathcal{S}\to\mathcal{T}$. 
+    This corresponds to the topological notion of continuity: if $U$ is open, i.e. $dU \subseteq S\setminus U$, then
+    $df^{-1}(U) \subseteq f^{-1}(S\setminus U) = T\setminus f^{-1}(U)$, so $f^{-1}(U)$ is open.    
+<p>
+<h3>  Proof of Theorem </h3>
+<p>
+    </body>
+</html>

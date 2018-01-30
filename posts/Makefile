@@ -9,3 +9,6 @@ all:
 	python3 translate.py quantcomp.mookdown quantcomp.html
 	python3 translate.py rando.mookdown rando.html
 
+boundary:
+	python3 translate.py boundary.mookdown boundary.html
+
