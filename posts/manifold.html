@@ -26,12 +26,12 @@ $\newcommand{\from}{\leftarrow}$
 <p>
 <h3>  Overview of Manifolds  </h3>
     Manifolds are spaces locally "like" Euclidean space $\RR^n$.  We use the ambiguous word "like"
-    because there are multiple types of Euclidean structure we may care about mimicking and thus
-    multiple notions of manifold.  Each type of structure is encoded in a notion of "isomorphism".  
-    When "isomorphism" means "homeomorphism", we obtain the notion of <b>topological manifold</b>.  
-    When "isomorphism" means "diffeomorphism", we obtain the notion of <b>smooth manifold</b>.  
-    When "isomorphism" means "invertible affine map", we obtain the notion of <b>affine manifold</b>. 
-    When "isomorphism" means "isometry", we obtain the notion of <b>flat manifold</b>.  
+    because there are multiple aspects of Euclidean structure we may wish to mimic and thus
+    multiple notions of manifold.  Each type of structure is encoded in a notion of "morphism".  
+    When "morphism" means "continuous map", we obtain the notion of <b>topological manifold</b>.  
+    When "morphism" means "smooth map", we obtain the notion of <b>smooth manifold</b>.  
+    When "morphism" means "affine map", we obtain the notion of <b>affine manifold</b>. 
+    When "morphism" means "isometry", we obtain the notion of <b>flat manifold</b>.  
     Then:
 <p>
     <b>Definition</b>: an $n$-<b>manifold</b> is a set of bijections $\phi_i:U_i\from R_i \subseteq \RR^n$
@@ -43,19 +43,21 @@ $\newcommand{\from}{\leftarrow}$
     $f:M'\from M$ is a <b>morphism</b> when each
     ${\phi'}_i^{-1} \circ f \circ \phi_j |_{(f\circ \phi_j)^{-1}({U'}_i)}$ is a "morphism". 
 <p>
-    The topological notion is most general.  In fact, we may imbue $X$ with the unique topology
+    The topological notion is most general.  In fact, we may equip $X$ with the unique topology
     that makes each $\phi_i$ a homeomorphism.  Then $X$ is a topological space.  It is easy to
     check that the morphisms between topological manifolds are the continuous maps.  Because we
     aim to do calculus on manifolds, we would like unique limits and therefore prefer the case that
     $X$ is Hausdorff.  Classification questions also interest us; however, even the classification
-    of $0$-manifolds is non-trivial as stated, since there is a $0$-manifold for each cardinality.
+    of $0$-manifolds is difficult as stated: there is a $0$-manifold for each cardinality!
     So let us consider only manageably small manifolds: the ones with countable basis.  In short,
     we will require henceforth that manifolds be <b>Hausdorff</b> and <b>second-countable</b>.
 <p>
 <h4>  Examples of Manifolds  </h4>
-    To classify manifolds, it's enough to classify connected manifolds --- every general manifold will be a countable
-    union of connected manifolds.  The only connected $0$-manifold is the point.  There's only one topological
-    structure, only one smooth structure, only one affine structure, and only one flat structure. 
+    To classify manifolds, it's enough to classify connected manifolds.  Then every general manifold will be a countable
+    union of connected manifolds.
+<p>
+    The only connected $0$-manifold is the point.  There's only one topological structure, only one smooth structure,
+    only one affine structure, and only one flat structure. 
 <p>
     The only connected topological or smooth $1$-manifolds are the circle and the open interval.  But!  There are
     uncountably many affine $1$-manifolds: a single open interval and an uncountable family of circles (parameterized
@@ -64,40 +66,24 @@ $\newcommand{\from}{\leftarrow}$
 <p>
     ILLUSTRATIONS 
 <p>
-    Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, the idea of  
-<p>
     $2$-manifolds...
 <p>
-<h3>  Smooth Manifolds </h3>
-<p>
-<h4>  Sard's Theorem </h4>
-    <b>Theorem</b> (Sard): if $f:M\from N$ is smooth, then its set of critical values has measure $0$. 
-<p>
-    The theorem implies, for instance, that every embedding of a lower-dimensional manifold into
-    a higher-dimensional manifold has measure $0$ image.
-<p>
-    <b>Proof</b>: Let $C\subseteq N$ be the set of critical points of $f$. 
-    Let $C^k\subseteq N$ be the set of points where all derivatives up through the $k$th vanish.
-    We may classify the points of $c$ according to the order . 
-<p>
-<h4>  Tangent and Cotangent Bundles </h4>
-<h4>  Inverse and Implict Function Theorems </h4>
-<h4>  Partitions of Unity and Embedding Theorems  </h4>
-<h4>  Differential Forms and Stoke's Theorem </h4>
-<h4>  Differential Equations and Frobenius </h4>
-<p>
-<h3>  Differential Topology </h3>
-<p>
-<h4>  Constant Rank Theorem </h4>
-<h4>  Degrees of Maps </h4>
-<h4>  Visualizing some Bundles  </h4>
-<h4>  Poincare Hopf Index Formula  </h4>
+<h4>  Riemann Manifolds </h4>
+    Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, it makes sense
+    to generalize the notion of "flat manifold".  Since the morphisms of flat manifolds are isometries,
+    we'd like to consider a larger collection of metric spaces as manifolds.  However, by insisting that
+    the global metric $\delta:M^2\to [0,\infty]$ be smooth, we rule out desirable examples such as
+    the circle.  Indeed, the arclength metric on $S^1$ is not smooth when evaluated between antipodal points.
+    Our eventual definition will be equivalent to the following: a <b>Riemannian manifold</b> is a smooth
+    manifold together with a global metric $\delta:M^2\to [0, \infty]$ that induces the topological
+    structure and is <em>locally smooth</em>.  That is, for any $p\in M$, there must exist a neighborhood
+    $p\in U\subseteq M$ such that $\delta|_{U^2}$ is smooth.  The morphisms will be smooth isometries. 
 <p>
 <h3>  Riemann Manifolds </h3>
 <p>
     To move from topology to geometry, we need concepts such as <b>length</b>, <b>angle</b>, and <b>volume</b>.
     It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
-    isometry of Euclidean space also preserves angles and has determinant 1.
+    isometry of Euclidean space also preserves angles and has determinant $\pm 1$.
     We can explicitly solve for angles (between two vectors) in terms of lengths from the
     generalized Pythagorean Theorem: 
         $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
@@ -131,6 +117,33 @@ $\newcommand{\from}{\leftarrow}$
 <p>
 <h3>  Differential Geometry  </h3>
 <h4>  The Levi Civita Connection </h4>
+<p>
+<h3>  Appendix: Differential Topology </h3>
+<p>
+<h4>  Smooth Manifolds </h4>
+<p>
+<h5>  Sard's Theorem </h5>
+    <b>Theorem</b> (Sard): if $f:M\from N$ is smooth, then its set of critical values has measure $0$. 
+<p>
+    The theorem implies, for instance, that every embedding of a lower-dimensional manifold into
+    a higher-dimensional manifold has measure $0$ image.
+<p>
+    <b>Proof</b>: Let $C\subseteq N$ be the set of critical points of $f$. 
+    Let $C^k\subseteq N$ be the set of points where all derivatives up through the $k$th vanish.
+    We may classify the points of $c$ according to the order . 
+<p>
+<h5>  Tangent and Cotangent Bundles </h5>
+<h5>  Inverse and Implict Function Theorems </h5>
+<h5>  Partitions of Unity and Embedding Theorems  </h5>
+<h5>  Differential Forms and Stoke's Theorem </h5>
+<h5>  Differential Equations and Frobenius </h5>
+<p>
+<h4>  Differential Topology </h4>
+<p>
+<h5>  Constant Rank Theorem </h5>
+<h5>  Degrees of Maps </h5>
+<h5>  Visualizing some Bundles  </h5>
+<h5>  Poincare Hopf Index Formula  </h5>
 <p>
 <p>
     </body>
