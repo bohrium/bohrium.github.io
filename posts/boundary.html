@@ -20,6 +20,7 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 <p>
+<p>
 <h2>  Boundary Axioms for Topology  </h2>
     Can we axiomatize point-set topology in terms of topological boundaries rather than open or closed sets?  We
     describe such a formulation, invented with Dean Young, Noah Luntzlara, Eric Winsor, Leo Izen, and Brian Pinsky.
@@ -47,6 +48,8 @@ $\newcommand{\from}{\leftarrow}$
         $d$ is symmetric: $d(T \ U) = dU$; and
         $d$ obeys the product rule: $d(UV) \subseteq dUV \cup U dV \cup dU dV$
 <p>
+<figure style="text-align:center"><img src="../images/boundary/prod.png" alt="Figure 0: Product Rule"></figure><figcaption style="text-align:center">Figure 0: Product Rule</figcaption>
+<p>
     We then call T a boundary space. Here, we concatenate to denote intersection: $UV = U \cap V$.
     If $T$ is a topological space, its topology can be recovered from its boundary structure:
 <p>
@@ -59,10 +62,15 @@ $\newcommand{\from}{\leftarrow}$
     <b>Theorem</b>: The open sets of a boundary space form a topology, and the standard boundary map of a
     topological space is a boundary operator.
 <p>
+<p>
 <h3>  Continuity, Connectedness, Compactness </h3>
     A map $f:S \from T$ between boundary spaces is <em>continuous</em> when $df^{-1} \subseteq df^{-1}$ as maps $:\mathcal{S}\to\mathcal{T}$. 
     This corresponds to the topological notion of continuity: if $U$ is open, i.e. $dU \subseteq S\setminus U$, then
     $df^{-1}(U) \subseteq f^{-1}(S\setminus U) = T\setminus f^{-1}(U)$, so $f^{-1}(U)$ is open.    
+<p>
+    A boundary space $T$ is <em>connected</em> when no nonempty proper subset have empty boundaries. 
+<p>
+    A boundary space $T$ is <em>compact</em> when any  
 <p>
 <h3>  Proof of Theorem </h3>
 <p>

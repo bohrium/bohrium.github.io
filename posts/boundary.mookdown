@@ -8,6 +8,7 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
+
 ! Boundary Axioms for Topology 
     Can we axiomatize point-set topology in terms of topological boundaries rather than open or closed sets?  We
     describe such a formulation, invented with Dean Young, Noah Luntzlara, Eric Winsor, Leo Izen, and Brian Pinsky.
@@ -35,6 +36,8 @@ $\newcommand{\from}{\leftarrow}$
         $d$ is symmetric: $d(T \ U) = dU$; and
         $d$ obeys the product rule: $d(UV) \subseteq dUV \cup U dV \cup dU dV$
 
+[../images/boundary/prod.png][Figure 0: Product Rule]
+
     We then call T a boundary space. Here, we concatenate to denote intersection: $UV = U \cap V$.
     If $T$ is a topological space, its topology can be recovered from its boundary structure:
 
@@ -46,6 +49,7 @@ $\newcommand{\from}{\leftarrow}$
  
     *Theorem*: The open sets of a boundary space form a topology, and the standard boundary map of a
     topological space is a boundary operator.
+
 
 !! Continuity, Connectedness, Compactness
     A map $f:S \from T$ between boundary spaces is %continuous% when $df^{-1} \subseteq df^{-1}$ as maps $:\mathcal{S}\to\mathcal{T}$. 
