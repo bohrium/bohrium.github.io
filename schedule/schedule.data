@@ -9,11 +9,11 @@
 11:30   .               g               .               b               gdean           b               gsharon 
 12:00   .               g               .               .               g               g               g 
 12:30   .               g               r               .               g               r               g 
-13:00   .               g               ydiffgeo        .               ydiffgeo        groberta        ydiffgeo
-13:30   .               g               y               .               y               g               y
+13:00   .               g               ydiffgeo        c13:00-14:00    ydiffgeo        groberta        ydiffgeo
+13:30   .               g               y               c               y               g               y
 14:00   .               g               gsamjfree       .               .               c14:00-16:00    . 
-14:30   .               .               r               ccarl_vondrick  r               c               gjimmy♫
-15:00   .               .               brandalgs       c               brandalgs       c               g 
+14:30   .               .               r               gcarl_vondrick  r               c               gjimmy♫
+15:00   .               .               brandalgs       g               brandalgs       c               g 
 15:30   .               .               b               .               b               c               g
 16:00   .               .               b               .               b               ymath_club      . 
 16:30   .               .               .               .               bquantcomp      y               . 
@@ -21,8 +21,8 @@
 17:30   .               .               .               .               b               .               .         
 18:00   .               .               .               bmsail          .               ydiffgeo        .
 18:30   .               .               .               b               .               y               . 
-19:00   .               .               .               .               .               ymathcircle     . 
-19:30   .               .               .               .               .               y               . 
+19:00   .               .               .               c19:00-20:00    c19:00-20:00    ymathcircle     . 
+19:30   .               .               .               c               c               y               . 
 20:00   .               .               .               .               .               gpizzahouse     .
 20:30   .               .               .               .               .               g               . 
 21:00   .               .               yimprov         .               .               g               . 
