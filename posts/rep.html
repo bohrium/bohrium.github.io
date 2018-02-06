@@ -18,76 +18,95 @@
 $\newcommand{\Aut}{\text{Aut}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
 $\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\FF}{\mathbb{F}}$
 <p>
 <h2>  Representation Theory </h2>
 <h5>  Notes by Sam Tenka based on courses by Andrew Snowden and Jessica Fintzen </h5>
 <p>
 <h3>  What are Representations? </h3>
 <h4>  Yeah, What are They? </h4>
-    A <b>representation</b> is a group homomorphism $\pi:G\to \Aut(V)$ from a group to the linear
-    automorphisms of a vector space.  We say that $\pi$ <b>represents $G$</b> or
-    <b>is a representation of $G$ on $V$</b>.  We will often abuse terminology by speaking of
-    "the representation $V$", even though $V$ technically lacks the information of $\pi$; in doing
-    so, we sin as heinously yet conveniently as when we refer to a group by its underlying set.
-    We thus speak of a representation's <b>dimension</b> (i.e. the dimension of its underlying vector
-    space $V$) and subspaces and so forth.  This document will treat <em> complex </em> representations
-    only, i.e. those such that $V$ is a vector space over $\CC$.
+    A <b>representation</b> of a group $G$ over a field $\FF$ is simply a functor $\rho:G\to\text{Vec}_{\FF}$
+    from $G$ to the category of vector spaces over $\FF$.  In other words, a representation is a group
+    homormorphism $\rho:G\to \Aut(V)$ from $G$ to the linear automorphisms of some $\FF$ vector space $V$.
+    Equivalently, a representation is a module $V$ over the group-ring $\FF[G]$.  
+<p>
+    Morphisms between representations of $G$ over $\FF$ are then <em>natural transformations</em> between functors,
+    linear maps between vector spaces that respect the $G$ action, or homomorphisms of $\FF[G]$ modules.
+    Note that a bijective homomorphism is automatically an isomorphism. 
+    The category of $\FF[G]$ modules is <em>abelian</em> --- I don't know enough homological algebra
+    to really grok what this means, but some of the important facts are that (finitary!) sums and products
+    exist and agree; hence, that initial and terminal objects (i.e. zero-ary sums and products) exist and agree;
+    and that the familiar isomorphism theorems about abelian groups hold.
+    As a concrete illustration: to perform <b>direct sum</b> on representations of a fixed group $G$, just perform
+    it on their underlying vector spaces and let $G$ act componentwise.
+<p>
+    We say that $\rho$ <b>represents $G$</b> or <b>is a representation of $G$ on $V$</b>.  We will often
+    abuse terminology by speaking of "the representation $V$", even though $V$ technically lacks
+    the information of $\rho$; in doing so, we sin as heinously yet conveniently as when we refer
+    to a group by its underlying set.  We thus speak of a representation's <b>dimension</b> and subspaces
+    and so forth.
 <p>
     For example, if $G$ acts on a set $X$, then this action induces a representation of $G$ on the
-    free vector space $\CC^X$.  Concretely, this means that each element
+    free vector space $\FF^X$.  Concretely, this means that each element
     $g\in G$ maps to a permutation matrix.  Thus, though every vector space is a set (via the
     forgetful functor) and thus representation theory a special case of group action theory, 
     we can also say that, because every set generates a vectorspace (via the free functor), that
     group action theory is a special case of representation theory.  As a special case, if $X=G$
-    and $G$ acts on $X$ by left multiplication, then we obtain a representation of $G$ on $\CC^G$
-    --- this is the <b>regular representation</b>. 
+    and $G$ acts on $X$ by left multiplication, then we obtain a representation of $G$ on $\FF^G$:
+    the <b>regular representation</b>. 
 <p>
-<h4>  Finite Cyclic Groups </h4>
-    Not all representations have permutation-matrix form: let $G = \ZZ/n\ZZ$ act on the
-    1-dimensional complex vectorspace $V=\CC^1$ by $\pi_\eta(g)(v) = \eta^g v$, where $\eta$ is a fixed
-    $n$th
-    root of unity.  The corresponding matrices have shape 1-by-1 and entry $\eta^g$.  It's easy to
-    show that the representations of $\ZZ/n\ZZ$ on 1-dimensional complex vector spaces are in
-    correspondence with the $n$ different $n$th roots of unity. 
+    We will focus on the case where $G$ is finite, $\FF=\CC$, and $V$ has finite dimension.
 <p>
-    From the $\pi_\eta$ s, we can form higher-dimensional representations via direct sum.  To perform
-    <b>direct sum</b> on representations of a fixed group $G$, just perform it on their underlying vector
-    spaces and let $G$ act componentwise.  In fact, all finite-dimensional representations
-    of $\ZZ/n\ZZ$ arise this way!  Of course, to understand what the previous sentence means, we
-    must define what it means for two representations to be the same.  Well,  a <b>homomorphism</b> of
-    representations is just a homomorphism of vector spaces that commutes with the group action.
-    And an <b>isomorphism</b> is a bijective homomorphism --- it's easy to show that its inverse will
-    also be a homomorphism.  Then the <b>direct sum</b> we defined earlier is just a coproduct in the
-    resulting category.  In short, we claim:
+<h4>  Example: Finite Abelian Groups </h4>
+    Not all representations have permutation-matrix form: let $G = \ZZ/n\ZZ$ act on $V=\CC^1$ by
+    $\pi_\eta(g)(v) = \eta^g v$, where $\eta$ is an $n$th root of unity.  The corresponding matrices
+    have shape 1-by-1 and entry $\eta^g$.  It's easy to show that the 1-dimensional representations
+    of $\ZZ/n\ZZ$ correspond bijectively to the $n$ different $n$th roots of unity. 
+<p>
+    We obtain higher-dimensional representations by direct summing the $\pi_\eta$s.  In fact, all
+    finite-dimensional representations of $\ZZ/n\ZZ$ arise this way: 
 <p>
     <b>Theorem M</b>:
-    <em> Each finite-dimensional representation $\pi$ of $G=\ZZ/n\ZZ$ is isomorphic to some </em>
-    <em> $\bigoplus_i \pi_{\eta_i}$. </em> 
+    <em> Each finite-dimensional representation $\pi:G\to \Aut(V)$ of $G=\ZZ/n\ZZ$ is isomorphic to some $\bigoplus_i \pi_{\eta_i}$. </em> 
 <p>
     <b>Proof</b>: 
-        If $g\in G$, then $\pi(g)^n=I$ is the identity.  However, a consideration of
-        Jordan Normal Form shows that this is possible only if $\pi(g)$ is diagonalizable.
-        Moreover, since $G$ is abelian, the $\pi(g)$s all commute.
-        Now, if a set of diagonalizable operators all commute, then there exists a basis that 
-        simultaneously diagonalizes all of them.  This basis gives the decomposition we seek.
+        If $g\in G$, then $\pi(g)^n=I$ is the identity.  However, Jordan Normal Form shows that this is possible only if
+        $\pi(g)$ is diagonalizable.  Moreover, since $G$ is abelian, the $\pi(g)$s all commute.  If a finite set of diagonalizable
+        operators all commute, then there exists a basis that simultaneously diagonalizes all of them.
+        This basis gives the decomposition we seek.
     (end of Proof)
 <p>
     In fact, the proof shows that whenever $G$ is a finite abelian group, then its finite-dimensional
-    representations into 1-dimensional representations.
+    representations decompose into 1-dimensional representations.  However, since $\Aut(V)=\CC^\star$ is abelian
+    when $V$ has dimension $1$, the image of a $\rho:G\to\Aut(V)$ must be abelian, even if $G$ is not abelian,
+    whenever $\rho$ is a sum of 1-dimensional representations.  However, the regular representation is an
+    injective homomorphism; we conclude that the regular representation of any non-abelian group does
+    not decompose into 1-dimensional representations.
+<p>
+    Let us call representations that are not direct sums <b>irreducible</b>.  We see that when $G$ is abelian,
+    every irreducible has dimension $1$.  MORE 
+<p>
+<h4>  Example: Nonabelian $S_3$ </h4>
+    Consider the left-regular representation $V$ of $S_3$.  This has $6$ dimensions.
+    by permuting the basis elements.  We see that $V$ decomposes into  
+<p>
+<h4>  Penrose String Notation </h4>
 <p>
 <h4>  Irreducible Representations and Maschke's Theorem  </h4>
-<p>
+    If $G$ is a group with irreps $\{W_i\}$, then a representation $V$ is written in <b>Maschke form</b>
+    when it is written as $V \cong \bigoplus_i W_i^{\oplus m_i}$ for non-negative naturals $m_i$. 
+    representation $V$ is  
+    <b>Theorem (Maschke)</b>:
+    <em> Every finite-dimensional representation of a finite group $G$ over $\CC$ can be written in Maschke form. </em>
+    <em> Moreover, the UNIQUENESS </em>
 <p>
 <h4>  Some Basic Questions and Answers </h4>
     <b>How many irreducible representations does $G$ have?</b> If $G$ is finite, then finitely many;
     this we will see soon. 
 <p>
-<p>
 <h3>  Characters </h3>
 <h4>  Schur Orthogonality </h4>
     What are the irreps of a given group? 
-<p>
-<h4>  Penrose String Notation </h4>
 <p>
 <h3>  Harmonic Theory  </h3>
 <h3>  Compact Groups and Haar Measure  </h3>
