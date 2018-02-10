@@ -60,14 +60,14 @@ $\newcommand{\from}{\leftarrow}$
     Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, it makes sense
     to generalize the notion of "flat manifold".  Since the morphisms of flat manifolds are isometries,
     we'd like to consider a larger collection of metric spaces as manifolds.  However, by insisting that
-    the global metric $\delta:M^2\to [0,\infty]$ be smooth, we rule out desirable examples such as
+    the global metric $\delta:M^2\to [0,\infty]$ be smooth, we would rule out desirable examples such as
     the circle.  Indeed, the arclength metric on $S^1$ is not smooth when evaluated between antipodal points.
-    Our eventual definition will be equivalent to the following: a *Riemannian manifold* is a smooth
-    manifold together with a global metric $\delta:M^2\to [0, \infty]$ that induces the topological
-    structure and is %locally smooth%.  That is, for any $p\in M$, there must exist a neighborhood
+    Our eventual definition will be equivalent to the following: a *Riemann(ian) manifold* is a smooth
+    manifold together with a global metric $\delta:M^2\to [0, \infty]$ that induces the original topology
+    and that is %locally smooth%.  That is, for any $p\in M$, there must exist a neighborhood
     $p\in U\subseteq M$ such that $\delta|_{U^2}$ is smooth.  The morphisms will be smooth isometries. 
 
-!! Riemann Manifolds
+!! Local Metrics
 
     To move from topology to geometry, we need concepts such as *length*, *angle*, and *volume*.
     It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
@@ -98,8 +98,6 @@ $\newcommand{\from}{\leftarrow}$
     vectors along a curve.  And by subtracting, we may *covariantly differentiate* a vector field
     with respect to another vector. 
 
-!!! Metric: Globally and Locally
-
 !!! Is Every Space Flat?
     $\RR$ and $S^1$ have flat structures, so $\RR^n \times (S^1)^m$ has flat structure.
     But the sphere $S^2$ has no flat structure.  Moreover, though every metric structure on $\RR^1$ is
@@ -109,6 +107,10 @@ $\newcommand{\from}{\leftarrow}$
 !!! The Levi Civita Connection
 !!! The Exponential Map
 !!! Curvature 
+!!! Jacobi Fields 
+
+!! Application to General Relativity
+!! Application to Information Geometry 
 
 !! Appendix: Differential Topology
 
