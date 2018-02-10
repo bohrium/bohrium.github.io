@@ -1,0 +1,277 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css">
+        <script type="text/x-mathjax-config">   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"> </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+            <h2>Eraser</h2>
+
+            Arghh! Whenever I photograph a drawing, it turns out all dark --- and not even uniformly so!
+            <p>
+                <figure style="text-align:center">
+                    <img src="../images/eraser/Hokusai.bmp" alt="Copy of WIND by the great print-maker Hokusai">
+                </figure>
+                <figcaption style="text-align:center">copy of WIND by the great print-maker Hokusai</figcaption>
+            <p>
+            So I wrote <a href="https://github.com/samueltenka/Eraser" target="_blank">a program</a> to guess how much is paper:
+            <p>
+                <figure style="text-align:center">
+                    <img src="../images/eraser/STEP_1500.bmp" alt="Copy of WIND by the great print-maker Hokusai">
+                </figure>
+                <figcaption style="text-align:center">estimated lighting artifacts</figcaption>
+            <p>
+            and how much is drawing:
+            <p>
+                <figure style="text-align:center">
+                    <img src="../images/eraser/Hokusai_wo_unblurredpaper.png" alt="Copy of WIND by the great print-maker Hokusai">
+                </figure>
+                <figcaption style="text-align:center">cleaned drawing</figcaption>
+            <p>
+            Wow! I'm surprised it worked!  I barely had to change my initial guess at an algorithm; mainly, I just converted
+            previously integer arithmetic to floating point so I could mess around with tiny timesteps . . . speaking of which,
+            <i>yeah, how does it work</i>?
+            <p>
+            This way: to find out how the image looks like erased, we physically simulate a sheet of cloth, which "falls down"
+            on the graph of the image, where white is high and black, low.  Tension in the fabric will prevent it from filling
+            black valleys, so we'll get some surface that fits neatly on the highest parts of the image, but that remains far
+            above low parts.  In other words, we will have whitened out the black areas in a smooth way consistent with the bad
+            lighting of the white areas.  The fabric is then a graph of the paper beneath the drawing!
+            <p>
+                <figure style="text-align:center">
+                    <img src="../images/eraser/graph_1_cropped_wo_paper.png" alt="Copy of WIND by the great print-maker Hokusai">
+                </figure>
+                <figcaption style="text-align:center">decomposition of a 1D image into foreground and background</figcaption>
+            <p>
+            <p>
+                <figure style="text-align:center">
+                    <img src="../images/eraser/graph_2_cropped_wo_paper.png" alt="Copy of WIND by the great print-maker Hokusai">
+                </figure>
+                <figcaption style="text-align:center">convergence of iterative approximations</figcaption>
+            <p>
+ 
+            In particular, we want to minimize the energy $V:\text{bitmaps} \to \mathbb{R}$:
+                $$\text{to do} = \text{fall down} + \text{catch on original} + \text{don't warp}$$
+                $$V(p) = m p + k \min\{0, \, (p-\text{original})\}^2 + s (\nabla^2 p)^2$$
+            and so descend by gradient
+                $$\text{paper} \leftarrow \text{paper} - \epsilon \nabla V(\text{paper})$$ as the following slides show:
+
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+                <div style="text-align: center;">
+                    <button onclick="skipBackward()">Previous</button> <button onclick="skipForward()">Next</button>
+                </div>
+                <div id="index" style="text-align: center;">
+                </div>
+                <div style="text-align: center;">
+                    <img id="myImage" style="border: none;" />
+                </div>
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+
+            Then we're essentially done: assuming the paper was intrinsically white, all darkness in its image must come from
+            low lighting, meaning we just have to scale the brightnesses up:
+                $$\text{drawing} = \text{original} \cdot \frac{255}{\text{paper}}$$
+            Finally, we clean up a little by rounding all pixels sufficiently bright ($&gt; 248$) to $255$ --- full white.
+
+            Tada!
+
+            Although I didn't end up revising the algorithm, I <i>did </i>have a lot of trouble adjusting the stiffness $s$.
+            We want our paper very stiff, that is, at-most-gently curved, so as not to overfit the drawing.  Real images of paper
+            seem very stiff. But great stiffness requires a tiny timestep, or we'll overshoot!  Indeed, some pretty cool
+            artifacts appear when we use $n = 200$, timesteps of $\epsilon = 0.1$, $m = 10, k = 100$, and varying $s$:
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+                <br />
+                <div style="text-align: center;">
+                    <button onclick="skipBackward_s()">Previous</button> <button onclick="skipForward_s()">Next</button>
+                </div>
+                <div id="index_s" style="text-align: center;">
+                </div>
+                <div id="comment_s" style="text-align: center;">
+                </div>
+                <div style="text-align: center;">
+                    <img id="myImage_s" style="border: none;" />
+                </div>
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+
+            Worry not!  Using a finer $n = 1500$, $\epsilon = 0.02$, with stiffer $m, k, s = 10, 100, 30$, our paper is smooth
+            and we get such images as:
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+                <div style="text-align: center;">
+                    <button onclick="flip()">Flip</button>
+                </div>
+                <div style="text-align: center;">
+                    <img id="myImage3" style="border: none;" />
+                </div>
+            <!-- BUTTONS --> <!-- BUTTONS --> <!-- BUTTONS -->
+
+            That's another copy of a Hokusai sketch, this time Manga 28-3-L.
+            Tada!
+
+            <!-- CODE --> <!-- CODE --> <!-- CODE -->
+            <script>
+            
+                ///////////////////////
+                //
+                //    TIME VARYING
+                //
+                ///////////////////////
+                
+                var filenames =
+                [
+                    "../images/eraser/STEP_0000.jpg", 
+                    "../images/eraser/STEP_0100.jpg", 
+                    "../images/eraser/STEP_0200.jpg", 
+                    "../images/eraser/STEP_0300.jpg", 
+                    "../images/eraser/STEP_0400.jpg", 
+                    "../images/eraser/STEP_0500.jpg", 
+                    "../images/eraser/STEP_0600.jpg", 
+                    "../images/eraser/STEP_0700.jpg", 
+                    "../images/eraser/STEP_0800.jpg", 
+                    "../images/eraser/STEP_0900.jpg", 
+                    "../images/eraser/STEP_1000.jpg", 
+                    "../images/eraser/STEP_1100.jpg", 
+                    "../images/eraser/STEP_1200.jpg", 
+                    "../images/eraser/STEP_1300.jpg", 
+                    "../images/eraser/STEP_1400.jpg", 
+                    "../images/eraser/STEP_1500.bmp" 
+                ];
+                var index = 0;
+                
+                showImage()
+                
+                function showImage()
+                {
+                    document.getElementById("myImage").src = filenames[index];
+                    document.getElementById("index").innerHTML = "Steps so far: " + index*100; // automatic int-to-string conversion
+                }
+                
+                // left/right:
+                function skipForward() {
+                    if(index + 1 < filenames.length)
+                    {
+                        index += 1;
+                    }
+                
+                    showImage();
+                }
+                function skipBackward() {
+                    if(index - 1 >= 0)
+                    {
+                        index -= 1;
+                    }
+                
+                    showImage();
+                }
+                
+                ////////////////////////////
+                //
+                //    STIFFNESS VARYING
+                //
+                ////////////////////////////
+                
+                // initialize:
+                var filenames_s =
+                [
+                    "../images/eraser/Hokusai_Paper_0000.jpg", 
+                    "../images/eraser/Hokusai_Paper_0100.jpg", 
+                    "../images/eraser/Hokusai_Paper_0500.jpg", 
+                    "../images/eraser/Hokusai_Paper_0600.jpg", 
+                    "../images/eraser/Hokusai_Paper_0700.jpg", 
+                    "../images/eraser/Hokusai_Paper_0725.jpg", 
+                    "../images/eraser/Hokusai_Paper_0750.jpg", 
+                    "../images/eraser/Hokusai_Paper_0775.jpg", 
+                    "../images/eraser/Hokusai_Paper_0800.jpg", 
+                    "../images/eraser/Hokusai_Paper_1000.jpg", 
+                    "../images/eraser/Hokusai_Paper_3000.jpg", 
+                    "../images/eraser/Hokusai_Paper_5000.jpg"
+                ];
+                var stiffnesses =
+                [
+                     0.0,
+                     1.0,
+                     5.0,
+                     6.0,
+                     7.0,
+                     7.25,
+                     7.5,
+                     7.75,
+                     8.0,
+                    10.0,
+                    30.0,
+                    50.0,
+                ];
+                var comments = 
+                [
+                "With no stiffness, the paper completely conforms to the original image.", 
+                "A little stiffness goes a long way, because energy's quadratic. The black depressions of the maple leaves are now smoothed out.", 
+                "Wait. What's this mysterious speckling?!", 
+                "Notice the monk's robe shrinking and lifting toward white.", 
+                "The speckles, now great in number, reveal a grid pattern!", 
+                "We must be at a phase transition: as stiffness increases, the paper crystallizes!", 
+                "Woah! Domains of alternating lines partition the image. Under this coarse timestep, stiff standing waves resonate with the negative feedback of gradient descent.", 
+                "As we leave resonance, there isn't enough time for large domains to assemble, I think.", 
+                "At this point, only the loudest features of the original image remain: a value gradient slashing diagonally, and the large darkness of the monk's robe.", 
+                "Do we see a return to structure, an increase in domain size?", 
+                "It seems we've hit a higher harmonic, one allowing diagonal domains, and consequently almost circular waves!", 
+                "We'll stop here, since it's clear this won't ever look anything like real paper.", 
+                ];
+                var index_s = 0;
+                
+                showImage_s()
+                
+                function showImage_s()
+                {
+                    document.getElementById("myImage_s").src = filenames_s[index_s];
+                    document.getElementById("index_s").innerHTML = "s = " + stiffnesses[index_s]; // automatic int-to-string conversion
+                    document.getElementById("comment_s").innerHTML = comments[index_s]; // automatic int-to-string conversion
+                }
+                
+                // left/right:
+                function skipForward_s() {
+                    if(index_s + 1 < filenames_s.length)
+                    {
+                        index_s += 1;
+                    }
+                
+                    showImage_s();
+                }
+                function skipBackward_s() {
+                    if(index_s - 1 >= 0)
+                    {
+                        index_s -= 1;
+                    }
+                
+                    showImage_s();
+                }
+                
+                ///////////////////////////////
+                //
+                //    ORIGINAL/DRAWING FLIP
+                //
+                ///////////////////////////////
+                
+                var filenames3 =
+                [
+                    "../images/eraser/Hokusai2.jpg", 
+                    "../images/eraser/Hokusai2_wo_paper.jpg"
+                ];
+                var index3 = 0;
+                
+                showImage3()
+                
+                function showImage3()
+                {
+                    document.getElementById("myImage3").src = filenames3[index3];
+                }
+                
+                function flip() {
+                    index3 += 1;
+                    index3 %= 2;
+                
+                    showImage3();
+                }
+             </script>
+        <!-- CODE --> <!-- CODE --> <!-- CODE -->
+    </body>
+</html>
