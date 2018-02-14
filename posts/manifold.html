@@ -71,16 +71,18 @@ $\newcommand{\from}{\leftarrow}$
 <h4>  Riemann Manifolds </h4>
     Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, it makes sense
     to generalize the notion of "flat manifold".  Since the morphisms of flat manifolds are isometries,
-    we'd like to consider a larger collection of metric spaces as manifolds.  However, by insisting that
-    the global metric $\delta:M^2\to [0,\infty]$ be smooth, we would rule out desirable examples such as
-    the circle.  Indeed, the arclength metric on $S^1$ is not smooth when evaluated between antipodal points.
+    we'd like to consider a larger collection of metric spaces as manifolds.  The question is:
+    <em>how do we specify how the metric and smooth structures should agree</em>?  Even for $\RR^n$, the 
+    global metric $\delta:M^2\to [0, \infty]$ itself isn't smooth (at $(p, p)\in M^2$), so we shouldn't
+    insist that $\delta$ be smooth.  How about $\delta^2$?  Well, even for $S^1$, the squared metric
+    $\delta^2$ isn't smooth.  
+    Indeed, the arclength metric on $S^1$ is not smooth when evaluated on an antipodal pair $(p, -p)\in M^2$.
     Our eventual definition will be equivalent to the following: a <b>Riemann(ian) manifold</b> is a smooth
-    manifold together with a global metric $\delta:M^2\to [0, \infty]$ that induces the original topology
-    and that is <em>locally smooth</em>.  That is, for any $p\in M$, there must exist a neighborhood
-    $p\in U\subseteq M$ such that $\delta|_{U^2}$ is smooth.  The morphisms will be smooth isometries. 
+    manifold together with a global metric $\delta:M^2\to [0, \infty]$ whose square is <em>locally smooth</em>.
+    That is, for any $p\in M$, there must exist a neighborhood $p\in U\subseteq M$ such that $\delta^2|_{U^2}$ is
+    smooth.  The morphisms will be smooth isometries. 
 <p>
 <h3>  Local Metrics </h3>
-<p>
     To move from topology to geometry, we need concepts such as <b>length</b>, <b>angle</b>, and <b>volume</b>.
     It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
     isometry of Euclidean space also preserves angles and has determinant $\pm 1$.
