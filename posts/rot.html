@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+        
+<p>
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h2>  Gyros & Spinors & Qubits (Oh My!) </h2>
+<h5>  A Revolutionary Account of Rotations of 3D Space </h5>
+<h5>  A Battle with Signs and Cosines  </h5>
+<h5>  by Samuel Tenka </h5>
+<p>
+<h3>  Rotations Don't Commute </h3>
+<em> While preparing dinner, I once accidentally read the microwave instructions </em>
+<em> upside-down.  My dinner ended up colder than room-temperature. </em>
+<p>
+<h4>  $SO(3)$  </h4>
+    Consider the vector space $\RR^3$.  Up to isomorphism, there is a unique inner product
+    and a unique orientation of this space.  We thus define the topological group $SO(3)$
+    to be the subgroup of $GL(\RR^3)$ of maps that preserves inner product and orientation.
+<p>
+    $SO(3)$ is $3$-dimensional and non-abelian.  Indeed, we will soon see that the elements 
+    of $SO(3)$ are precisely the rotations about lines through the origin.
+<p>
+<h5>  ... consists of Rotations about Lines  </h5>
+    <b>Prop A</b>: Each non-identity $T\in SO(3)$ fixes a unique line pointwise --- this is its <b>axis</b>.
+<p>
+    <b>Proof</b>: <em>Existence</em>: $T$'s characteristic polynomial $p\in \RR[z]$ is cubic.
+    Since $p$ has real coefficients, $p$'s three roots must have form $\lambda, z, \bar{z}$, where $\lambda$ is real.
+    Since $T$ preserves orientation, $p$'s three roots multiply to $1$, so $\lambda$ is positive.
+    Since $T$ preserves norm, every real root must square to $1$, so $\lambda=1$.  The corresponding
+    eigenspace contains a desired fixed line.
+    <em>Uniqueness</em>: if $T$ fixes two distinct lines pointwise, then two of $p$'s eigenvalues are $1$.
+    Thus, all of $T$'s eigenvalues are $1$.  Since $T$ is orthogonal (hence normal), $T$ is complex-diagonalizable
+    and therefore the identity. 
+<p>
+    <b>Corollary</b>: Since $T$ preserves angles, it must stabilize the plane perpendicular to 
+    its axis.  $T$ acts on this plane orthogonally, hence by a rotation through angle $\theta$.  
+    When $\theta \notin \pi \ZZ$, $T$ stabilizes no lines besides its axis. 
+<p>
+<h5>  ... is not Abelian </h5>
+    <b>Prop B</b>: If abelian $G$ acts on $X$, then the $g$s with unique fixed points
+    all share the same fixed point.
+<p>
+    <b>Proof</b>: If $r, s\in G$ have unique fixed points $x_r, x_s\in X$, then 
+    $s x_r = r s r^{-1} x_r = r s x_r$, whence uniqueness of $x_r$ tells us that $s x_r = x_r$.
+    So $x_r$, a fixed point of $s$, is equal to $x_s$.
+<p>
+    <b>Corollary of Props A and B</b>: Consider the action of $SO(3)$ on the set of lines.
+    Every rotation through angle $\theta\notin \pi\ZZ$ fixes a unique line, but no line
+    is fixed by all such rotations.  It follows that $SO(3)$ is non-abelian.
+<p>
+<h5>  ... is a 3-Dimensional Manifold </h5>
+    <b>Corollary of Prop A and its Corollary</b>: The smooth map $f:S^2\times S^1 \to GL(\RR^3)$
+    that, given axis $a\in S^2$ and angle $\theta\in S^1$, returns a counterclockwise
+    rotation about axis $a$ by angle $\theta$, has image $SO(3)\subseteq GL(\RR^3)$.
+    Moreover, $f$ is an immersion.  In fact, $f$ is a double cover: $f(a, \theta)=f(-a, -\theta)$,
+    $f(a, 0) = f(a', 0)$
+    are the only redundancies.  Thus, $SO(3)$ is a manifold with the same dimension as $S^2\times S^1$.
+<p>
+<h5>  ... is not Simply Connected </h5>
+<p>
+<h4>  $\RR^3$, Hodge Star, and $SO(3)$  </h4>
+    Moreover, fixing an orientation on $\RR$, we
+<p>
+<h4>  Reals, Complexes, Quaternions, Octonions  </h4>
+<h4>  Representations of $SU(2)$; Clebsch Gordan </h4>
+<h4>  Spherical Harmonics </h4>
+<h4>  Gyroscopes and Coriolis Effect and Gimbal Lock  </h4>
+<h4>  Looking at a Mirror.  Hairy Ball.  </h4>
+<p>
+<p>
+    </body>
+</html>
