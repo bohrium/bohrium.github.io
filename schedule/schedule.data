@@ -1,12 +1,12 @@
         SAT             SUN             MON              TUE             WED             THU             FRI
 08:00   .               r                .               .               .               .               .
 08:30   .               r                .               .               .               .               .
-09:00   .               r                .               .               .               .               .
-09:30   .               rarrive_urbana   .               .               .               gCS_bfast       .
-10:00   .               rshuttle_hotel   g               gcheckout       .               g               gCS_bfast     
+09:00   .               r                .               .               gdentist?       .               .
+09:30   .               rarrive_urbana   .               .               g               gCS_bfast       .
+10:00   .               rshuttle_hotel   g               gcheckout       g               g               gCS_bfast     
 10:30   .               gRSVPTueShuttle  g               rshuttle_port   .               gfaculty_meets  gcampus_tour
-11:00   .               .                garea_session   .               .               g               g 
-11:30   .               .                g               rdepart_urbana  .               g               .    
+11:00   .               .                garea_session   .               grenew_license  g               g 
+11:30   .               .                g               rdepart_urbana  g               g               .    
 12:00   gangelo's_dean  .                gstudent_meet   r               .               g               gNYC!
 12:30   .               .                .               r               .               glunch          g 
 13:00   .               rshuttle_UIUC    gheffernan_call r               .               g               g       

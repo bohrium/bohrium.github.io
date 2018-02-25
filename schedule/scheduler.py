@@ -1,7 +1,20 @@
 # author: samtenka
-# change: 2018-01-21
+# change: 2018-02-24
 # create: 2018-01-21
 # descrp: generate html table for schedule
+# usage: Ensure the following files are in your directory:
+#            A. scheduler.py
+#            B. schedule.data
+#            C. schedule_template.html 
+#        Then run `python scheduler.py NAME_OF_OUTPUT_FILE.html` 
+#
+#        Note that cell colors are denoted by a single-character prefix
+#        among (b(lue), g(reen), c(yan), r(ed), m(agenta), and y(ellow)).
+#        Use underscores instead of spaces in cell names.  See an sample 
+#        schedule, for instance `schedule_2018-02-17.data`, for illustrations.
+
+from sys import argv
+out_name = argv[1]
 
 with open('schedule.data') as f:
     lines = filter(None, f.read().split('\n'))[1:]
@@ -37,6 +50,6 @@ def print_table(lines):
 with open('schedule_template.html') as f:
     text = f.read()
 
-with open('../schedule.html', 'w') as f:
+with open(out_name, 'w') as f:
     f.write(text.replace('TABLE', print_table(lines)))
 
