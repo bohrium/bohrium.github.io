@@ -6,7 +6,7 @@
 #            A. scheduler.py
 #            B. schedule.data
 #            C. schedule_template.html 
-#        Then run `python scheduler.py NAME_OF_OUTPUT_FILE.html` 
+#        Then run `python scheduler.py schedule.data NAME_OF_OUTPUT_FILE.html` 
 #
 #        Note that cell colors are denoted by a single-character prefix
 #        among (b(lue), g(reen), c(yan), r(ed), m(agenta), and y(ellow)).
@@ -14,9 +14,9 @@
 #        schedule, for instance `schedule_2018-02-17.data`, for illustrations.
 
 from sys import argv
-out_name = argv[1]
+in_name, out_name = argv[1:3]
 
-with open('schedule.data') as f:
+with open(in_name) as f:
     lines = filter(None, f.read().split('\n'))[1:]
 
 def print_cell(token):
