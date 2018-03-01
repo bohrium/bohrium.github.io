@@ -1,14 +1,14 @@
         SAT             SUN             MON              TUE             WED             THU             FRI            
 08:00   .               rarrive_chicago  .               .               .               .               .            .07:00 
 08:30   .               .                .               .               .               .               .            .07:30
-09:00   .               .                gwelcome_info   .               gdentist?       r→Columbia      .            .08:00
-09:30   .               .                g               .               g               gCS_bfast       r→Columbia   .08:30
-10:00   .               .                gsubfield_presn gcheckout       g               g               gCS_bfast    .09:00
-10:30   .               gbarbara's_books g               rshuttle_port   .               gdavid_blei     gcampus_tour .09:30
+09:00   .               .                gwelcome_info   .               .               r→Columbia      .            .08:00
+09:30   .               .                g               .               .               gCS_bfast       r→Columbia   .08:30
+10:00   .               .                gsubfield_presn gcheckout       .               g               gCS_bfast    .09:00
+10:30   .               gbuy_books       g               rshuttle_port   .               gdavid_blei     gcampus_tour .09:30
 11:00   .               .                gAI_session     .               grenew_license  gcarl_vondrick  g            .10:00
 11:30   .               .                g               rdepart_urbana  g               geugene_wu      .            .10:30
-12:00   gangelo's_dean  .                gstudent_meet   r               .               glydia_chilton  r→116.Broad  .11:00
-12:30   g               .                .               r               .               glunch          gharry_zhao  .11:30
+12:00   gangelo's_dean  .                gstudent_meet   r               g               glydia_chilton  r→116.Broad  .11:00
+12:30   g               .                .               r               g               glunch          gharry_zhao  .11:30
 13:00   g               .                gheffernan_call rarrive_chicago .               g               g            .12:00
 13:30   .               .                g               .               .               .               g            .12:30
 14:00   .               .                gfaculty_lunch  .               .               .               g            .13:00
