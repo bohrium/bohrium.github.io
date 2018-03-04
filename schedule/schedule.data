@@ -1,29 +1,30 @@
-        SAT             SUN             MON              TUE             WED             THU             FRI            
-08:00   .               rarrive_chicago  .               .               .               .               .            .07:00 
-08:30   .               .                .               .               .               .               .            .07:30
-09:00   .               .                gwelcome_info   .               .               r→Columbia      .            .08:00
-09:30   .               .                g               .               .               gCS_bfast       r→Columbia   .08:30
-10:00   .               .                gsubfield_presn gcheckout       .               g               gbrian_tour  .09:00
-10:30   .               gbuy_books       g               rshuttle_port   .               gdavid_blei     g            .09:30
-11:00   .               .                gAI_session     .               grenew_license  gcarl_vondrick  geugene_carl .10:00
-11:30   .               .                g               rdepart_urbana  g               geugene_wu      g            .10:30
-12:00   gangelo's_dean  .                gstudent_meet   r               g               glydia_chilton  r→116.Broad  .11:00
-12:30   g               .                .               r               g               glunch          gharry_zhao  .11:30
-13:00   g               .                gheffernan_call rarrive_chicago .               g               g            .12:00
-13:30   .               .                g               .               .               .               g            .12:30
-14:00   .               .                gfaculty_lunch  .               .               .               g            .13:00
-14:30   .               rbus_champaign   gfaculty_panel  .               .               gdaniel_hsu     g            .13:30
-15:00   .               r                g               rdepart_chicago .               gtheo.-ai_panel g            .14:00
-15:30   .               r                .               r               .               g               g            .14:30
-16:00   .               r                gforsyth        r               .               ghousing_tour   g            .15:00
-16:30   .               r                gtelgarsky      rarrive_detroit .               g               g            .15:30
-17:00   .               r                g               rshuttle_MSU    rto_airport     .               r            .16:00
-17:30   .               r                g               r               .               .               gthe_alex    .16:30
-18:00   rparent_pickup  gcheckin_hotel   ggrad_lounge    r               .               gfaculty_dinner g            .17:00
-18:30   ghaircut        r→UIUC           r→hotel         rarrive_MSU     rdepart_detroit g               r→84th.1st   .17:30
-19:00   .               ggrad_dinner     gfancy_dinner   gbrian_pinsky   r               g               grosenberg   .18:00
-19:30   gdinner         g                g               g               r               g               g            .18:30
-20:00   g               g                g               gdinner         r               .               g            .19:00
-20:30   .               gnight_tour      .               g               rarrive_NYC     .               r            .19:30
-21:00   .               ghappy_hour      .               r→home          rtaxi_hotel     .               .            .20:00
-21:30   .               .                .               r               .               .               .            .20:30
+        SAT             SUN             MON             TUE             WED             THU             FRI            
+07:30   .               .               gbfast          gbfast          .               .               .               
+08:00   .               .               .               gcheckout       .               .               .               
+08:30   .               .               rto_campus      rto_campus      .               .               .               
+09:00   .               .               gcs_overview    .               .               .               .               
+09:30   .               .               .               g_priya_donti   gwelcome        .               .               
+10:00   rto_airport     .               gnihar_shah     .               .               .               .               
+10:30   .               .               .               rto_airport     .               .               .               
+11:00   .               .               gtai-sing_lee   .               .               .               .               
+11:30   rdepart_nyc     .               g               .               .               .               .               
+12:00   r               .               gAI_lunch       .               gml_lunch       .               rdepart_boston  
+12:30   rarrive_detroit rto_airport     g               rdepart_pitts   g               .               r               
+13:00   r               .               g               r               .               .               r               
+13:30   .               .               ggrad_research  r               .               .               rarrive_dc      
+14:00   .               rdepart_detroit g               rarrive_boston  gfreeman        .               .               
+14:30   .               r               gd_toureztky    .               gdaskalakis     .               .               
+15:00   .               rarrive_pitts   gv_nagarajan    .               gtenenbaum      .               rdepart_dc      
+15:30   .               rto_hotel       gdavid_held     .               gdaskalakis     .               r               
+16:00   .               .               gb_lengerich    .               .               gtorralba       r               
+16:30   .               .               gt_sandholm     .               gkaelbling      .               rarrive_detroit 
+17:00   .               .               gopen_office_hs .               greception      .               .               
+17:30   .               .               g               .               gml_dinner      .               .               
+18:00   .               ghotel_dinner   gdptmnt_dinner  gjanner.dobson  g               .               .               
+18:30   .               .               g               g               g               .               .               
+19:00   .               .               g               g               .               .               .               
+19:30   .               .               g               g               .               .               .               
+20:00   .               .               rto_hotel       .               .               .               .               
+20:30   .               .               .               .               .               .               .               
+21:00   .               .               .               .               .               .               .               
+21:30   .               .               .               .               .               .               .               
