@@ -1,7 +1,7 @@
         SAT             SUN             MON             TUE             WED             THU             FRI            
-07:30   .               .               gbfast          gbfast          .               .               .               
-08:00   .               .               .               gcheckout       .               .               .               
-08:30   .               .               rto_campus      rto_campus      .               .               .               
+07:30   .               .               gbfast          gbfast/checkout .               .               .               
+08:00   .               .               .               r_to_campus     .               .               .               
+08:30   .               .               rto_campus      gzico_kolter    .               .               .               
 09:00   .               .               gcs_overview    .               .               .               .               
 09:30   .               .               .               g_priya_donti   gMIT_welcome    .               gcheckout       
 10:00   rto_airport     .               gnihar_shah     .               .               .               rto_airport     
@@ -14,11 +14,11 @@
 13:30   .               .               ggrad_research  r               .               c               rarrive_dc      
 14:00   .               rdepart_detroit g               rarrive_boston  gfreeman        c               .               
 14:30   .               r               gtoureztky      .               gdaskalakis     c               .               
-15:00   .               rarrive_pitts   gnagarajan      ccan_meet       gtenenbaum      c               rdepart_dc      
-15:30   .               rto_hotel       gdavid_held     c_(cambridge)   gdaskalakis     .               r               
+15:00   .               rarrive_pitts   gnagarajan      ccan_meet       g               c               rdepart_dc      
+15:30   .               rto_hotel       gdavid_held     c_(cambridge)   g               .               r               
 16:00   .               gcheckin        glengerich      c               .               gtorralba       r               
 16:30   .               .               gsandholm       gcheckin        gkaelbling      .               rarrive_detroit 
-17:00   .               .               gopen_office_hs .               greception      .               .               
+17:00   .               .               gopen_office_hs .               gtenenbaum      .               .               
 17:30   .               .               g               .               gml_dinner      .               .               
 18:00   .               ghotel_dinner   gdptmnt_dinner  gMSAIL_vidcall  g_-(janner?)    gmagdalen       .               
 18:30   .               .               g               g               g               g               .               
