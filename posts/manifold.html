@@ -74,13 +74,19 @@ $\newcommand{\from}{\leftarrow}$
     we'd like to consider a larger collection of metric spaces as manifolds.  The question is:
     <em>how do we specify how the metric and smooth structures should agree</em>?  Even for $\RR^n$, the 
     global metric $\delta:M^2\to [0, \infty]$ itself isn't smooth (at $(p, p)\in M^2$), so we shouldn't
-    insist that $\delta$ be smooth.  How about $\delta^2$?  Well, even for $S^1$, the squared metric
-    $\delta^2$ isn't smooth.  
-    Indeed, the arclength metric on $S^1$ is not smooth when evaluated on an antipodal pair $(p, -p)\in M^2$.
-    Our eventual definition will be equivalent to the following: a <b>Riemann(ian) manifold</b> is a smooth
-    manifold together with a global metric $\delta:M^2\to [0, \infty]$ whose square is <em>locally smooth</em>.
-    That is, for any $p\in M$, there must exist a neighborhood $p\in U\subseteq M$ such that $\delta^2|_{U^2}$ is
-    smooth.  The morphisms will be smooth isometries. 
+    insist that $\delta$ be smooth.  How about $\delta^2$?  Well, even for $S^1$, the squared arclength metric
+    $\delta^2$ isn't smooth when evaluated on an antipodal pair $(p, -p)\in M^2$.
+    Therefore, we consider only smooth manifolds equipped with metrics $\delta:M^2\to [0, \infty]$ whose square is
+    <em>locally smooth</em>.  That is, each point $p\in M$ must have a neighborhood $p\in U\subseteq M$ in which
+    $\delta^2|_{U^2}$ is smooth.  As a final constraint, we will want distances to measure lengths of paths: 
+<p>
+    $$\delta(x, y) = \inf_{x=x_0,x_1\cdots,x_n=y} \sum_{0\leq i \lt n} \delta(x_i, x_{i+1})$$
+<p>
+    In particular, the distance between points not connected by a path will by $\infty$.
+    One annoying aspect of this is that a smooth submanifold with induced metric might
+    fail to have this property.  We will ignore this annoying point. 
+<p>
+    The morphisms will be smooth isometries. 
 <p>
 <h3>  Local Metrics </h3>
     To move from topology to geometry, we need concepts such as <b>length</b>, <b>angle</b>, and <b>volume</b>.
@@ -115,11 +121,13 @@ $\newcommand{\from}{\leftarrow}$
     But the sphere $S^2$ has no flat structure.  Moreover, though every metric structure on $\RR^1$ is
     flat, some metric structures on $\RR^2$ are <b>curved</b>.
 <p>
-<h3>  Differential Geometry  </h3>
+<h3>  Local Geometric Concepts </h3>
 <h4>  The Levi Civita Connection </h4>
 <h4>  The Exponential Map </h4>
 <h4>  Curvature  </h4>
 <h4>  Jacobi Fields  </h4>
+<p>
+<h3>  Cool Theorems </h3>
 <p>
 <h3>  Application to General Relativity </h3>
 <h3>  Application to Information Geometry  </h3>

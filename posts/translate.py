@@ -1,9 +1,10 @@
 ''' author: samtenka
-    create: 2017-12-31
+    create: 2018-03-20
     change: 2017-12-22
     descr: implement an interpreter for Mookdown (my own markdown variant)
-    usage: run `python translate.py INFILE.mookdown OUTFILE.html` 
-           e.g.`python translate.py language.mookdown language.html` 
+    usage: run `python translate.py NAME` 
+           e.g.`python translate.py language` in order to translate
+            `language.mookdown` into `language.html`
 '''
 
 from sys import argv
@@ -49,6 +50,8 @@ def translate(text):
     return template.replace('BODY', html)
 
 if __name__=='__main__':
-    infile, outfile = argv[1:]
-    html = translate(open(infile).read())
-    open(outfile, 'w').write(html)
+    NAME, = argv[1:]
+    INFILE, OUTFILE = '%s.mookdown'%NAME, '%s.html'%NAME
+    html = translate(open(INFILE).read())
+    open(OUTFILE, 'w').write(html)
+    print('translated %s into %s' % (INFILE, OUTFILE))

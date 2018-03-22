@@ -1,14 +1,12 @@
 all:
-	python3 translate.py algtop.mookdown algtop.html
-	python3 translate.py geo.mookdown geo.html
-	python3 translate.py genfunc.mookdown genfunc.html
-	python3 translate.py quant.mookdown quant.html
-	python3 translate.py rep.mookdown rep.html
-	python3 translate.py modules.mookdown modules.html
-	python3 translate.py manifold.mookdown manifold.html
-	python3 translate.py quantcomp.mookdown quantcomp.html
-	python3 translate.py rando.mookdown rando.html
-
-boundary:
-	python3 translate.py boundary.mookdown boundary.html
-
+	python3 translate.py algtop
+	python3 translate.py boundary
+	python3 translate.py geo
+	python3 translate.py genfunc
+	python3 translate.py quant
+	python3 translate.py rep
+	python3 translate.py ml 
+	python3 translate.py modules
+	python3 translate.py manifold
+	python3 translate.py quantcomp
+	python3 translate.py rando

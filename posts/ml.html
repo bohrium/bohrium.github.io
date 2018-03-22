@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+        
+<p>
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h2>  Machine Learning for Math Majors   </h2>
+<h5>  Notes by Sam Tenka based on courses by Satinder Baveja and Jenna Wiens </h5>
+<p>
+<h3>  Linear Algebra  </h3>
+    <em>Who is the average Michigan student $A$?</em>
+<p>
+    Well, $A$ is 5-and-a-half feet tall and wears a medium T-shirt. This T-shirt is green, a sickly
+    mixture of maize and navy that recollects drowned crops; in slightly darker green is printed
+    "Michigan Solar Squirrel Ball Volunteer's Club", superposed against a logo of Rorschachian
+    ambiguity.  Among the pedestrians and bicyclists of Central Campus, $A$ travels on a unicycle.
+    Transportation matters: A's classes are all in the Nichols Arboretum between Central and North.
+    In those classes, $A$ always earns a C. Despite this, $A$ sometimes earns As.  $A$ enjoys
+    swimming for sport: 10-and-a-quarter laps at the pool, whereupon they find themselves stuck in
+    the liquid's middle.  $A$ swims at 1 yard per second but 2 seconds per yard, and at this meager
+    pace, still wins 8-contestant races one out of eight times.
+<p>
+    <b>Exercise</b>: Resolve the mystery of $A$'s speed by constructing an example.  That is, construct
+    a set of speeds that average to 1 but whose inverses average to 2.
+<p>
+    $A$'s story both inspires and warns.  It inspires because it shows that summarization is
+    possible: a few statistics can capture something of the flavor of campus life.  Does
+    Wikipedia's opening paragraph on the University even compete?  But it also warns us that
+    summarization may mislead by neglecting potentially crucial variety and by enabling logical
+    contradictions.
+<p>
+    With this double moral in mind, we note that linear relationships are simple enough to analyze
+    but powerful enough to model real data.  Combined with nonlinearities, those relationships
+    underlie Machine Learning techniques such as Support Vector Machines, Principal Component
+    Analysis, Gaussian Processes, and Neural Networks.  Let's learn how.
+<p>
+<h4>  Vectors are Data; Covectors are Features </h4>
+    In dealing with data, we would like to consider averages and analogies.  For instance, we'd
+    like to represent "the average Michigan student" or express that "queen is to woman as king is
+    to man".  Those notions are captured by (linear) relations, that is, equations between vectors
+    involving only addition and scaling.  For instance, imagine a vector space of concepts.
+    Here's a relation that might then hold:
+        $$queen − woman = king − man$$
+    Later, we’ll introduce more structure, allowing discussion of similarity between vectors and
+    hence of generalization.  All these ingredients come together into a language appropriate for
+    machine learning.  The language of linear algebra abstracts datapoints as elements of a vector
+    space.
+<p>
+    We now know to represent data as vectors, but this is only half the story. The other half is
+    the analysis of that data. Specifically, though we love vectors, we want plain numbers at the
+    end of the day. We want meaningful maps $f : \RR \from V$.  Such maps are called features.  For
+    instance, recall the queen analogy.  We might study the royalty feature: <tt>queen</tt> has royalty
+    level $1$, <tt>woman</tt> has royalty level $0$, and so on.  Crucially, the analogy between concepts
+    stays true of their royalty levels: $1 − 0 = 1 − 0$.  It is in this sense that a map
+    $f : \RR \from W$ has meaning: it preserves all linear relations, or equivalently, all weighted
+    averages.  When a function $f : \RR \from W$ preserves all linear relations, we call it a
+    (linear) feature.  Let $W^\star$ denote the set of linear features on $W$.  Then $W^\star$ is
+    also a vector space, called the dual of W.
+<p>
+<h4>  Inner Products control Generalization  </h4>
+<p>
+<p>
+<h4>  Perceptrons and SVMs  </h4>
+<h4>  Kernel Trick  </h4>
+<p>
+    </body>
+</html>
