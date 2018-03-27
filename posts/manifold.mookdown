@@ -41,16 +41,17 @@ $\newcommand{\from}{\leftarrow}$
     we will require henceforth that manifolds be *Hausdorff* and *second-countable*.
 
 !!! Examples of Manifolds 
-    To classify manifolds, it's enough to classify connected manifolds.  Then every general manifold will be a countable
-    union of connected manifolds.
+    To classify manifolds, it's enough to classify connected manifolds.  Then every general
+    manifold will be a countable union of connected manifolds.
 
-    The only connected $0$-manifold is the point.  There's only one topological structure, only one smooth structure,
-    only one affine structure, and only one flat structure. 
+    The only connected $0$-manifold is the point.  There's only one topological structure, only
+    one smooth structure, only one affine structure, and only one flat structure. 
 
-    The only connected topological or smooth $1$-manifolds are the circle and the open interval.  But!  There are
-    uncountably many affine $1$-manifolds: a single open interval and an uncountable family of circles (parameterized
-    by how tangent vectors stretch as we go around).  And there are uncountably many flat $1$-manifolds: each finite
-    size of circle, each finite size of open interval, and a single open line, and a single open ray.  
+    The only connected topological or smooth $1$-manifolds are the circle and the open interval.
+    But!  There are uncountably many affine $1$-manifolds: a single open interval and an
+    uncountable family of circles (parameterized by how tangent vectors stretch as we go around).
+    And there are uncountably many flat $1$-manifolds: each finite size of circle, each finite size
+    of open interval, and a single open line, and a single open ray.  
 
     ILLUSTRATIONS 
 
@@ -58,10 +59,10 @@ $\newcommand{\from}{\leftarrow}$
 
 !!! Riemann Manifolds
     Since the smooth manifold $\RR^1$ (hence $\RR^n$) has multiple flat structures, it makes sense
-    to generalize the notion of "flat manifold".  Since the morphisms of flat manifolds are isometries,
-    we'd like to consider a larger collection of metric spaces as manifolds.  The question is:
-    %how do we specify how the metric and smooth structures should agree%?  Even for $\RR^n$, the 
-    global metric $\delta:M^2\to [0, \infty]$ itself isn't smooth (at $(p, p)\in M^2$), so we shouldn't
+    to generalize the notion of "flat manifold".  Since the morphisms of flat manifolds are
+    isometries, we'd like to consider a larger collection of metric spaces as manifolds.  The
+    question is: %how do we specify how the metric and smooth structures should agree%?  Even for
+    $\RR^n$, the global metric $\delta:M^2\to [0, \infty]$ itself isn't smooth (at $(p, p)\in M^2$), so we shouldn't
     insist that $\delta$ be smooth.  How about $\delta^2$?  Well, even for $S^1$, the squared arclength metric
     $\delta^2$ isn't smooth when evaluated on an antipodal pair $(p, -p)\in M^2$.
     Therefore, we consider only smooth manifolds equipped with metrics $\delta:M^2\to [0, \infty]$ whose square is
@@ -79,9 +80,9 @@ $\newcommand{\from}{\leftarrow}$
 !! Local Metrics
     To move from topology to geometry, we need concepts such as *length*, *angle*, and *volume*.
     It turns out that we can recover the other concepts from lengths.  Indeed, recall that every
-    isometry of Euclidean space also preserves angles and has determinant $\pm 1$.
-    We can explicitly solve for angles (between two vectors) in terms of lengths from the
-    generalized Pythagorean Theorem: 
+    isometry of Euclidean space also preserves angles and has determinant $\pm 1$.  We can
+    explicitly solve for angles (between two vectors) in terms of lengths from the generalized
+    Pythagorean Theorem: 
         $$ \|v\|^2 + \|w\|^2 = \|v-w\|^2 + 2\|v\| \|w\|\cos(\theta) $$
     Once equipped with length and angle, we can recognize which parallelepipeds are right-angled,
     define their volumes as the products of their side-lengths, and thus recover volume.
@@ -112,10 +113,17 @@ $\newcommand{\from}{\leftarrow}$
     flat, some metric structures on $\RR^2$ are *curved*.
 
 !! Local Geometric Concepts
+!!! Lie Brackets  
+    
+    
 !!! The Levi Civita Connection
-!!! The Exponential Map
-!!! Curvature 
+    
+!!! Geodesics and The Exponential Map
+    
 !!! Jacobi Fields 
+    
+!!! Curvature 
+    
 
 !! Cool Theorems
 
