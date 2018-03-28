@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/moo.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    
+    <body>
+    
+        <h1><a href="index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+            <h2>Reading</h2> 
+    
+                <div class="separator" style="clear: both; text-align: center;">
+
+                <canvas height="480" id="myCanvas" style="border: 0px;" width="640"></canvas>
+                <div id="infobox">
+                </div>
+ 
+
+                <br>
+                <br>
+                <div>
+                    Thanks to <a href="https://medium.com/@jagadeshanh/html5-canvas-click-and-draw-f665e02f5744">
+                    this medium article</a>.
+                </div>
+
+    
+                <script>
+                    var canvas = document.getElementById("myCanvas");
+                    var rect = canvas.getBoundingClientRect();
+                    var context = canvas.getContext("2d");
+                    canvas.addEventListener("mousemove", onMouseMove, false);
+                    canvas.addEventListener("click", onClick, false);
+                    context.font = "20px Arial";
+                    context.fillStyle = "#444";
+                    context.textAlign="center"; 
+                    var offset = 40;
+
+                    /*
+                        month of completion 
+                        date of publication
+                        holistic rating
+                        humour 
+                        poetry 
+                        technicality 
+                        learn about human
+                    */
+                    var books = [
+                        ["Peaceful Pill Handbook",          "2017-02", 2006, 0  , 0  , 0.5, 1.5, 0.5],
+                        ["Pale Fire",                       "2017-03", 1962, 1  , 1  , 1  , 0.5, 0  ],
+                        ["A Confederacy of Dunces",         "2017-04", 1980, 2  , 2  , 0.5, 0  , 0.5],
+                        ["Zen in the Art of Writing",       "2017-05", 1990, 0  , 0  , 0  , 1  , 0.5, "books/zen_bradbury.html"],
+                        ["Martian Chronicles",              "2017-06", 1950, 1  , 0  , 1  , 0  , 0  ],
+                        ["Running with Scissors",           "2017-06", 2002, 2  , 2  , 0  , 0  , 1.0],
+                        ["Cannery Row",                     "2017-06", 1945, 1  , 0.5, 0.5, 0  , 0.5],
+                        ["Hebdomeros",                      "2017-06", 1929, 0  , 0  , 1  , 0  , 0  ],
+                        ["Fahrenheit 451",                  "2017-06", 1953, 0  , 0  , 0  , 0  , 0  ],
+                        ["Milnor's Differential Topology",  "2017-06", 1965, 2  , 0  , 0.5, 2  , 0  ],
+                        ["How to Do Things Right",          "2017-06", 1004, 1  , 1  , 0.5, 0.5, 0.5],
+                        ["Me Talk Pretty One Day",          "2017-09", 2000, 1  , 1  , 0  , 0  , 0.5],
+                        ["An Artist of the Floating World", "2018-01", 1986, 2  , 0.5, 0.5, 0  , 0.5, "books/artist_ishiguro.html"],
+                        ["Winesburg, Ohio",                 "2018-04", 1919, 0  , 0  , 0  , 0  , 0  ],
+                        ["A Clockwork Orange",              "2018-04", 1962, 0  , 0  , 0  , 0  , 0  , "books/clockwork_burgess.html"],
+                        ["Pnin",                            "2018-04", 1957, 0  , 0  , 0  , 0  , 0  ],
+                        ["Neon Bible",                      "2018-04", 1954, 0  , 0  , 0  , 0  , 0  ],
+                    ];
+
+                    onMouseMove_xy(0, 0);
+
+                    function get_book_y(i) {
+                        b = books[i]
+                        return offset+(canvas.height-3*offset) * (1.0 - (2*b[3]+b[4]+b[5]+b[6]+b[7])/12.0);
+                    }
+                    function get_book_x(i) {
+                        return offset+(canvas.width-3*offset) * (books[i][2]-1820.0)/(2020.0 - 1820.0);
+                    }
+
+                    function resetCanvas() {
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+                        context.strokeStyle="#888";
+                        context.lineWidth = 3;
+                        /* y axis: */
+                            context.moveTo(offset, offset);
+                            context.lineTo(offset, canvas.height-offset) 
+                            context.rotate(-Math.PI/2);
+                            context.fillText("Rating", -canvas.height/2, offset/2);
+                            context.rotate(+Math.PI/2);
+                        /* x axis: */
+                            context.moveTo(offset, canvas.height-offset);
+                            context.lineTo(canvas.width-offset, canvas.height-offset);
+                            context.fillText("Date of Publication", canvas.width/2, canvas.height-offset/2);
+                            context.fillText("1820", offset, canvas.height-offset/2);
+                            context.fillText("2020", canvas.width-offset, canvas.height-offset/2);
+                        context.stroke();
+                    }
+
+                    function onMouseMove(e) {
+                        onMouseMove_xy(e.clientX-rect.left, e.clientY-rect.top)
+                    }
+                    function onMouseMove_xy(clickx, clicky) {
+                        resetCanvas();
+                        for (i=0; i!=books.length; ++i) {
+                            var bookx = get_book_x(i);
+                            var booky = get_book_y(i);
+                            var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
+                            var color = "#88c"; 
+                            context.lineWidth = books[i].length==9 ? 6 : 3;
+                            if (d2<7.5*7.5) {
+                                color = "#4cf";
+                                context.fillText(books[i][0], canvas.width/2, offset);
+                            }
+                            context.beginPath();
+                            context.arc(bookx, booky, 7.5, 0, Math.PI * 2, false);
+                            context.strokeStyle = color;
+                            context.stroke();
+                        }
+                    }
+
+                    function onClick(e) {
+                        var clickx, clicky;
+                        clickx = e.clientX-rect.left;
+                        clicky = e.clientY-rect.top;
+                        for (i=0; i!=books.length; ++i) {
+                            var bookx = get_book_x(i);
+                            var booky = get_book_y(i);
+                            var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
+                            if (d2<7.5*7.5 && books[i].length==9) {
+                                window.location = books[i][8];
+                            }
+                        }
+                    }
+               </script>
+ 
+    </body>
+</html>
