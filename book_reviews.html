@@ -17,11 +17,19 @@
 
             <h2>Reading</h2> 
     
-                <div class="separator" style="clear: both; text-align: center;">
-
-                <canvas height="480" id="myCanvas" style="border: 0px;" width="640"></canvas>
-                <div id="infobox">
+                <div>
+                    Here's what I've been reading recently.  Click on the bold bubbles for notes.
                 </div>
+                <div class="separator" style="clear: both; text-align: center;">
+                    <canvas height="480" id="myCanvas" style="border: 0px;" width="640"></canvas>
+                    <div id="infobox">
+                </div>
+                <div style="clear: both; text-align: center;">
+                    The ratings live in $[0, 1]$ and are computed as
+                    $ \frac{1}{8} \left (4 \cdot \text{overall} + \text{humor} + \text{poetry} + \text{technical insight} + \text{human insight}\right) $
+                    where each sub-score lives in $[0, 1]$.
+                </div>
+ 
  
 
                 <br>
@@ -54,17 +62,18 @@
                     */
                     var books = [
                         ["Peaceful Pill Handbook",          "2017-02", 2006, 0  , 0  , 0.5, 1.5, 0.5],
-                        ["Pale Fire",                       "2017-03", 1962, 1  , 1  , 1  , 0.5, 0  ],
+                        ["Pale Fire",                       "2017-03", 1962, 1.5, 1  , 1  , 0.5, 0  ],
                         ["A Confederacy of Dunces",         "2017-04", 1980, 2  , 2  , 0.5, 0  , 1  ],
                         ["Zen in the Art of Writing",       "2017-05", 1990, 0  , 0  , 0  , 1  , 0.5, "books/zen_bradbury.html"],
+                        ["To Friend Who Didn't Save M'Life","2017-06", 1990, 2  , 0.5, 1  , 0.5, 2  ],
                         ["Martian Chronicles",              "2017-06", 1950, 1  , 0  , 1  , 0  , 0  ],
-                        ["Running with Scissors",           "2017-06", 2002, 2  , 2  , 0  , 0  , 1  ],
+                        ["Running with Scissors",           "2017-06", 2002, 1.5, 2  , 0  , 0  , 1  ],
                         ["Cannery Row",                     "2017-06", 1945, 1  , 0.5, 0.5, 0  , 0.5],
-                        ["Hebdomeros",                      "2017-06", 1929, 0  , 0  , 1  , 0  , 0  ],
-                        ["Fahrenheit 451",                  "2017-06", 1953, 0  , 0  , 0  , 0  , 0  ],
-                        ["Milnor's Differential Topology",  "2017-06", 1965, 2  , 0  , 0.5, 2  , 0  ],
-                        ["How to Do Things Right",          "2017-06", 1004, 1  , 1  , 0.5, 0.5, 0.5],
-                        ["Me Talk Pretty One Day",          "2017-09", 2000, 1  , 1  , 0  , 0  , 0.5],
+                        ["Hebdomeros",                      "2017-07", 1929, 0.5, 0  , 1  , 0  , 0  ],
+                        ["Fahrenheit 451",                  "2017-07", 1953, 0  , 0  , 0  , 0  , 0  ],
+                        ["Milnor's Differential Topology",  "2017-07", 1965, 2  , 0  , 0.5, 2  , 0  ],
+                        ["How to Do Things Right",          "2017-07", 1004, 1.5, 1  , 0.5, 0.5, 0.5],
+                        ["Me Talk Pretty One Day",          "2017-10", 2000, 1  , 1  , 0  , 0  , 0.5],
                         ["An Artist of the Floating World", "2018-01", 1986, 2  , 0.5, 0.5, 0  , 1  , "books/artist_ishiguro.html"],
                         ["A Clockwork Orange",              "2018-03", 1962, 2  , 0  , 1  , 0  , 1.5, "books/clockwork_burgess.html"],
                         ["Winesburg, Ohio",                 "2018-04", 1919, 0  , 0  , 0  , 0  , 0  ],
@@ -102,7 +111,7 @@
 
                     function get_score(i) {
                         b = books[i]
-                        return (2*b[3]+b[4]+b[5]+b[6]+b[7])/12.0;
+                        return (4*b[3]+b[4]+b[5]+b[6]+b[7])/16.0;
                     }
                     function get_book_y(i) {
                         return offset+(canvas.height-3*offset) * (1.0 - get_score(i));
