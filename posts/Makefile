@@ -10,3 +10,6 @@ all:
 	python3 translate.py manifold
 	python3 translate.py quantcomp
 	python3 translate.py rando
+
+routine:
+	python3 translate.py _routine
