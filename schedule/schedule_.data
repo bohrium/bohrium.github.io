@@ -3,10 +3,10 @@
 09:30   .                .                .                .                .                .                .               
 10:00   .                mdiffgeo         mdiffgeo         mdiffgeo         .                .                .               
 10:30   .                m                m                m                .                .                .               
-11:00   .                m                m                m                .                .                .               
-11:30   bbehavior_study  m                m                m                .                .                .               
-12:00   b                bquant_comp      .                .                .                .                .               
-12:30   .                b                .                .                .                .                .               
+11:00   .                m                m                .                .                .                .               
+11:30   bbehavior_study  m                m                r                .                .                .               
+12:00   b                bquant_comp      .                yroberta         .                .                .               
+12:30   .                b                .                y                .                .                .               
 13:00   mdiffgeo         b                mdiffgeo         .                .                .                .               
 13:30   m                .                m                ggrad_house_qa   .                .                .               
 14:00   m                mdiffgeo         m                g                .                .                ymath_awards    
@@ -24,8 +24,8 @@
 20:00   .                .                m                .                .                .                .               
 20:30   .                .                m                .                .                .                .               
 21:00   .                .                .                .                .                .                .               
-21:30   .                .                .                .                .                .                .               
-22:00   .                .                .                .                .                .                .               
+21:30   .                .                yswim            .                .                .                .               
+22:00   .                .                y                .                .                .                .               
 22:30   .                .                .                .                .                .                .               
 23:00   .                .                .                .                .                .                .               
 23:30   .                .                .                .                .                .                .               
