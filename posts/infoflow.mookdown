@@ -1,0 +1,78 @@
+# author: samtenka
+# change: 2017-04-20
+# create: 2018-04-20
+# descrp: Category of Conditionals: Info Flow 
+
+$\newcommand{\from}{\leftarrow}$
+$\newcommand{\ConC}{\mathbb{C}}$
+$\newcommand{\Con}{\texttt{Con}}$
+$\newcommand{\Vec}{\texttt{Vec}}$
+$\newcommand{\Set}{\texttt{Set}}$
+
+! Info Flow in the Category of Conditionals 
+!!!! by Sam Tenka
+
+!! Introduction
+
+Let $\Con$ be the category whose objects are sets and whose morphisms to $A$ from $B$ are the
+conditional distributions of form $P(a|b)$.  We may represent each such distribution as a
+*stochastic matrix* whose rows are indexed by $A$ and whose columns are indexed by $B$.  The word
+"matrix" just means an array of real numbers such that each column contains only finitely many
+non-zero entries.  The word "stochastic" just means that all entries are non-negative and that each
+column sums to $1$.  Then composition of morphisms is given by matrix multiplication in the usual
+way: $P(a|c) = \sum_b P(a|b) P(b|c)$.
+
+At first glance, $\Con$ seems akin to the category $\Vec$ of real vector spaces.
+However, because the stochasticity condition is so strong, the two categories turn out to be very
+different.  For instance, many stochastic matrices are invertible in $\Vec$ but not in $\Con$:
+$$ \left( \matrix{1 & 1/2 \\ 0 & 1/2} \right)^{-1} = \left( \matrix{1 & -1/2 \\ 0 & 2} \right) $$
+As we will see, the stochasticity condition allows us to recover which morphisms are deterministic,
+a concept that has no analogue in the basis-invariant constructions of $\Vec$.
+
+In fact, my attempts to model $\Con$ in terms of a modified $\Vec$ --- for example by considering
+pointed vector spaces --- all failed.  Instead, $\Con$ seems to interpolate between $\Vec$ and
+$\Set$.  For instance, $\Set$ embeds into $\Con$ and $\Con$ embeds into $\Vec$ via the obvious
+functors $L_{CS}, E_{VC}$ (by "embed", we mean "injective on objects and on homsets").  Moreover,
+we may define a forgetful functor $R_{SC}: \Set \from \Con$ that sends each set to the real simplex
+it generates and each stochastic matrix to the corresponding set map between simplices.  Then 
+$L_{CS}$ and $R_{SC}$ are adjoint in the usual free/forgetful way:
+$$Hom_{\Con}(C \from L_{CS}(S)) \cong Hom_{\Set}(R_{SC}(C) \from S)$$
+By contrast, $E_{VC}$ is neither a free-type nor a forgetful-type adjoint: we will see
+below that it preserves neither colimits nor limits.
+
+!!! Limits and Colimits
+As with $\Set$, $\Con$ has an initial element (the empty set $0$) and a terminal element (the
+singleton $1$).  These are the nullary product and nullary coproduct, respectively.  Maps %from%
+the terminal element $1$ are not in general unique; they are %elements% in $\Set$ and
+%distributions% in $\Con$.    
+
+Coequalizers also exist: if $f, g:A\from B$ are conditionals, then the coequalizer  
+
+Finitary coproducts exist, too!  Let $A, B$ be objects.  Then, since $L_{CS}$ is a free-type
+adjoint, if $A, B$ have a coproduct in $\Con$, it is induced by the coproduct in $\Set$.  Let us
+check that this is indeed a colimit.  Call the canonical inclusions $a, b$.  Then if $\alpha, \beta$
+map to $A, B$ from some test object $P$, we must demonstrate a unique conditional
+$m:P\from A\sqcup B$ that commutes (i.e. $ma=\alpha$ and $mb=\beta$).  Well, writing $\alpha$ and
+$\beta$ as matrices, it is clear that $m = (\matrix{\alpha & \beta})$ works and is unique.
+
+When we pre-compose any $p:C\from A\sqcup B$ by $a:A\sqcup B\from A$, we get $pa:C \from A$.  This is
+*conditioning*!
+
+Unfortunately, finitary products don't generally exist.  
+
+!!! Completion gives Independence! 
+
+!!! Monoidal Structure and Independence
+If $A, B$ are objects, we may consider their cartesian product $A\times B$ along with the canonical 
+projections $a, b$.  If $\alpha, \beta$ map to some $$For any test object $P$ that maps via $\alpha, \beta$ to $A, B$, there exists
+a conditional $m:A\times B\from P$ This cartesian product is not a categorical product because its "universal arrows"
+are not actually unique.  Still, when we post-compose by $a:A\from A\times B$ any $p:A\times B\from C$,
+we get $ap:A\from C$.  This is is *marginalization*!
+
+We say that two distributions $a:A\from 1$ and $b:B\from 1$
+
+!!! Determinism
+
+!!! Abelian?
+
+

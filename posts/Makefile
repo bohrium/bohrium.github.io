@@ -13,3 +13,7 @@ all:
 
 routine:
 	python3 translate.py _routine
+
+info:
+	python3 translate.py infoflow 
+
