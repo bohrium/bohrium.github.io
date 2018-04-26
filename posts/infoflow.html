@@ -59,24 +59,27 @@ singleton $1$).  These are the nullary product and nullary coproduct, respective
 the terminal element $1$ are not in general unique; they are <em>elements</em> in $\Set$ and
 <em>distributions</em> in $\Con$.    
 <p>
-Finitary coproducts exist, too!  Let $A, B$ be objects.  Then, since $L_{CS}$ is a free-type
-adjoint, if $A, B$ have a coproduct in $\Con$, it is induced by the coproduct in $\Set$.  Let us
-check that this is indeed a colimit.  Call the canonical inclusions $a, b$.  Then if
-$\alpha, \beta$ map to $A, B$ from some test object $P$, we must demonstrate a unique conditional
-$m:P\from A\sqcup B$ that commutes (i.e. $ma=\alpha$ and $mb=\beta$).  Well, writing $\alpha$ and
-$\beta$ as matrices, it is clear that $m = (\matrix{\alpha & \beta})$ works and is unique.  When we
-pre-compose any $p:C\from A\sqcup B$ by $a:A\sqcup B\from A$, we get $pa:C \from A$.  This is
-<b>[co]nditioning</b>!
+Small-ary coproducts exist, too!  The general case is as easy as the finitary one.  Let $A, B$ be
+objects.  Then, since $L_{CS}$ is a free-type adjoint, if $A, B$ have a coproduct in $\Con$, it is
+induced by the coproduct in $\Set$.  Let us check that this is indeed a colimit.  Call the
+canonical inclusions $a, b$.  Then if $\alpha, \beta$ map to $A, B$ from some test object $P$, we
+must demonstrate a unique conditional $m:P\from A\sqcup B$ that commutes (i.e. $ma=\alpha$ and
+$mb=\beta$).  Well, writing $\alpha$ and $\beta$ as matrices, it is clear that
+$m = (\matrix{\alpha & \beta})$ works and is unique.  When we pre-compose any $p:C\from A\sqcup B$
+by $a:A\sqcup B\from A$, we get $pa:C \from A$.  This is <b>[co]nditioning</b>!
 <p>
-Moreover, there are finitary coequalizers.  To see this, we establish a lemma.  In what follows,
-call a subset $S\subseteq \RR^n$ an <b>$n$-simplex</b> if it is the convex hull of a unique set of $n$
-points, which we call its <em>generators</em>.  In this case, the <b>rank</b> of $s\in S$ is the size of a
-smallest set of generators whose convex hull contains $s$.  The rank-$n$ points of $S$ are <b>generic</b>. 
+Moreover, $\Con$ has coequalizers.  To see this, we establish a lemma.  In what follows, let $S$ be
+an arbitrary cardinality, let $\RR^{\oplus C}$ be the $C$-ary coproduct vector space, let
+$\RR^C \cong (\RR^{\oplus C})^*$ be its dual space, let $H = \RR_{0\leq}$, and let 
+$j\in H^C \subseteq \RR^c$ have every coefficient equal to $1$.  We say the $H$-*span* of a
+set $S\subseteq \RR^C$ is the set of all finite linear combinations
+$\{\sum h_i s_i: h_i\in H, s_i\in S\}$.  We say that $S$ is an $H$-*basis* for its $H$-span when it
+is minimal by inclusion among sets that span its $H$-span.
 <p>
-<b>Lemma</b>: If $S\subseteq \RR^n$ is an $n$-simplex, $W\subseteq \RR^n$ is a subspace
-of dimension $m$, and $W$ meets $S$ at a generic point, then $W\cap S$ is an $m$-simplex.
+<b>Lemma</b>: If $W\subseteq \RR^C$ is a subspace and $j\in W$, then $W$'s $H$-span has an $H$-basis $S$
+that is also abasis for $W$.
 <p>
-<b>Proof</b>: The simplices that are subsets of $W\cap S$ form a poset $\mathcal{P}$ by inclusion. 
+<b>Proof</b>:  
 <p>
 <h4>  Limits give Independence!  </h4>
 Unfortunately, finitary products don't generally exist.  
