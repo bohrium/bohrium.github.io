@@ -1,0 +1,101 @@
+# author: samtenka
+# change: 2017-12-30 
+# create: 2017-12-22 
+# descrp: An Algebraic Topology example of Mookdown
+
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! Algebraic Topology
+!!!! Notes by Sam Tenka based on a course by Igor Kriz
+
+#[../PAINTER/donut2.png][Figure: a two-holed torus]
+
+!! What is Algebraic Topology?
+!!! Invariants Help Us Distinguish Spaces
+    A classic technique for showing that two things are different is to demonstrate a property of
+    one that doesn't hold for another.  For instance, this trick allows us to show that a circle
+    and a real line are not homemorphic: one is compact, and the other isn't!  To show that one 
+    circle is not homeomorphic to two circles, we can count
+    connected components.  However, other distinctions require subtler tools to see.  No elementary
+    topological property distinguishes a one-holed torus from a two-holed torus, for example.
+    Instead of associating a truth-value or number with each space, it turns out in this case to be
+    more fruitful to associate a %group%.  *Algebraic topology* is the study of such
+    algebraically flavored topological invariants.
+
+    Here is an informal example: again, consider the tori $T^{\#1}, T^{\#2}$ with one and
+    two holes.  Then   
+    
+!!! Homotopy Equivalence
+    We will investigate two invariants: the *fundamental group* and *singular homology*.  Both are
+    preserved under not only homeomorphism but also %homotopy equivalence%.  It is easier for
+    spaces to be homotopy equivalent than to be homeomorphic: the latter implies the former.  So
+    the invariant technique cannot always distinguish nonhomeomorphic spaces.  The technique can't
+    distinguish spaces that are too similar to each other, but when it %does% distinguish spaces,
+    we know that they are %very% dissimilar.  Moreover, the invariants we will study are not even
+    sufficient to reconstruct spaces up to homotopy equivalence.  This means two things: that we
+    might still confuse very dissimilar spaces.  In other words, our tools cannot show that two
+    spaces are %the same%, even for weak notions of "same".
+
+!!! Algebraic Topology and Maps 
+    
+    
+
+!!! Why Do We Care When Spaces or Maps are Different?
+    Here are three cool applications of FILL IN.
+
+    *Theorem* (Brouwer): Every continuous map $f:D^n\to D^n$ on a closed ball has a fixed point.
+
+    *Theorem* (Poincare): Every continuous vector field on $S^{2n}$ has a $0$.
+
+    *Theorem* (Gauss): Every complex polynomial is constant or has a root.
+
+    *Theorem*: Every subgroup of a free group is free.
+
+!! The Fundamental Group
+!!! The Fundamental Set
+    For a space $X$, consider the continuous maps $:X\from S^1$.  Recall that two such maps $f,g$
+    are %homotopic% when there is some continuous interpolator $h:X\from [0,1]\times S^1$ such that
+    $h_0=f$ and $h_1=g$.  This is clearly an equivalence relation.  The resulting equivalence
+    classes we will call %loops% in $X$.  The set $F(X)$ of loops is X's %fundamental set%. 
+
+    For instance, $F(S^1)$ is infinite, while $F(\RR)$ is finite of size $1$.  Since $F$ is clearly
+    invariant under homeomorphism, this provides another proof that $S^1$ and $\RR$ are not
+    homeomorphic.
+
+    Likewise, $F(S^2)$ is finite of size $1$, while $F(S^1\times S^1)$ is infinite.  This shows
+    that the sphere and torus are not homeomorphic.  
+
+    However, $F(T^{\#1})$ and $F(T^{\#2})$ are both countably infinite.  We need a finer invariant 
+    to distinguish them.
+
+    Before we do so, let's think about the fundamental set.  First, it is a functor from Top to
+    Set.  It acts on morphisms in the natural way: if $s:X\from Y$ is continuous,
+    then $F(s)$ sends the loop $f:Y\from S^1$ to the loop $s\circ f:X\from S^1$.    
+
+    Thus, injections map to injections, so $S^1$ is not a deformation retract of the disk $D^2$. 
+
+    Visualize in terms of torus.  View as generalization of path connected components.
+    While path-connectedness is preserved by continuous maps, simple-connectedness is not.
+
+!! The Fundamental Group
+    To obtain a more powerful invariant, we needn't look far.  The idea is to consider
+    relationships between loops, thus imposing further structure on the Fundamental Set.  In fact,
+    we will modify our definitions slightly to allow %composition% of loops, yielding the
+    Fundamental Group.  We can consider loops as paths when we fix a basepoint $\star\in S^1$.
+    Then, if $f,g:X\from S^1$ are loops with $f(\star)=g(\star)$, we can compose the loops into
+    $(fg):X\from S^1$ using the homotopy class of maps $:S^1\wedge S^1\from S^1$.  
+    
+    However, the  
+ 
+Let's begin with the fundamental group.  This is a covariant functor from the
+category of % pointed topological spaces % to the category of groups.   
+
+!!! Covering Spaces 
+!!! Seifert Van Kampen Theorem
+!!! Application: Classification of Compact Surfaces
+
+!! Singular Homology
+!!! Mayer Vietoris Sequence 

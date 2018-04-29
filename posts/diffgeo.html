@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
+        
+<p>
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+<p>
+<h2>  Differential Geometry  </h2>
+<h5>  Notes by Sam Tenka based on a course by Ralf Spatzier following Do Carmo's text. </h5>
+<h5>  Aim: to digest and record, not to compose a textbook.  Not always complete sentences. </h5>
+<h5>  Comprehensible given basic differential topology and algebraic topology.  </h5>
+<p>
+<h3>  Part A: Similarities to Euclidean Space </h3>
+<h4>  Lecture  0: Introduction  </h4>
+    Let us study the geometry of smooth manifolds.  While differential topology illuminates global
+    shape via local calculus, we will understand global shape via local metric notions.  For
+    example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
+    fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
+    "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
+    "Every complete simply connected manifold is diffeomorphic to $\RR^n$".  Here, curvature and
+    completeness are concepts defined in terms of a manifold's metric structure.
+<p>
+<h5>  $\fbox{CURVATURE}$  </h5>
+    Curvature will be a central quantity of study.  Let's develop intuition by considering some
+    low-dimensional manifolds immersed into Euclidean space; the former will inherit their metrics
+    from the latter.  First, observe that curves in $\RR^2$ are all locally isometric --- just
+    parameterize by arclength.  Therefore, though two immersions may have osculating circles of
+    different radii (and hence different extrinsic curvatures), all curves have the <em>same</em>
+    intrinsic curvature.
+<p>
+    INSERT IMAGE
+<p>
+    Second, consider surfaces in $\RR^3$.  Instead of osculating circles, we now have osculating
+    ellipsoids (and hyperboloids)!  Thus, the extrinsic curvatures are described by <em>two</em> radii,
+    not one.  When considering what is preserved by isometries of a surface, we find that one
+    degree of freedom dies (for instance, observe that a plane and cylinder are locally isometric
+    because it is possible to roll paper without bending it), and one degree of freedom remains.
+    Therefore, even locally, not all surfaces are equivalent!
+<p>
+    INSERT IMAGE
+<p>
+    Equipped with this intuitive image of a surface's curvature, several questions become natural:
+    Are the aforementioned theorems true?  Is every simply connected constant positive curvature
+    manifold a sphere?  What if we allow "small" perturbations away from constant?  Is every
+    orientable compact manifold of positive curvature simply connected?  Given curvature
+    information, can we relate a compact connected manifold's fundamental group to its metric
+    structure?  But we must precisely define curvature before addressing these questions.  We begin
+    with a review of manifolds:
+<p>
+<h5>  $\fbox{SMOOTH MANIFOLDS}$  </h5>
+    It is well to define a topological manifold semi-intrinsically as a topological space
+    (second-countable and Hausdorff) locally homeomorphic to (subsets of) some $\RR^n$.  In so
+    doing, we rely on a prior notion of general topological structure.  However, we have no
+    analogue for general smooth structure.  Thus, we work extrinsically: a <b>smooth manifold</b> of
+    dimension $n$ is a family of bijections $\{\phi_i:X_i\to U_i\subseteq \RR^n\}_{i\in I}$ where
+    each $U_i\subseteq \RR^n$ is open.  The bijections must obey the <b>gluing axiom</b>, that is, for
+    all $i, j\in I$, the map $\phi_i\circ \phi_j|_{\phi_j(X_i\cap X_j)}$ between real open sets
+    is <em>smooth</em>.  These "transition maps" will hence be diffeomorphisms and so
+    $M = \bigcup_{i\in I} X_i$ will also be a topological manifold (with the second countable and
+    Hausdorff assumptions always implicit).  Beware: topological manifolds may have 0, 1, or
+    more smooth structures.  Typical examples:
+    $S^n, \RR P^n=S^n/(\ZZ/2\ZZ), \CC P^n=S^{2n+1}/U(1)$; Lie Groups such as
+    $(S^1)^n, SO(n), SU(n)$; compact surfaces $((S^1)^2)^{\#n}, (\RR P^2)^{\#n}$.
+<p>
+    DG relies on derivatives, and derivatives act on vectors.  Think of $T_p M$ as a vectorspace of
+    velocities.  We recall 3 definitions: derivations of germs; equivalence classes of pointed
+    curves; coherent assignments $v_i\in T_{\phi_i(p)U_i}$ of vectors in $T\RR^n$.  The first deals
+    with maps $:M\to \RR$; the middle with maps $:\RR\to M$; and the last with local
+    diffeomorphisms $M \leftrightarrow \RR^n$ --- each view has contexts of use.  The last
+    viewpoint allows us to consider a local (trivial) tangent bundle $\bigsqcup_{p\in V} T_p M$ as
+    a smooth manifold itself.  Gluing, we obtain a (nontrivial) bundle $TM \twoheadrightarrow M$
+    between smooth manifolds.  $\dim(TM) = 2n$.
+<p>
+<h5>  $\fbox{METRIC STRUCTURE}$  </h5>
+    Finally, metric structure.  We wish to consider metrics $d: M^2\to [0, \infty]$ that agree with
+    a manifold's smooth structure.  Specifically, our metrics must: (a) agree with topology; (b)
+    have locally smooth squares $d^2|_{U^2}$; and (c) induce <b>length spaces</b>, that is, obey
+    $$d(a, b) = \inf_{a=c_0, \cdots, c_m=b} \sum_{0\leq i\lt m} d(c_i, c_{i+1})$$
+<p>
+    For example, the unit circle $S^1$ has a metric (given by arclength) that obeys the above.  In
+    this case, $d^2$ is not globally smooth: it is not differentiable when evaluated at antipodal
+    points.  However, $d^2$ is locally smooth.  Moreover, because distance is defined in terms of 
+    the length of paths, the length space condition is also met. 
+<p>
+    INSERT IMAGE
+<p>
+    This consideration of paths leads us to seek a local characterization of a manifold's metric
+    structure.  This is given by the <b>metric tensor</b> $g_p$, a bilinear map on each $T_p M$ defined
+    by $2 g_p(v, w) = v(w(q \mapsto d^2(p, q)))$.  The main properties of $g$, to be checked next
+    time, are that it is an inner product, that $g_p$ varies suitably smoothly in $p$, and that
+    from $g_p$, which gives local geometric information, we can recover $d$ on any connected
+    component. 
+<p>
+<h4>  Lecture  1: Length and Distance </h4>
+<h5>  $\fbox{TENSOR FROM METRIC}$  </h5>
+<h5>  $\fbox{METRIC FROM TENSOR}$  </h5>
+<h5>  $\fbox{1-MANIFOLDS}$  </h5>
+<h5>  $\fbox{GEODESICS}$  </h5>
+<p>
+<h4>  Lecture  2: Geodesics; Exponential Map </h4>
+<h5>  $\fbox{GEODESICS}$ </h5>
+<h5>  $\fbox{GEODESIC FLOW}$ </h5>
+<h5>  $\fbox{EXPONENTIAL MAP}$ </h5>
+<h5>  $\fbox{GAUSS LEMMA}$ </h5>
+<p>
+<h4>  Lecture  3: Convex Neighborhoods  </h4>
+<h4>  Lecture  4: Hopf-Rinow Theorem  </h4>
+<p>
+<h3>  Part B: Differences From Euclidean Space  </h3>
+<h4>  Lecture  5: Differentiating Vector Fields </h4>
+<h4>  Lecture  6: Levi-Civita Connection </h4>
+<h4>  Lecture  7: Curvature Defined  </h4>
+<h4>  Lecture  8: Curvature Summarized </h4>
+<h4>  Lecture  9: Variations of Energy; Jacobi Fields  </h4>
+<p>
+<h3>  Part C: Isometries </h3>
+<h4>  Lecture 10: Killing Fields  </h4>
+<h4>  Lecture 11: Isometries form a Lie Group  </h4>
+<h5>  $\fbox{DIMENSION OF ISOMETRY GROUP}$ </h5>
+<h4>  Lecture 12: Homogeneous Spaces  </h4>
+<h4>  Lecture 13: Symmetric Spaces </h4>
+<h4>  Lecture 14: Cartan's Theorem; Spaces of Constant Curvature </h4>
+<p>
+<h3>  Part D: Global Tools  </h3>
+<h4>  Lecture 17: Basic Rauch Theorem </h4>
+<h4>  Lecture 18: Advanced Rauch Theorem </h4>
+<h4>  Lecture 19: Morse Index Theorem </h4>
+<p>
+<h3>  Part E: Global Results </h3>
+<h4>  Lecture 20: Hadamard Theorem  </h4>
+<h4>  Lecture 21: Theorems of Bonnet-Myers and Synge-Weinstein  </h4>
+<h4>  Lecture 22: Estimating Injectivity Radius  </h4>
+<h4>  Lecture 23: Sphere Theorem </h4>
+<h4>  Lecture 24: Mostow Theorem </h4>
+<p>
+    </body>
+</html>

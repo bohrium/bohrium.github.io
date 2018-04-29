@@ -16,4 +16,7 @@ routine:
 
 info:
 	python3 translate.py infoflow 
+	python3 translate.py diffgeo 
+	python3 translate.py algtop 
+
 

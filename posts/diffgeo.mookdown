@@ -1,0 +1,138 @@
+# author: samtenka
+# change: 2018-04-26
+# create: 2018-04-26 
+# descrp: Riemann Manifolds 
+
+$\newcommand{\Aut}{\text{Aut}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! Differential Geometry 
+!!!! Notes by Sam Tenka based on a course by Ralf Spatzier following Do Carmo's text.
+!!!! Aim: to digest and record, not to compose a textbook.  Not always complete sentences.
+!!!! Comprehensible given basic differential topology and algebraic topology. 
+
+!! Part A: Similarities to Euclidean Space
+!!! Lecture  0: Introduction 
+    Let us study the geometry of smooth manifolds.  While differential topology illuminates global
+    shape via local calculus, we will understand global shape via local metric notions.  For
+    example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
+    fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
+    "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
+    "Every complete simply connected manifold is diffeomorphic to $\RR^n$".  Here, curvature and
+    completeness are concepts defined in terms of a manifold's metric structure.
+
+!!!! $\fbox{CURVATURE}$ 
+    Curvature will be a central quantity of study.  Let's develop intuition by considering some
+    low-dimensional manifolds immersed into Euclidean space; the former will inherit their metrics
+    from the latter.  First, observe that curves in $\RR^2$ are all locally isometric --- just
+    parameterize by arclength.  Therefore, though two immersions may have osculating circles of
+    different radii (and hence different extrinsic curvatures), all curves have the %same%
+    intrinsic curvature.
+
+    INSERT IMAGE
+    
+    Second, consider surfaces in $\RR^3$.  Instead of osculating circles, we now have osculating
+    ellipsoids (and hyperboloids)!  Thus, the extrinsic curvatures are described by %two% radii,
+    not one.  When considering what is preserved by isometries of a surface, we find that one
+    degree of freedom dies (for instance, observe that a plane and cylinder are locally isometric
+    because it is possible to roll paper without bending it), and one degree of freedom remains.
+    Therefore, even locally, not all surfaces are equivalent!
+
+    INSERT IMAGE
+
+    Equipped with this intuitive image of a surface's curvature, several questions become natural:
+    Are the aforementioned theorems true?  Is every simply connected constant positive curvature
+    manifold a sphere?  What if we allow "small" perturbations away from constant?  Is every
+    orientable compact manifold of positive curvature simply connected?  Given curvature
+    information, can we relate a compact connected manifold's fundamental group to its metric
+    structure?  But we must precisely define curvature before addressing these questions.  We begin
+    with a review of manifolds:
+
+!!!! $\fbox{SMOOTH MANIFOLDS}$ 
+    It is well to define a topological manifold semi-intrinsically as a topological space
+    (second-countable and Hausdorff) locally homeomorphic to (subsets of) some $\RR^n$.  In so
+    doing, we rely on a prior notion of general topological structure.  However, we have no
+    analogue for general smooth structure.  Thus, we work extrinsically: a *smooth manifold* of
+    dimension $n$ is a family of bijections $\{\phi_i:X_i\to U_i\subseteq \RR^n\}_{i\in I}$ where
+    each $U_i\subseteq \RR^n$ is open.  The bijections must obey the *gluing axiom*, that is, for
+    all $i, j\in I$, the map $\phi_i\circ \phi_j|_{\phi_j(X_i\cap X_j)}$ between real open sets
+    is %smooth%.  These "transition maps" will hence be diffeomorphisms and so
+    $M = \bigcup_{i\in I} X_i$ will also be a topological manifold (with the second countable and
+    Hausdorff assumptions always implicit).  Beware: topological manifolds may have 0, 1, or
+    more smooth structures.  Typical examples:
+    $S^n, \RR P^n=S^n/(\ZZ/2\ZZ), \CC P^n=S^{2n+1}/U(1)$; Lie Groups such as
+    $(S^1)^n, SO(n), SU(n)$; compact surfaces $((S^1)^2)^{\#n}, (\RR P^2)^{\#n}$.
+
+    DG relies on derivatives, and derivatives act on vectors.  Think of $T_p M$ as a vectorspace of
+    velocities.  We recall 3 definitions: derivations of germs; equivalence classes of pointed
+    curves; coherent assignments $v_i\in T_{\phi_i(p)U_i}$ of vectors in $T\RR^n$.  The first deals
+    with maps $:M\to \RR$; the middle with maps $:\RR\to M$; and the last with local
+    diffeomorphisms $M \leftrightarrow \RR^n$ --- each view has contexts of use.  The last
+    viewpoint allows us to consider a local (trivial) tangent bundle $\bigsqcup_{p\in V} T_p M$ as
+    a smooth manifold itself.  Gluing, we obtain a (nontrivial) bundle $TM \twoheadrightarrow M$
+    between smooth manifolds.  $\dim(TM) = 2n$.
+
+!!!! $\fbox{METRIC STRUCTURE}$ 
+    Finally, metric structure.  We wish to consider metrics $d: M^2\to [0, \infty]$ that agree with
+    a manifold's smooth structure.  Specifically, our metrics must: (a) agree with topology; (b)
+    have locally smooth squares $d^2|_{U^2}$; and (c) induce *length spaces*, that is, obey
+    $$d(a, b) = \inf_{a=c_0, \cdots, c_m=b} \sum_{0\leq i\lt m} d(c_i, c_{i+1})$$
+
+    For example, the unit circle $S^1$ has a metric (given by arclength) that obeys the above.  In
+    this case, $d^2$ is not globally smooth: it is not differentiable when evaluated at antipodal
+    points.  However, $d^2$ is locally smooth.  Moreover, because distance is defined in terms of 
+    the length of paths, the length space condition is also met. 
+
+    INSERT IMAGE
+
+    This consideration of paths leads us to seek a local characterization of a manifold's metric
+    structure.  This is given by the *metric tensor* $g_p$, a bilinear map on each $T_p M$ defined
+    by $2 g_p(v, w) = v(w(q \mapsto d^2(p, q)))$.  The main properties of $g$, to be checked next
+    time, are that it is an inner product, that $g_p$ varies suitably smoothly in $p$, and that
+    from $g_p$, which gives local geometric information, we can recover $d$ on any connected
+    component. 
+
+!!! Lecture  1: Length and Distance
+!!!! $\fbox{TENSOR FROM METRIC}$ 
+!!!! $\fbox{METRIC FROM TENSOR}$ 
+!!!! $\fbox{1-MANIFOLDS}$ 
+!!!! $\fbox{GEODESICS}$ 
+
+!!! Lecture  2: Geodesics; Exponential Map
+!!!! $\fbox{GEODESICS}$
+!!!! $\fbox{GEODESIC FLOW}$
+!!!! $\fbox{EXPONENTIAL MAP}$
+!!!! $\fbox{GAUSS LEMMA}$
+
+!!! Lecture  3: Convex Neighborhoods 
+!!! Lecture  4: Hopf-Rinow Theorem 
+
+!! Part B: Differences From Euclidean Space 
+!!! Lecture  5: Differentiating Vector Fields
+!!! Lecture  6: Levi-Civita Connection
+!!! Lecture  7: Curvature Defined 
+!!! Lecture  8: Curvature Summarized
+!!! Lecture  9: Variations of Energy; Jacobi Fields 
+
+!! Part C: Isometries
+!!! Lecture 10: Killing Fields 
+!!! Lecture 11: Isometries form a Lie Group 
+!!!! $\fbox{DIMENSION OF ISOMETRY GROUP}$
+!!! Lecture 12: Homogeneous Spaces 
+!!! Lecture 13: Symmetric Spaces
+!!! Lecture 14: Cartan's Theorem; Spaces of Constant Curvature
+
+!! Part D: Global Tools 
+!!! Lecture 17: Basic Rauch Theorem
+!!! Lecture 18: Advanced Rauch Theorem
+!!! Lecture 19: Morse Index Theorem
+
+!! Part E: Global Results
+!!! Lecture 20: Hadamard Theorem 
+!!! Lecture 21: Theorems of Bonnet-Myers and Synge-Weinstein 
+!!! Lecture 22: Estimating Injectivity Radius 
+!!! Lecture 23: Sphere Theorem
+!!! Lecture 24: Mostow Theorem
