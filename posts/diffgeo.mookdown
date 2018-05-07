@@ -97,9 +97,8 @@ $\newcommand{\from}{\leftarrow}$
 
 !!! Lecture  1: Length and Distance
 !!!! $\fbox{TENSOR FROM METRIC}$ 
-!!!! $\fbox{METRIC FROM TENSOR}$ 
 !!!! $\fbox{1-MANIFOLDS}$ 
-!!!! $\fbox{GEODESICS}$ 
+!!!! $\fbox{EXAMPLE: GEODESICS IN HYPERBOLIC PLANE}$ 
 
 !!! Lecture  2: Geodesics; Exponential Map
 !!!! $\fbox{GEODESICS}$
@@ -108,14 +107,22 @@ $\newcommand{\from}{\leftarrow}$
 !!!! $\fbox{GAUSS LEMMA}$
 
 !!! Lecture  3: Convex Neighborhoods 
+!!!! $\fbox{NORMAL BALLS}$
+!!!! $\fbox{TOTALLY NORMAL BALLS}$
+!!!! $\fbox{STRONGLY CONVEX BALLS}$
+!!!! $\fbox{METRIC FROM TENSOR}$ 
+
 !!! Lecture  4: Hopf-Rinow Theorem 
+!!!! $\fbox{COMPLETE MANIFOLDS}$
+!!!! $\fbox{MINIMIZING GEODESICS}$
+!!!! $\fbox{EQUIVALENT TO COMPLETENESS...}$
 
 !! Part B: Differences From Euclidean Space 
 !!! Lecture  5: Differentiating Vector Fields
 !!! Lecture  6: Levi-Civita Connection
-!!! Lecture  7: Curvature Defined 
-!!! Lecture  8: Curvature Summarized
-!!! Lecture  9: Variations of Energy; Jacobi Fields 
+!!! Lecture  7: Variations of Energy; Jacobi Fields 
+!!! Lecture  8: Curvature Defined 
+!!! Lecture  9: Curvature Summarized
 
 !! Part C: Isometries
 !!! Lecture 10: Killing Fields 
@@ -125,7 +132,7 @@ $\newcommand{\from}{\leftarrow}$
 !!! Lecture 13: Symmetric Spaces
 !!! Lecture 14: Cartan's Theorem; Spaces of Constant Curvature
 
-!! Part D: Global Tools 
+!! Part D: Comparison Theorems 
 !!! Lecture 17: Basic Rauch Theorem
 !!! Lecture 18: Advanced Rauch Theorem
 !!! Lecture 19: Morse Index Theorem
