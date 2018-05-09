@@ -21,16 +21,16 @@ with open(in_name) as f:
 
 def print_cell(token):
     color, text = token[0], token[1:].replace('_', ' ') 
-    color_code = {
-        '.':'',
-        'b':'#aaaaff',
-        'g':'#aaffaa',
-        'c':'#aaffff',
-        'r':'#ffaaaa',
-        'm':'#ffaaff',
-        'y':'#ffffaa'
+    color_code, style = {
+        '.':('',       'font-variant: small-caps'),
+        'b':('#aaaaff','')                        ,
+        'g':('#aaffaa','')                        ,
+        'c':('#aaffff','')                        ,
+        'r':('#ffaaaa','')                        ,
+        'm':('#ffaaff','')                        ,
+        'y':('#ffffaa','')                        ,
     }[color]
-    return '\n    <td bgcolor="%s">%s</td>' % (color_code, text)
+    return '\n    <td bgcolor="%s" style="%s">%s</td>' % (color_code, style, text)
     
 def print_line(line):
     rtrn = '\n<tr>'

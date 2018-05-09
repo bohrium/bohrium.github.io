@@ -10,9 +10,9 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
 ! Differential Geometry 
-!!!! Notes by Sam Tenka based on a course by Ralf Spatzier following Do Carmo's text.
-!!!! Aim: to digest and record, not to compose a textbook.  Not always complete sentences.
-!!!! Comprehensible given basic differential topology and algebraic topology. 
+!!!! Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.
+!!!! Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.
+!!!! Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc.
 
 !! Part A: Similarities to Euclidean Space
 !!! Lecture  0: Introduction 
@@ -21,13 +21,14 @@ $\newcommand{\from}{\leftarrow}$
     example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
     fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
     "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
-    "Every complete simply connected manifold is diffeomorphic to $\RR^n$".  Here, curvature and
+    "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".  Here, curvature and
     completeness are concepts defined in terms of a manifold's metric structure.
 
 !!!! $\fbox{CURVATURE}$ 
     Curvature will be a central quantity of study.  Let's develop intuition by considering some
-    low-dimensional manifolds immersed into Euclidean space; the former will inherit their metrics
-    from the latter.  First, observe that curves in $\RR^2$ are all locally isometric --- just
+    low-dimensional manifolds embedded into Euclidean space; the distance between two points on
+    a manifold we understand as the infima of lengths of paths between them.  First, observe
+    that curves in $\RR^2$ are all locally isometric --- just
     parameterize by arclength.  Therefore, though two immersions may have osculating circles of
     different radii (and hence different extrinsic curvatures), all curves have the %same%
     intrinsic curvature.
@@ -95,6 +96,8 @@ $\newcommand{\from}{\leftarrow}$
     from $g_p$, which gives local geometric information, we can recover $d$ on any connected
     component. 
 
+    *EXERCISE:* Find all metric structures on the circle (up to isometry).   
+
 !!! Lecture  1: Length and Distance
 !!!! $\fbox{TENSOR FROM METRIC}$ 
 !!!! $\fbox{1-MANIFOLDS}$ 
@@ -124,22 +127,30 @@ $\newcommand{\from}{\leftarrow}$
 !!! Lecture  8: Curvature Defined 
 !!! Lecture  9: Curvature Summarized
 
-!! Part C: Isometries
+!! Part C: Isometries and Nice Spaces  
 !!! Lecture 10: Killing Fields 
 !!! Lecture 11: Isometries form a Lie Group 
 !!!! $\fbox{DIMENSION OF ISOMETRY GROUP}$
 !!! Lecture 12: Homogeneous Spaces 
 !!! Lecture 13: Symmetric Spaces
-!!! Lecture 14: Cartan's Theorem; Spaces of Constant Curvature
+!!! Lecture 14: Spaces of Constant Curvature
+!!!! $\fbox{CARTAN}$
 
-!! Part D: Comparison Theorems 
-!!! Lecture 17: Basic Rauch Theorem
-!!! Lecture 18: Advanced Rauch Theorem
-!!! Lecture 19: Morse Index Theorem
+!! Part D: Comparing Spaces to Nice Spaces
+!!! Lecture 15: Morse Index Lemma 
+!!! Lecture 16: Rauch Theorem
+!!! Lecture 17: Topogonov Theorem
+!!! Lecture 18: Morse Index Theorem
+!!! Lecture 19: Summary of Tricks with Balls and Geodesics 
 
-!! Part E: Global Results
-!!! Lecture 20: Hadamard Theorem 
-!!! Lecture 21: Theorems of Bonnet-Myers and Synge-Weinstein 
-!!! Lecture 22: Estimating Injectivity Radius 
-!!! Lecture 23: Sphere Theorem
-!!! Lecture 24: Mostow Theorem
+!! Part E: Geometry Controls Topology  
+!!! Lecture 20: Covering Negatively Curved Spaces
+!!!! $\fbox{HADARMARD}$
+!!!! $\fbox{PRIESMANN}$
+!!! Lecture 21: Covering Positively Curved Spaces
+!!!! $\fbox{BONNET-MYERS}$
+!!!! $\fbox{SYNGE-WEINSTEIN}$
+!!! Lecture 22: Sphere Theorem
+!!! Lecture 23: Mostow Theorem
+!!! Lecture 24: Chern-Gauss-Bonnet Theorem 
+    Based on http://www.maths.ed.ac.uk/~v1ranick/papers/li4.pdf
