@@ -1,32 +1,54 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/moo.css" />
         <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
         </script>
         <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
     </head>
     <body>
+        <h1><a href="../index.html" style="color:rgb(0, 0, 64);">Samuel Tenka</a></h1>
+
         
 <p>
-<h1>  The <tt>Mookdown</tt> Guide  </h1>
-<h2>  A Specification by Example </h2>
+<h2>  The <tt>Mookdown</tt> Guide  </h2>
+<h5>  A Specification by Example </h5>
+<h5>  See <tt>bohrium.github.io/posts/language.mookdown</tt> for the Mookdown that generated this page. </h5>
 <p>
-Mookdown permits various text styles, including <b>bold</b>, <em>italicized</em>, <tt>monospaced</tt>, and <del>struckthrough</del> text.
-All 16 combinations are available, too.  For instance, <b><em><tt><del>this text has all 4 styles at once</del></tt></em></b>!
-Even if you mistakenly <b>forget to close a style, </b>
-it will reset on the next source line.
+<h3>  Formatting Text </h3>
+    Mookdown permits <b>bold</b>, <em>italicized</em>, <tt>monospaced</tt>, and <del>struckthrough</del> text.
+    All 16 combinations are available.  For instance, <b><em><tt><del>this text has all 4 styles at once</del></tt></em></b>!
+    Even if you mistakenly <b>forget to close a style, </b>
+    it will reset on the next source line.
 <p>
-Newlines in the source do not imply newlines in the generated html.
-So, to start a new paragraph, try two newlines.
-Comments are line-based: start a line with <tt>#</tt> to comment the whole line out. 
-For now, links such as
-<a href="url">text</a>
-must be on their own line.
+    Newlines in the source do not imply newlines in the generated html.
+    So, to start a new paragraph, try two newlines.
+    Comments are line-based: start a line with <tt>#</tt> to comment the whole line out. 
 <p>
+    Render math by enclosing in dollar signs: $\exp(A+B) \approx \exp(A)\exp(B)\exp([A,B]/2)$.
+    Move to display mode by <em>starting a new paragraph</em> and enclosing in <em>pairs</em> of dollar signs:
 <p>
+    $$R_{\mu\nu} + (-\frac{1}{2}R + \Lambda)g_{\mu\nu} = 8\pi G T_{\mu\nu}$$
+<p>
+    Links are rendered in bra/ket notation for url/linktext: 
+<a href="../index.html">here is <em>my</em> $\exp$traordinary <b>homepage</b></a>.
+    Observe that formatting and math (but not nested links) is permitted in link text.
+    Remember to use <tt>http://</tt> in the URL for external links such as 
+<a href="http://www.google.com">to Google</a>.
+<p>
+    Beware: asterisks, percent signs, backticks, tildes, dollar signs, and angle brackets are all special characters.
+    Avoid using them for other purposes.  For instance, instead of angle brackets, opt for <tt>\lt</tt> and <tt>\gt</tt> in $\LaTeX$ code.
+<p>
+<h3>  Headers </h3>
+    Yep, math and formatting are allowed.
+    However, bold styles do not render differently, because headers are already bold.
+<h4>  <em>Sub</em>headers  </h4>
+<h5>  $sub^2$headers </h5>
+<h5>  I like to use $\LaTeX$ to $\fbox{BOX SUBSUBHEADERS}$ </h5>
 <p>
     </body>
 </html>

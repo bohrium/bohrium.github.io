@@ -1,0 +1,13 @@
+# author: samtenka
+# change: 2018-05-13
+# create: 2017-05-13 
+# descrp: Techniques for the Preparation of Peanut Butter and Jelly Sandwich
+
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\from}{\leftarrow}$
+
+! PB & `J` & *bold* & %italics%
+
+This is a <http://www.google.com|test *link*>

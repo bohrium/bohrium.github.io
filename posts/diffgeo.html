@@ -33,16 +33,16 @@ $\newcommand{\from}{\leftarrow}$
     example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
     fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
     "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
-    "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".  Here, curvature and
-    completeness are concepts defined in terms of a manifold's metric structure.
+    "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".
+    Here, curvature and completeness are concepts defined in terms of a manifold's metric structure.
 <p>
 <h5>  $\fbox{CURVATURE}$  </h5>
     Curvature will be a central quantity of study.  Let's develop intuition by considering some
-    low-dimensional manifolds immersed into Euclidean space; the former will inherit their metrics
-    from the latter.  First, observe that curves in $\RR^2$ are all locally isometric --- just
-    parameterize by arclength.  Therefore, though two immersions may have osculating circles of
-    different radii (and hence different extrinsic curvatures), all curves have the <em>same</em>
-    intrinsic curvature.
+    low-dimensional manifolds embedded into Euclidean space; the distance between two points on
+    a manifold we understand as the infima of lengths of paths between them.  First, observe
+    that curves in $\RR^2$ are all locally isometric --- just parameterize by arclength. 
+    Therefore, though two immersions may have osculating circles of different radii (and hence
+    may have different extrinsic curvatures), all curves have the <em>same</em> intrinsic curvature.
 <p>
     INSERT IMAGE
 <p>
@@ -65,13 +65,13 @@ $\newcommand{\from}{\leftarrow}$
 <p>
 <h5>  $\fbox{SMOOTH MANIFOLDS}$  </h5>
     It is well to define a topological manifold semi-intrinsically as a topological space
-    (second-countable and Hausdorff) locally homeomorphic to (subsets of) some $\RR^n$.  In so
+    (second-countable and Hausdorff) locally homeomorphic to (open subsets of) some $\RR^n$.  In so
     doing, we rely on a prior notion of general topological structure.  However, we have no
     analogue for general smooth structure.  Thus, we work extrinsically: a <b>smooth manifold</b> of
     dimension $n$ is a family of bijections $\{\phi_i:X_i\to U_i\subseteq \RR^n\}_{i\in I}$ where
-    each $U_i\subseteq \RR^n$ is open.  The bijections must obey the <b>gluing axiom</b>, that is, for
-    all $i, j\in I$, the map $\phi_i\circ \phi_j|_{\phi_j(X_i\cap X_j)}$ between real open sets
-    is <em>smooth</em>.  These "transition maps" will hence be diffeomorphisms and so
+    each $U_i\subseteq \RR^n$ is open.  The bijections must obey a gluing axiom: for all
+    $i, j\in I$, the map $\phi_i\circ \phi_j|_{\phi_j(X_i\cap X_j)}$ between real open sets is
+    <em>smooth</em>.  These "transition maps" will hence be diffeomorphisms and so
     $M = \bigcup_{i\in I} X_i$ will also be a topological manifold (with the second countable and
     Hausdorff assumptions always implicit).  Beware: topological manifolds may have 0, 1, or
     more smooth structures.  Typical examples:
@@ -133,10 +133,28 @@ $\newcommand{\from}{\leftarrow}$
 <p>
 <h3>  Part B: Differences From Euclidean Space  </h3>
 <h4>  Lecture  5: Differentiating Vector Fields </h4>
+<h5>  $\fbox{LIE BRACKETS}$ </h5>
+<h5>  $\fbox{AFFINE CONNECTIONS}$ </h5>
+<h5>  $\fbox{PARALLEL TRANSPORT}$ </h5>
 <h4>  Lecture  6: Levi-Civita Connection </h4>
-<h4>  Lecture  7: Variations of Energy; Jacobi Fields  </h4>
-<h4>  Lecture  8: Curvature Defined  </h4>
-<h4>  Lecture  9: Curvature Summarized </h4>
+<h5>  $\fbox{LADDER PICTURE}$ </h5>
+<h5>  $\fbox{LEVI-CIVITA CONSTRUCTION}$ </h5>
+<h5>  $\fbox{FORMULAS; EXAMPLE: SPHERE}$ </h5>
+<h4>  Lecture  7: Variations of Energy </h4>
+<h5>  $\fbox{ENERGY AND GEODESICS}$ </h5>
+<h5>  $\fbox{FIRST VARIATION}$ </h5>
+<h5>  $\fbox{SECOND VARIATION}$ </h5>
+<h5>  $\fbox{JACOBI FIELDS}$ </h5>
+<h4>  Lecture  8: Sectional Curvature </h4>
+<h5>  $\fbox{FROM SECOND VARIATION}$ </h5>
+<h5>  $\fbox{JACOBI EQUATION}$ </h5>
+<h5>  $\fbox{ETYMOLOGY}$ </h5>
+<h4>  Lecture  9: Viewpoints on Curvature  </h4>
+<h5>  $\fbox{RIEMANN TENSOR}$ </h5>
+<h5>  $\fbox{METRIC FROM CURVATURE: CARTAN}$ </h5>
+<h5>  $\fbox{CURVATURE AND PARALLEL TRANSPORT}$ </h5>
+<h5>  $\fbox{CURVATURE AND SIDE-ANGLE-SIDE}$ </h5>
+<h5>  $\fbox{CURVATURE AND ANGLE DEFICIT}$ </h5>
 <p>
 <h3>  Part C: Isometries and Nice Spaces   </h3>
 <h4>  Lecture 10: Killing Fields  </h4>
@@ -145,7 +163,7 @@ $\newcommand{\from}{\leftarrow}$
 <h4>  Lecture 12: Homogeneous Spaces  </h4>
 <h4>  Lecture 13: Symmetric Spaces </h4>
 <h4>  Lecture 14: Spaces of Constant Curvature </h4>
-<h5>  $\fbox{CARTAN}$ </h5>
+<h5>  $\fbox{CARTAN THEOREM}$ </h5>
 <p>
 <h3>  Part D: Comparing Spaces to Nice Spaces </h3>
 <h4>  Lecture 15: Morse Index Lemma  </h4>
@@ -162,9 +180,10 @@ $\newcommand{\from}{\leftarrow}$
 <h5>  $\fbox{BONNET-MYERS}$ </h5>
 <h5>  $\fbox{SYNGE-WEINSTEIN}$ </h5>
 <h4>  Lecture 22: Sphere Theorem </h4>
+<h5>  $\fbox{ESTIMATING INJECTIVITY RADIUS}$ </h5>
 <h4>  Lecture 23: Mostow Theorem </h4>
 <h4>  Lecture 24: Chern-Gauss-Bonnet Theorem  </h4>
-    Based on http://www.maths.ed.ac.uk/<del>v1ranick/papers/li4.pdf</del>
+    This lecture based on http://www.maths.ed.ac.uk/<del>v1ranick/papers/li4.pdf</del>
 <p>
     </body>
 </html>

@@ -4,18 +4,34 @@
 # descrp: Mookdown: a Specification by Example 
 
 ! The `Mookdown` Guide 
-!! A Specification by Example
+!!!! A Specification by Example
+!!!! See `bohrium.github.io/posts/language.mookdown` for the Mookdown that generated this page.
 
-Mookdown permits various text styles, including *bold*, %italicized%, `monospaced`, and ~struckthrough~ text.
-All 16 combinations are available, too.  For instance, *%`~this text has all 4 styles at once~`%*!
-Even if you mistakenly *forget to close a style, 
-it will reset on the next source line.
+!! Formatting Text
+    Mookdown permits *bold*, %italicized%, `monospaced`, and ~struckthrough~ text.
+    All 16 combinations are available.  For instance, *%`~this text has all 4 styles at once~`%*!
+    Even if you mistakenly *forget to close a style, 
+    it will reset on the next source line.
+    
+    Newlines in the source do not imply newlines in the generated html.
+    So, to start a new paragraph, try two newlines.
+    Comments are line-based: start a line with `#` to comment the whole line out. 
+    
+    Render math by enclosing in dollar signs: $\exp(A+B) \approx \exp(A)\exp(B)\exp([A,B]/2)$.
+    Move to display mode by %starting a new paragraph% and enclosing in %pairs% of dollar signs:
+    
+    $$R_{\mu\nu} + (-\frac{1}{2}R + \Lambda)g_{\mu\nu} = 8\pi G T_{\mu\nu}$$
+    
+    Links are rendered in bra/ket notation for url/linktext: <../index.html|here is %my% $\exp$traordinary *homepage*>.
+    Observe that formatting and math (but not nested links) is permitted in link text.
+    Remember to use `http://` in the URL for external links such as <http://www.google.com|to Google>.
+    
+    Beware: asterisks, percent signs, backticks, tildes, dollar signs, and angle brackets are all special characters.
+    Avoid using them for other purposes.  For instance, instead of angle brackets, opt for `\lt` and `\gt` in $\LaTeX$ code.
 
-Newlines in the source do not imply newlines in the generated html.
-So, to start a new paragraph, try two newlines.
-Comments are line-based: start a line with `#` to comment the whole line out. 
-For now, links such as
-[url][text]
-must be on their own line.
-
-
+!! Headers
+    Yep, math and formatting are allowed.
+    However, bold styles do not render differently, because headers are already bold.
+!!! %Sub%headers 
+!!!! $sub^2$headers
+!!!! I like to use $\LaTeX$ to $\fbox{BOX SUBSUBHEADERS}$
