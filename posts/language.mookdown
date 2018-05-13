@@ -1,5 +1,5 @@
 # author: samtenka
-# change: 2017-12-22 
+# change: 2018-05-13
 # create: 2017-12-22 
 # descrp: Mookdown: a Specification by Example 
 
@@ -13,9 +13,10 @@
     Even if you mistakenly *forget to close a style, 
     it will reset on the next source line.
     
-    Newlines in the source do not imply newlines in the generated html.
+    Newlines in the source do not induce newlines in the generated html.
     So, to start a new paragraph, try two newlines.
     Comments are line-based: start a line with `#` to comment the whole line out. 
+# for instance, see the top of the source
     
     Render math by enclosing in dollar signs: $\exp(A+B) \approx \exp(A)\exp(B)\exp([A,B]/2)$.
     Move to display mode by %starting a new paragraph% and enclosing in %pairs% of dollar signs:
@@ -30,8 +31,9 @@
     Avoid using them for other purposes.  For instance, instead of angle brackets, opt for `\lt` and `\gt` in $\LaTeX$ code.
 
 !! Headers
-    Yep, math and formatting are allowed.
-    However, bold styles do not render differently, because headers are already bold.
+    Headers of all levels may include math and formatting.
+    However, bold styles are invisible, because headers are already bold.
+
 !!! %Sub%headers 
 !!!! $sub^2$headers
 !!!! I like to use $\LaTeX$ to $\fbox{BOX SUBSUBHEADERS}$
