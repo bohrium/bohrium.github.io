@@ -1,3 +1,28 @@
+#togglerbody {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+    text-align: center;
+}
+#toggler {
+    float: left;
+    background-color: rgb(64, 48, 48);
+    color: rgb(32, 16, 16);
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+}
+#title {
+    font-size: 55px;
+    color: rgb(192, 192, 192);
+}
+
+
+
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -65,13 +90,8 @@ body {
     color: rgb(255, 224, 192);
 }
 
-#title {
-    color: rgb(192, 192, 192);
-}
-
 h1 {
     color: rgb(255, 255, 192);
-    font-size: 200%;
     font-weight: normal;
     margin: 0;
     padding: 0;
