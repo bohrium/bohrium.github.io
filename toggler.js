@@ -13,7 +13,7 @@ function getCookie(cname) {
     return null;
 }
 
-var styles = ["moo", "dark"];
+var styles = ["white", "desert", "surf", "carboniferous", "beach"];
 var current_style_index = null;
 function current_style() {
     return styles[current_style_index];
