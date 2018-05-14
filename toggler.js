@@ -3,7 +3,7 @@ function setCookie(cname, cvalue) {
 }
 
 function getCookie(cname) {
-    var nameEQ = name + "=";
+    var nameEQ = cname + "=";
     alert("##"+document.cookie);
     var ca = document.cookie.split(';');
     for (var i=0; i!=ca.length; ++i) {
