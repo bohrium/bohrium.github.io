@@ -20,7 +20,7 @@ function current_style() {
 }
 function swapStyleSheet() {
     current_style_index = (current_style_index + 1) % styles.length;
-    setCookie("style_index", toString(current_style_index));
+    setCookie("style_index", current_style_index.toString());
     alert("cookie:" + document.cookie);
     document.getElementById("pagestyle").href = "css/"+current_style()+".css";
 }
