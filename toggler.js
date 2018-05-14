@@ -5,9 +5,9 @@ function setCookie(cname, cvalue) {
 function getCookie(cname) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for(var i=0; i!=ca.length; ++i) {
+    for (var i=0; i!=ca.length; ++i) {
         var c = ca[i];
-        while (c.charAt(0)==' ') { c = c.substring(1, c.length); }
+        while (c.charAt(0) == ' ') { c = c.substring(1, c.length); }
         if (c.indexOf(nameEQ) == 0) { return c.substring(nameEQ.length, c.length); }
     }
     return null;
@@ -30,9 +30,11 @@ function initate() {
     toggler.onclick = function () {swapStyleSheet();};
 
     var cookie_style_index = getCookie("style_index");
+    alert(cookie_style_index);
     if (cookie_style_index == null) {
         alert("reset cookie:" + document.cookie);
         setCookie("style_index", "0");
+        current_style_index = 0; 
     } else {
         alert("fetch cookie:" + document.cookie);
         current_style_index = parseInt(cookie_style_index);
