@@ -14,13 +14,14 @@ function getCookie(cname) {
 }
 
 var styles = ["moo", "dark"];
-var current_style_index = 0;
+var current_style_index = null;
 function current_style() {
-    return  styles[current_style_index];
+    return styles[current_style_index];
 }
 function swapStyleSheet() {
     current_style_index = (current_style_index + 1) % styles.length;
-    setCookie("style_index", current_style_index);
+    setCookie("style_index", toString(current_style_index));
+    alert("cookie:" + document.cookie);
     document.getElementById("pagestyle").href = "css/"+current_style()+".css";
 }
 
@@ -30,11 +31,10 @@ function initate() {
 
     var cookie_style_index = getCookie("style_index");
     if (cookie_style_index == null) {
-        setCookie("style_index", current_style_index);
+        setCookie("style_index", "0");
     } else {
         current_style_index = parseInt(cookie_style_index);
     }
-    setCookie("hi=bye");
     alert("cookie:" + document.cookie);
     document.getElementById("pagestyle").href = "css/"+current_style()+".css";
 }
