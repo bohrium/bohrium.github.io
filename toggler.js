@@ -31,11 +31,12 @@ function initate() {
 
     var cookie_style_index = getCookie("style_index");
     if (cookie_style_index == null) {
+        alert("reset cookie:" + document.cookie);
         setCookie("style_index", "0");
     } else {
+        alert("fetch cookie:" + document.cookie);
         current_style_index = parseInt(cookie_style_index);
     }
-    alert("cookie:" + document.cookie);
     document.getElementById("pagestyle").href = "css/"+current_style()+".css";
 }
 
