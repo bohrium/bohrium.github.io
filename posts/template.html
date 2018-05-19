@@ -1,17 +1,20 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../css/carboniferous.css" />
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
         <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-            });
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
         </script>
         <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
+        <script type="application/javascript" src="../js/toggler.js"></script>
     </head>
+    
     <body>
-        <h1><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
 
         BODY
     </body>
