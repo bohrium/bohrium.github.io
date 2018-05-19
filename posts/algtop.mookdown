@@ -9,9 +9,7 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
 ! Algebraic Topology
-!!!! Notes based on a course by Igor Kriz, on May's text, on Ben Gould's notes, and on conversations with Dean Young.
-!!!! Aim: to digest and record, not to compose a textbook.  Not always complete sentences.
-!!!! Comprehensible given basic point-set topology.
+!!!! Notes based on a course by Igor Kriz, on May's text, on <http://www-personal.umich.edu/~brgould/592_notes.pdf|Ben Gould's notes>, and on conversations with Dean Young.  Aim: to digest and record, not to compose a textbook.  Not always complete sentences.  Comprehensible given basic point-set topology.
 
 !! Part A: Fundamental Groupoid
 !!! What is Algebraic Topology?

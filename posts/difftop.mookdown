@@ -1,7 +1,7 @@
 # author: samtenka
 # change: 2017-12-24 
 # create: 2017-12-24 
-# descrp: Riemann Manifolds 
+# descrp: Differential Topology 
 
 $\newcommand{\Aut}{\text{Aut}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
@@ -9,7 +9,7 @@ $\newcommand{\RR}{\mathbb{R}}$
 $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
-! Differential Geometry 
+! Differential Topology 
 !!!! Notes by Sam Tenka based on courses by Ralf Spatzier
 
 !! Overview of Manifolds 

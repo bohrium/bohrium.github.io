@@ -1,183 +1,36 @@
-#togglerbody {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+@import "base.css";
 
-    display: block;
-    text-align: center;
-}
 #toggler {
-    float: left;
     background-color: rgb(255, 255, 255);
     color: rgb(224, 240, 255);
-    border: none;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
 }
 #title {
-    font-size: 55px;
     color: rgb(0, 0, 64);
 }
-
-
-
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-
-
-
-
-
-#wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  width: 26em;
-}
-
-.left {
-  float: left;
-  width: 5em;
-  padding-right: 1em;
-  padding-top: .2em;
-  padding-bottom: .2em;
-  text-align: right;
-  color: #888;
-  overflow: visible;
-}
-
-.right {
-  margin-left: 5.5em;
-  width: 20em;
-  padding-left: .5em;
-  padding-top: .2em;
-  padding-bottom: .2em;
-  border-left: 1px solid #ddd;
-  text-align: justify;
-}
-
-
-
-
-
-
-
-
 
 body {
-    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-
     background-color: rgb(224, 240, 255);
     color: rgb(32, 148, 139);
-
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: justify;
 }
-
 h1 {
     color: rgb(0, 0, 64);
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-    font-size: 55px;
-    text-align: center;
 }
-
 h2 {
     color: rgb(32, 148, 139);
-    font-size: 45px;
-    text-align: center;
 }
-
 h3 {
     color: rgb(106, 177, 135);
-    font-size: 35px;
-    text-align: center;
 }
-
 h4 {
     color: rgb(244, 208, 112);
-    font-size: 25px;
-    text-align: center;
 }
-
 h5 {
     color: rgb(222, 122, 34);
-    font-size: 15px;
-    text-align: center;
 }
-
 a {
     color: rgb(128, 128, 192);
-    text-decoration: none;
 }
-
 a:hover {
     background-color: rgb(64, 192, 256);
     color: rgb(64, 64, 256);
-    text-decoration: none;
-}
-
-
-
-
-
-
-
-#leadership {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-
-    margin-top: 40px;
-}
-
-.leader-box {
-    width: 180px;
-    padding: 0 20px;
-    margin-bottom: 20px;
-}
-
-.leader-portrait {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 10px auto;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.leader-portrait img {
-    width: 100%;
-}
-
-.leader-name {
-    text-align: center;
-    color: rgb(64, 64, 128);
-    font-weight:  bold;
-    font-size: 18px;
-}
-
-.leader-info {
-    text-align: center;
-    color: rgb(128, 128, 128);
-    font-style: italic;
-    font-size: 14px;
 }

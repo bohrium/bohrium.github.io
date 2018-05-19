@@ -1,0 +1,41 @@
+#leadership {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 40px;
+}
+
+.leader-box {
+    width: 180px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.leader-portrait {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.leader-portrait img {
+    width: 100%;
+}
+
+.leader-name {
+    text-align: center;
+    color: rgb(64, 64, 128);
+    font-weight:  bold;
+    font-size: 18px;
+}
+
+.leader-info {
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-style: italic;
+    font-size: 14px;
+}
