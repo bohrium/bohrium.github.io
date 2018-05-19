@@ -18,10 +18,20 @@ var current_style_index = null;
 function current_style() {
     return styles[current_style_index];
 }
+function set_stylesheet() {
+    var loc = window.location.pathname;
+    loc = loc.substring(loc.lastIndexOf("bohrium.github.io/"), loc.length);
+    var filenm = "";
+    for (var i=0; i!=loc.split("/").length-2; ++i) {
+        filenm += "../";
+    }
+    filenm += "css/"+current_style()+".css";
+    document.getElementById("pagestyle").href = filenm;
+}
 function swapStyleSheet() {
     current_style_index = (current_style_index + 1) % styles.length;
     setCookie("style_index", current_style_index.toString());
-    document.getElementById("pagestyle").href = "css/"+current_style()+".css";
+    set_stylesheet();
 }
 
 function initate() {
@@ -35,7 +45,7 @@ function initate() {
     } else {
         current_style_index = parseInt(cookie_style_index);
     }
-    document.getElementById("pagestyle").href = "css/"+current_style()+".css";
+    set_stylesheet();
 }
 
 window.onload = initate;
