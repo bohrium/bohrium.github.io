@@ -10,9 +10,7 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
 ! Differential Geometry 
-!!!! Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.
-!!!! Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.
-!!!! Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc.
+!!!! Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.  Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.  Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc.
 
 !! Part A: Similarities to Euclidean Space
 !!! Lecture  0: Introduction 
