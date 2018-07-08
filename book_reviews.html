@@ -21,7 +21,7 @@
             <h2>Reading</h2> 
     
                 <div>
-                    Here's what I've been reading recently.  Click on the bold bubbles for notes.
+                    Here are some books I've enjoyed.  Click the bold bubbles for notes.
                     The ratings live in $[0, 1]$ and are computed as
                     $ \frac{1}{8} \left (4 \cdot \text{overall} + \text{humor} + \text{poetry} + \text{technical insight} + \text{human insight}\right) $
                     where each sub-score lives in $[0, 1]$.
@@ -31,6 +31,9 @@
                     <canvas height="480" id="myCanvas" style="border: 0px;" width="640"></canvas>
                     <div id="infobox">
                 </div>
+
+                <strong><div id="bookreviewtitle"></div></strong>
+                <div id="bookreview"></div>
 
                 <br>
                 <br>
@@ -42,6 +45,7 @@
     
                 <script>
                     var canvas = document.getElementById("myCanvas");
+                    var bookreview = document.getElementById("bookreview");
                     var context = canvas.getContext("2d");
                     var rect = canvas.getBoundingClientRect();
                     canvas.addEventListener("mousemove", onMouseMove, false);
@@ -62,9 +66,9 @@
                     */
                     var books = [
                         ["Peaceful Pill Handbook",          "2017-02", 2006, 0  , 0  , 0.5, 1.5, 0.5],
-                        ["Pale Fire",                       "2017-03", 1962, 1.5, 1  , 1  , 0.5, 0  ],
-                        ["A Confederacy of Dunces",         "2017-04", 1980, 2  , 2  , 0.5, 0  , 1  ],
-                        ["Zen in the Art of Writing",       "2017-05", 1990, 0  , 0  , 0  , 1  , 0.5, "books/zen_bradbury.html"],
+                        ["Pale Fire",                       "2017-03", 1962, 1.5, 1  , 1  , 0.5, 0  , "test"],
+                        ["A Confederacy of Dunces",         "2017-04", 1980, 2  , 2  , 0.5, 0  , 1  , "moo"],
+                        ["Zen in the Art of Writing",       "2017-05", 1990, 0  , 0  , 0  , 1  , 0.5],
                         ["To Friend Who Didn't Save M'Life","2017-06", 1990, 2  , 0.5, 1  , 0.5, 2  ],
                         ["Martian Chronicles",              "2017-06", 1950, 1  , 0  , 1  , 0  , 0  ],
                         ["Running with Scissors",           "2017-06", 2002, 1.5, 2  , 0  , 0  , 1  ],
@@ -72,24 +76,73 @@
                         ["Hebdomeros",                      "2017-07", 1929, 0.5, 0  , 1  , 0  , 0  ],
                         ["Fahrenheit 451",                  "2017-07", 1953, 0  , 0  , 0  , 0  , 0  ],
                         ["Milnor's Differential Topology",  "2017-07", 1965, 2  , 0  , 0.5, 2  , 0  ],
-                        ["How to Do Things Right",          "2017-07", 1004, 1.5, 1  , 0.5, 0.5, 0.5],
-                        ["Me Talk Pretty One Day",          "2017-10", 2000, 1  , 1  , 0  , 0  , 0.5],
-                        ["An Artist of the Floating World", "2018-01", 1986, 2  , 0.5, 0.5, 0  , 1  , "books/artist_ishiguro.html"],
-                        ["A Clockwork Orange",              "2018-03", 1962, 2  , 0  , 1  , 0  , 2  , "books/clockwork_burgess.html"],
-                        ["Neon Bible",                      "2018-04", 1954, 1.5, 0  , 2  , 0  , 1  ],
-                        ["Cold Comfort Farm",               "2018-04", 1932, 1  , 2  , 0.5, 0  , 0.5],
-                        ["Math of the Transcendental",      "2018-04", 2014, 0.5, 0  , 0  , 1.5, 0  ],
-                        /*["Winesburg, Ohio",                 "2018-04", 1919, 0  , 0  , 0  , 0  , 0  ],
+                        ["How to Do Things Right",          "2017-07", 1972, 1.5, 1  , 0.5, 0.5, 0.5],
+                        ["Me Talk Pretty One Day",          "2017-10", 2000, 1  , 1  , 1  , 0  , 0.5],
+                        ["An Artist of the Floating World", "2018-01", 1986, 2  , 0.5, 0.5, 0  , 1  ],
+                        ["A Clockwork Orange",              "2018-03", 1962, 2  , 0  , 1  , 0  , 2  ],
+
+                        ["Planiverse",                      "2018-07", 1984, 2  , 0.5, 0  , 2  , 0  ],
+                        ["Reasons to Stay Alive",           "2018-07", 2015, 0  , 0  , 0  , 0  , 1.5],
+                        ["How to Write a Sentence",         "2018-07", 2011, 0.5, 0  , 0.5, 0.5, 0  ],
+                        ["Neon Bible",                      "2018-07", 1954, 1  , 0  , 1.5, 0  , 0.5],
+                        ["Cold Comfort Farm",               "2018-07", 1932, 1.5, 2  , 0.5, 0  , 1  ],
+                        ["Winesburg, Ohio",                 "2018-07", 1919, 0  , 0.5, 2  , 0  , 1  ],
+                        ["Thinking Fast and Slow",          "2018-07", 2011, 1  , 0  , 0  , 1.5, 1  ],
+                        ["Pnin",                            "2018-07", 1957, 0  , 1  , 0  , 0  , 0.5],
+                        ["Secret Life of Salvador Dali",    "2018-07", 1942, 1.5, 2  , 1  , 0.5, 0  ],
+                        ["Adventures of Kavalier and Clay", "2018-07", 2000, 2  , 1  , 1  , 0  , 1  ],
+                        ["Twain's Connecticut Yankee",      "2018-07", 1889, 1  , 1  , 0  , 0  , 0  ],
+                        ["Borge's Ficciones",               "2018-07", 1962, 1  , 0.5, 2  , 0.5, 0  ],
+                        ["The Anatomy of Prose",            "2018-07", 1954, 1  , 0  , 1  , 1 ,  0  ],
+                        ["On the Road",                     "2018-08", 1957, 0  , 0  , 2  , 0  , 2  ],
+                        ["The Sun Also Rises",              "2018-08", 1926, 0  , 0  , 1  , 0  , 1  ],
+                        ["Selfish Gene",                    "2018-08", 1976, 2  , 0  , 0  , 2  , 0  ],
+                        ["The Periodic Table",              "2018-08", 1975, 1  , 1  , 2  , 0  , 0  ],
+                        ["Introduction to Algorithms",      "2018-08", 1989, 1  , 0  , 0  , 1  , 0  ],
+                        ["Artificial Intelligence",         "2018-08", 1994, 0  , 0  , 0  , 1  , 0  ],
+                        ["Learning from Data",              "2018-08", 2012, 1.5, 0  , 0  , 1  , 0  ],
+                        ["Discipline of Programming",       "2018-08", 1976, 2  , 0  , 0  , 2  , 0  ],
+                        ["Diversity of Life",               "2018-08", 1992, 1.5, 0  , 1  , 1  , 0  ],
+                        ["The #1 Ladies' Detective Agency", "2018-08", 1998, 2  , 2  , 1  , 0  , 1  ],
+
+                        /*["A Separate Peace",                "2018-07", 1959, 0  , 0  , 0  , 0  , 0  ],
+                        ["A Room of One's Own",             "2018-08", 1929, 0  , 0  , 0  , 0  , 0  ],
+                        ["Note to Self",                    "2018-07", 2017, 0.5, 0.5, 1  , 0  , 0  ],
+                        ["The Language Instinct",           "2018-07", 1994, 1  , 0.5, 0  , 1  , 0.5],
+                        ["How to Write an Autobio Novel",   "2018-07", 2018, 1  , 0.5, 1  , 0  , 0  ],
+                        ["The Remains of the Day",          "2018-07", 1989, 1.5, 0  , 1  , 0  , 2  ],
+                        ["Life of Tristam Shandy",          "2018-07", 1767, 0.5, 1.5, 0  , 0  , 0.5],
+                        ["Unbearable Lightness of Being",   "2018-08", 1984, 0  , 0  , 0  , 0  , 0  ],
+                        ["Portnoy's Complaint",             "2018-08", 1969, 0  , 0  , 0  , 0  , 0  ],
+                        ["Midnight's Children",             "2018-08", 1981, 0  , 0  , 0  , 0  , 0  ],
+                        ["Things Fall Apart",               "2018-08", 1958, 0  , 0  , 0  , 0  , 0  ],
+                        ["Great Expectations",              "2018-08", 1861, 0  , 0  , 0  , 0  , 0  ],
+                        ["Middlemarch",                     "2018-08", 1871, 0  , 0  , 0  , 0  , 0  ],
+                        ["The Old Man and the Sea",         "2018-08", 1952, 0  , 0  , 0  , 0  , 0  ],
+                        ["Beloved",                         "2018-08", 1987, 0  , 0  , 0  , 0  , 0  ],
+                        ["A Room with a View",              "2018-08", 1908, 0  , 0  , 0  , 0  , 0  ],
+                        ["Ginger Man",                      "2018-08", 1955, 0  , 0  , 0  , 0  , 0  ],
+                        ["Deliverance",                     "2018-08", 1970, 0  , 0  , 0  , 0  , 0  ],
+                        ["1984",                            "2018-08", 1949, 0  , 0  , 0  , 0  , 0  ],
+                        ["Lives of a Cell",                 "2018-08", 1974, 0  , 0  , 0  , 0  , 0  ],
+                        ["The Double Helix",                "2018-08", 1968, 0  , 0  , 0  , 0  , 0  ],
+                        ["The Mismeasure of Man",           "2018-08", 1981, 0  , 0  , 0  , 0  , 0  ],
+                        ["Varieties of Religious Exp'nce",  "2018-08", 1907, 0  , 0  , 0  , 0  , 0  ],
+                        ["Speak, Memory",                   "2018-08", 1966, 0  , 0  , 0  , 0  , 0  ],
+                        ["I am Malala",                     "2018-08", 2013, 0  , 0  , 0  , 0  , 0  ],
+                        ["Hrtbrkng Wrk o Staggering Genius","2018-08", 2000, 0  , 0  , 0  , 0  , 0  ],
+                        ["Darkness Visible",                "2018-08", 1990, 0  , 0  , 0  , 0  , 0  ],
+                        ["Boy Erased",                      "2018-08", 2016, 0  , 0  , 0  , 0  , 0  ],
+                        ["Palimpsest",                      "2018-08", 1995, 0  , 0  , 0  , 0  , 0  ],
+
                         ["Gulliver's Travels",              "2018-04", 1726, 0  , 0  , 0  , 0  , 0  ],
-                        ["Pnin",                            "2018-04", 1957, 0  , 0  , 0  , 0  , 0  ],
+                        ["Math of the Transcendental",      "2018-04", 2014, 0.5, 0  , 0  , 1.5, 0  ],
                         ["Love in the Time of Cholera",     "2018-04", 1985, 0  , 0  , 0  , 0  , 0  ],
-                        ["Unbearable Lightness of Being",   "2018-05", 1984, 0  , 0  , 0  , 0  , 0  ],
                         ["Life a User's Manual",            "2018-05", 1978, 0  , 0  , 0  , 0  , 0  ],
                         ["Ada or Ardor: A Family Chronicle","2018-05", 1969, 0  , 0  , 0  , 0  , 0  ],
                         ["Portrait of Artist as Young Man", "2018-05", 1916, 0  , 0  , 0  , 0  , 0  ],
                         ["Borge's Labrinths",               "2018-05", 1962, 0  , 0  , 0  , 0  , 0  ],
                         ["The World According to Garp",     "2018-05", 1978, 0  , 0  , 0  , 0  , 0  ],
-                        ["Thinking Fast and Slow",          "2018-05", 2011, 0  , 0  , 0  , 0  , 0  ],
                         ["The Broom of the System",         "2018-05", 1987, 0  , 0  , 0  , 0  , 0  ],
                         ["De Profundis",                    "2018-06", 1905, 0  , 0  , 0  , 0  , 0  ],
                         ["DeLillo's White Noise",           "2018-06", 1985, 0  , 0  , 0  , 0  , 0  ],
@@ -98,16 +151,12 @@
                         ["20,000 Leagues Under the Sea",    "2018-06", 1870, 0  , 0  , 0  , 0  , 0  ],
                         ["Anna Karenina",                   "2018-06", 1877, 0  , 0  , 0  , 0  , 0  ],
                         ["Leaves of Grass",                 "2018-06", 1855, 0  , 0  , 0  , 0  , 0  ],
-                        ["Twain's Connecticut Yankee",      "2018-06", 1889, 0  , 0  , 0  , 0  , 0  ],
                         ["A Boy's Own Story",               "2018-07", 1982, 0  , 0  , 0  , 0  , 0  ],
                         ["The Catcher in the Rye",          "2018-07", 1951, 0  , 0  , 0  , 0  , 0  ],
-                        ["Adventures of Kavalier and Clay", "2018-07", 2000, 0  , 0  , 0  , 0  , 0  ],
                         ["Mysteries of Pittsburgh",         "2018-07", 1988, 0  , 0  , 0  , 0  , 0  ],
                         ["The Corrections",                 "2018-07", 2001, 0  , 0  , 0  , 0  , 0  ],
                         ["The Adventures of Augie March",   "2018-07", 1953, 0  , 0  , 0  , 0  , 0  ],
-                        ["Portnoy's Complaint",             "2018-07", 1969, 0  , 0  , 0  , 0  , 0  ],
-                        ["Brief Wondrous Life of Oscar Wao","2018-07", 2007, 0  , 0  , 0  , 0  , 0  ],
-                        ["The Anatomy of Prose",            "2018-08", 1954, 0  , 0  , 0  , 0  , 0  ],*/
+                        ["Brief Wondrous Life of Oscar Wao","2018-07", 2007, 0  , 0  , 0  , 0  , 0  ],*/
                     ];
 
                     onMouseMove_xy(0, 0);
@@ -120,7 +169,7 @@
                         return offset+(canvas.height-3*offset) * (1.0 - get_score(i));
                     }
                     function get_book_x(i) {
-                        return offset+(canvas.width-3*offset) * (books[i][2]-1720.0)/(2020.0 - 1720.0);
+                        return offset+(canvas.width-3*offset) * (Math.max(1870.0, books[i][2])-1870.0)/(2020.0 - 1870.0);
                     }
 
                     function resetCanvas() {
@@ -138,7 +187,7 @@
                             context.moveTo(offset, canvas.height-offset);
                             context.lineTo(canvas.width-offset, canvas.height-offset);
                             context.fillText("Date of Publication", canvas.width/2, canvas.height-offset/2);
-                            context.fillText("1720", offset, canvas.height-offset/2);
+                            context.fillText("pre-1870", offset, canvas.height-offset/2);
                             context.fillText("2020", canvas.width-offset, canvas.height-offset/2);
                         context.stroke();
                     }
@@ -175,7 +224,8 @@
                             var booky = get_book_y(i);
                             var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
                             if (d2<7.5*7.5 && books[i].length==9) {
-                                window.location = books[i][8];
+                                bookreviewtitle.innerHTML = books[i][0];
+                                bookreview.innerHTML = books[i][8];
                             }
                         }
                     }
