@@ -23,9 +23,13 @@
     
                 <div>
                     Here are books I've enjoyed or plan to enjoy.  Click big bubbles for notes.
-                    Smaller dots are books not yet read or rated. 
-                        The ratings live in $[0, 1]$ and are computed as
-                    $ \frac{1}{8} \left (4 \cdot \text{overall} + \text{humor} + \text{poetry} + \text{technical insight} + \text{human insight}\right) $
+                    Smaller dots are books not yet read or reviewed --- their ratings are tentative. 
+                    The ratings live in $[0, 1]$ and are computed as <br>
+
+                    <div style="text-align:center">
+                    $ \frac{1}{32} \left (16 \cdot \text{overall} + 4 \cdot \text{humor} + 3 \cdot \text{poetry} + 4 \cdot \text{technical insight} + 5 \cdot \text{human insight}\right) $ <br>
+                    </div>
+
                     where each sub-score lives in $[0, 1]$.
                 </div>
  
@@ -74,7 +78,7 @@
 
                     function get_score(i) {
                         b = books[i]
-                        return (4*b[4]+b[5]+b[6]+b[7]+b[8])/16.0;
+                        return (16*b[4]+4*b[5]+3*b[6]+4*b[7]+5*b[8])/64.0;
                     }
                     function get_book_y(i) {
                         return offset+(canvas.height-3*offset) * (1.0 - get_score(i));

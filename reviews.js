@@ -2,7 +2,7 @@ var books = [
 ["Peaceful Pill Handbook",          "2017-02", 2006, "P.Nitschke     ", 0  , 0  , 0.5, 1.5, 0.5, 
     "In short: Nembutal injections are a peaceful but legally inaccessible way to go."],
 ["Pale Fire",                       "2017-03", 1962, "V.Nabokov      ", 1.5, 1  , 1  , 0.5, 0  , 
-    "    Written in 1962 by Vladimir Nabokov, author of 'Lolita'," +
+    "    Written in 1962 by Vladimir Nabokov, author of 'Lolita', " +
     "'Pale Fire' stands as a text in 4 parts and 3 layers, with 2-fold symmetry and hidden unity. " +
     "On the surface, the book is not a novel but a poem with thorough annotations. " +
     "The poem, a beautiful meditation on the nature of death by the late John Shade, begins:<br><br>" +
@@ -43,24 +43,62 @@ var books = [
     "Gripping.  Confusing ending."],
 ["Martian Chronicles",              "2017-06", 1950, "R.Bradbury     ", 1  , 0  , 2  , 0  , 0  , 
     "Highest poetry."],
-["Running with Scissors",           "2017-06", 2002, "A.Burroughs    ", 1.5, 2  , 0  , 0  , 1  , 
-    "Hilarious."],
+["Running with Scissors",           "2017-06", 2002, "A.Burroughs    ", 1.5, 2  , 0  , 0  , 1  , ""],
 ["Cannery Row",                     "2017-06", 1945, "J.Steinbeck    ", 1  , 0.5, 0.5, 0  , 0.5, ""],
 ["Fahrenheit 451",                  "2017-07", 1953, "R.Bradbury     ", 0  , 0  , 0  , 0  , 0  , ""],
-["Topology from Differential View", "2017-07", 1965, "J.Milnor       ", 2  , 0  , 0.5, 2  , 0  , 
-    "Beautifully presented"],
+["Topology from Differential View", "2017-07", 1965, "J.Milnor       ", 2  , 0  , 0.5, 2  , 0  , ""],
 ["How to Do Things Right",          "2017-07", 1972, "R.Hills        ", 1.5, 1  , 0.5, 0.5, 0.5, 
     "A funny antidote to my own curmudgeonliness."],
-["Me Talk Pretty One Day",          "2017-10", 2000, "D.Sedaris      ", 1  , 1  , 1  , 0  , 0.5, 
-    "Relatable."],
+["Me Talk Pretty One Day",          "2017-10", 2000, "D.Sedaris      ", 1  , 1  , 1  , 0  , 0.5, ""],
 ["An Artist of the Floating World", "2018-01", 1986, "K.Ishiguro     ", 2  , 0.5, 0.5, 0  , 1  , ""],
 ["A Clockwork Orange",              "2018-03", 1962, "A.Burgess      ", 2  , 0  , 1  , 0  , 2  , 
     "Music."],
 ["Riemannian Geometry",             "2018-05", 1971, "M.d.Carmo      ", 1  , 0  , 0.5, 1.5, 0  , ""],
-["Planiverse",                      "2018-07", 1984, "A.K.Dewdney    ", 1  , 0.5, 0.5, 2  , 0  , ""],
+["The Planiverse",                  "2018-07", 1984, "A.K.Dewdney    ", 1  , 0.5, 0.5, 1.5, 0  , ""],
+["The Armchair Economist",          "2018-07", 1993, "S.E.Landsburg  ", 2  , 0.5, 0  , 2  , 1  ,
+    "Economics is fun!  So I've learned from the 'Armchair Economist', a treasury of thought experiments and " +
+    "an invitation to puzzle over human behavior.  The book, beginning with the axiom that 'people respond to incentives', " +
+    "asks in a multitude of scenarios: based on observed actions, what incentives are present?  based on observed incentives, what actions should follow? " +
+    "<br><br>" +
+    "Though the book sparkles with beautiful insights " +
+    "(such as Coase's theorem, mechanisms to elicit truthful responses[*], and the presence of bias in certain inflation measurements), " +
+    "two chapters are particularly delicious: 'Why Popcorn Costs More at the Movies and Why the Obvious Answer is Wrong' and 'The Iowa Car Crop'. " + 
+    "The Popcorn chapter introduces a mystery, a solution, objections, counterobjections, countercounterobjections, and so on (I had to ponder it a while); " +
+    "it reaches a partially satisfying fixpoint, but its main delights, for me, lie in " +
+    "the ideas invoked along the way and the air of possibility we are left with. " +
+    "The Iowa chapter, by contrast, presents a gleaming, self-contained argument. " +
+    "<br><br>" +
+    "I much appreciate Landsburg's discussion of the urgency and nontriviality of determining our goals.[**] " +
+    "As policy makers, we may design incentives to elicit behaviors and hence outcomes, but what outcomes do we seek? " +
+    "Landsburg raises this question in 'Telling Right from Wrong', the book's most important chapter. " +
+    "He proposes no grand solution, but the question itself is worth asking.  After this chapter, economic efficiency is the " +
+    "precisely stated but only approximately accurate answer assumed. " +
+    "<br><br>" +
+    "The book closes with ludicrous policy suggestions and a salty complaint about environmentalism. " +
+    "I value these for the thought they provoke --- " +
+    "for instance, if we condemn the collusion of companies, why do we laud political bipartisanship? " +
+    "The analogy intrigues, but it smells fishy.  The question is, whence exactly comes that smell?[***] " +
+    "--- but I don't value them very much. " +
+    "" +
+    "<br><br>" +
+    "[*] To the book's examples I would add the following: how can one extract a true probability distribution from a reticent meteorologist? " +
+    "One wishes to incentivize the reported and true probabilities to be similar; " +
+    "however, the rewards can depend only on the reported probabilities and the single actual outcome. " +
+    "Answer: use logarithmic rewards!  That is, if the meteorologist says it will rain with chance p, then when it rains, reward her with log(p) dollars, " +
+    "and when it doesn't, reward her with log(1-p) dollars.  This is just cross entropy loss in machine learning. " +
+    "Speaking of ML, Nihar Shah shows that a multiplicative mechanism for crowdsource labeling is optimal --- see 'Double or Nothing' (JMLR 2016). " +
+    "<br><br>" +
+    "[**] I used to walk with a professor --- Igor Markov --- to office hours after his lecture. " +
+    "Once, as we ascended a spiral staircase, I remarked to him that it was always better to walk the inner circumference: " +
+    "that way, one travels a shorter distance.  He immediately asked me: 'what if I want a workout?'. " +
+    "<br><br>" +
+    "[***] Here's an issue my roommate Ryan and I grapple with: when gut and reasoning differ, what should one do?"],
 
+["Portnoy's Complaint",             "2018-08", 1969, "P.Roth         ", 1  , 0  , 2  , 0  , 0  , ""],
 ["Reasons to Stay Alive",           "2018-07", 2015, "M.Haig         ", 0  , 0  , 0  , 0  , 1.5, ""],
-["How to Write a Sentence",         "2018-07", 2011, "S.Fish         ", 0.5, 0  , 0.5, 0.5, 0  , ""],
+["How to Write a Sentence",         "2018-07", 2011, "S.Fish         ", 0  , 0  , 0.5, 0.5, 0  , ""],
+["The Tipping Point",               "2018-07", 2000, "M.Gladwell     ", 0.5, 0  , 0  , 0  , 1  , ""],
+
 ["Neon Bible",                      "2018-07", 1954, "J.K.Toole      ", 1  , 0  , 1.5, 0  , 0.5, ""],
 ["Cold Comfort Farm",               "2018-07", 1932, "S.Gibbons      ", 1.5, 2  , 0.5, 0  , 1  , ""],
 ["Winesburg, Ohio",                 "2018-07", 1919, "S.Anderson     ", 0  , 0.5, 2  , 0  , 1  , ""],
@@ -92,7 +130,6 @@ var books = [
 ["The Remains of the Day",          "2018-07", 1989, "K.Ishiguro     ", 1  , 0  , 1  , 0  , 2  , ""],
 ["Life of Tristam Shandy",          "2018-07", 1767, "L.Sterne       ", 1  , 0  , 0  , 0  , 1  , ""],
 ["Unbearable Lightness of Being",   "2018-08", 1984, "M.Kundera      ", 0  , 0  , 0  , 0  , 1  , ""],
-["Portnoy's Complaint",             "2018-08", 1969, "P.Roth         ", 1  , 0  , 2  , 0  , 0  , ""],
 ["Midnight's Children",             "2018-08", 1981, "S.Rushdie      ", 0  , 0  , 0  , 0  , 0  , ""],
 ["Lives of a Cell",                 "2018-08", 1974, "L.Thomas       ", 0  , 0  , 0  , 1  , 1  , ""],
 ["The Double Helix",                "2018-08", 1968, "J.D.Watson     ", 0  , 0  , 0  , 0  , 1  , ""],
