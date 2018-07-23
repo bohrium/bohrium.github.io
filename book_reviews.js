@@ -4,26 +4,31 @@ var books = [
     "    Written in 1962 by Vladimir Nabokov, author of 'Lolita', " +
     "'Pale Fire' stands as a text in 4 parts and 3 layers, with 2-fold symmetry and hidden unity. " +
     "On the surface, the book is not a novel but a poem with thorough annotations. " +
-    "The poem, a beautiful meditation on the nature of death by the late John Shade, begins:<br><br>" +
+    "The poem, a beautiful meditation on the nature of death by the late John Shade, begins: " +
+    "<br><br>" +
     "    I was the shadow of the waxwing slain<br>" +
     "    By the false azure in the windowpane;<br>" +
     "    I was the smudge of ashen fluff---and I<br>" +
-    "    Lived on, flew on, in the reflected sky.<br><br>" +
+    "    Lived on, flew on, in the reflected sky." +
+    "<br><br>" +
     "We see a bird smashing itself against a window that looks like the sky. " +
     "It dies at an invisible boundary between the real and the reflected. " +
     "But the poet imagines that the bird flies on in the reflected space beyond the window. " +
     "Shade continues to depict symmetry between parallel worlds (life and afterlife, the profound and the mundane)" +
-    "and to examine the shared boundary of each pair.<br><br>" +
+    "and to examine the shared boundary of each pair.[*] " +
+    "<br><br>" +
     "    The theme of parallel worlds continues beyond the poem, " +
     "for we soon discover the poem's extensive commentary to be rich itself in plot, symbol, and suspense. " +
     "Indeed, the footnotes to the poem (totaling perhaps 85% of the printed ink) are written by one Dr. Charles Kinbote, " +
-    "a harmless but delusional gay vegetarian who reads (really misreads) the poem in increasingly divergent senses. " +
+    "a harmless but delusional gay vegetarian who reads (really misreads) the poem in increasingly divergent senses.[**] " +
     "Kinbote glosses the poem as a veiled chronicle of a king's exile from the distant nothern state of Zembla" +
-    "--- and the reader sees that Kinbote believes himself to be that country's king.<br><br>" +
+    "--- and the reader sees that Kinbote believes himself to be that country's king. " +
+    "<br><br>" +
     "    But as the commentator's self-descriptions become decreasing likely, we search for yet another level of meaning: " +
     "who is Kinbote, truly?  Is he as harmless as he seems?  Where lies the boundary between his myth and Shade's reality" +
     "--- if such a boundary exists at all? " +
-    "The novel is littered with clues or seeming clues, and I myself have not been satisfied.<br><br>" +
+    "The novel is littered with clues or seeming clues, and I myself have not been satisfied. " +
+    "<br><br>" +
     "    Perhaps the mystery cannot be resolved.    And perhaps that is the point.    Shade's poem recounts his excitement" +
     "upon discovering that his near-death vision of a 'white fountain' had been matched by another's near-death vision of the same, " +
     "only to learn, in disappointment, that the latter had actually forseen a 'white mountain'. " +
@@ -33,7 +38,19 @@ var books = [
     "I like this, for it seems an antidote to my addiction to seeking fundamental pattern. " +
     "Ultimately, there may be no one canonically elegant perspective of Gaussian Distributions --- only many good ones. " +
     "One selects and develops a personal perspective through commentary. " +
-    "And as Kinbote decrees: 'for better or worse, it is the commentator who has the last word.' "],
+    "And as Kinbote decrees: 'for better or worse, it is the commentator who has the last word.' " +
+    "<br><br>" +
+    "[*] I recall my own father's fascination with painting frames: " +
+    "at the NYC museum of modern art, he tried to learn as much as possible about each painting's frame. " +
+    "He values craftsmanship: seamless sleek design, sometimes ornate, sometimes simple. " +
+    "A great frame should hide itself and enhance its image --- or should the painting enhance the frame? " +
+    "To make it sound profound: he taught me to look for the border between the real and represented. " +
+    "<br><br>" +
+    "[**] To the poem's innocent image of a 'male hand', Kinbote adds: " +
+    "'... he had nothing on save a leopard-spotted loincloth... " +
+    "the boy applied avid lips to a pipe of spring water and wiped his wet hands on his black bathing trunks... " +
+    "the young woodwose had now closed his eyes and was stretched out supine on the pool's marble margin...'"
+],
 ["A Confederacy of Dunces",         "2017-04", 1980, "J.K.Toole      ", 2  , 2  , 0.5, 0  , 1  , ""],
 ["Zen in the Art of Writing",       "2017-05", 1990, "R.Bradbury     ", 0  , 0  , 0  , 1  , 0.5, ""],
 ["To Friend Who Didn't Save M'Life","2017-06", 1990, "H.Guibert      ", 2  , 0.5, 1  , 0.5, 2  , ""],
@@ -52,7 +69,7 @@ var books = [
     "What do I feel upon reading it?  Enchantment.  Possibility.  Creative impulse. " + 
     "Dewdney's is a work of world-building; but, unlike Tolkien or Lewis, he invites the reader to join the fun. " +
     "The principles are few: the world is to be as similar as possible to ours, except in 2 space dimensions only. " +
-    "From this explode page after page of surprising delights: " +
+    "From these explode page after page of surprising delights: " +
     "wouldn't creatures with a full-length digestive tract fall apart?  Well, not if they possess zipper(!) mechanism! " +
     "How would one design doors?  Hinges?  Steam engines? " + 
     "What would the visual arts be like, burdened and liberated by huge ambiguities of depth and direction? " +
@@ -140,12 +157,21 @@ var books = [
     "Once, as we ascended a spiral staircase, I remarked to him that it was always better to walk the inner circumference: " +
     "that way, one travels a shorter distance.  He immediately asked me: 'what if I want a workout?'. " +
     "<br><br>" +
-    "[***] Here's an issue my roommate Ryan and I grapple with: when gut and reasoning differ, what should one do?"],
+    "[***] Here's an issue my roommate Ryan and I grapple with: when gut and reasoning differ, what should one do?"
+],
+["The Time Machine",                "2018-07", 1895, "H.G.Wells      ", 1  , 0  , 0.5, 1.0, 0  ,
+    "FILL IN " +
+    "Wells' language particularly impressed me. " +
+    "'Night followed day like the flapping of a black wing.' --- " +
+    "'this bleached, obscene, nocturnal Thing... was also heir to all the ages' --- " +
+    "'came a longing that was pain' --- " +
+    "'the future is still black and blank' "
+],
 
+["Portnoy's Complaint",             "2018-08", 1969, "P.Roth         ", 1  , 1  , 0  , 0  , 1  , ""],
 ["Ficciones",                       "2018-07", 1962, "J.L.Borges     ", 1  , 0.5, 2  , 0.5, 0  , ""],
 ["How to Write an Autobio Novel",   "2018-07", 2018, "A.Chee         ", 1.5, 0  , 2  , 0  , 2  , ""],
 ["Foundation",                      "2018-08", 1951, "I.Asimov       ", 1  , 0  , 0  , 0.5, 1  , ""],
-["Portnoy's Complaint",             "2018-08", 1969, "P.Roth         ", 1  , 1  , 0  , 0  , 1  , ""],
 ["Reasons to Stay Alive",           "2018-07", 2015, "M.Haig         ", 0  , 0  , 0  , 0  , 1.5, ""],
 ["How to Write a Sentence",         "2018-07", 2011, "S.Fish         ", 0  , 0  , 0.5, 0.5, 0  , ""],
 ["The Tipping Point",               "2018-07", 2000, "M.Gladwell     ", 0.5, 0  , 0  , 0  , 1  , ""],
@@ -155,7 +181,7 @@ var books = [
 
 ["Adventures of Kavalier and Clay", "2018-07", 2000, "M.Chabon       ", 2  , 1  , 1  , 0  , 1  , ""],
 ["Secret Life of Salvador Dali",    "2018-07", 1942, "S.Dali         ", 1.5, 2  , 1  , 0.5, 0  , ""],
-["Neon Bible",                      "2018-07", 1954, "J.K.Toole      ", 1  , 0  , 1.5, 0  , 0.5, ""],
+["The Neon Bible",                  "2018-07", 1954, "J.K.Toole      ", 1  , 0  , 1.5, 0  , 0.5, ""],
 ["Cold Comfort Farm",               "2018-07", 1932, "S.Gibbons      ", 1.5, 2  , 0.5, 0  , 1  , ""],
 ["Winesburg, Ohio",                 "2018-07", 1919, "S.Anderson     ", 0  , 0.5, 2  , 0  , 1  , ""],
 ["Thinking Fast and Slow",          "2018-07", 2011, "D.Kahneman     ", 1  , 0  , 0  , 1.5, 1  , ""],
