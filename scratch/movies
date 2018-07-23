@@ -1,81 +1,80 @@
-lock, stock, and two smoking barrels
-pineapple express
-the shining
-it follows
-a quiet place
-it comes at night
-isle of dogs
-the incredibles
-the incredibles 2
-moonlight
-call me by your name
-the way he looks
-king cobra
-the skinny
-the 10 year plan
-west side story
-the shape of water
-your name (kimi no na wa)
-florence foster jenkins
-the departed
-it
-thor: ragnarok
-guardians of the galaxy
-guardians of the galaxy vol. 2
-wonder woman
-zootopia
-la la land
-the lego movie
-the lego batman movie
-citizen kane
-moonrise kingdom
-the ballad of narayama
-pulp fiction
-spirited away
-grave of the fireflies
-groundhog day
-the big lebowski
-pan's labyrinth
-strangers on a train
-the trouble with harry
-rear window
-one flew over the cuckoo's nest
-amadeus
-my neighbor totoro
-kiki's delivery service
-howl's moving castle
-lawrence of arabia
-planes, trains, and automobiles
-the shawshank redemption
-fantastic mr fox
-the grand budapest hotel
-the man who knew too little
-inglorious basterds
-ratatouille
-up
-toy story 3
-taken
-gravity
-interstellar
-night of the living dead
-fantasia
-jiro dreams of sushi
-amelie
-ghost in the shell
-winnie the pooh
-kung fu panda
-the princess bride
-ghostbusters
-the imitation game
-the martian
-iron man
-edward scissorhands
-zombieland
-game night
-inception
-bill and ted's excellent adventure
-another gay movie
-darjeeling limited
+["lock, stock, and two smoking barrels" , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],
+["pineapple express"                  " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],
+["the shining"                        " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],
+["it follows"                         " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],
+["a quiet place"                      " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],
+["it comes at night"                  " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],
+["isle of dogs"                       " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],
+["the incredibles                     " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""], 
+["the incredibles 2                   " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["moonlight                           " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["call me by your name                " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["the way he looks                    " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["king cobra                          " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["the skinny                          " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["the 10 year plan                    " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["west side story                     " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["the shape of water                  " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["your name (kimi no na wa)           " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["florence foster jenkins             " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["the departed                        " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["it                                  " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["thor: ragnarok                      " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["guardians of the galaxy             " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["guardians of the galaxy vol. 2      " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["wonder woman                        " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["zootopia                            " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["la la land                          " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["the lego movie                      " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["the lego batman movie               " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["citizen kane                        " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],          
+["moonrise kingdom                    " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["the ballad of narayama              " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["pulp fiction                        " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["spirited away                       " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["grave of the fireflies              " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["groundhog day                       " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["the big lebowski                    " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["pan's labyrinth                     " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["strangers on a train                " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["the trouble with harry              " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["rear window                         " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["one flew over the cuckoo's nest     " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["amadeus                             " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["my neighbor totoro                  " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["kiki's delivery service             " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["howl's moving castle                " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["lawrence of arabia                  " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["planes, trains, and automobiles     " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],  
+["the shawshank redemption            " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["fantastic mr fox                    " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],  
+["the grand budapest hotel            " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["the man who knew too little         " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["inglorious basterds                 " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],   
+["ratatouille                         " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],  
+["up                                  " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],  
+["toy story 3                         " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["taken                               " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["gravity                             " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["interstellar                        " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["night of the living dead            " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["fantasia                            " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["jiro dreams of sushi                " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["amelie                              " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["winnie the pooh                     " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["kung fu panda                       " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["the princess bride                  " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["ghostbusters                        " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["the imitation game                  " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["the martian                         " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],  
+["iron man                            " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["edward scissorhands                 " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],          
+["zombieland                          " , "", 1962, "", 0  , 0  , 0  , 0  , 0  , ""],          
+["game night                          " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["inception                           " , "", 1962, "", 0.5, 0  , 0  , 0  , 0  , ""],      
+["bill and ted's excellent adventure  " , "", 1962, "", 2  , 0  , 0  , 0  , 0  , ""],      
+["another gay movie                   " , "", 1962, "", 1  , 0  , 0  , 0  , 0  , ""],      
+["darjeeling limited                  " , "", 1962, "", 1.5, 0  , 0  , 0  , 0  , ""],      
 ---
 what about bob?
 monty python and the holy grail
