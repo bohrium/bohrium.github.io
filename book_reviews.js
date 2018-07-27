@@ -178,6 +178,13 @@ var books = [
 ["Naked",                           "2018-07", 1997, "D.Sedaris      ", 1  , 0.5, 0  , 0  , 1  , ""],
 ["The Selfish Gene",                "2018-08", 1976, "R.Dawkins      ", 2  , 0  , 0  , 2  , 0  , ""],
 ["The Periodic Table",              "2018-08", 1975, "P.Levi         ", 1  , 1  , 2  , 0  , 0  , ""],
+["The Sea, The Sea",                "2018-08", 1978, "I.Murdoch      ", 0  , 0  , 0  , 0  , 0  , ""],
+["Ulysses",                         "2018-08", 1922, "J.Joyce        ", 0  , 0  , 0  , 0  , 0  , ""],
+["Whales on Stilts",                "2018-08", 2005, "M.T.Anderson   ", 0  , 0  , 0  , 0  , 0  , ""],
+["Clue of the Linoleum Lederhosen", "2018-08", 2006, "M.T.Anderson   ", 0  , 0  , 0  , 0  , 0  , ""],
+["The Back Passage",                "2018-08", 2006, "J.Lear         ", 0  , 0  , 0  , 0  , 0  , ""],
+["Morse Theory",                    "2018-08", 1963, "J.Milnor       ", 0  , 0  , 0  , 0  , 0  , ""],
+["Lectures on h-cobordism Theorem", "2018-08", 1965, "J.Milnor       ", 0  , 0  , 0  , 0  , 0  , ""],
 
 ["Adventures of Kavalier and Clay", "2018-07", 2000, "M.Chabon       ", 2  , 1  , 1  , 0  , 1  , ""],
 ["Secret Life of Salvador Dali",    "2018-07", 1942, "S.Dali         ", 1.5, 2  , 1  , 0.5, 0  , ""],

@@ -10,6 +10,7 @@ all:
 	python3 translate.py quant
 	python3 translate.py rep
 	python3 translate.py language
+	python3 translate.py lowerbound 
 	python3 translate.py ml 
 	python3 translate.py modules
 	python3 translate.py quantcomp
