@@ -26,13 +26,9 @@
                 <div>
                     Here are books I've enjoyed or plan to enjoy.  Click big bubbles for notes.
                     Smaller dots are books not yet read or reviewed --- their ratings are tentative. 
-                    The ratings live in $[0, 1]$ and are computed as <br>
-
-                    <div style="text-align:center">
-                    $ \frac{1}{32} \left (16 \cdot \text{overall} + 4 \cdot \text{humor} + 3 \cdot \text{poetry} + 4 \cdot \text{technical insight} + 5 \cdot \text{human insight}\right) $ <br>
-                    </div>
-
-                    where each sub-score lives in $[0, 1]$.
+                    The ratings live in $[0, 1]$ and are computed as a weighted average of poetry of style, 
+                    transcendence, humor, technical insight, human insight, stimulation density, and
+                    overall enjoyment, with later terms having higher weight. 
                 </div>
  
                 <div class="separator" style="clear: both; text-align: center;">
@@ -68,11 +64,14 @@
                         month of completion 
                         year of publication
                         author
+
                         holistic rating
-                        humor 
                         poetry 
+                        transcendence
+                        humor
                         technical insight
                         human insight
+                        stimulation density
                         review
                     */
 
@@ -80,7 +79,7 @@
 
                     function get_score(i) {
                         b = books[i]
-                        return (161*b[4]+42*b[5]+33*b[6]+44*b[7]+55*b[8])/655.0;
+                        return (87*b[4]+21*b[5]+32*b[6]+43*b[7]+54*b[8]+65*b[9]+76*b[10])/(2*378.0);
                     }
                     function get_book_y(i) {
                         return offset+(canvas.height-3*offset) * (1.0 - get_score(i));
@@ -126,7 +125,7 @@
                                 context.fillText(text, canvas.width/2, offset);
                             }
                             context.beginPath();
-                            if (books[i][9]=="") {
+                            if (books[i][11]=="") {
                                 context.arc(bookx, booky, 2.5, 0, Math.PI * 2, false);
                             } else {
                                 context.arc(bookx, booky, 7.5, 0, Math.PI * 2, false);
@@ -144,9 +143,9 @@
                             var bookx = get_book_x(i);
                             var booky = get_book_y(i);
                             var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
-                            if (d2<7.5*7.5 && books[i][9]) {
+                            if (d2<7.5*7.5 && books[i][11]) {
                                 bookreviewtitle.innerHTML = books[i][0];
-                                bookreview.innerHTML = "<object  data=\"" + books[i][9] + "\" width=\"853\" height=\"1024\"></object>"
+                                bookreview.innerHTML = "<object  data=\"" + books[i][11] + "\" width=\"853\" height=\"1024\"></object>"
                             }
                         }
                     }
