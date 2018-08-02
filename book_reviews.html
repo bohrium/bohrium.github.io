@@ -3,6 +3,8 @@
 <html>
     <head>
         <link id="pagestyle" rel="stylesheet" type="text/css" href="css/carboniferous.css">
+
+        <script src="jquery-3.3.1.min.js"></script>
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
         </script>
@@ -39,7 +41,7 @@
                 </div>
 
                 <strong><div id="bookreviewtitle"; style="text-align: center"></div></strong>
-                <div id="bookreview"; style="text-align: left"></div>
+                <div id="bookreview"; style="text-align: left" scroll="no"></div>
 
                 <br>
                 <br>
@@ -78,7 +80,7 @@
 
                     function get_score(i) {
                         b = books[i]
-                        return (16*b[4]+4*b[5]+3*b[6]+4*b[7]+5*b[8])/64.0;
+                        return (161*b[4]+42*b[5]+33*b[6]+44*b[7]+55*b[8])/655.0;
                     }
                     function get_book_y(i) {
                         return offset+(canvas.height-3*offset) * (1.0 - get_score(i));
@@ -142,9 +144,9 @@
                             var bookx = get_book_x(i);
                             var booky = get_book_y(i);
                             var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
-                            if (d2<7.5*7.5) {
+                            if (d2<7.5*7.5 && books[i][9]) {
                                 bookreviewtitle.innerHTML = books[i][0];
-                                bookreview.innerHTML = books[i][9];
+                                bookreview.innerHTML = "<object  data=\"" + books[i][9] + "\" width=\"853\" height=\"1024\"></object>"
                             }
                         }
                     }
