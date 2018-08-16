@@ -57,7 +57,7 @@
                     context.font = "20px Arial";
                     context.fillStyle = "#444";
                     context.textAlign="center"; 
-                    var offset = 40;
+                    var offset = 60;
 
                     /*
                         title
@@ -82,10 +82,10 @@
                         return (87*b[4]+21*b[5]+32*b[6]+43*b[7]+54*b[8]+65*b[9]+76*b[10])/(2*378.0);
                     }
                     function get_book_y(i) {
-                        return offset+(canvas.height-3*offset) * (1.0 - get_score(i));
+                        return offset+(canvas.height-2*offset) * (1.0 - get_score(i));
                     }
                     function get_book_x(i) {
-                        return offset+(canvas.width-3*offset) * (Math.max(1870.0, books[i][2])-1870.0)/(2020.0 - 1870.0);
+                        return offset+(canvas.width-2*offset) * (Math.max(1824.0, books[i][2])-1824.0)/(2018.0 - 1824.0);
                     }
 
                     function resetCanvas() {
@@ -102,9 +102,16 @@
                         /* x axis: */
                             context.moveTo(offset, canvas.height-offset);
                             context.lineTo(canvas.width-offset, canvas.height-offset);
-                            context.fillText("Date of Publication", canvas.width/2, canvas.height-offset/2);
-                            context.fillText("pre-1870", offset, canvas.height-offset/2);
-                            context.fillText("2020", canvas.width-offset, canvas.height-offset/2);
+                            context.fillText("Date of Publication", canvas.width/2, canvas.height-0.25*offset);
+                            context.font="14px Century Gothic";
+                            context.fillText("Ludwig's 9th", offset + (canvas.width-2*offset)*(1824.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("Snow's Cholera", offset + (canvas.width-2*offset)*(1854.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("Maxwell-Hertz", offset + (canvas.width-2*offset)*(1884.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("General Relativity", offset + (canvas.width-2*offset)*(1917.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("Fat Man", offset + (canvas.width-2*offset)*(1945.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("Robert Rayford", offset + (canvas.width-2*offset)*(1969.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("124-H", offset + (canvas.width-2*offset)*(1991.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.fillText("Instagram", offset + (canvas.width-2*offset)*(2010.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
                         context.stroke();
                     }
 
