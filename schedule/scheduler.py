@@ -29,6 +29,12 @@ def print_cell(token):
         'r':('#ffaaaa','')                        ,
         'm':('#ffaaff','')                        ,
         'y':('#ffffaa','')                        ,
+        'B':('#aaaaff','font-weight: bold')       ,
+        'G':('#aaffaa','font-weight: bold')       ,
+        'C':('#aaffff','font-weight: bold')       ,
+        'R':('#ffaaaa','font-weight: bold')       ,
+        'M':('#ffaaff','font-weight: bold')       ,
+        'Y':('#ffffaa','font-weight: bold')       ,
     }[color]
     return '\n    <td bgcolor="%s" style="%s">%s</td>' % (color_code, style, text)
     
