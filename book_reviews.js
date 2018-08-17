@@ -7,7 +7,8 @@ var books = [
 ["Martian Chronicles"              , "2017-06", 1950, "R.Bradbury"     , 1  , 0  , 1.5 , 0  , 0  , 0  , 0  , ""],
 ["Running with Scissors"           , "2017-06", 2002, "A.Burroughs"    , 1.5, 0  , 0   , 2  , 0  , 1  , 1  , ""],
 ["Cannery Row"                     , "2017-06", 1945, "J.Steinbeck"    , 1  , 0.5, 0   , 0.5, 0  , 0.5, 0  , ""],
-["Fahrenheit 451"                  , "2017-07", 1953, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Hebdomeros"                      , "2017-06", 1964, "G.d.Chirico"    , 0.5, 2  , 1   , 0  , 0  , 1  , 0  , ""],
+["Fahrenheit 451"                  , "2017-07", 1953, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 1  , ""],
 ["Topology from Differential View" , "2017-07", 1965, "J.Milnor"       , 2  , 1  , 0   , 0  , 2  , 0  , 1  , ""],
 ["How to Do Things Right"          , "2017-07", 1972, "R.Hills"        , 1.5, 0.5, 0   , 1  , 0.5, 0.5, 0  , ""],
 ["Me Talk Pretty One Day"          , "2017-10", 2000, "D.Sedaris"      , 1  , 0.5, 0.5 , 1  , 0  , 0.5, 0  , ""],
@@ -20,7 +21,7 @@ var books = [
 ["Symbols, Signals and Noise"      , "2018-08", 1961, "J.R.Pierce"     , 1.5, 0  , 0.5 , 0  , 2  , 1  , 2  , "reviews/symbols-signals-noise.html"],
 ["Foundation"                      , "2018-08", 1951, "I.Asimov"       , 1  , 0  , 1   , 0  , 0  , 0.5, 1  , "reviews/foundation.html"],
 ["The Back Passage"                , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 2  , 0  , 1  , 1  , ""],
-["The #1 Ladies' Detective Agency" , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0.5, "reviews/number-one-ladies-detective-agency.html"],
+["The #1 Ladies' Detective Agency" , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 1  , "reviews/number-one-ladies-detective-agency.html"],
 ["A Separate Peace"                , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0.5, 2  , 2  , "reviews/a-separate-peace.html"],
 
 /*
