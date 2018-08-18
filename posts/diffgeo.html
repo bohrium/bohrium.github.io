@@ -28,19 +28,40 @@ $\newcommand{\from}{\leftarrow}$
 <h5>  Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.  Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.  Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc. </h5>
 <p>
 <h3>  Part A: Similarities to Euclidean Space </h3>
-<h4>  Lecture  0: Introduction  </h4>
-    Let us study the geometry of smooth manifolds.  While differential topology illuminates global
-    shape via local calculus, we will understand global shape via local metric notions.  For
-    example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
-    fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
+<h4>  Epsiode  0: Introduction </h4>
+    The old joke goes that a topologist can't distinguish a donut and a coffee mug.  Thus stem the
+    durable, meaty invariants of topology.  At the same time, one feels that there <b>is</b> some
+    interesting difference between the two breakfast items.  For instance, we know that 
+    a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the same
+    among those diffeomorphic to a torus?  Or, imagine we are infinitesimal ants walking
+    geodesically on a donut and on a coffee mug.  For certain shapes as sketched below, we may
+    observe two drastically different behaviors: on a donut, the ant <b>always</b> traces a dense path;
+    on a mug, it <b>never</b> does!
+<p>
+    But, while the introduction of geometric structure leads us to ask about the structure
+    itself, we may also step back and wonder how geometry and topology relate.  Whenever we have a pair
+    of notions, one more abstract and one more concrete, we may investigate all the ways a given
+    abstract object may be realized concretely (if at all); which properties of a concrete object
+    determine certain properties of its abstraction; and vice versa.  Examples of pairs include
+    groups and their representations, manifolds and their euclidean embeddings, set theories and
+    their models, and topologies and their metrics.  Here, we shall wonder:
+    <b>what can geometry tell us about topology</b>?
+<p>
+    In short, we are interested in volumes, lengths, and angles.
+    After all: sometimes, size matters.
+<p>
+    In these notes, we will develop the basic language, techniques, and examples of
+    <b>Differential Geometry</b>, this subject of lengths and angles on smooth manifolds.  Eventually, we
+    will discuss statements such as
     "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
     "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".
-    Here, curvature and completeness are concepts defined in terms of a manifold's metric structure.
+    We will end by sketching applications to einsteinian gravity, statistics, computer vision, and
+    geology. 
 <p>
 <h5>  $\fbox{CURVATURE}$  </h5>
     Curvature will be a central quantity of study.  Let's develop intuition by considering some
     low-dimensional manifolds embedded into Euclidean space; the distance between two points on
-    a manifold we understand as the infima of lengths of paths between them.  First, observe
+    a manifold we understand as the infimum of lengths of paths between them.  First, observe
     that curves in $\RR^2$ are all locally isometric --- just parameterize by arclength. 
     Therefore, though two immersions may have osculating circles of different radii (and hence
     may have different extrinsic curvatures), all curves have the <em>same</em> intrinsic curvature.
@@ -110,47 +131,47 @@ $\newcommand{\from}{\leftarrow}$
 <p>
     <b>EXERCISE:</b> Find all metric structures on the circle (up to isometry).   
 <p>
-<h4>  Lecture  1: Length and Distance </h4>
+<h4>  Episode  1: Length and Distance </h4>
 <h5>  $\fbox{TENSOR FROM METRIC}$  </h5>
 <h5>  $\fbox{1-MANIFOLDS}$  </h5>
 <h5>  $\fbox{EXAMPLE: GEODESICS IN HYPERBOLIC PLANE}$  </h5>
 <p>
-<h4>  Lecture  2: Geodesics; Exponential Map </h4>
+<h4>  Episode  2: Geodesics; Exponential Map </h4>
 <h5>  $\fbox{GEODESICS}$ </h5>
 <h5>  $\fbox{GEODESIC FLOW}$ </h5>
 <h5>  $\fbox{EXPONENTIAL MAP}$ </h5>
 <h5>  $\fbox{GAUSS LEMMA}$ </h5>
 <p>
-<h4>  Lecture  3: Convex Neighborhoods  </h4>
+<h4>  Episode  3: Convex Neighborhoods  </h4>
 <h5>  $\fbox{NORMAL BALLS}$ </h5>
 <h5>  $\fbox{TOTALLY NORMAL BALLS}$ </h5>
 <h5>  $\fbox{STRONGLY CONVEX BALLS}$ </h5>
 <h5>  $\fbox{METRIC FROM TENSOR}$  </h5>
 <p>
-<h4>  Lecture  4: Hopf-Rinow Theorem  </h4>
+<h4>  Episode  4: Hopf-Rinow Theorem  </h4>
 <h5>  $\fbox{COMPLETE MANIFOLDS}$ </h5>
 <h5>  $\fbox{MINIMIZING GEODESICS}$ </h5>
 <h5>  $\fbox{EQUIVALENT TO COMPLETENESS...}$ </h5>
 <p>
 <h3>  Part B: Differences From Euclidean Space  </h3>
-<h4>  Lecture  5: Differentiating Vector Fields </h4>
+<h4>  Episode  5: Differentiating Vector Fields </h4>
 <h5>  $\fbox{LIE BRACKETS}$ </h5>
 <h5>  $\fbox{AFFINE CONNECTIONS}$ </h5>
 <h5>  $\fbox{PARALLEL TRANSPORT}$ </h5>
-<h4>  Lecture  6: Levi-Civita Connection </h4>
+<h4>  Episode  6: Levi-Civita Connection </h4>
 <h5>  $\fbox{LADDER PICTURE}$ </h5>
 <h5>  $\fbox{LEVI-CIVITA CONSTRUCTION}$ </h5>
 <h5>  $\fbox{FORMULAS; EXAMPLE: SPHERE}$ </h5>
-<h4>  Lecture  7: Variations of Energy </h4>
+<h4>  Episode  7: Variations of Energy </h4>
 <h5>  $\fbox{ENERGY AND GEODESICS}$ </h5>
 <h5>  $\fbox{FIRST VARIATION}$ </h5>
 <h5>  $\fbox{SECOND VARIATION}$ </h5>
 <h5>  $\fbox{JACOBI FIELDS}$ </h5>
-<h4>  Lecture  8: Sectional Curvature </h4>
+<h4>  Episode  8: Sectional Curvature </h4>
 <h5>  $\fbox{FROM SECOND VARIATION}$ </h5>
 <h5>  $\fbox{JACOBI EQUATION}$ </h5>
 <h5>  $\fbox{ETYMOLOGY}$ </h5>
-<h4>  Lecture  9: Viewpoints on Curvature  </h4>
+<h4>  Episode  9: Viewpoints on Curvature  </h4>
 <h5>  $\fbox{RIEMANN TENSOR}$ </h5>
 <h5>  $\fbox{METRIC FROM CURVATURE: CARTAN}$ </h5>
 <h5>  $\fbox{CURVATURE AND PARALLEL TRANSPORT}$ </h5>
@@ -158,32 +179,32 @@ $\newcommand{\from}{\leftarrow}$
 <h5>  $\fbox{CURVATURE AND ANGLE DEFICIT}$ </h5>
 <p>
 <h3>  Part C: Isometries and Nice Spaces   </h3>
-<h4>  Lecture 10: Killing Fields  </h4>
-<h4>  Lecture 11: Isometries form a Lie Group  </h4>
+<h4>  Episode 10: Killing Fields  </h4>
+<h4>  Episode 11: Isometries form a Lie Group  </h4>
 <h5>  $\fbox{DIMENSION OF ISOMETRY GROUP}$ </h5>
-<h4>  Lecture 12: Homogeneous Spaces  </h4>
-<h4>  Lecture 13: Symmetric Spaces </h4>
-<h4>  Lecture 14: Spaces of Constant Curvature </h4>
+<h4>  Episode 12: Homogeneous Spaces  </h4>
+<h4>  Episode 13: Symmetric Spaces </h4>
+<h4>  Episode 14: Spaces of Constant Curvature </h4>
 <h5>  $\fbox{CARTAN THEOREM}$ </h5>
 <p>
 <h3>  Part D: Comparing Spaces to Nice Spaces </h3>
-<h4>  Lecture 15: Morse Index Lemma  </h4>
-<h4>  Lecture 16: Rauch Theorem </h4>
-<h4>  Lecture 17: Topogonov Theorem </h4>
-<h4>  Lecture 18: Morse Index Theorem </h4>
-<h4>  Lecture 19: Summary of Tricks with Balls and Geodesics  </h4>
+<h4>  Episode 15: Morse Index Lemma  </h4>
+<h4>  Episode 16: Rauch Theorem </h4>
+<h4>  Episode 17: Topogonov Theorem </h4>
+<h4>  Episode 18: Morse Index Theorem </h4>
+<h4>  Episode 19: Summary of Tricks with Balls and Geodesics  </h4>
 <p>
 <h3>  Part E: Geometry Controls Topology   </h3>
-<h4>  Lecture 20: Covering Negatively Curved Spaces </h4>
+<h4>  Episode 20: Covering Negatively Curved Spaces </h4>
 <h5>  $\fbox{HADARMARD}$ </h5>
 <h5>  $\fbox{PRIESMANN}$ </h5>
-<h4>  Lecture 21: Covering Positively Curved Spaces </h4>
+<h4>  Episode 21: Covering Positively Curved Spaces </h4>
 <h5>  $\fbox{BONNET-MYERS}$ </h5>
 <h5>  $\fbox{SYNGE-WEINSTEIN}$ </h5>
-<h4>  Lecture 22: Sphere Theorem </h4>
+<h4>  Episode 22: Sphere Theorem </h4>
 <h5>  $\fbox{ESTIMATING INJECTIVITY RADIUS}$ </h5>
-<h4>  Lecture 23: Mostow Theorem </h4>
-<h4>  Lecture 24: Chern-Gauss-Bonnet Theorem  </h4>
+<h4>  Episode 23: Mostow Theorem </h4>
+<h4>  Episode 24: Chern-Gauss-Bonnet Theorem  </h4>
     This lecture based on http://www.maths.ed.ac.uk/<del>v1ranick/papers/li4.pdf</del>
 <p>
     </body>

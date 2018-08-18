@@ -13,19 +13,40 @@ $\newcommand{\from}{\leftarrow}$
 !!!! Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.  Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.  Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc.
 
 !! Part A: Similarities to Euclidean Space
-!!! Lecture  0: Introduction 
-    Let us study the geometry of smooth manifolds.  While differential topology illuminates global
-    shape via local calculus, we will understand global shape via local metric notions.  For
-    example, the Hopf Index Theorem, which equates a manifold's Euler Characteristic to its vector
-    fields' shared total index, exemplifies DT.  By contrast, we will show statements such as
+!!! Epsiode  0: Introduction
+    The old joke goes that a topologist can't distinguish a donut and a coffee mug.  Thus stem the
+    durable, meaty invariants of topology.  At the same time, one feels that there *is* some
+    interesting difference between the two breakfast items.  For instance, we know that 
+    a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the same
+    among those diffeomorphic to a torus?  Or, imagine we are infinitesimal ants walking
+    geodesically on a donut and on a coffee mug.  For certain shapes as sketched below, we may
+    observe two drastically different behaviors: on a donut, the ant *always* traces a dense path;
+    on a mug, it *never* does!
+
+    But, while the introduction of geometric structure leads us to ask about the structure
+    itself, we may also step back and wonder how geometry and topology relate.  Whenever we have a pair
+    of notions, one more abstract and one more concrete, we may investigate all the ways a given
+    abstract object may be realized concretely (if at all); which properties of a concrete object
+    determine certain properties of its abstraction; and vice versa.  Examples of pairs include
+    groups and their representations, manifolds and their euclidean embeddings, set theories and
+    their models, and topologies and their metrics.  Here, we shall wonder:
+    *what can geometry tell us about topology*?
+
+    In short, we are interested in volumes, lengths, and angles.
+    After all: sometimes, size matters.
+
+    In these notes, we will develop the basic language, techniques, and examples of
+    *Differential Geometry*, this subject of lengths and angles on smooth manifolds.  Eventually, we
+    will discuss statements such as
     "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
     "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".
-    Here, curvature and completeness are concepts defined in terms of a manifold's metric structure.
+    We will end by sketching applications to einsteinian gravity, statistics, computer vision, and
+    geology. 
 
 !!!! $\fbox{CURVATURE}$ 
     Curvature will be a central quantity of study.  Let's develop intuition by considering some
     low-dimensional manifolds embedded into Euclidean space; the distance between two points on
-    a manifold we understand as the infima of lengths of paths between them.  First, observe
+    a manifold we understand as the infimum of lengths of paths between them.  First, observe
     that curves in $\RR^2$ are all locally isometric --- just parameterize by arclength. 
     Therefore, though two immersions may have osculating circles of different radii (and hence
     may have different extrinsic curvatures), all curves have the %same% intrinsic curvature.
@@ -95,47 +116,47 @@ $\newcommand{\from}{\leftarrow}$
 
     *EXERCISE:* Find all metric structures on the circle (up to isometry).   
 
-!!! Lecture  1: Length and Distance
+!!! Episode  1: Length and Distance
 !!!! $\fbox{TENSOR FROM METRIC}$ 
 !!!! $\fbox{1-MANIFOLDS}$ 
 !!!! $\fbox{EXAMPLE: GEODESICS IN HYPERBOLIC PLANE}$ 
 
-!!! Lecture  2: Geodesics; Exponential Map
+!!! Episode  2: Geodesics; Exponential Map
 !!!! $\fbox{GEODESICS}$
 !!!! $\fbox{GEODESIC FLOW}$
 !!!! $\fbox{EXPONENTIAL MAP}$
 !!!! $\fbox{GAUSS LEMMA}$
 
-!!! Lecture  3: Convex Neighborhoods 
+!!! Episode  3: Convex Neighborhoods 
 !!!! $\fbox{NORMAL BALLS}$
 !!!! $\fbox{TOTALLY NORMAL BALLS}$
 !!!! $\fbox{STRONGLY CONVEX BALLS}$
 !!!! $\fbox{METRIC FROM TENSOR}$ 
 
-!!! Lecture  4: Hopf-Rinow Theorem 
+!!! Episode  4: Hopf-Rinow Theorem 
 !!!! $\fbox{COMPLETE MANIFOLDS}$
 !!!! $\fbox{MINIMIZING GEODESICS}$
 !!!! $\fbox{EQUIVALENT TO COMPLETENESS...}$
 
 !! Part B: Differences From Euclidean Space 
-!!! Lecture  5: Differentiating Vector Fields
+!!! Episode  5: Differentiating Vector Fields
 !!!! $\fbox{LIE BRACKETS}$
 !!!! $\fbox{AFFINE CONNECTIONS}$
 !!!! $\fbox{PARALLEL TRANSPORT}$
-!!! Lecture  6: Levi-Civita Connection
+!!! Episode  6: Levi-Civita Connection
 !!!! $\fbox{LADDER PICTURE}$
 !!!! $\fbox{LEVI-CIVITA CONSTRUCTION}$
 !!!! $\fbox{FORMULAS; EXAMPLE: SPHERE}$
-!!! Lecture  7: Variations of Energy
+!!! Episode  7: Variations of Energy
 !!!! $\fbox{ENERGY AND GEODESICS}$
 !!!! $\fbox{FIRST VARIATION}$
 !!!! $\fbox{SECOND VARIATION}$
 !!!! $\fbox{JACOBI FIELDS}$
-!!! Lecture  8: Sectional Curvature
+!!! Episode  8: Sectional Curvature
 !!!! $\fbox{FROM SECOND VARIATION}$
 !!!! $\fbox{JACOBI EQUATION}$
 !!!! $\fbox{ETYMOLOGY}$
-!!! Lecture  9: Viewpoints on Curvature 
+!!! Episode  9: Viewpoints on Curvature 
 !!!! $\fbox{RIEMANN TENSOR}$
 !!!! $\fbox{METRIC FROM CURVATURE: CARTAN}$
 !!!! $\fbox{CURVATURE AND PARALLEL TRANSPORT}$
@@ -143,30 +164,30 @@ $\newcommand{\from}{\leftarrow}$
 !!!! $\fbox{CURVATURE AND ANGLE DEFICIT}$
 
 !! Part C: Isometries and Nice Spaces  
-!!! Lecture 10: Killing Fields 
-!!! Lecture 11: Isometries form a Lie Group 
+!!! Episode 10: Killing Fields 
+!!! Episode 11: Isometries form a Lie Group 
 !!!! $\fbox{DIMENSION OF ISOMETRY GROUP}$
-!!! Lecture 12: Homogeneous Spaces 
-!!! Lecture 13: Symmetric Spaces
-!!! Lecture 14: Spaces of Constant Curvature
+!!! Episode 12: Homogeneous Spaces 
+!!! Episode 13: Symmetric Spaces
+!!! Episode 14: Spaces of Constant Curvature
 !!!! $\fbox{CARTAN THEOREM}$
 
 !! Part D: Comparing Spaces to Nice Spaces
-!!! Lecture 15: Morse Index Lemma 
-!!! Lecture 16: Rauch Theorem
-!!! Lecture 17: Topogonov Theorem
-!!! Lecture 18: Morse Index Theorem
-!!! Lecture 19: Summary of Tricks with Balls and Geodesics 
+!!! Episode 15: Morse Index Lemma 
+!!! Episode 16: Rauch Theorem
+!!! Episode 17: Topogonov Theorem
+!!! Episode 18: Morse Index Theorem
+!!! Episode 19: Summary of Tricks with Balls and Geodesics 
 
 !! Part E: Geometry Controls Topology  
-!!! Lecture 20: Covering Negatively Curved Spaces
+!!! Episode 20: Covering Negatively Curved Spaces
 !!!! $\fbox{HADARMARD}$
 !!!! $\fbox{PRIESMANN}$
-!!! Lecture 21: Covering Positively Curved Spaces
+!!! Episode 21: Covering Positively Curved Spaces
 !!!! $\fbox{BONNET-MYERS}$
 !!!! $\fbox{SYNGE-WEINSTEIN}$
-!!! Lecture 22: Sphere Theorem
+!!! Episode 22: Sphere Theorem
 !!!! $\fbox{ESTIMATING INJECTIVITY RADIUS}$
-!!! Lecture 23: Mostow Theorem
-!!! Lecture 24: Chern-Gauss-Bonnet Theorem 
+!!! Episode 23: Mostow Theorem
+!!! Episode 24: Chern-Gauss-Bonnet Theorem 
     This lecture based on http://www.maths.ed.ac.uk/~v1ranick/papers/li4.pdf
