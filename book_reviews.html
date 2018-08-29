@@ -28,7 +28,7 @@
                     The ratings live in $[0, 1]$ and are computed as a weighted average of style, 
                     transcendence, humor, technical insight, human insight, stimulation density,
                     and overall enjoyment, with later terms having higher weight.  The ratings are
-                    assigned quite harshly, so $0.25$ means "excellent".
+                    assigned quite harshly, so $0.5$ means "excellent".
                 </div>
  
                 <div class="separator" style="clear: both; text-align: center;">
@@ -105,8 +105,9 @@
                             context.lineTo(canvas.width-offset, canvas.height-offset);
                             context.fillText("Date of Publication", canvas.width/2, canvas.height-0.25*offset);
                             context.font="12px Century Gothic";
-                            context.fillText("Maxwell-Hertz", offset+(canvas.width-2*offset)*Math.pow((1884.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("HIV",           offset+(canvas.width-2*offset)*Math.pow((1908.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Maxwell",       offset+(canvas.width-2*offset)*Math.pow((1862.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Olympics",      offset+(canvas.width-2*offset)*Math.pow((1896.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("HIV",           offset+(canvas.width-2*offset)*Math.pow((1912.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
                             context.fillText("Sliced Bread",  offset+(canvas.width-2*offset)*Math.pow((1928.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
                             context.fillText("Fat Man",       offset+(canvas.width-2*offset)*Math.pow((1945.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
                             context.fillText("Mao's Famine",  offset+(canvas.width-2*offset)*Math.pow((1960.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);

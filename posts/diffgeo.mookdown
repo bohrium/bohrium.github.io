@@ -18,10 +18,7 @@ $\newcommand{\from}{\leftarrow}$
     durable, meaty invariants of topology.  At the same time, one feels that there *is* some
     interesting difference between the two breakfast items.  For instance, we know that 
     a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the same
-    among those diffeomorphic to a torus?  Or, imagine we are infinitesimal ants walking
-    geodesically on a donut and on a coffee mug.  For certain shapes as sketched below, we may
-    observe two drastically different behaviors: on a donut, the ant *always* traces a dense path;
-    on a mug, it *never* does!
+    among those diffeomorphic to a torus?  
 
     But, while the introduction of geometric structure leads us to ask about the structure
     itself, we may also step back and wonder how geometry and topology relate.  Whenever we have a pair
@@ -69,6 +66,16 @@ $\newcommand{\from}{\leftarrow}$
     information, can we relate a compact connected manifold's fundamental group to its metric
     structure?  But we must precisely define curvature before addressing these questions.  We begin
     with a review of manifolds:
+
+!!!! $\fbox{ANTS ON TWO DONUTS}
+    Or, imagine we are infinitesimal ants walking
+    geodesically on flat donut or a real donut.  On a flat donut, we trace a dense path for almost
+    all initial conditions; this is not so for a real donut!
+
+    Positive and negative attraction; conservation law.
+    Follow level curves
+
+    [INSERT IMAGE]
 
 !!!! $\fbox{SMOOTH MANIFOLDS}$ 
     It is well to define a topological manifold semi-intrinsically as a topological space
