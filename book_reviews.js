@@ -18,18 +18,27 @@ var books = [
 ["Me Talk Pretty One Day"          , "2017-10", 2000, "D.Sedaris"      , 1  , 0.5, 0.5 , 1  , 0  , 0.5, 0  , ""],
 ["An Artist of the Floating World" , "2018-01", 1986, "K.Ishiguro"     , 2  , 1  , 1   , 0.5, 0  , 1  , 0  , ""],
 
-["A Clockwork Orange"              , "2018-03", 1962, "A.Burgess"      , 2  , 1.5, 0   , 0  , 0  , 2  , 0  , "reviews/a-clockwork-orange.html"], 
+["A Clockwork Orange"              , "2018-03", 1962, "A.Burgess"      , 2  , 1.5, 0   , 0  , 0  , 2  , 1  , "reviews/a-clockwork-orange.html"], 
 ["Riemannian Geometry"             , "2018-05", 1971, "M.d.Carmo"      , 1  , 0.5, 0   , 0  , 1.5, 0  , 0.5, ""],
 ["The Planiverse"                  , "2018-07", 1984, "A.K.Dewdney"    , 1  , 0  , 0.5 , 0.5, 1.5, 0.5, 1  , "reviews/planiverse.html"],
 ["The Armchair Economist"          , "2018-07", 1993, "S.E.Landsburg"  , 2  , 0  , 0   , 0.5, 2  , 1  , 1.5, "reviews/armchair-economist.html"],
 ["The Time Machine"                , "2018-07", 1895, "H.G.Wells"      , 0.5, 0.5, 0.5 , 0  , 0  , 0.5, 0  , "reviews/time-machine.html"],
 ["Symbols, Signals and Noise"      , "2018-08", 1961, "J.R.Pierce"     , 1.5, 0  , 0.5 , 0  , 1.5, 1  , 2  , "reviews/symbols-signals-noise.html"],
 ["Foundation"                      , "2018-08", 1951, "I.Asimov"       , 1  , 0  , 1   , 0.5, 0  , 0.5, 1  , "reviews/foundation.html"],
-["The Back Passage"                , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 2  , 0  , 1  , 1  , ""],
+["The Back Passage"                , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 1  , 0  , 1  , 1  , ""],
 
 ["The #1 Ladies' Detective Agency" , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
 ["A Separate Peace"                , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0  , 2  , 2  , "reviews/a-separate-peace.html"],
 ["The Remains of the Day"          , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
+
+/*
+["How to Write an Autobio Novel"   , "2018-08", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Naked"                           , "2018-08", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Dubliners"                       , "2018-08", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Civilization and Its Discontents", "2018-08", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+*/
+
+
 
 /*
 // to read (HIGH PRIORITY: >= 4.1 on goodreads, or special exception) 
@@ -39,7 +48,6 @@ var books = [
 ["Godel Escher Bach"               , "2018-08", 1979, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Periodic Table"              , "2018-08", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
 ["Ficciones"                       , "2018-08", 1962, "J.L.Borges"     , 1  , 2  , 0   , 0.5, 0.5, 0  , 0  , ""],
-["How to Write an Autobio Novel"   , "2018-08", 2018, "A.Chee"         , 1.5, 2  , 0   , 0  , 0  , 2  , 0  , ""],
 ["Secret Life of Salvador Dali"    , "2018-08", 1942, "S.Dali"         , 1.5, 1  , 0   , 2  , 0.5, 0  , 0  , ""],
 ["Adventures of Kavalier and Clay" , "2018-08", 2000, "M.Chabon"       , 2  , 1  , 0   , 1  , 0  , 1  , 0  , ""],
 ["The Diversity of Life"           , "2018-08", 1992, "E.O.Wilson"     , 1.5, 1  , 0   , 0  , 1  , 0  , 0  , ""],
@@ -55,7 +63,6 @@ var books = [
 // to read (MEDIUM PRIORITY: == 4.0 on goodreads, or special exception) 
 ["The Periodic Table"              , "2018-08", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
 ["The Selfish Gene"                , "2018-08", 1976, "R.Dawkins"      , 2  , 0  , 0   , 0  , 2  , 0  , 0  , ""],
-["Naked"                           , "2018-08", 1997, "D.Sedaris"      , 1  , 0  , 0   , 0.5, 0  , 1  , 0  , ""],
 ["Thinking Fast and Slow"          , "2018-08", 2011, "D.Kahneman"     , 1  , 0  , 0   , 0  , 1.5, 1  , 0  , ""],
 ["Flowers for Algernon"            , "2018-08", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
 ["A Room of One's Own"             , "2018-08", 1929, "V.Woolf"        , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
@@ -119,11 +126,9 @@ var books = [
 ["Brave New World"                 , "2018-08", 1932, "A.Huxley"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["One Hundred Years of Solitude"   , "2018-08", 1967, "G.G.Marquez"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Metamorphosis"               , "2018-08", 1915, "F.Kafka"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Dubliners"                       , "2018-08", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Hunger"                          , "2018-08", 1890, "K.Hamsun"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Invisible Man"               , "2018-08", 1897, "H.G.Wells"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Around the World in 80 Days"     , "2018-08", 1873, "J.Verne"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Civilization and Its Discontents", "2018-08", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Life of Frederick Douglass"      , "2018-08", 1845, "F.Douglass"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Prometheus Unbound"              , "2018-08", 1820, "P.B.Shelley"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Oliver Twist"                    , "2018-08", 1839, "C.Dickens"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],

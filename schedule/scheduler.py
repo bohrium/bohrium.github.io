@@ -21,22 +21,22 @@ with open(in_name) as f:
 
 def print_cell(token):
     color, text = token[0], token[1:].replace('_', ' ') 
-    color_code, style = {
-        '.':('',       'font-variant: small-caps'),
-        'b':('#aaaaff','')                        ,
-        'g':('#aaffaa','')                        ,
-        'c':('#aaffff','')                        ,
-        'r':('#ffaaaa','')                        ,
-        'm':('#ffaaff','')                        ,
-        'y':('#ffffaa','')                        ,
-        'B':('#aaaaff','font-weight: bold')       ,
-        'G':('#aaffaa','font-weight: bold')       ,
-        'C':('#aaffff','font-weight: bold')       ,
-        'R':('#ffaaaa','font-weight: bold')       ,
-        'M':('#ffaaff','font-weight: bold')       ,
-        'Y':('#ffffaa','font-weight: bold')       ,
+    bg_color, fg_color, style = {
+        '.':('',       '#888888','font-variant: small-caps'),
+        'b':('#aaaaff','#888888','')                        ,
+        'g':('#aaffaa','#888888','')                        ,
+        'c':('#aaffff','#888888','')                        ,
+        'r':('#ffaaaa','#888888','')                        ,
+        'm':('#ffaaff','#888888','')                        ,
+        'y':('#ffffaa','#888888','')                        ,
+        'B':('#aaaaff','#000000','font-weight: bold')       ,
+        'G':('#aaffaa','#000000','font-weight: bold')       ,
+        'C':('#aaffff','#000000','font-weight: bold')       ,
+        'R':('#ffaaaa','#000000','font-weight: bold')       ,
+        'M':('#ffaaff','#000000','font-weight: bold')       ,
+        'Y':('#ffffaa','#000000','font-weight: bold')       ,
     }[color]
-    return '\n    <td bgcolor="%s" style="%s">%s</td>' % (color_code, style, text)
+    return '\n    <td bgcolor="%s" style="color:%s;%s">%s</td>' % (bg_color, fg_color, style, text)
     
 def print_line(line):
     rtrn = '\n<tr>'
