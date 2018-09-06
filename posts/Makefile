@@ -1,4 +1,5 @@
 all:
+	python3 translate.py gradschool 
 	python3 translate.py algtop
 	python3 translate.py boundary
 	python3 translate.py diffgeo 

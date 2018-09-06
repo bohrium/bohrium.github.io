@@ -24,11 +24,11 @@
             <h2>Sam's Reading List</h2> 
     
                 <div>
-                    Here are books I've enjoyed or plan to enjoy.  Click big bubbles for notes.
-                    Smaller dots are books not yet read or reviewed --- their ratings are tentative. 
+                    Here are books I've enjoyed.  Click big bubbles for notes.
                     The ratings live in $[0, 1]$ and are computed as a weighted average of style, 
-                    transcendence, humor, technical insight, human insight, stimulation density, and
-                    overall enjoyment, with later terms having higher weight. 
+                    transcendence, humor, technical insight, human insight, stimulation density,
+                    and overall enjoyment, with later terms having higher weight.  The ratings are
+                    assigned quite harshly, so $0.5$ means "excellent".
                 </div>
  
                 <div class="separator" style="clear: both; text-align: center;">
@@ -38,6 +38,7 @@
 
                 <strong><div id="bookreviewtitle"; style="text-align: center"></div></strong>
                 <div id="bookreview"; style="text-align: left" scroll="no"></div>
+    
 
                 <br>
                 <br>
@@ -85,7 +86,7 @@
                         return offset+(canvas.height-2*offset) * (1.0 - get_score(i));
                     }
                     function get_book_x(i) {
-                        return offset+(canvas.width-2*offset) * (Math.max(1824.0, books[i][2])-1824.0)/(2018.0 - 1824.0);
+                        return offset+(canvas.width-2*offset) * Math.pow((Math.max(1824.0, books[i][2])-1824.0)/(2018.0 - 1824.0), 2);
                     }
 
                     function resetCanvas() {
@@ -103,15 +104,19 @@
                             context.moveTo(offset, canvas.height-offset);
                             context.lineTo(canvas.width-offset, canvas.height-offset);
                             context.fillText("Date of Publication", canvas.width/2, canvas.height-0.25*offset);
-                            context.font="14px Century Gothic";
-                            context.fillText("Ludwig's 9th", offset + (canvas.width-2*offset)*(1824.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("Snow's Cholera", offset + (canvas.width-2*offset)*(1854.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("Maxwell-Hertz", offset + (canvas.width-2*offset)*(1884.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("General Relativity", offset + (canvas.width-2*offset)*(1917.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("Fat Man", offset + (canvas.width-2*offset)*(1945.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("Robert Rayford", offset + (canvas.width-2*offset)*(1969.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("124-H", offset + (canvas.width-2*offset)*(1991.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
-                            context.fillText("Instagram", offset + (canvas.width-2*offset)*(2010.0 - 1824.0)/(2018.0 - 1824.0), canvas.height-0.65*offset);
+                            context.font="12px Century Gothic";
+                            context.fillText("Maxwell",       offset+(canvas.width-2*offset)*Math.pow((1862.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Olympics",      offset+(canvas.width-2*offset)*Math.pow((1896.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("HIV",           offset+(canvas.width-2*offset)*Math.pow((1912.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Sliced Bread",  offset+(canvas.width-2*offset)*Math.pow((1928.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Fat Man",       offset+(canvas.width-2*offset)*Math.pow((1945.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Mao's Famine",  offset+(canvas.width-2*offset)*Math.pow((1960.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Oil Crisis",    offset+(canvas.width-2*offset)*Math.pow((1973.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("TCP/IP",        offset+(canvas.width-2*offset)*Math.pow((1983.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Amazon",        offset+(canvas.width-2*offset)*Math.pow((1994.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("9-11",          offset+(canvas.width-2*offset)*Math.pow((2001.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("LHC",           offset+(canvas.width-2*offset)*Math.pow((2008.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Irish 34th",    offset+(canvas.width-2*offset)*Math.pow((2015.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
                             context.font="20px Century Gothic";
                         context.stroke();
                     }
