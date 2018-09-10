@@ -30,35 +30,43 @@ var books = [
 ["The #1 Ladies' Detective Agency" , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
 ["A Separate Peace"                , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0  , 2  , 2  , "reviews/a-separate-peace.html"],
 ["The Remains of the Day"          , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
-
+["Incident of the Dog in the Night", "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 /*
-["How to Write an Autobio Novel"   , "2018-08", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Naked"                           , "2018-08", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Dubliners"                       , "2018-08", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Civilization and Its Discontents", "2018-08", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Brief Wondrous Life of Oscar Wao", "2018-09", 2007, "J.Diaz"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["How to Write an Autobio Novel"   , "2018-09", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Naked"                           , "2018-09", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Dubliners"                       , "2018-09", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+["Civilization and Its Discontents", "2018-09", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["White Noise"                     , "2018-09", 1985, "D.DeLillo"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Advice for a Young Investigator" , "2018-09", 1987, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Methods of Information Geometry" , "2018-09", 1993, "S.Amari"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+["Lincoln in the Bardo"            , "2018-10", 2017, "G.Saunders"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Cold Comfort Farm"               , "2018-10", 1932, "S.Gibbons"      , 1.5, 0.5, 0   , 2  , 0  , 1  , 0  , ""],
+["Leaves of Grass"                 , "2018-10", 1855, "W.Whitman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Something Wicked This Way Comes" , "2018-10", 1962, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 */
 
 
 
 /*
 // to read (HIGH PRIORITY: >= 4.1 on goodreads, or special exception) 
-["Advice for a Young Investigator" , "2018-09", 1987, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["White Noise"                     , "2018-09", 1985, "D.DeLillo"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Boy's Life"                      , "2018-08", 1991, "R.R.McCammon"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Godel Escher Bach"               , "2018-08", 1979, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["The Periodic Table"              , "2018-08", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
-["Ficciones"                       , "2018-08", 1962, "J.L.Borges"     , 1  , 2  , 0   , 0.5, 0.5, 0  , 0  , ""],
-["Secret Life of Salvador Dali"    , "2018-08", 1942, "S.Dali"         , 1.5, 1  , 0   , 2  , 0.5, 0  , 0  , ""],
-["Adventures of Kavalier and Clay" , "2018-08", 2000, "M.Chabon"       , 2  , 1  , 0   , 1  , 0  , 1  , 0  , ""],
-["The Diversity of Life"           , "2018-08", 1992, "E.O.Wilson"     , 1.5, 1  , 0   , 0  , 1  , 0  , 0  , ""],
-["Discipline of Programming"       , "2018-08", 1976, "E.W.Dijkstra"   , 1.5, 0  , 0   , 0  , 2  , 0  , 0  , ""],
-["Visual Display of Quant. Info"   , "2018-08", 2001, "E.R.Tufte"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["East of Eden"                    , "2018-09", 1952, "J.Steinbeck"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Malloy"                          , "2018-09", 1951, "S.Bellow"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Sweet Thursday"                  , "2018-09", 1954, "J.Steinbeck"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["A History of Western Philosophy" , "2018-09", 1945, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["In Praise of Idleness etc"       , "2018-09", 1935, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Just So Stories"                 , "2018-09", 1902, "R.Kipling"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Boy's Life"                      , "2018-10", 1991, "R.R.McCammon"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Godel Escher Bach"               , "2018-10", 1979, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["The Periodic Table"              , "2018-10", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
+["Ficciones"                       , "2018-10", 1962, "J.L.Borges"     , 1  , 2  , 0   , 0.5, 0.5, 0  , 0  , ""],
+["Secret Life of Salvador Dali"    , "2018-11", 1942, "S.Dali"         , 1.5, 1  , 0   , 2  , 0.5, 0  , 0  , ""],
+["Adventures of Kavalier and Clay" , "2018-11", 2000, "M.Chabon"       , 2  , 1  , 0   , 1  , 0  , 1  , 0  , ""],
+["The Diversity of Life"           , "2018-11", 1992, "E.O.Wilson"     , 1.5, 1  , 0   , 0  , 1  , 0  , 0  , ""],
+["Discipline of Programming"       , "2018-11", 1976, "E.W.Dijkstra"   , 1.5, 0  , 0   , 0  , 2  , 0  , 0  , ""],
+["Visual Display of Quant. Info"   , "2018-11", 2001, "E.R.Tufte"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["East of Eden"                    , "2018-11", 1952, "J.Steinbeck"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Malloy"                          , "2018-11", 1951, "S.Bellow"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Sweet Thursday"                  , "2018-11", 1954, "J.Steinbeck"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["A History of Western Philosophy" , "2018-12", 1945, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["In Praise of Idleness etc"       , "2018-12", 1935, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Just So Stories"                 , "2018-12", 1902, "R.Kipling"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 // to read (MEDIUM PRIORITY: == 4.0 on goodreads, or special exception) 
 ["The Periodic Table"              , "2018-08", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
@@ -85,7 +93,6 @@ var books = [
 ["The Anatomy of Prose"            , "2018-08", 1954, "M.Boulton"      , 1  , 1  , 0   , 0  , 1 ,  0  , 0  , ""],
 ["Connecticut Yankee in A's Court" , "2018-08", 1889, "M.Twain"        , 1  , 0  , 0   , 1  , 0  , 0  , 0  , ""],
 ["Winesburg, Ohio"                 , "2018-08", 1919, "S.Anderson"     , 0  , 2  , 0   , 0.5, 0  , 1  , 0  , ""],
-["Cold Comfort Farm"               , "2018-08", 1932, "S.Gibbons"      , 1.5, 0.5, 0   , 2  , 0  , 1  , 0  , ""],
 ["On the Road"                     , "2018-08", 1957, "J.Kerouac"      , 0  , 2  , 0   , 0  , 0  , 2  , 0  , ""],
 ["The Language Instinct"           , "2018-08", 1994, "S.Pinker"       , 1  , 0  , 0   , 0  , 1  , 1  , 0  , ""],
 ["The Mismeasure of Man"           , "2018-08", 1981, "S.J.Gould"      , 0  , 0  , 0   , 0  , 1  , 1  , 0  , ""],
@@ -132,7 +139,6 @@ var books = [
 ["Life of Frederick Douglass"      , "2018-08", 1845, "F.Douglass"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Prometheus Unbound"              , "2018-08", 1820, "P.B.Shelley"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Oliver Twist"                    , "2018-08", 1839, "C.Dickens"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Leaves of Grass"                 , "2018-08", 1855, "W.Whitman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 */
 
 ];
