@@ -13,6 +13,7 @@
 #        Use underscores instead of spaces in cell names.  See an sample 
 #        schedule, for instance `schedule_2018-02-17.data`, for illustrations.
 
+import random
 from sys import argv
 in_name, out_name = argv[1:3]
 
@@ -21,6 +22,7 @@ with open(in_name) as f:
 
 def print_cell(token):
     color, text = token[0], token[1:].replace('_', ' ') 
+    height, text = (1, text) if '@' not in text else (int(text.split('@')[1]), text.split('@')[0])
     bg_color, fg_color, style = {
         '.':('',       '#888888','font-variant: small-caps'),
         'b':('#aaaaff','#888888','')                        ,
@@ -36,7 +38,7 @@ def print_cell(token):
         'M':('#ffaaff','#000000','font-weight: bold')       ,
         'Y':('#ffffaa','#000000','font-weight: bold')       ,
     }[color]
-    return '\n    <td bgcolor="%s" style="color:%s;%s">%s</td>' % (bg_color, fg_color, style, text)
+    return '\n    <td bgcolor="%s" style="color:%s;%s" rowspan=\"%d\">%s</td>' % (bg_color, fg_color, style, height, text)
     
 def print_line(line):
     rtrn = '\n<tr>'
