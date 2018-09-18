@@ -14,17 +14,16 @@ $\newcommand{\from}{\leftarrow}$
 
 !! Part A: Similarities to Euclidean Space
 !!! Epsiode  0: Introduction
-    The old joke goes that a topologist can't distinguish a donut and a coffee mug.  Thus stem the
+    The old joke goes that a topologist can't distinguish a donut from a coffee mug.  Thus stem the
     durable, meaty invariants of topology.  At the same time, one feels that there *is* some
     interesting difference between the two breakfast items.  For instance, we know that 
     a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the same
-    among those diffeomorphic to a torus?  
+    among those diffeomorphic to a torus?   
 
-    But, while the introduction of geometric structure leads us to ask about the structure
-    itself, we may also step back and wonder how geometry and topology relate.  Whenever we have a pair
-    of notions, one more abstract and one more concrete, we may investigate all the ways a given
-    abstract object may be realized concretely (if at all); which properties of a concrete object
-    determine certain properties of its abstraction; and vice versa.  Examples of pairs include
+    While geometry in itself is interesting, we may also consider how geometry and topology relate.
+    Whenever we have a pair of notions, one more abstract and one more concrete, we may investigate
+    all the ways a given abstract object may be realized concretely (if at all); which properties
+    of a concrete object determine certain properties of its abstraction; and vice versa.  Examples of pairs include
     groups and their representations, manifolds and their euclidean embeddings, set theories and
     their models, and topologies and their metrics.  Here, we shall wonder:
     *what can geometry tell us about topology*?
@@ -33,8 +32,8 @@ $\newcommand{\from}{\leftarrow}$
     After all: sometimes, size matters.
 
     In these notes, we will develop the basic language, techniques, and examples of
-    *Differential Geometry*, this subject of lengths and angles on smooth manifolds.  Eventually, we
-    will discuss statements such as
+    *Differential Geometry*, this subject of lengths and angles on smooth manifolds.  Eventually,
+    we will discuss statements such as
     "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
     "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".
     We will end by sketching applications to einsteinian gravity, statistics, computer vision, and
@@ -67,7 +66,7 @@ $\newcommand{\from}{\leftarrow}$
     structure?  But we must precisely define curvature before addressing these questions.  We begin
     with a review of manifolds:
 
-!!!! $\fbox{ANTS ON TWO DONUTS}
+!!!! $\fbox{ANTS ON TWO DONUTS}$
     Or, imagine we are infinitesimal ants walking
     geodesically on flat donut or a real donut.  On a flat donut, we trace a dense path for almost
     all initial conditions; this is not so for a real donut!
@@ -198,3 +197,10 @@ $\newcommand{\from}{\leftarrow}$
 !!! Episode 23: Mostow Theorem
 !!! Episode 24: Chern-Gauss-Bonnet Theorem 
     This lecture based on http://www.maths.ed.ac.uk/~v1ranick/papers/li4.pdf
+
+!! Part F: Applications 
+!!! Episode 25: Euclid and Dido Revisited 
+!!! Episode 26: Computer Vision
+!!! Episode 27: Einstein's Gravity 
+!!! Episode 28: Differential Geology 
+!!! Episode 29: Information Geometry

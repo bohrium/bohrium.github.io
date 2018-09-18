@@ -1,19 +1,19 @@
         SAT              SUN              MON              TUE              WED              THU              FRI         
 08:00   csleep_in@4      csleep_in@2      cweights@2       .                cweights@2       .                cweights@2     
-08:30                                                      .                                 .                               
-09:00                    yma/pa           mmeal_a          mmeal_a          mmeal_a          mmeal_a          mmeal_a        
-09:30                    .                Grsrch@2         Grsrch@3         Grsrch@2         Grsrch@3         Grsrch@2       
+08:30                                                      madmin;meal_a@2                   madmin;meal_a@2                 
+09:00                    ycall_ma/pa@2    mmeal_a                           mmeal_a                           mmeal_a        
+09:30                                     Mrsrch@2         Mrsrch@3         Mrsrch@2         Mrsrch@3         Mrsrch@2       
 10:00   mplan;meal_ab@2  cmusic@2                                                                                            
 10:30                                     crun                              crun                              crun           
-11:00   yart_club@3      mmeal_ab@3       ybrent@2         Grsrch@3         Grsrch@2         Grsrch@3         Grsrch@2       
-11:30                                                                                                                        
+11:00   .                mmeal_ab@3       ybrent@2         Grsrch@3         Grsrch@2         Grsrch@3         Grsrch@2       
+11:30   yart_club@2                                                                                                          
 12:00                                     .                                 Bcoco;meal_b@2                    Bvision;meal_b@2
 12:30   Grsrch@4         Grsrch@4         mmeal_b          mmeal_b                           mmeal_b                         
 13:00                                     Bstat_learn@3    Bcomp_cogsci@3   Bstat_learn@3    Bcomp_cogsci@3   .              
 13:30                                                                                                         ybrent@2       
 14:00                                                                                                                        
-14:30   .                .                Grsrch@3         bcompu_theory@3  Grsrch@3         bcompu_theory@3  .              
-15:00   .                .                                                                                    Grsrch@2       
+14:30   .                .                Mrsrch@3         bcompu_theory@3  Mrsrch@3         bcompu_theory@3  .              
+15:00   .                .                                                                                    Mrsrch@2       
 15:30   Grsrch@4         Grsrch@4                                                                                            
 16:00                                     b6.961;meal_c@2  mmeal_c          mmeal_c          mmeal_c          Blis;meal_c@2  
 16:30                                                      .                Grsrch@2         Grsrch@2                         
