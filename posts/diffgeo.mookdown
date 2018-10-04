@@ -10,33 +10,30 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\from}{\leftarrow}$
 
 ! Differential Geometry 
-!!!! Notes by Sam Tenka based on Ralf Spatzier's course and following Do Carmo's text.  Written to organize author's mind.  Not a textbook.  Incomplete sentences, but many illustrations.  Depends on tensor calculus, the $\pi_1$ functor, Lie groups, etc.
+!!!! Notes by Sam Tenka based on Ralf Spatzier's course on Do Carmo's text.
 
 !! Part A: Similarities to Euclidean Space
 !!! Epsiode  0: Introduction
-    The old joke goes that a topologist can't distinguish a donut from a coffee mug.  Thus stem the
-    durable, meaty invariants of topology.  At the same time, one feels that there *is* some
-    interesting difference between the two breakfast items.  For instance, we know that 
-    a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the same
-    among those diffeomorphic to a torus?   
+    The old joke goes that a topologist can't tell a donut from a coffee mug.  Thus arise the
+    durable, meaty invariants of topology.  Yet, one feels that there *is* some interesting
+    difference between the two breakfast items.  For instance, as we glaze our donuts, we recall
+    that a unit sphere encloses the most volume for a fixed surface area; which shapes achieve the
+    same among those diffeomorphic to a torus?   
 
     While geometry in itself is interesting, we may also consider how geometry and topology relate.
     Whenever we have a pair of notions, one more abstract and one more concrete, we may investigate
-    all the ways a given abstract object may be realized concretely (if at all); which properties
-    of a concrete object determine certain properties of its abstraction; and vice versa.  Examples of pairs include
-    groups and their representations, manifolds and their euclidean embeddings, set theories and
-    their models, and topologies and their metrics.  Here, we shall wonder:
+    the ways a given abstract object may be realized concretely (if at all), which properties
+    of a concrete object determine certain properties of its abstraction, and vice versa.  Examples
+    of pairs include groups and their representations, manifolds and their euclidean embeddings,
+    set theories and their models, and topologies and their metrics.  Here, we shall wonder:
     *what can geometry tell us about topology*?
 
-    In short, we are interested in volumes, lengths, and angles.
-    After all: sometimes, size matters.
-
-    In these notes, we will develop the basic language, techniques, and examples of
-    *Differential Geometry*, this subject of lengths and angles on smooth manifolds.  Eventually,
-    we will discuss statements such as
-    "Every complete manifold of curvature bounded below by some positive $\delta$ is compact" and
-    "Every complete simply connected manifold of negative curvature is diffeomorphic to $\RR^n$".
-    We will end by sketching applications to einsteinian gravity, statistics, computer vision, and
+    In short, we are interested in volumes, lengths, and angles.  After all: size matters.  Thus,
+    we here develop the basic language, techniques, and examples of *Differential Geometry*, this
+    subject of lengths and angles on smooth manifolds.  This machinery will lead to results such as 
+    "Every complete manifold of positive curvature bounded away from $0$ is compact" and
+    "Every complete manifold of constant negative curvature is covered by $\RR^n$".
+    We conclude by sketching applications to einsteinian gravity, statistics, computer vision, and
     geology. 
 
 !!!! $\fbox{CURVATURE}$ 
@@ -198,9 +195,21 @@ $\newcommand{\from}{\leftarrow}$
 !!! Episode 24: Chern-Gauss-Bonnet Theorem 
     This lecture based on http://www.maths.ed.ac.uk/~v1ranick/papers/li4.pdf
 
-!! Part F: Applications 
-!!! Episode 25: Euclid and Dido Revisited 
-!!! Episode 26: Computer Vision
-!!! Episode 27: Einstein's Gravity 
-!!! Episode 28: Differential Geology 
-!!! Episode 29: Information Geometry
+!! Part F: Applications and the Second Fundamental Form 
+!!! Episode 25: Gravity 
+
+!!! Episode 26: Discrete Calculus
+
+!!! Episode 27: Differential Geology 
+We base our discussion on "Using Differential Geometry to Describe 3-D Folds" (Mynatt, Bergbauer, Pollard in %Journal of Structural Geology%, 2007)
+!!!! $\fbox{LAYERS OF ROCKS}$
+!!!! $\fbox{PRINCIPAL CURVATURES}$
+!!!! $\fbox{READING ROCKS}$
+
+!!! Episode 28: Information Geometry
+We base our discussion on "Natural Gradient Works Efficiently in Learning" (Amari in %Neural Computation%, 1998). 
+!!!! $\fbox{PARAMETERIZED DISTRIBUTIONS}$
+!!!! $\fbox{KL DIVERGENCE AND FISCHER INFORMATION}$
+!!!! $\fbox{NATURAL DESCENT}$
+    
+!!! Episode 29: Minimal Surfaces
