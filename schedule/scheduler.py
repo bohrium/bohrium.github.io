@@ -25,18 +25,18 @@ def print_cell(token):
     height, text = (1, text) if '@' not in text else (int(text.split('@')[1]), text.split('@')[0])
     bg_color, fg_color, style = {
         '.':('',       '#888888','font-variant: small-caps'),
-        'b':('#ccccff','#888888','')                        ,
-        'g':('#ccffcc','#888888','')                        ,
-        'c':('#ccffff','#888888','')                        ,
-        'r':('#ffcccc','#888888','')                        ,
-        'm':('#ffccff','#888888','')                        ,
-        'y':('#ffffcc','#888888','')                        ,
-        'B':('#9999ff','#000000','font-weight: bold')       ,
-        'G':('#99ff99','#000000','font-weight: bold')       ,
-        'C':('#99ffff','#000000','font-weight: bold')       ,
-        'R':('#ff9999','#000000','font-weight: bold')       ,
-        'M':('#ff99ff','#000000','font-weight: bold')       ,
-        'Y':('#ffff99','#000000','font-weight: bold')       ,
+        'b':('#ccccee','#888888','')                        ,
+        'g':('#cceecc','#888888','')                        ,
+        'c':('#cceeee','#888888','')                        ,
+        'r':('#eecccc','#888888','')                        ,
+        'm':('#eeccee','#888888','')                        ,
+        'y':('#eeeecc','#888888','')                        ,
+        'B':('#8888ff','#000000','font-weight: bold')       ,
+        'G':('#88ff88','#000000','font-weight: bold')       ,
+        'C':('#88ffff','#000000','font-weight: bold')       ,
+        'R':('#ff8888','#000000','font-weight: bold')       ,
+        'M':('#ff88ff','#000000','font-weight: bold')       ,
+        'Y':('#ffff88','#000000','font-weight: bold')       ,
     }[color]
     return '\n    <td bgcolor="%s" style="color:%s;%s" rowspan=\"%d\">%s</td>' % (bg_color, fg_color, style, height, text)
     
