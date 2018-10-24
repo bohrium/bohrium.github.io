@@ -24,13 +24,14 @@ var books = [
 ["The Armchair Economist"          , "2018-07", 1993, "S.E.Landsburg"  , 2  , 0  , 0   , 0.5, 2  , 1  , 1.5, "reviews/armchair-economist.html"],
 ["The Time Machine"                , "2018-07", 1895, "H.G.Wells"      , 0.5, 0.5, 0.5 , 0  , 0  , 0.5, 0  , "reviews/time-machine.html"],
 ["Symbols, Signals and Noise"      , "2018-08", 1961, "J.R.Pierce"     , 1.5, 0  , 0.5 , 0  , 1.5, 1  , 2  , "reviews/symbols-signals-noise.html"],
-["Foundation"                      , "2018-08", 1951, "I.Asimov"       , 1  , 0  , 1   , 0.5, 0  , 0.5, 1  , "reviews/foundation.html"],
+["Foundation"                      , "2018-08", 1951, "I.Asimov"       , 1  , 0  , 1   , 0.5, 0  , 0.5, 1  , ""],//"reviews/foundation.html"],
 ["The Back Passage"                , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 1  , 0  , 1  , 1  , ""],
 
 ["The #1 Ladies' Detective Agency" , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
-["A Separate Peace"                , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0  , 2  , 2  , "reviews/a-separate-peace.html"],
+["A Separate Peace"                , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
 ["The Remains of the Day"          , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
 ["Incident of the Dog in the Night", "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
+["The Corrections"                 , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
 /*
 ["Brief Wondrous Life of Oscar Wao", "2018-09", 2007, "J.Diaz"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["How to Write an Autobio Novel"   , "2018-09", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
