@@ -1,33 +1,33 @@
         SAT              SUN              MON              TUE               WED                THU                 FRI         
-08:00   csleep_in@4      csleep_in@2      cweights@2       .                 cweights@2         .                   cweights@2     
-08:30                                                      madmin;meal_a@2                      madmin;meal_a@2                    
-09:00                    ycall_ma/pa@2    mmeal_a                            mmeal_a                                mmeal_a        
-09:30                                     crun             crun              crun               crun                crun           
-10:00   mplan;meal_ab@2  cpractice♪@2     mjournal@2       gwrite@5          gwrite@3           gwrite@3            gwrite@2       
-10:30                                                                                                                              
-11:00   yquartet@2       mmeal_ab@3       ybrent@2                                                                  mstats_sem@2    
-11:30                                                                        Bco/vis;meal_b@3   ybrent@2                           
-12:00   gwrite@3                          .                                                                         Bisolab;meal_b@3
-12:30                    gwrite@2         mmeal_b          mmeal_b                              mmeal_b                            
-13:00                                     Bstat_learn@3    Bcomp_cogsci@3    Bstat_learn@3      Bcomp_cogsci@3                 
-13:30   mread@2          ycateg@3                                                                                   gwrite@2               
-14:00                                                                                                                              
-14:30   .                                 gwrite@2         bcompu_theory@3   gwrite@3           bcompu_theory@3     .              
-15:00   .                mread@2                                                                                    Bphillip@2     
-15:30   .                                 Bmunzer@2                                                                                        
-16:00   .                yyog@2                            msipser_oh;meal_c mmeal_c            minfer/bcs@2        Blis/bmm;meal_c@2 
-16:30   .                                 gwrite@2         mread@2           mml_sem@2                                               
-17:00   gwrite@3         gwrite@4                                                               .                   mread;gsb@2     
-17:30                                     mread;muffin@2   Binfo_geo@3       .                  .                                  
-18:00                                                                        .                  gwrite@3            .               
-18:30   mmeal_cd@3                        gwrite@2                           Ysai/yog;meal_d@3                      gwrite@2       
-19:00                    mmeal_cd@2                        gwrite@1                                                                
-19:30                                     mmeal_d          mmeal_d                              mmeal_d             mmeal_d        
-20:00   .                mstudy_toc@2     mstudy_slt@2     mstudy_toc@2      mstudy_slt@2       mstudy_ccs@2        .              
-20:30   .                                                                                                           .              
-21:00   .                .                .                .                 ycoffee            .                   .              
-21:30   .                .                .                .                 .                  .                   .              
-22:00   .                .                .                .                 .                  .                   .              
-22:30   .                .                .                .                 .                  .                   .              
+08:00   csleep_in@6      csleep_in@3      cweights@2       crun              cweights@2         crun                cweights@2     
+08:30                                                      madmin@2                             madmin@2                           
+09:00                                     m                                  m                                      m              
+09:30                    m                mjournal@2       r                 r                  cpractice♪@2        r              
+10:00                    cpractice♪@2                      mwork@3           .                                      gwrite@2       
+10:30                                     r                                  gwrite@2           r                                  
+11:00   .                yquartet@2       ybrent@2                                              ybrent@2            mstats:???@2
+11:30   .                                                  gwrite@3          bcocosci@3                                     
+12:00   gwrite@2         gwrite@2         r                                                     r                   bisolab@3     
+12:30                                     gwrite                                                gwrite                             
+13:00   mwork@4          .                bstat_learn@3    bcomp_cogsci@3    bstat_learn@3      bcomp_cogsci@3                 
+13:30                    ytype_theory@3                                                                             .            
+14:00                                                                                                               gwrite@2       
+14:30                                     gwrite@3         bcompu_theory@3   yslt_study@2       bcompu_theory@3                    
+15:00   gwrite@2         gwrite@2                                                                                   bphillip@2   
+15:30                                                                        gwrite@2                                                      
+16:00   .                yyog@2           mlids:???@2      gwrite                               minfer:???@2        mbmm:???@2      
+16:30   .                                                  msipser           mml:???@2                                         
+17:00   mwork@4          mwork@4          .                mwork@4                              gwrite@3            mwork@4     
+17:30                                     yinfogeo@3                         .                                                     
+18:00                                                                        r                                                 
+18:30                                                                        yyog@2             .                                  
+19:00   .                .                r                r                                    r                   r              
+19:30   .                mwork@2          mwork@2          mwork@2           ysai@3             mwork@2                            
+20:00   .                                                                                                           ycall_mapa     
+20:30   .                .                .                .                                    .                   .              
+21:00   .                mwork@4          mwork@4          mwork@2           ycoffee            mwork@4             .              
+21:30   .                                                                    mwork@3                                .              
+22:00   .                                                  ycall_mapa                                               .              
+22:30   .                                                  .                                                        .              
 23:00   .                .                .                .                 .                  .                   .              
 23:30   .                .                .                .                 .                  .                   .              
