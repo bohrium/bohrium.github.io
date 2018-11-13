@@ -33,27 +33,31 @@ var books = [
 ["Incident of the Dog in the Night", "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 ["The Corrections"                 , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
 /*
-["Brief Wondrous Life of Oscar Wao", "2018-09", 2007, "J.Diaz"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["How to Write an Autobio Novel"   , "2018-09", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Naked"                           , "2018-09", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Dubliners"                       , "2018-09", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Brief Wondrous Life of Oscar Wao", "2018-11", 2007, "J.Diaz"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["How to Write an Autobio Novel"   , "2018-11", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Naked"                           , "2018-11", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Dubliners"                       , "2018-11", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
-["Civilization and Its Discontents", "2018-09", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["White Noise"                     , "2018-09", 1985, "D.DeLillo"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Advice for a Young Investigator" , "2018-09", 1987, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Methods of Information Geometry" , "2018-09", 1993, "S.Amari"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Civilization and Its Discontents", "2018-11", 1930, "S.Freud"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["White Noise"                     , "2018-11", 1985, "D.DeLillo"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Advice for a Young Investigator" , "2018-11", 1987, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Methods of Information Geometry" , "2018-11", 1993, "S.Amari"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
-["Lincoln in the Bardo"            , "2018-10", 2017, "G.Saunders"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Cold Comfort Farm"               , "2018-10", 1932, "S.Gibbons"      , 1.5, 0.5, 0   , 2  , 0  , 1  , 0  , ""],
-["Leaves of Grass"                 , "2018-10", 1855, "W.Whitman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Something Wicked This Way Comes" , "2018-10", 1962, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Lincoln in the Bardo"            , "2018-12", 2017, "G.Saunders"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Cold Comfort Farm"               , "2018-12", 1932, "S.Gibbons"      , 1.5, 0.5, 0   , 2  , 0  , 1  , 0  , ""],
+["Leaves of Grass"                 , "2018-12", 1855, "W.Whitman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Something Wicked This Way Comes" , "2018-12", 1962, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+["The Swimming-Pool Library"       , "2018-12", 1988, "A.Hollinghurst" , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Thinking Fast and Slow"          , "2018-12", 2011, "D.Kahneman"     , 1  , 0  , 0   , 0  , 1.5, 1  , 0  , ""],
+["Flowers for Algernon"            , "2018-12", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
+["Boy's Life"                      , "2018-12", 1991, "R.R.McCammon"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 */
 
 
 
 /*
 // to read (HIGH PRIORITY: >= 4.1 on goodreads, or special exception) 
-["Boy's Life"                      , "2018-10", 1991, "R.R.McCammon"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Godel Escher Bach"               , "2018-10", 1979, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Periodic Table"              , "2018-10", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
 ["Ficciones"                       , "2018-10", 1962, "J.L.Borges"     , 1  , 2  , 0   , 0.5, 0.5, 0  , 0  , ""],
@@ -72,8 +76,6 @@ var books = [
 // to read (MEDIUM PRIORITY: == 4.0 on goodreads, or special exception) 
 ["The Periodic Table"              , "2018-08", 1975, "P.Levi"         , 1  , 2  , 0   , 1  , 0  , 0  , 0  , ""],
 ["The Selfish Gene"                , "2018-08", 1976, "R.Dawkins"      , 2  , 0  , 0   , 0  , 2  , 0  , 0  , ""],
-["Thinking Fast and Slow"          , "2018-08", 2011, "D.Kahneman"     , 1  , 0  , 0   , 0  , 1.5, 1  , 0  , ""],
-["Flowers for Algernon"            , "2018-08", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
 ["A Room of One's Own"             , "2018-08", 1929, "V.Woolf"        , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
 ["Note to Self"                    , "2018-08", 2017, "C.Franta"       , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Unbearable Lightness of Being"   , "2018-08", 1984, "M.Kundera"      , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
