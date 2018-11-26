@@ -1,32 +1,32 @@
         SAT              SUN              MON              TUE               WED                THU                 FRI         
-08:00   csleep_in@4      csleep_in@4      cwork_out@2      cwork_out         cwork_out@2        csleep_in@6         csleep_in@6     
+08:00   csleep_in@6      csleep_in@4      cwork_out@2      cwork_out         cwork_out@2        csleep_in@6         csleep_in@6     
 08:30                                                      m@2                                                                      
 09:00                                     m                                  m                                                      
 09:30                                     .                .                 .                                                      
-10:00   m@2              m@2              cpractice♪@2     g@2               g@2                                                    
+10:00                    m@2              cpractice♪@2     g@2               g@2                                                    
 10:30                                                                                                                               
-11:00   .                .                ybrent@2         msgd@4            .                  ycall_mapa          .               
-11:30   .                .                                                   bcoco@3            .                   rto_bus         
-12:00   ybrunch_karl@3   ybrunch_jason@3  g@2                                                   .                   .               
-12:30                                                                                           .                   .               
-13:00                                     bstat_learn@3    bcomp_cogsci@3    bstat_learn@3      .                   rto_nyc...      
-13:30   yshop_karl@3     .                                                                      .                   g@4             
-14:00                    .                                                                      .                                   
+11:00   m                msgd@2           ybrent@2         r                 .                  ycall_mapa          .               
+11:30   .                                                  ykarl@2           .                  .                   rto_bus         
+12:00   ybrunch_karl@3   ybrunch_sidpac@2 g@2                                .                  .                   .               
+12:30                                                      r                 .                  .                   .               
+13:00                    ybrunch_jason@3  bstat_learn@3    bcomp_cogsci@3    bstat_learn@3      .                   rto_nyc...      
+13:30   yshop_karl@3                                                                            .                   g@4             
+14:00                                                                                           .                                   
 14:30                    .                .                bcompu_theory@3   mdissect@4         .                                   
 15:00   .                g@2              bdissect@2                                            .                                   
 15:30   .                                                                                       .                   g@4             
-16:00   g@2              yyoga@2          mflows@3         bsipser@2                            .                                   
-16:30                                                                        msgd@4             .                                   
-17:00   mflows@3         mflows@3                          mflows@4                             .                                   
-17:30                                     mdissect@3                                            .                   rto_nyc...      
-18:00                                                                                           .                   .               
-18:30   mdissect@3       mdissect@3                                          .                  .                   .               
+16:00   .                yyoga@2          mflows@3         bsipser@2                            .                                   
+16:30   .                                                                    msgd@4             .                                   
+17:00   .                mflows@3                          mflows@4                             .                                   
+17:30   .                                 mdissect@3                                            .                   rto_nyc...      
+18:00   mflows@4                                                                                .                   .               
+18:30                    mdissect@3                                          .                  .                   .               
 19:00                                     .                .                 mnotes@6           ythxgiving_dinner@6 .               
 19:30                                     ycall_mapa       .                                                        .               
-20:00   msgd@3           msgd@3           mnotes@2         mnotes@2                                                 .               
-20:30                                                                                                               .               
+20:00   .                msgd@3           mnotes@2         mnotes@2                                                 .               
+20:30   mdissect@4                                                                                                  .               
 21:00                                     mtoc_pset@2      mslt_pset@2                                              .               
-21:30   g@2              g@2                                                                                        .               
+21:30                    g@2                                                                                        .               
 22:00                                     g@2              g@2               ysharon@4          .                   .               
 22:30   .                .                                                                      .                   .               
 23:00   .                .                .                .                                    .                   .               
