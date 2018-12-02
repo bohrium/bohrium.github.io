@@ -1,33 +1,35 @@
         SAT              SUN              MON              TUE               WED                THU                 FRI         
-08:00   csleep_in@6      csleep_in@4      csleep_in@5      cwork_out         cwork_out@2        cwork_out           cwork_out@2    
-08:30                                                      m@2                                  m@2                                
-09:00                                                                        m                                      m              
-09:30                                                      .                 .                  .                   .              
-10:00                    .                                 g@2               g@2                g@2                 ybrent@2             
-10:30                    .                m                                                                                              
-11:00   .                ygrac_diner@2    ybrent@2         msgd@2            .                  mflows@4            .                       
-11:30   ydiner_brunch@2                                                      bcoco@3                                .                    
-12:00                    .                .                bmben_chat@2                                             bisolab@4     
-12:30   .                .                .                                                                                      
-13:00   yuniqlo@4        .                bstat_learn@3    bcomp_cogsci@3    bstat_learn@3      bcomp_cogsci@3                 
-13:30                    rto_busstop@3                                                                                            
-14:00                                                                                                               g@2            
-14:30                                     mread_papers@3   bcompu_theory@3   mdissect@4         bcompu_theory@3                    
-15:00   .                rto_camb...@5                                                                              bphillip@2   
-15:30   ysoup_dumpls                                                                                                                       
-16:00   .                                 mqi_networking@2 bsipser@2                            mdissect@3          mflows@3        
-16:30   .                                                                    msgd@4                                                  
-17:00   ymet_art_muse@3                   .                mflows@4                                                                 
-17:30                    mrosen_sop@2     mslt_pset@3                                           msgd@3              g@2              
-18:00                                                                                                                               
-18:30   .                r...to_camb@5                                       .                                      .              
-19:00   ysoup_dumpls@3                    .                .                 yyoga@2            .                   .              
-19:30                                     ycall_mapa       .                                    ycall_mapa          .              
-20:00                                     mnotes@2         mnotes@2          mnotes@2           mnotes@2            mjin_sop@2
-20:30   .                                                                                                                          
-21:00   ybar_hop@4       .                .                .                 .                  .                   .              
-21:30                    .                .                .                 .                  .                   .              
-22:00                    mkarl_study@4    g@2              g@2               g@2                g@2                 .              
-22:30                                                                                                               .              
-23:00   .                                 .                .                 .                  .                   .              
-23:30   yice_cream                        .                .                 .                  .                   .              
+07:00   csleep_in@14     csleep_in@6      cwork_out        cwork_out         cwork_out          cwork_out           cwork_out      
+07:30                                     m                m                 m                  m                   m     
+08:00                                     .                .                 .                  .                   bbayes_dl_talks@2
+08:30                                     badvers_tut@4    bml_in_public@2   brobust_rl@2       btrustworth_algos@2  
+09:00                                                                                                               bdeep_rl_talks@2
+09:30                                                      btest_of_time     bspotlights        bspotlights                        
+10:00                    m                                 bneuron_capacity  bvisual_memory     btail_adapt_div     bbayes_dl_posters@2              
+10:30                    m@2              .                bspotlights       bspotlights        bspotlights                                
+11:00                                     bunsup_dl_tut@4  .                 .                  .                   bdeep_rl_talks@2        
+11:30                    .                                 bposters@2        bposters@2         bposters@2                               
+12:00                    rto_airport                                                                                yisolab@3     
+12:30                    .                                 .                 .                  .                                
+13:00                    m@4              g@2              g@2               g@2                g@2                            
+11:30                                                                                                               bdeep_rl_talks@2
+14:00   .                                 .                bbodies_think@2   bhuman_ai_trust@2  bsoftware_2.0@2                    
+14:30   .                                 bslt_tut@4                                                                               
+15:00   ykarl_indian@2   rto_montreal@4                    .                 .                  .                   bdeep_rl_posters@2
+15:30                                                      bneural_odes      bcubic_regular     bnon-delusional_ql                         
+16:00   .                                                  bspotlights       bspotlights        bspotlights         yphillip@2      
+16:30   .                                 .                bbatch_norm       brecur_world_mod   bsample_eff_rl                       
+17:00   .                .                .                bposters@2        bposters@2         bposters@2          .               
+17:30   .                .                binclusive_ai@2                                                           .                
+18:00   .                m@4                               bdemonstrations@2 bdemonstrations@2  .                   m@4             
+18:30   .                                 .                                                     .                                  
+19:00   .                                 .                .                 .                  .                                  
+19:30   mslides@2                         ycall_mapa       .                 .                  ycall_mapa                         
+20:00                    .                mnotes@2         mnotes@2          mnotes@2           mnotes@2            .              
+20:30   .                m@4                                                                                        m@4            
+21:00   mplan@2                           .                .                 .                  .                                  
+21:30                                     m@4              m@4               m@4                m@4                                
+22:00   .                                                                                                                          
+22:30   .                                                                                                                          
+23:00   .                .                                                                                          .              
+23:30   .                .                .                .                 .                  .                   .              
