@@ -42,6 +42,7 @@
                 <div id="weekmenubody" style="text-align:center">
                     <button id="thisweek"> this week </button>
                     <button id="nextweek"> next week </button>
+                    <button id="nextnextweek"> next next week </button>
                     <button id="genericweek"> generic week </button>
                 </div>
 
@@ -49,23 +50,28 @@
                 <div id="test"> </div>
                 <script>
                     var test = document.getElementById("test");
-                    test.innerHTML = "<object  data=\"" + "schedule/schedule_table.html"         + "\" width=\"900\" height=\"1024\"></object>";
+                    test.innerHTML =     "<object  data=\"" + "schedule/schedule_table.html"            + "\" width=\"900\" height=\"1024\"></object>";
 
                     function thisweekRender() {
-                        test.innerHTML = "<object  data=\"" + "schedule/schedule_table.html"         + "\" width=\"900\" height=\"1024\"></object>";
+                        test.innerHTML = "<object  data=\"" + "schedule/schedule_table.html"            + "\" width=\"900\" height=\"1024\"></object>";
                     }
                     function nextweekRender() {
-                        test.innerHTML = "<object  data=\"" + "schedule/schedule_next_table.html"    + "\" width=\"900\" height=\"1024\"></object>";
+                        test.innerHTML = "<object  data=\"" + "schedule/schedule_next_table.html"       + "\" width=\"900\" height=\"1024\"></object>";
+                    }
+                    function nextnextweekRender() {
+                        test.innerHTML = "<object  data=\"" + "schedule/schedule_next_next_table.html"  + "\" width=\"900\" height=\"1024\"></object>";
                     }
                     function genericweekRender() {
-                        test.innerHTML = "<object  data=\"" + "schedule/schedule_generic_table.html" + "\" width=\"900\" height=\"1024\"></object>";
+                        test.innerHTML = "<object  data=\"" + "schedule/schedule_generic_table.html"    + "\" width=\"900\" height=\"1024\"></object>";
                     }
 
                     var thisweek = document.getElementById("thisweek");
                     var nextweek = document.getElementById("nextweek");
+                    var nextnextweek = document.getElementById("nextnextweek");
                     var genericweek = document.getElementById("genericweek");
                     thisweek.onclick = function () {thisweekRender();};
                     nextweek.onclick = function () {nextweekRender();};
+                    nextnextweek.onclick = function () {nextnextweekRender();};
                     genericweek.onclick = function () {genericweekRender();};
                 </script>
 
