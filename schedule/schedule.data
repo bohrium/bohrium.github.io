@@ -1,33 +1,33 @@
-        SAT              SUN              MON              TUE               WED                THU                 FRI         
-07:00   csleep_in@14     csleep_in@6      cwork_out        cwork_out         cwork_out          cwork_out           m              
-07:30                                     m                m                 m                  m                   r_to_neurips
-08:00                                     rto_neurips      rto_neurips       rto_neurips        rto_neurips         bbayes_dl_talks@2
-08:30                                     badversarial@4   bml_in_public@2   brobust_rl@2       btrustworth_algos@2  
-09:00                                                                                                               bdeep_rl_talks@2
-09:30                                                      btest_of_time     bspotlights        bspotlights                        
-10:00                    m                                 bneuron_capacity  bvisual_memory     btail_adapt_div     bbayes_dl_posters@2              
-10:30                    m@2              .                bspotlights       bspotlights        bspotlights                                
-11:00                                     bunsup_dl_tut@4  .                 .                  .                   bdeep_rl_talks@2        
-11:30                    .                                 bposters@2        bposters@2         bposters@2                               
-12:00                    rto_airport                                                                                yisolab@3     
-12:30                    .                                 .                 .                  .                                
-13:00                    m@4              g@2              g@2               g@2                g@2                            
-13:30                                                                                                               bdeep_rl_talks@2
-14:00   .                                 .                bbodies_think@2   bhuman_ai_trust@2  bsoftware_2.0@2                    
-14:30   .                                 bslt_tut@4                                                                yphillip@2     
-15:00   ykarl_indian@2   rto_montreal@3                    .                 .                  .                                          
-15:30                                                      bneural_odes      bcubic_regular     bnon-deluded_ql     bdeep_rl_posters       
-16:00   .                                                  bspotlights       bspotlights        bspotlights         rto_hotel       
-16:30   .                rto_hotel        rto_hotel        bbatch_norm       brecur_world_mod   bsample_eff_rl      ybrent@2         
-17:00   .                .                ybrent@2         bposters@2        bposters@2         bposters@2                          
-17:30   .                .                                                                                          mnotes@2         
-18:00   .                m@4              .                bdemonstrations   bdemonstrations    rto_hotel                           
-18:30   .                                 ycall_mapa       rto_hotel         rto_hotel          ycall_mapa          m@4            
-19:00   .                                 mnotes@2         mnotes@2          mnotes@2           mnotes@2                           
-19:30   mslides@2                                                                                                                  
-20:00                    .                m@3              m@3               m@4                m@3                                
-20:30   .                m@4                                                                                        .              
-21:00   mplan@2                                                                                                     m@4            
-21:30                                     m@3              m@3               m@2                m@3                                
-22:00   .                                                                                                                          
-22:30   .                                                                                                                          
+         SAT              SUN              MON              TUE               WED                THU                 FRI         
+.07:00   csleep_in@14     csleep_in@6      cwork_out        cwork_out         cwork_out          cwork_out           m              
+.07:30                                     m                m                 m                  m                   r_to_neurips
+.08:00                                     rto_neurips      rto_neurips       rto_neurips        rto_neurips         bbayes_dl_talks@2
+.08:30                                     badversarial@4   bml_in_public@2   brobust_rl@2       btrustworth_algos@2  
+.09:00                                                                                                               bdeep_rl_talks@2
+.09:30                                                      btest_of_time     bspotlights        bspotlights                        
+.10:00                    m                                 bneuron_capacity  bvisual_memory     btail_adapt_div     bbayes_dl_posters@2              
+.10:30                    m@2              .                bspotlights       bspotlights        bspotlights                                
+.11:00                                     bunsup_dl_tut@4  .                 .                  .                   bdeep_rl_talks@2        
+.11:30                    .                                 bposters@2        bposters@2         bposters@2                               
+.12:00                    rto_airport                                                                                yisolab@3     
+.12:30                    .                                 .                 .                  .                                
+.13:00                    m@4              g@2              g@2               g@2                g@2                            
+.13:30                                                                                                               bdeep_rl_talks@2
+.14:00   .                                 .                bbodies_think@2   bhuman_ai_trust@2  bsoftware_2.0@2                    
+.14:30   .                                 bslt_tut@4                                                                yphillip@2     
+.15:00   ykarl_indian@2   rto_montreal@3                    .                 .                  .                                          
+.15:30                                                      bneural_odes      bcubic_regular     bnon-deluded_ql     bdeep_rl_posters       
+.16:00   .                                                  bspotlights       bspotlights        bspotlights         rto_hotel       
+.16:30   .                rto_hotel        rto_hotel        bbatch_norm       brecur_world_mod   bsample_eff_rl      ybrent@2         
+.17:00   .                .                ybrent@2         bposters@2        bposters@2         bposters@2                          
+.17:30   .                .                                                                                          mnotes@2         
+.18:00   .                m@4              .                bdemonstrations   bdemonstrations    rto_hotel                           
+.18:30   .                                 ycall_mapa       rto_hotel         rto_hotel          ycall_mapa          m@4            
+.19:00   .                                 mnotes@2         mnotes@2          mnotes@2           mnotes@2                           
+.19:30   mslides@2                                                                                                                  
+.20:00                    .                m@3              m@3               m@4                m@3                                
+.20:30   .                m@4                                                                                        .              
+.21:00   mplan@2                                                                                                     m@4            
+.21:30                                     m@3              m@3               m@2                m@3                                
+.22:00   .                                                                                                                          
+.22:30   .                                                                                                                          

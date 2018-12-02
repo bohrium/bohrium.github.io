@@ -43,9 +43,10 @@ def print_cell(token):
 def print_line(line):
     rtrn = '\n<tr>'
     toks = line.strip().split()
-    time = toks[0]
-    rtrn += '\n    <td>%s</td>' % time
-    for tok in toks[1:]:
+    #time = toks[0]
+    #rtrn += '\n    <td>%s</td>' % time
+    #for tok in toks[1:]:
+    for tok in toks:
         rtrn += print_cell(tok) 
     return rtrn + '\n</tr>'
 
