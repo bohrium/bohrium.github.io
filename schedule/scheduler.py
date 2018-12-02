@@ -56,7 +56,7 @@ def print_table(lines):
         rtrn += print_line(line)
     return rtrn
 
-with open('schedule_template.html') as f:
+with open('schedule_table_template.html') as f:
     text = f.read()
 
 with open(out_name, 'w') as f:

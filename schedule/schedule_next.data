@@ -7,19 +7,19 @@
                                                                                                                                         
 .08:30@2   rto_neurips@2                     .                g@4               g@4                g@4                 .             
                                              r                                                                         r                
-.09:00@2   bcreate_talks@12                  ybrent@4                                                                  ybrent@4      
+.09:00@2   bcreati_talks@12                  ybrent@4                                                                  ybrent@4      
                                                                                                                                         
 .09:30@2                                                      .                 .                  .                                 
                                                               r                 r                  r                                    
-.10:00@2                    m@4              r                msgd@6            msgd@6             mflows@8            r             
+.10:00@2                    m@4              r                msgd@4            msgd@6             mflows@8            r             
                                              .                                                                         .                
 .10:30@2                                     g@4                                                                       g@4           
                                                                                                                                         
-.11:00@2                    cpractice♪@4                                                                                             
+.11:00@2                    cpractice♪@4                      yaaron_lunch@4                                                         
                                                                                                                                         
-.11:30@2                                     msgd@6           msgd@6            bcoco@6                                .             
+.11:30@2                                     msgd@6                             bcoco@6                                .             
                                                                                                                        .                
-.12:00@2   rto_airport@2    mflows@8                                                               .                   bisolab@6     
+.12:00@2   rto_airport@2    mflows@8                          msgd@4                               .                   bisolab@6     
                                                                                                    .                                    
 .12:30@2   msgd@4                                                                                  mdissect@6                       
                                                                                                                                         
@@ -33,8 +33,8 @@
                                              .                                                                                          
 .15:00@2   rto_sidpac@2     mflows@4         bdissect@4                                                                bphillip@4   
                                                                                                                                         
-.15:30@2   .                                                                                                                         
-           .                                                                                                                            
+.15:30@2   m@2                                                                                                                       
+                                                                                                                                        
 .16:00@2   .                yyoga@4          mflows@10        bsipser@4                            .                   mflows@6      
            .                                                                                       .                                    
 .16:30@2   mslt_proj@8                                                          mflows@8           mdissect@8                        

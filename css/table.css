@@ -11,3 +11,13 @@ td, th {
 tr:nth-child(4n+2) {
     background-color: #cccccc;
 }
+
+body {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: justify;
+}
