@@ -32,8 +32,8 @@ var books = [
 ["The Remains of the Day"          , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
 ["Incident of the Dog in the Night", "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 ["The Corrections"                 , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
+["Brief Wondrous Life of Oscar Wao", "2018-12", 2007, "J.Diaz"         , 1  , 1.5, 1   , 2  , 0.5, 0.5, 2  , ""],
 /*
-["Brief Wondrous Life of Oscar Wao", "2018-11", 2007, "J.Diaz"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["How to Write an Autobio Novel"   , "2018-11", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Naked"                           , "2018-11", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Dubliners"                       , "2018-11", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],

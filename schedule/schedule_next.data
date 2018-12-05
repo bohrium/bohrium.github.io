@@ -23,8 +23,8 @@
                                                                                                    .                                    
 .12:30@2   msgd@4                                                                                  mdissect@6                       
                                                                                                                                         
-.13:00@2                                     bstat_learn@6    bcomp_cogsci@6    bstat_learn@6                                     
-                                                                                                                                        
+.13:00@2                                     bstat_learn@6    brakhlin_meet     bstat_learn@6                                     
+                                                              bcomp_cogsci@5                                                            
 .13:30@2   rto_boston@6                                                                                                mflows@6      
                                                                                                                                         
 .14:00@2                    g@4                                                                    .                                 
@@ -60,3 +60,4 @@
 .21:30@2                                                                                                               .             
                                                                                                                        .                
 .           .2018-12-08     .2018-12-09     .2018-12-10     .2018-12-11     .2018-12-12     .2018-12-13     .2018-12-14
+.           .               .               .cc_rakhlin_due .               .slt_proj_due   .iso_pres_due   .           
