@@ -85,8 +85,11 @@
                     function get_book_y(i) {
                         return offset+(canvas.height-2*offset) * (1.0 - get_score(i));
                     }
+                    function x_from_year(yr) {
+                        return offset+(canvas.width-2*offset) * (1.0 - (Math.log(5.0 + 2018.0-yr) - Math.log(5.0))/(Math.log(12018)-Math.log(5.0)));
+                    }
                     function get_book_x(i) {
-                        return offset+(canvas.width-2*offset) * Math.pow((Math.max(1824.0, books[i][2])-1824.0)/(2018.0 - 1824.0), 2);
+                        return x_from_year(books[i][2]);
                     }
 
                     function resetCanvas() {
@@ -105,18 +108,16 @@
                             context.lineTo(canvas.width-offset, canvas.height-offset);
                             context.fillText("Date of Publication", canvas.width/2, canvas.height-0.25*offset);
                             context.font="12px Century Gothic";
-                            context.fillText("Maxwell",       offset+(canvas.width-2*offset)*Math.pow((1862.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Olympics",      offset+(canvas.width-2*offset)*Math.pow((1896.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("HIV",           offset+(canvas.width-2*offset)*Math.pow((1912.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Sliced Bread",  offset+(canvas.width-2*offset)*Math.pow((1928.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Fat Man",       offset+(canvas.width-2*offset)*Math.pow((1945.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Mao's Famine",  offset+(canvas.width-2*offset)*Math.pow((1960.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Oil Crisis",    offset+(canvas.width-2*offset)*Math.pow((1973.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("TCP/IP",        offset+(canvas.width-2*offset)*Math.pow((1983.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Amazon",        offset+(canvas.width-2*offset)*Math.pow((1994.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("9-11",          offset+(canvas.width-2*offset)*Math.pow((2001.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("LHC",           offset+(canvas.width-2*offset)*Math.pow((2008.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
-                            context.fillText("Irish 34th",    offset+(canvas.width-2*offset)*Math.pow((2015.0 - 1824.0)/(2018.0 - 1824.0), 2), canvas.height-0.65*offset);
+                            context.fillText("Khufu",         x_from_year(-2560.0), canvas.height-0.65*offset);
+                            context.fillText("Augustus",      x_from_year(  -27.0), canvas.height-0.65*offset);
+                            context.fillText("BiSheng",       x_from_year( 1048.0), canvas.height-0.65*offset);
+                            context.fillText("Kepler",        x_from_year( 1609.0), canvas.height-0.65*offset);
+                            context.fillText("Liberte",       x_from_year( 1789.0), canvas.height-0.65*offset);
+                            context.fillText("Light",         x_from_year( 1889.0), canvas.height-0.65*offset);
+                            context.fillText("Bomb",          x_from_year( 1945.0), canvas.height-0.65*offset);
+                            context.fillText("Amazon",        x_from_year( 1994.0), canvas.height-0.65*offset);
+                            context.fillText("LIGO",          x_from_year( 2008.0), canvas.height-0.65*offset);
+                            context.fillText("Paris",         x_from_year( 2015.0), canvas.height-0.65*offset);
                             context.font="20px Century Gothic";
                         context.stroke();
                     }

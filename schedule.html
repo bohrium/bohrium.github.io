@@ -43,6 +43,7 @@
                     <button id="thisweek"> this week </button>
                     <button id="nextweek"> next week </button>
                     <button id="nextnextweek"> next next week </button>
+                    <button id="nextnextnextweek"> next next next week </button>
                     <button id="genericweek"> generic week </button>
                 </div>
 
@@ -60,6 +61,9 @@
                     }
                     function nextnextweekRender() {
                         test.innerHTML = "<object  data=\"" + "schedule/schedule_next_next_table.html"  + "\" width=\"900\" height=\"1024\"></object>";
+                    }                                                                                                                                  
+                    function nextnextnextweekRender() {
+                        test.innerHTML = "<object  data=\"" + "schedule/schedule_next_next_next_table.html"  + "\" width=\"900\" height=\"1024\"></object>";
                     }
                     function genericweekRender() {
                         test.innerHTML = "<object  data=\"" + "schedule/schedule_generic_table.html"    + "\" width=\"900\" height=\"1024\"></object>";
@@ -68,10 +72,12 @@
                     var thisweek = document.getElementById("thisweek");
                     var nextweek = document.getElementById("nextweek");
                     var nextnextweek = document.getElementById("nextnextweek");
+                    var nextnextnextweek = document.getElementById("nextnextnextweek");
                     var genericweek = document.getElementById("genericweek");
                     thisweek.onclick = function () {thisweekRender();};
                     nextweek.onclick = function () {nextweekRender();};
                     nextnextweek.onclick = function () {nextnextweekRender();};
+                    nextnextnextweek.onclick = function () {nextnextnextweekRender();};
                     genericweek.onclick = function () {genericweekRender();};
                 </script>
 
