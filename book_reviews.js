@@ -34,6 +34,7 @@ var books = [
 ["The Corrections"                  , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
 ["Brief Wondrous Life of Oscar Wao" , "2018-12", 2007, "J.Diaz"         , 1  , 1.5, 1   , 2  , 0.5, 0.5, 2  , ""],
 ["Hamlet"                           , "2018-12", 1601, "W.Shakespeare"  , 1  , 2  , 0   , 0.5, 1  , 1  , 1  , ""],
+//["Structure of Classical Mechanics" , "2018-12", 2001, "G.J.Sussman"    , 1  , 2  , 0   , 0.5, 1  , 1  , 1  , ""],
 //["How to Write an Autobio Novel"    , "2018-12", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Epic of Gilgamesh"                , "2018-12",-1200, "Anonymous"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Beowulf"                          , "2018-12", 1000, "Anonymous"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
