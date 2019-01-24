@@ -28,37 +28,64 @@ var books = [
 ["The Back Passage"                 , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 1  , 0  , 1  , 1  , ""],
 
 ["The #1 Ladies' Detective Agency"  , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
-["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 2  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
+["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 1  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
 ["The Remains of the Day"           , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
 ["Incident of the Dog in the Night" , "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 ["The Corrections"                  , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
 ["Brief Wondrous Life of Oscar Wao" , "2018-12", 2007, "J.Diaz"         , 1  , 1.5, 1   , 2  , 0.5, 0.5, 2  , ""],
 ["Hamlet"                           , "2018-12", 1601, "W.Shakespeare"  , 1  , 2  , 0   , 0.5, 1  , 1  , 1  , ""],
 ["Connecticut Yankee in A's Court"  , "2018-12", 1889, "M.Twain"        , 1.5, 1  , 0   , 1.5, 0.5, 0.5, 2  , "reviews/connecticut-yankee.html"],
+
 ["Less"                             , "2019-01", 2017, "A.S.Greer"      , 1  , 2  , 1   , 1  , 0  , 2  , 1.5, ""],
+["The Odyssey"                      , "2019-01", -700, "Homer"          , 2  , 2  , 0   , 0  , 0.5, 0.5, 2  , ""],
 
 /*
+// philosophy of science:
+["The Logic of Scientific Discovery", "2019-01", 1959, "K.Popper"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Structure of Science Revolutions" , "2019-02", 1962, "T.S.Kuhn"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Enquiry Into Human Understanding" , "2019-03", 1748, "D.Hume"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Critique of Pure Reason"          , "2019-04", 1783, "I.Kant"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Surfaces and Essences"            , "2019-05", 2010, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+// the experience of science:
+["Advice for a Young Investigator"  , "2019-01", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
+["Vision"                           , "2019-02", 1982, "D.Marr"         , 2  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
+["Math and Plausible Reasoning"     , "2019-03", 1954, "G.Polya"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Pleasure of Finding Things Out"   , "2019-04", 1999, "R.P.Feynman"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["A Mathematician's Apology"        , "2019-05", 1940, "G.H.Hardy"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+// content and classic method of science:
 ["Thinking Fast and Slow"           , "2019-01", 2011, "D.Kahneman"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["On the Origin of Species"         , "2019-02", 1859, "C.Darwin"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Texture of Nervous Systems"       , "2019-03", 1859, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["The Extended Phenotype"           , "2019-04", 1982, "R.Dawkins"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Chemical History of a Candle"     , "2019-05", 1825, "M.Faraday"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+// literature:
+["The Periodic Table"               , "2019-01", 1975, "P.Levi"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Death in Venice"                  , "2019-02", 1912, "T.Mann"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
+["The Swimming-Pool Library"        , "2019-04", 1988, "A.Hollinghurst" , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Dubliners"                        , "2018-05", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+*/
+
+/*
+["Opticks"                          , "2019-01", 1704, "I.Newton"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["A Discipline of Programming"      , "2019-01", 1976, "E.W.Dijkstra"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Death in Venice"                  , "2019-01", 1912, "T.Mann"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Dubliners"                        , "2018-02", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["The Periodic Table"               , "2019-02", 1975, "P.Levi"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["The Odyssey"                      , "2019-02", -700, "Homer"          , 0  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
+["The Selfish Gene"                 , "2018-08", 1976, "R.Dawkins"      , 2  , 0  , 0   , 0  , 2  , 0  , 0  , ""],
+["What is Life?"                    , "2019-01", 1944, "E.Schrodinger"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Language Instinct"            , "2019-02", 1994, "S.Pinker"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Dunes"                            , "2019-03", 2013, "A.Warren"       , 1  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
 
-["Vision"                           , "2019-03", 1982, "D.Marr"         , 2  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Something Wicked This Way Comes"  , "2019-03", 1962, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["A Society of Mind"                , "2019-04", 1986, "M.Minsky"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Secret Life of Salvador Dali"     , "2019-04", 1942, "S.Dali"         , 1.5, 1  , 0   , 2  , 0.5, 0  , 0  , ""],
 ["Adventures of Kavalier and Clay"  , "2019-04", 2000, "M.Chabon"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Naked"                            , "2019-04", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Winesburg, Ohio"                  , "2019-05", 1919, "S.Anderson"     , 0  , 2  , 0   , 0.5, 0  , 1  , 0  , ""],
-["Advice for a Young Investigator"  , "2019-05", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 
 ["How to Write an Autobio Novel"    , "2019-05", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["The Swimming-Pool Library"        , "2019-06", 1988, "A.Hollinghurst" , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Flowers for Algernon"             , "2019-06", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
 
 ["Enrico Fermi"                     , "2019-06", 1970, "E.Segre"        , 1  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Ficciones"                        , "2019-05", 1962, "J.L.Borges"     , 1  , 2  , 0   , 0.5, 0.5, 0  , 0  , ""],
@@ -96,7 +123,6 @@ var books = [
 ["Stats and Scientific Inference"   , "2018-12", 1956, "R.A.Fisher"     , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Computation Despite Noise"        , "2018-12", 1963, "S.Winograd"     , 1  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Cybernetics"                      , "2018-12", 1948, "N.Wiener"       , 2  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
-["A Mathematician's Apology"        , "2018-12", 1940, "G.H.Hardy"      , 0  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
 
 ["All of Statistics"                , "2018-12", 2004, "L.A.Wasserman"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Causal Inference Primer"          , "2018-12", 2016, "J.Pearl"        , 1  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -147,7 +173,6 @@ var books = [
 ["In Praise of Idleness etc"       , "2018-12", 1935, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 // to read (MEDIUM PRIORITY: == 4.0 on goodreads, or special exception) 
-["The Selfish Gene"                , "2018-08", 1976, "R.Dawkins"      , 2  , 0  , 0   , 0  , 2  , 0  , 0  , ""],
 ["A Room of One's Own"             , "2018-08", 1929, "V.Woolf"        , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
 ["Note to Self"                    , "2018-08", 2017, "C.Franta"       , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Unbearable Lightness of Being"   , "2018-08", 1984, "M.Kundera"      , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
