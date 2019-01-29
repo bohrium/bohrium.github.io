@@ -1,0 +1,67 @@
+            SAT             SUN             MON             TUE             WED             THU             FRI         
+.07:00@2    csleep_in@16    csleep_in@14    csleep_in@17    csleep_in@20    csleep_in@5     cwork_out@2     .              
+                                                                                                            . 
+.07:30@2                                                                                    .               . 
+                                                                                            .               . 
+.08:00@2                                                                                    .               .  
+                                                                            .               .               r 
+.08:30@2                                                                    .               .               cwork_out@4
+                                                                            .               .write_indep@4               
+.09:00@2                                                                    cwork_out@4     .                         
+                                                                                            .                 
+.09:30@2                                                                                    .               m@2
+                                                                                            .                 
+.10:00@2                                                                    r               .indep_exper@8  r               
+                                                                            .               .               ybrent@3        
+.10:30@2                    .                                               .               .                               
+                            .                                               .               .                               
+.11:00@2    .               .                                               .               .               r@2              
+            .               .               .                               .               .                                
+.11:30@2    .               .               .                               .               .               m@6              
+            .               .               .                               .               bisolab@8                       
+.12:00@2    ywujie_lunch@5  .               .               .               r                                               
+                            .               .               .               gcotopology@6                                   
+.12:30@2                    .               .               .                                                               
+                            .               .               .                                                               
+.13:00@2                    .               .               .                                               ygsa_lunch@3    
+            .               .               .               bhep_ai@3                                                       
+.13:30@2    .               .               .                                                                               
+            .               .               .                               r               .               r 
+.14:00@2    .               .               .               bapplied_cats@6 bapplied_cats@6 bapplied_cats@6 bapplied_cats@4
+            .               .               cwork_out@4                                                       
+.14:30@2    mfight_itch@5   .                                                                                 
+                            .                                                                                 
+.15:00@2                    .                                                                               r    
+                            .               r                                                               bphillip@3          
+.15:30@2                    .               .               r               r               r                                   
+            .               .               .               munbiased_sgd@6 gpoppernet@4    m@8                                 
+.16:00@2    .               .               .                                                               m@4                 
+            .               .               .                                                                                   
+.16:30@2    .               mfight_itch@4   .                                                                                   
+            .                               .                               .                                                   
+.17:00@2    .                               .                               .                               g@4                 
+            .                               .               gsgd_lndscape@6 .                                                   
+.17:30@2    .               .               .                               .                                                   
+            .               .               .                               .               m@8                                 
+.18:00@2    .               yqueer_movie@12 .                               .                               r                   
+            .                               .                               .                               .                   
+.18:30@2    .                               .                               .                               yfriend_dinn@5      
+            .                               .               .               .                                                   
+.19:00@2    .                               .               .               .                                                   
+            .                               .               .               .                                 
+.19:30@2    .                               .               .               .                                 
+            .                               .               .               .               r               . 
+.20:00@2    .                               mact_pset@10    gco-germs@4     mindep_exper@6  .               yqueer_movie@9  
+            .                                                                               .                 
+.20:30@2    .                                                                               m@6               
+            .                                                                                                 
+.21:00@2    .               .                               .                                                 
+            .               .                               .                                                 
+.21:30@2    .               .                               .               mindep_exper@6                    
+            .               .                               ycall_mapa@5                                      
+.22:00@2    .               .                                                               c@4              
+            .               .                                                                               .
+.22:30@2    .               .               ykarl@2                                                         .
+            .               .                                                                               .
+.           .2018-01-19     .2018-01-20     .2018-01-21     .2019-01-22     .2019-01-23     .2019-01-24     .2018-01-25
+.           .               .               .               .               .               .               .           
