@@ -14,6 +14,7 @@ def translate_link(source):
     assert(source[-1]=='>')
     url, text = source[1:-1].split('|')
 
+    print(url)
     if url.split('.')[-1] in ('jpg', 'png'):
         return '\n<figure style="text-align:center"><img src="%s" alt="%s"></figure><figcaption style="text-align:center">%s</figcaption>' % (url, text, translate_line(text)) 
     else:

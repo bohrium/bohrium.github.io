@@ -23,10 +23,7 @@
     
     $$R_{\mu\nu} + (-\frac{1}{2}R + \Lambda)g_{\mu\nu} = 8\pi G T_{\mu\nu}$$
     
-    Links are rendered in bra/ket notation for url/linktext: <../index.html|here is %my% $\exp$traordinary *homepage*>.
-    Observe that formatting and math (but not nested links) is permitted in link text.
-    Remember to use `http://` in the URL for external links such as <http://www.google.com|to Google>.
-    
+   
     Beware: asterisks, percent signs, backticks, tildes, dollar signs, and angle brackets are all special characters.
     Avoid using them for other purposes.  For instance, instead of angle brackets, opt for `\lt` and `\gt` in $\LaTeX$ code.
 
@@ -37,3 +34,12 @@
 !!! %Sub%headers 
 !!!! $sub^2$headers
 !!!! I like to use $\LaTeX$ to $\fbox{BOX SUBSUBHEADERS}$
+
+!! Links and Figures
+    Links are rendered in bra/ket notation for url/linktext: <../index.html|here is %my% $\exp$traordinary *homepage*>.
+    Observe that formatting and math (but not nested links) is permitted in link text.
+    Remember to use `http://` in the URL for external links such as <http://www.google.com|to Google>.
+
+    In case the url has an image-type extension (`.png` or `.jpg`), the link renders as the image itself and the
+    linktext renders as a caption:
+    <../images/boundary/prod.png|Figure 0: Product Rule>

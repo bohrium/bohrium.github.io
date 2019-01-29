@@ -1,0 +1,17 @@
+# author: samtenka
+# change: 2019-01-29 
+# create: 2019-01-29
+# descrp: Conditional Category
+
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\fanC}{\mathcal{C}}$
+$\newcommand{\fanS}{\mathcal{S}}$
+$\newcommand{\from}{\leftarrow}$
+
+
+! Category of Conditionals
+    Can we axiomatize point-set topology in terms of topological boundaries rather than open or closed sets?  We
+    describe such a formulation, invented with Dean Young.
+
