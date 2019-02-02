@@ -28,15 +28,15 @@ $\newcommand{\from}{\leftarrow}$
     Can we axiomatize point-set topology in terms of topological boundaries rather than open or closed sets?  We
     describe such a formulation, invented with Dean Young, Noah Luntzlara, Eric Winsor, Leo Izen, and Brian Pinsky.
 <p>
-    We later learned of previous work by Lesniak [0].  Lesniak’s Example 2 shows the forward and backward
+    We later learned of previous work by Lesniak [0].  Lesniak's Example 2 shows the forward and backward
     correspondences developed here not to be bijective.  In particular, our axiom set is missing the logically
     independent $ddU \subseteq dU$ necessary to make unique the boundary operator associated with a topological
     space.  We nevertheless present topology from a boundary point of view, for whatever insight it may give.
 <p>
 <h3>  Introduction </h3>
 <p>
-    As scientists studying space, we might begin with this observation: a region of space has an inside and an outside
-    separated by a boundary.  What can we say then, about boundaries?  We note that space on whole has empty boundary:
+    Contemplating space, we might begin with this observation: a region of space has an inside and an outside separated
+    by a boundary.  What can we say then, about boundaries?  We note that space on whole has empty boundary:
     space is entirely inside with no outside.  Moreover, a region and its complement have the same boundary.
 <p>
     Yet, those observations fail to capture the essence of a boundary as a thin tissue separating a region and its
@@ -47,11 +47,12 @@ $\newcommand{\from}{\leftarrow}$
 <p>
     <b>Definition</b>: A map $d: \mathcal{P}T\from \mathcal{P}T$ on a set $T$ is a <b>boundary operator</b> provided that,
     for all $U, V \subseteq T$:
-        $T$ has no boundary: $dT = \{\}$;
-        $d$ is symmetric: $d(T \ U) = dU$; and
-        $d$ obeys the product rule: $d(UV) \subseteq dUV \cup U dV \cup dU dV$
+        $T$ has no boundary ($dT = \{\}$);
+        $d$ is symmetric ($d(T \setminus U) = dU$); and
+        $d$ obeys the product rule ($d(UV) \subseteq dUV \cup U dV \cup dU dV$).
 <p>
-[../images/boundary/prod.png][Figure 0: Product Rule]
+
+<figure style="text-align:center"><img src="../images/boundary/prod.png" alt="Figure 0: Product Rule"></figure><figcaption style="text-align:center">Figure 0: Product Rule</figcaption>
 <p>
     We then call T a boundary space. Here, we concatenate to denote intersection: $UV = U \cap V$.
     If $T$ is a topological space, its topology can be recovered from its boundary structure:
