@@ -7,7 +7,6 @@ all:
 	python3 translate.py geo
 	python3 translate.py genfunc
 	python3 translate.py gradschool 
-	python3 translate.py infoflow 
 	python3 translate.py pbj 
 	python3 translate.py quant
 	python3 translate.py rep
