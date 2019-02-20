@@ -39,6 +39,7 @@ var books = [
 ["Less"                             , "2019-01", 2017, "A.S.Greer"      , 1  , 2  , 1   , 1  , 0  , 2  , 1.5, ""],
 ["The Odyssey"                      , "2019-01", -700, "Homer"          , 2  , 2  , 0   , 0  , 0.5, 0.5, 2  , ""],
 ["Mother Night"                     , "2019-01", 1962, "K.Vonnegut"     , 1  , 1  , 1   , 0.5, 0  , 1  , 1  , ""],
+["12 Rules for Life"                , "2019-02", 2018, "J.B.Peterson"   , 1.5, 1  , 1   , 1  , 2  , 2  , 0  , ""],
 
 /*
 // philosophy of science:
