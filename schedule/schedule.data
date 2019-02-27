@@ -9,14 +9,14 @@
                                                                                             .               .             
 .09:00@2                                                    m@2                             .               .                
                                                                                             r               . 
-.09:30@2                                                    r                               binf_inf@6      .  
+.09:30@2                                                    r                               binf_inf@4      .  
                                                             binf_inf@5                                      r@2
 .10:00@2                                                                                                                    
                                                                                                             ybrent@3        
-.10:30@2                                    .                                                                               
+.10:30@2                                    .                                               brakhlin@4                      
                                             .                                                                               
-.11:00@2                                    .               m@2                             .               r                
-                                            bvisit_day@3                                    .               g@4              
+.11:00@2                                    .               m@2                                             r                
+                                            bvisit_day@3                                                    g@4              
 .11:30@2                                                    .               m               bisolab@6                        
                                                             .               r                                               
 .12:00@2                                    bleslie@2       .               bccs:tom@4                                      
