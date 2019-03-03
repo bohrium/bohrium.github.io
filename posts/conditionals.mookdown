@@ -12,58 +12,16 @@ $\newcommand{\Vec}{{\bf \text {Vec}}}$
 $\newcommand{\from}{\leftarrow}$
 
 
-! Categorical Probability: Beyond Simplices
+! Categorical Probability and Polyhedral Fun
+    $S$-vertex simplices parameterize (finite-support) distributions $P(s)$ over $S$ possibilities.
+    To generalize, an affine map to an $S$-vertex simplex from a $K$-vertex simplex gives the same data as a
+    conditional (finite-support) distribution $P(s;k)$.  The unconditional case we recover by setting $K=1$, the
+    terminal simplex.  Thus, we may interpret distributional data as affine maps between simplices. 
+    
+    So, what happens if we generalize simplices to %all convex sets%?
+    It turns out the resulting category has (co)limits, tensor, and hom,
+    and we may interpret these concepts probabilistically, too! 
+    In fact, given slightly restrictive re-definitions of statistical concepts,
+    we may also show <http://en.wikipedia.org/wiki/Completeness_(statistics)|Basu's and Bahadur's theorems>.
 
-!! The Category of Conditionals 
-    Let $\catC$ be the category of convex sets and affine maps.  For us, a convex set is a convex subset $C\subset V$
-    of some (real) vector space, where we view $(C\subset V), (C'\subset V')$ as equivalent when some affine map
-    between $V, V'$ restricts to a bijection between $C, C'$. 
-
-    Every set $S$ generates an $|S|$-pointed simplex $\Delta_S$.
-    Thus arises an adjoint pair $\text{Free}:\catC \from \Set$ and $\text{Forg}:\Set \from \catC$.
-    Each convex set $C$ generates a vector space $V = \RR^{\oplus C} / \sim$, where $C$'s relations generate $\sim$.
-    Thus arises an adjoint pair $\text{Free}:\Vec \from \catC$ and $\text{Forg}:\catC \from \Vec$.
-
-    In fact, the simplices have a special interpretation: a map $[A] \from \Delta_1$ may be identified with a
-    (finite-support) %probability distribution% $P(a)$ on the set $A$.
-    Likewise, a map $[A] \from [B]$ has the same data as a %conditional% probability distribution $P(a|b)$
-    (again with finite support for each element of $B$).
-    With this interpretation, we see that composition of affine maps implements the rule
-    $P(a|c) = \sum_b P(a|b) P(b|c)$; that is, composition implements *marginalization*.
-
-    However, $\catC$ contains non-simplices: think of a square.  This note will show how the richer context of maps
-    between general convex sets, not just simplices, illuminates the basic notions of probability.   
-
-!! Limits and Independence
-    Guided by the forgetful functor from $\Vec$, we can constructively show that $\catC$ has all limits. 
-    Indeed, $\sqcap_{i\in I} A_i$ is just the cartesian product with convex combinations taken elementwise.
-    For example, the terminal element is $\Delta_1$. 
-    And the equalizer of $f, g:A \from B$ is just $\{b\in B: f(b)=g(b)\}$, clearly convex.  
-
-!! Tensor-Hom and Inference  
-    $\catC$ has internal homs, and, adjoint to hom, a tensor product.
-
-!! Colimits and Expectation
-    Guided by the free functor from $\Set$, we can constructively show that $\catC$ has all colimits. 
-    In fact, $\sqcup_{i\in I} A_i$ we may define as $\{\sum_i c_i a_i: a_i\in A_i, c_i\in \RR, |\text{support}(c)|\lt\infty\}$.
-    For example, the initial element is $\Delta_0$. 
-    And the coequalizer of $f, g:A\from B$ is just the set quotient $A / \sim$, where relations
-    $(f(b)\sim g(b))_{b\in B}$ generate $\sim$.  If $\alpha, \alpha'$ are equivalence classes of $\sim$, considered
-    as elements of $A / \sim$, then any convex mixture $\{sa + (1-s)a': a\in \alpha, a'\in\alpha'\}$ is also an equivalence
-    class.  So $A/\sim$ is indeed convex.
-
-    The *expectation* of a map $\RR \from A$ with respect to the distribution $A \from \Delta_1$ is just (the image of) the
-    composition.
-#For example, the expectation of a product of independent random variables we may write as this composition:
-#$\RR \from \RR\otimes \RR \from A\otimes B \from A \sqcap B \from [1]$ 
-#Meanwhile, the product of expectations of independent random variables we may write as this composition:
-#$\RR \from \RR\otimes \RR \from \RR\sqcap\RR \from A \sqcap B \from [1]$. 
-
-
-
-!! Appendix: Computations
-!!! Adjunctions 
-    The free and forgetful functors between $\Set$ and $\catC$ are obviously adjoint.
-    We thus focus on the free and forgetful functors between $\catC$ and $\Vec$.  
-    We must demonstrate a natural bijection between $\Vec(V\from \RR^{\oplus C}/\sim)$ and $\catC(V\from C)$.
-    FILL IN
+    For more details, please see <http://youtu.be/Td_7_7MBHcU|*my Problyhedra talk*> at the MIT Categories seminar!
