@@ -20,10 +20,12 @@
             <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
         </div>
 
-                <h2>Geometry of Distributions over $3$ Outcomes</h2> 
+                <h2>Geometry of a Simplex</h2> 
     
                 <div>
-                    We visualize the 1-dimensional exponential families:  
+                    We visualize the 1-dimensional exponential families
+                    within the space of distributions over $3$ outcomes.
+                    Click to toggle between moving one endpoint and the other. 
                 </div>
  
                 <div class="separator" style="clear: both; text-align: center;">
@@ -47,7 +49,7 @@
                     var J = [-0.5, +0.5/Math.pow(3.0, 0.5)]; 
                     var K = [+0.5, +0.5/Math.pow(3.0, 0.5)]; 
 
-                    var abc_vs_ABC =false; 
+                    var abc_vs_ABC = 0; 
                     var abc = [1.0/3, 1.0/3, 1.0/3];
                     var ABC = [1.0/3, 1.0/3, 1.0/3];
 
@@ -113,21 +115,25 @@
                                 Math.pow(ABC[1], i/100.0)*Math.pow(abc[1], 1.0-i/100.0),
                                 Math.pow(ABC[2], i/100.0)*Math.pow(abc[2], 1.0-i/100.0)
                             ];
+                            var esum = e[0] + e[1] + e[2];
+                            e[0] /= esum;
+                            e[1] /= esum;
+                            e[2] /= esum;
                             context.lineTo(plot_x(e[0], e[1], e[2]), plot_y(e[0], e[1], e[2]));
                         }
                         context.stroke();
                     }
                     function onClick(clickx, clicky) {
-                        abc_vs_ABC = !abc_vs_ABC;
+                        abc_vs_ABC = (abc_vs_ABC+1)%4;
                     }
                     function onMouseMove(e) {
                         var clickx = e.clientX-rect.left;
                         var clicky = e.clientY-rect.top;
 
                         resetCanvas();
-                        if (abc_vs_ABC) {
+                        if (abc_vs_ABC==0) {
                             abc = getdist(clickx, clicky);
-                        } else {
+                        } else if (abc_vs_ABC==2) {
                             ABC = getdist(clickx, clicky);
                         }
                         draw_egeod(abc, ABC);
