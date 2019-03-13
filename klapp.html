@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="css/carboniferous.css">
+
+        <script src="jquery-3.3.1.min.js"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="js/toggler.js"></script>
+    </head>
+    
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
+
+                <h2>Geometry of Distributions over $3$ Outcomes</h2> 
+    
+                <div>
+                    We visualize the 1-dimensional exponential families:  
+                </div>
+ 
+                <div class="separator" style="clear: both; text-align: center;">
+                    <canvas height="640" id="myCanvas" style="border: 0px;" width="640"></canvas>
+                    <div id="infobox">
+                </div>
+
+                <strong><div id="bookreviewtitle"; style="text-align: center"></div></strong>
+                <div id="bookreview"; style="text-align: left" scroll="no"></div>
+    
+                <script>
+                    var canvas = document.getElementById("myCanvas");
+                    var context = canvas.getContext("2d");
+                    var rect = canvas.getBoundingClientRect();
+                    canvas.addEventListener("mousemove", onMouseMove, false);
+                    canvas.addEventListener("click", onClick, false); 
+                    context.font = "20px Century Gothic";
+                    context.fillStyle = "#444";
+                    context.textAlign="center"; 
+                    var I = [ 0.0, -1.0/Math.pow(3.0, 0.5)]; 
+                    var J = [-0.5, +0.5/Math.pow(3.0, 0.5)]; 
+                    var K = [+0.5, +0.5/Math.pow(3.0, 0.5)]; 
+
+                    var abc_vs_ABC =false; 
+                    var abc = [1.0/3, 1.0/3, 1.0/3];
+                    var ABC = [1.0/3, 1.0/3, 1.0/3];
+
+                    function plot_x(a, b, c) {
+                        return (a*I[0] + b*J[0] + c*K[0]) * 480 + canvas.width/2;
+                    }  
+                    function plot_y(a, b, c) {
+                        return (a*I[1] + b*J[1] + c*K[1]) * 480 + canvas.height/2; 
+                    }  
+
+                    onClick(0, 0);
+
+                    function resetCanvas() {
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+                        context.beginPath();
+                        context.strokeStyle="#888";
+                        context.lineWidth = 3;
+                        /* I to J: */
+                            context.moveTo(plot_x(1.0, 0.0, 0.0), plot_y(1.0, 0.0, 0.0));
+                            context.lineTo(plot_x(0.0, 1.0, 0.0), plot_y(0.0, 1.0, 0.0));
+                        /* J to K: */
+                            //context.moveTo(plot_x(0.0, 1.0, 0.0), plot_y(0.0, 1.0, 0.0));
+                            context.lineTo(plot_x(0.0, 0.0, 1.0), plot_y(0.0, 0.0, 1.0));
+                        /* K to I: */
+                            //context.moveTo(plot_x(0.0, 0.0, 1.0), plot_y(0.0, 0.0, 1.0));
+                            context.lineTo(plot_x(1.0, 0.0, 0.0), plot_y(1.0, 0.0, 0.0));
+                        context.stroke();
+                    }
+                    function getdist(clickx, clicky) {
+                        x = (clickx - canvas.width/2)/480.0;
+                        y = (clicky - canvas.height/2)/480.0;
+                        c = y/Math.pow(3.0, 0.5) + x + 1.0/3;
+                        b = y/Math.pow(3.0, 0.5) - x + 1.0/3;
+                        a = 1-(b+c);
+                        //return ((0<=a) && (0<=b) && (0<=c));
+                        var m = Math.min(0, a, b, c)-0.01; 
+                        a -= m; b -= m; c -= m;
+                        var M = a+b+c;
+                        a /= M; b /= M; c /= M;
+                        return [a, b, c];
+                    }
+                    function draw_egeod(abc, ABC) {
+                        context.beginPath();
+                        context.strokeStyle="#88F";
+                        context.lineWidth = 2;
+                        context.arc(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]), 2.5, 0, Math.PI * 2, false);
+                        context.stroke();
+
+                        context.beginPath();
+                        context.strokeStyle="#88F";
+                        context.lineWidth = 2;
+                        context.arc(plot_x(ABC[0], ABC[1], ABC[2]), plot_y(ABC[0], ABC[1], ABC[2]), 2.5, 0, Math.PI * 2, false);
+                        context.stroke();
+
+                        context.beginPath();
+                        context.strokeStyle="#88F";
+                        context.lineWidth = 2;
+                        context.moveTo(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]));
+                        var i;
+                        for (i=0; i!=101; ++i) {
+                            e = [
+                                Math.pow(ABC[0], i/100.0)*Math.pow(abc[0], 1.0-i/100.0),
+                                Math.pow(ABC[1], i/100.0)*Math.pow(abc[1], 1.0-i/100.0),
+                                Math.pow(ABC[2], i/100.0)*Math.pow(abc[2], 1.0-i/100.0)
+                            ];
+                            context.lineTo(plot_x(e[0], e[1], e[2]), plot_y(e[0], e[1], e[2]));
+                        }
+                        context.stroke();
+                    }
+                    function onClick(clickx, clicky) {
+                        abc_vs_ABC = !abc_vs_ABC;
+                    }
+                    function onMouseMove(e) {
+                        var clickx = e.clientX-rect.left;
+                        var clicky = e.clientY-rect.top;
+
+                        resetCanvas();
+                        if (abc_vs_ABC) {
+                            abc = getdist(clickx, clicky);
+                        } else {
+                            ABC = getdist(clickx, clicky);
+                        }
+                        draw_egeod(abc, ABC);
+                    }
+               </script>
+ 
+    </body>
+</html>
