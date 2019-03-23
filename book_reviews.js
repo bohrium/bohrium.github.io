@@ -40,6 +40,7 @@ var books = [
 ["The Odyssey"                      , "2019-01", -700, "Homer"          , 2  , 2  , 0   , 0  , 0.5, 0.5, 2  , ""],
 ["Mother Night"                     , "2019-01", 1962, "K.Vonnegut"     , 1  , 1  , 1   , 0.5, 0  , 1  , 1  , ""],
 ["12 Rules for Life"                , "2019-02", 2018, "J.B.Peterson"   , 1.5, 1  , 1   , 1  , 2  , 2  , 0  , ""],
+["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 1.5, 2  , 0.5 , 0  , 1  , 2  , 2  , ""],
 
 /*
 // philosophy of science:
@@ -66,7 +67,6 @@ var books = [
 // literature:
 ["The Periodic Table"               , "2019-01", 1975, "P.Levi"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Death in Venice"                  , "2019-02", 1912, "T.Mann"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 2  , 1  , 0   , 2  , 0  , 1  , 0  , ""],
 ["The Swimming-Pool Library"        , "2019-04", 1988, "A.Hollinghurst" , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Dubliners"                        , "2018-05", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
