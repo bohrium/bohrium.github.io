@@ -29,7 +29,7 @@
                 </div>
  
                 <div class="separator" style="clear: both; text-align: center;">
-                    <canvas height="640" id="myCanvas" style="border: 0px;" width="640"></canvas>
+                    <canvas height="800" id="myCanvas" style="border: 0px;" width="960"></canvas>
                     <div id="infobox">
                 </div>
 
@@ -54,10 +54,10 @@
                     var ABC = [1.0/3, 1.0/3, 1.0/3];
 
                     function plot_x(a, b, c) {
-                        return (a*I[0] + b*J[0] + c*K[0]) * 480 + canvas.width/2;
+                        return (a*I[0] + b*J[0] + c*K[0]) * 640 + canvas.width/2;
                     }  
                     function plot_y(a, b, c) {
-                        return (a*I[1] + b*J[1] + c*K[1]) * 480 + canvas.height/2; 
+                        return (a*I[1] + b*J[1] + c*K[1]) * 640 + canvas.height/2; 
                     }  
 
                     onClick(0, 0);
@@ -79,13 +79,13 @@
                         context.stroke();
                     }
                     function getdist(clickx, clicky) {
-                        x = (clickx - canvas.width/2)/480.0;
-                        y = (clicky - canvas.height/2)/480.0;
+                        x = (clickx - canvas.width/2)/640.0;
+                        y = (clicky - canvas.height/2)/640.0;
                         c = y/Math.pow(3.0, 0.5) + x + 1.0/3;
                         b = y/Math.pow(3.0, 0.5) - x + 1.0/3;
                         a = 1-(b+c);
                         //return ((0<=a) && (0<=b) && (0<=c));
-                        var m = Math.min(0, a, b, c)-0.01; 
+                        var m = Math.min(0, a, b, c)-0.00005; 
                         a -= m; b -= m; c -= m;
                         var M = a+b+c;
                         a /= M; b /= M; c /= M;
@@ -109,11 +109,11 @@
                         context.lineWidth = 2;
                         context.moveTo(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]));
                         var i;
-                        for (i=0; i!=101; ++i) {
+                        for (i=0; i!=201; ++i) {
                             e = [
-                                Math.pow(ABC[0], i/100.0)*Math.pow(abc[0], 1.0-i/100.0),
-                                Math.pow(ABC[1], i/100.0)*Math.pow(abc[1], 1.0-i/100.0),
-                                Math.pow(ABC[2], i/100.0)*Math.pow(abc[2], 1.0-i/100.0)
+                                Math.pow(ABC[0], i/200.0)*Math.pow(abc[0], 1.0-i/200.0),
+                                Math.pow(ABC[1], i/200.0)*Math.pow(abc[1], 1.0-i/200.0),
+                                Math.pow(ABC[2], i/200.0)*Math.pow(abc[2], 1.0-i/200.0)
                             ];
                             var esum = e[0] + e[1] + e[2];
                             e[0] /= esum;
