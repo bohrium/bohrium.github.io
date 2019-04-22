@@ -28,7 +28,7 @@ var books = [
 ["The Back Passage"                 , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 1  , 0  , 1  , 1  , ""],
 
 ["The #1 Ladies' Detective Agency"  , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
-["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 1  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
+["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 0  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
 ["The Remains of the Day"           , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
 ["Incident of the Dog in the Night" , "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 ["The Corrections"                  , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
@@ -39,8 +39,21 @@ var books = [
 ["Less"                             , "2019-01", 2017, "A.S.Greer"      , 1  , 2  , 1   , 1  , 0  , 2  , 1.5, ""],
 ["The Odyssey"                      , "2019-01", -700, "Homer"          , 2  , 2  , 0   , 0  , 0.5, 0.5, 2  , ""],
 ["Mother Night"                     , "2019-01", 1962, "K.Vonnegut"     , 1  , 1  , 1   , 0.5, 0  , 1  , 1  , ""],
-["12 Rules for Life"                , "2019-02", 2018, "J.B.Peterson"   , 1.5, 1  , 1   , 1  , 2  , 2  , 0  , ""],
-["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 1.5, 2  , 0.5 , 0  , 1  , 2  , 2  , ""],
+["12 Rules for Life"                , "2019-02", 2018, "J.B.Peterson"   , 1  , 1  , 1   , 1  , 2  , 1.5, 0  , ""],
+["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 1.5, 1.5, 0   , 0  , 1  , 2  , 2  , ""],
+["A Discipline of Programming"      , "2019-04", 1976, "E.W.Dijkstra"   , 2  , 2  , 0   , 0.5, 2  , 0  , 2  , "reviews/discipline-of-programming.html"],
+//["Othello"                          , "2019-04", 1605, "W.Shakespeare"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Sartorialist"                 , "2019-04", 2009, "S.Schuman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+//["Thinking Fast and Slow"           , "2019-05", 2011, "D.Kahneman"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Who Rules the World?"             , "2019-05", 2017, "N.Chomsky"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["At Swim-Two-Birds"                , "2019-05", 1939, "F.O'Brien"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Sapiens"                          , "2019-05", 2014, "Y.N.Harari"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+//["Intro. Lec.s on Convex Optim."    , "2019-06", 2003, "Y.Nesterov"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Mysteries of Pittsburgh"      , "2019-06", 1988, "M.Chabon"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Advice for a Young Investigator"  , "2019-06", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
+//["This Boy's Life"                  , "2019-06", 1989, "T.Wolff"        , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 
 /*
 // philosophy of science:
@@ -51,14 +64,12 @@ var books = [
 ["Surfaces and Essences"            , "2019-05", 2010, "D.Hofstadter"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 // the experience of science:
-["Advice for a Young Investigator"  , "2019-01", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Vision"                           , "2019-02", 1982, "D.Marr"         , 2  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Math and Plausible Reasoning"     , "2019-03", 1954, "G.Polya"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Pleasure of Finding Things Out"   , "2019-04", 1999, "R.P.Feynman"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["A Mathematician's Apology"        , "2019-05", 1940, "G.H.Hardy"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 // content and classic method of science:
-["Thinking Fast and Slow"           , "2019-01", 2011, "D.Kahneman"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["On the Origin of Species"         , "2019-02", 1859, "C.Darwin"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Texture of Nervous Systems"       , "2019-03", 1859, "S.R.Cajal"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Extended Phenotype"           , "2019-04", 1982, "R.Dawkins"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -74,7 +85,6 @@ var books = [
 
 /*
 ["Opticks"                          , "2019-01", 1704, "I.Newton"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-["A Discipline of Programming"      , "2019-01", 1976, "E.W.Dijkstra"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Selfish Gene"                 , "2018-08", 1976, "R.Dawkins"      , 2  , 0  , 0   , 0  , 2  , 0  , 0  , ""],
 ["What is Life?"                    , "2019-01", 1944, "E.Schrodinger"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Language Instinct"            , "2019-02", 1994, "S.Pinker"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -134,7 +144,6 @@ var books = [
 ["Intelligent Machines"             , "2018-12", 1962, "D.A.Bell"       , 0  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
 
 ["Romeo and Juliet"                 , "2018-12", 1595, "W.Shakespeare"  , 1  , 2  , 0   , 0  , 0  , 0  , 0  , ""],
-["Othello"                          , "2018-12", 1605, "W.Shakespeare"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["King Lear"                        , "2018-12", 1606, "W.Shakespeare"  , 1  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Macbeth"                          , "2018-12", 1606, "W.Shakespeare"  , 2  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["The Sea Birds Are Still Alive"    , "2018-12", 1982, "T.C.Bambara"    , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -169,6 +178,7 @@ var books = [
 // to read (HIGH PRIORITY: >= 4.1 on goodreads, or special exception) 
 ["The Diversity of Life"           , "2018-11", 1992, "E.O.Wilson"     , 1.5, 1  , 0   , 0  , 1  , 0  , 0  , ""],
 ["Visual Display of Quant. Info"   , "2018-11", 2001, "E.R.Tufte"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+["Envisioning Information"         , "2018-11", 1990, "E.R.Tufte"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["East of Eden"                    , "2018-11", 1952, "J.Steinbeck"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Malloy"                          , "2018-11", 1951, "S.Bellow"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["A History of Western Philosophy" , "2018-12", 1945, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
