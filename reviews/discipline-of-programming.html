@@ -1,44 +1,124 @@
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 What a beautiful book!
-The celebrated computing scientist Edsgar Dijkstra 
-Clarity as crux FILL IN
 
 <br><br>
-Formalization of Semantics and FILL IN 
-
-A computational mechanism is specified as an endofunctor $S$ on the lattice of ``state predicates'' that preserves
-nullary coproducts and finitary nonnullary products.
-(Alas, his axioms seem redundant, for he also asks that $S(a) \vee S(b) \leq S(a \vee b)$, which is already implied
-by functoriality.)
-
-Nondeterminacy
-Continuity and 'states'
-FILL IN
-
-<br><br>
-Reasoning about loops
-Fundamental Theorem and Strong Stop condition
-Linear Search and Small Superset
-Termination, Boundedness, goldbach philosophy   
-FILL IN
+Here, the celebrated computing scientist Edsgar Dijkstra opines on the role and construction of programs.     
+I met his fresh viewpoint with enthusiasm.  The monograph begins with a comparison of two algorithms for computing
+GCD.  One is a table lookup, and the other is Euclid's.  Dijkstra argues that the latter is superior due to and only
+to the ease with which one can verify its correctness.  The brutish table lookup is faster, but it does not reflect the
+structure of the task it solves and therefore can only be checked by exhaustion.  Meanwhile, Euclid's compact algorithm
+has a proof whose length does not scale with our input range.  We only slightly strengthen Dijkstra's thesis if we assert that
+a program's quality is not its speed or cleverness or (heaven forbid!) linecount, but instead the clarity of its
+correctness proof.  From this clarity usually follows readability and maintainability.  Thus, the author seeks to
+shrink the gap between program and specification, between mathematical aesthetics and the act of coding.
 
 <br><br>
-Example: max of two variables; or of a list
-FILL IN
+Such separations of concerns, whether of correctness from efficiency or of text from hardware, permeate and 
+motivate the book.  Indeed, Dijkstra notes a historical shift: while text used to be designed to instruct
+hardware, hardware is now designed to execute text (perhaps Scalia would approve).  As designers of code, we thus
+focus, for a majority of time, at least, on abstractions, not semiconductors.  
+For example, this reprioritization invites us to revisit and motivate the concept of state.  The same pair of GCD
+programs illustrates how programs with state allow inductive constructions and hence may be more compactly reasoned
+about.  Moreover, we
+usually choose to factor state into multiple <strong>variables</strong> rather than keeping it in a homogeneous mess as
+in a generic DFA.  (Digression: can we understand the Krohn-Rhodes structure theorem as leading to
+the notion of variables?).  The GCD example concretely shows how this factorization
+translates to a more clear correctness proof.  Finally, one notes that by opting for such a factorization, one seems
+to waste space: most joint states are never used.  This shows how the quest for clarity may consume memory.  Yet,
+the particular tradeoff inherent in the concept of variables using seems near-universally valued. 
 
-Biological analysis of programs including Rem's algorithm for online transitive symmetric closure, Tarjan's
+<br><br>
+The technical content of the book lies in a development and demonstration of a formalism for program semantics.   
+A computational mechanism is specified as an endofunctor \(S\) on the lattice of ``state predicates'' that preserves
+nullary colimits and non-nullary limits.  Intuitively, this functor takes a predicate on output states and returns
+a predicate on input states that is the <strong>weakest precondition</strong> for the mechanism to gaurantee that
+predicate on output states.  
+(We have recast Dijkstra's semantics in our own terms; Dijkstra's stated axioms are redundant anyway, for he asks that
+\(S(a) \vee S(b) \leq S(a \vee b)\), which is already implied by functoriality.  It is not clear to me which properties
+of the lattice of state predicates were used throughout the book; the properties used include distributivity.)
+For example, if \(R\) is a mechanism invoked by ``do_R()'', then the code  
+<br>
+<pre>
+        if (a == b) { do_R(); }
+        else { do_R(); do_R(); }
+</pre>
+invokes the mechanism \(S\), where
+$$
+    S(p) = (a=b \wedge R(p)) \vee (a \neq b \wedge R(R(p)))
+$$
+Likewise, <tt> while (a != 0) { do_R(); } </tt>
+invokes the mechanism \(T\), the initial object among those satisfying 
+\(T(p) = (a = 0 \wedge p) \vee (a \neq 0 \wedge R(T(p)))\).
+
+We may in this way define the semantics of large programs recursively in terms of primitive statements and
+flow-controllers.  This recursion is especially easy and elegant in the ``guarded command'' language fragment used in
+the book.  That language fragment differs both syntactically and semantically from the C-style language above.  
+
+<br><br>
+The formalism nicely allows captures nondeterministic mechanisms.  These are the functors that fail to preserve
+colimits.  Said plainly, a mechanism is nondeterministic if, even though it can gaurantee that A happens or B happens,
+it can neither gaurantee that A happens nor gaurantee that B happens.  In fact, the degree to which colimits are not
+preserved is a measure of nondeterminacy.  A mechanism that does not preserve nullary colimits is the worst of all ---
+some input state in the empty set of states leads via this mechanism to some output state --- and thus excluded by
+definition.  Next, one considers when countably sequential colimits are preserved --- it turns out that this relates to
+bounded nondeterminacy.  Because each of the primitive mechanisms considered in the book preserve countably sequential
+colimits, we have a proof of bounded nondeterminacy unreliant on Konig's Lemma and proved with almost no reference to
+``machine state''.  
+
+<br><br>
+I found especially juicy insight in the remarks about loops.
+(Many of the arguments about loops are more rigorous than anywhere else I have seen, leading to this delightful remark:
+``<i>The theorem is so obvious that it would be a shame if it were difficult to prove, but luckily it is not.</i>'')
+
+Here are some useful ideas about loops.  A loop <tt>while (A) { R; }</tt> guarantees \(\neg A\) at termination.  In 
+other words, if \(W\) is a loop mechanism, then \(W(A)=0\), so
+$$
+    W(B) = W((A\wedge B) \vee (\neg A \wedge B)) \geq (0 \wedge W(B)) \vee W(\neg A \wedge B) = W(\neg A \wedge B)
+$$
+Thus, to most easily reason about postconditions, we ought to have loop conditions (here, \(A\)) as weak as possible. 
+That's why one might prefer <tt>while (n!=0) { ... }</tt> to <tt> while (n &gt= 0) { ... }</tt> for a decreasing counter. 
+Dijkstra also has insights about the fundamental role of loop invariants, the technique of well-ordering for ensuring
+termination, and the heuristics of ``linear search'', ``small superset'', and ``taking a relation out of a loop''.  
+I find especially memorable his observation that when loops occur in sequence, the conditions of the later loops tend
+to be more complicated than those of the earlier ones, since they preserve more invariants.  Also, his provocative
+mistrust of the output of a program containing a loop not gauranteed to terminate, even if the loop happens to
+terminate in practice.
+
+<br><br>
+Overall, this formalism is directly applicable to the derivation of small programs from specifications.  The bulk of 
+the illustrative material, however, focuses on using the formalism more loosely, to inspire correct design of and
+reasoning about substantial programs.  I like to think of the exposition as ``biological'', because it presents not
+only correct texts but also, most absorbingly, a plausible path of reasoning to each text.  It explains the eyeball or
+the wing by gradual changes.
+Highlights include including Rem's algorithm for online transitive symmetric closure, Tarjan's
 algorithm for transitive closure, Knuth's substring matching algorithm, and Prim's minimal spanning tree constructor.
-Of these, the last three were discovered by Dijkstra.
-FILL IN
-
-Example: find the input's smallest prime factor given only comparisons, addition, and subtraction. 
-Dijkstra massages the task specification into a procedure using only $O(\sqrt{n} \log(n) \log\log(n))$ such arithmetic
-operations.  One might get comparable performance by implementing multiplication and remainder operations in
-$O(\log(a \vee b))^2$ arithmetic operations, then testing divisibility by factors from $2$ through $\sqrt{n}$. 
-By trading space for time, Dijkstra improves a $\log$ factor to a $\log \log$ factor, but to overemphasize this would
-veil the theme of clear correctness without egregious inefficiency.   
-FILL IN
+Of these, the last three were discovered by Dijkstra!
+Alas, Dijkstra's interesting approach to integer factorization
+using only comparisons, addition, and subtraction is too clever to be clear and also slower (by a \(\log \log n\)
+factor) than the straightforward algorithm that implements multiplication and remainder in terms of repeated additions
+and subtractions (with ``power laddering'').  Perhaps Dijkstra's following remark was here biographical: 
+``<i>The problem is that we are often so proud of our smart strategies that it hurts to abandon them</i>''
 
 <br><br>
-Dijkstra writes with wry rhetorical turns, dismissing in absolutist indignance all but his truth and hence often
-overstating his case.
-FILL IN
+Dijkstra defends his taste with wry barbs.  It is amusing that he expresses a sort of absolutist, righteous indignance
+and an implied solidarity with some mysterious general computing community to overstate his case on matters of taste.
+For example, he reassures us ``<i>none of the programs in this monograph, needless to say, has been tested on a machine.</i>''
+Indeed, he knows that as a community we have outgrown ``<i>the time that for deterministic machines we still believed in `debugging'</i>''
+I note with some sadness that his convex hull program had a non-typographical error corrected in the most recent
+edition.
+He also uses some words, without historical explanation, as standard, though I suspect they are of his own coinage
+and not much used.  These words include ``computing science'' and ``linear search theorem''. 
+His writing deals a surprising amount in emotions.
+At one point he recants a some syntactic sugar he had considered with a ``<i>Confession.  When I ..., I was frightened,
+cross with, and ashamed of myself.</i>''
+
+<br><br>
+Throughout the book, clarity rules.  In the tradition of Polya's ``How to Solve It'', Dijkstra seeks to present formal
+tools and heuristics for thinking.  For Dijkstra, clear thinking is something worthy of practice and transmission.  He
+compares his role to that of a music professor sharing ``the patterns of harmony and rhythm''.
+For Dijkstra, the ``<i>analogy is not far-fetched at all: a clear argument can make one catch one's breath, like a Mozart adagio can.</i>''
+
+
