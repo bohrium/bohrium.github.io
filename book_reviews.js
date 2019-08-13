@@ -42,6 +42,10 @@ var books = [
 ["12 Rules for Life"                , "2019-02", 2018, "J.B.Peterson"   , 1  , 1  , 1   , 1  , 2  , 1.5, 0  , ""],
 ["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 1.5, 1.5, 0   , 0  , 1  , 2  , 2  , ""],
 ["A Discipline of Programming"      , "2019-04", 1976, "E.W.Dijkstra"   , 2  , 2  , 0   , 0.5, 2  , 0  , 2  , "reviews/discipline-of-programming.html"],
+["The Tale of the Unknown Island"   , "2019-06", 1998, "J.Saramango"    , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
+//["Structured Programming"           , "2019-06", 1972, "O.J.Dahl"       , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
+//["The Shape of Math Arguments"      , "2019-06", 1988, "A.J.M.v.Gasteren",1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
+
 //["Othello"                          , "2019-04", 1605, "W.Shakespeare"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Sartorialist"                 , "2019-04", 2009, "S.Schuman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
