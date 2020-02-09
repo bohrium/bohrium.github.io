@@ -28,7 +28,7 @@ var books = [
 ["The Back Passage"                 , "2018-08", 2006, "J.Lear"         , 0  , 0  , 0   , 1  , 0  , 1  , 1  , ""],
 
 ["The #1 Ladies' Detective Agency"  , "2018-08", 1998, "A.M.Smith"      , 1  , 1  , 0   , 1  , 1  , 1  , 0  , ""],
-["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 0  , 2   , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
+["A Separate Peace"                 , "2018-08", 1959, "J.Knowles"      , 2  , 0  , 1.5 , 0.5, 0  , 2  , 2  , ""],//"reviews/a-separate-peace.html"],
 ["The Remains of the Day"           , "2018-08", 1989, "K.Ishiguro"     , 1  , 0  , 0   , 0  , 1  , 2  , 0.5, ""],
 ["Incident of the Dog in the Night" , "2018-09", 2003, "M.Haddon"       , 1  , 0.5, 0.5 , 0  , 0.5, 1.5, 2  , ""],
 ["The Corrections"                  , "2018-10", 2001, "J.Franzen"      , 0.5, 0.5, 0   , 0.5, 0.5, 0.5, 0.5, ""],
@@ -43,8 +43,20 @@ var books = [
 ["Flowers for Algernon"             , "2019-03", 1966, "D.Keyes"        , 1.5, 1.5, 0   , 0  , 1  , 2  , 2  , ""],
 ["A Discipline of Programming"      , "2019-04", 1976, "E.W.Dijkstra"   , 2  , 2  , 0   , 0.5, 2  , 0  , 2  , "reviews/discipline-of-programming.html"],
 ["The Tale of the Unknown Island"   , "2019-06", 1998, "J.Saramango"    , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
-//["Structured Programming"           , "2019-06", 1972, "O.J.Dahl"       , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
+["The Path to Power"                , "2020-01", 1982, "R.Caro"         , 2  , 0  , 0   , 0.5, 1.5, 2  , 1.5, ""],
+
+//["Advice for a Young Investigator"  , "2019-06", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Shape of Math Arguments"      , "2019-06", 1988, "A.J.M.v.Gasteren",1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
+//["Thinking Fast and Slow"           , "2019-05", 2011, "D.Kahneman"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Extended Phenotype"           , "2019-04", 1982, "R.Dawkins"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Periodic Table"               , "2019-01", 1975, "P.Levi"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Swimming-Pool Library"        , "2019-04", 1988, "A.Hollinghurst" , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Cold Comfort Farm"                , "2018-12", 1932, "S.Gibbons"      , 1.5, 0.5, 0   , 2  , 0  , 1  , 0  , ""],
+//["Winesburg, Ohio"                  , "2019-05", 1919, "S.Anderson"     , 0  , 2  , 0   , 0.5, 0  , 1  , 0  , ""],
+
+
+//["Dubliners"                        , "2018-05", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Structured Programming"           , "2019-06", 1972, "O.J.Dahl"       , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
 
 //["Othello"                          , "2019-04", 1605, "W.Shakespeare"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Sartorialist"                 , "2019-04", 2009, "S.Schuman"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -56,7 +68,6 @@ var books = [
 
 //["Intro. Lec.s on Convex Optim."    , "2019-06", 2003, "Y.Nesterov"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Mysteries of Pittsburgh"      , "2019-06", 1988, "M.Chabon"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
-//["Advice for a Young Investigator"  , "2019-06", 1987, "S.R.Cajal"      , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 //["This Boy's Life"                  , "2019-06", 1989, "T.Wolff"        , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 
 /*
@@ -100,6 +111,9 @@ var books = [
 ["Adventures of Kavalier and Clay"  , "2019-04", 2000, "M.Chabon"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Naked"                            , "2019-04", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Winesburg, Ohio"                  , "2019-05", 1919, "S.Anderson"     , 0  , 2  , 0   , 0.5, 0  , 1  , 0  , ""],
+
+
+//["Death in Venice"                  , "2019-02", 1912, "T.Mann"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 ["How to Write an Autobio Novel"    , "2019-05", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
