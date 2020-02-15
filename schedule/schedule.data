@@ -1,56 +1,56 @@
             SAT             SUN             MON             TUE             WED             THU             FRI             _                
 .09:00@2    .               .               .               .               .               .               .               .               
             .               .               .               .               .               .               .               .               
-.09:30@2    .               .               .               .               Rlist_progind@2 .               Rdc_works@2     .               
-            .               .               .               .                               .                               Y@9             
-.10:00@2    .               .               .               .               .               gfamil_dc@7     gnew_dc_dom@8                   
-            .               .               .               .               .                                                               
-.10:30@2    .               .               .               .               .                                                               
-            .               .               .               .               .                                                               
-.11:00@2    .               .               .               .               .                                                               
-            .               .               .               .               .                                                               
-.11:30@2    .               .               y@4             .               .                                                               
-            .               .                               .               .               .                                               
-.12:00@2    .               .                               .               .               gread_progind@7 Yjosh@3         .               
-            .               .                               .               Yhusayn@2                                       .               
-.12:30@2    .               .               .               .                                                               .               
-            .               .               .               .               .                               .               .               
-.13:00@2    .               .               yprogsyn@6      .               yprogsyn@6                      glg_repo@4      .               
-            .               .                               .                                                               .               
-.13:30@2    .               .                               .                                                               .               
-            .               .                               .                               .                               .               
-.14:00@2    .               .                               .                               gnew_dc_dom@7   ydisc_progsyn@4 .               
-            .               .                               gfamil_arc@3                                                    .               
-.14:30@2    .               .               m@3                             .                                               .               
-            .               .                                               gwrite_icml@4                                   .               
-.15:00@2    .               .                               Ypeng@2                                         .               .               
-            .               .               .                                                               .               .               
-.15:30@2    y@2             .               .               m@2                                             y@4             .               
-                            .               .                               .               gdsgn_arc_dsl@5                 .               
-.16:00@2    .               .               .               gnote_syn_sem@6 .                                               .               
-            .               .               .                               .                                               .               
-.16:30@2    .               .               .                               g@2                             .               .               
-            .               .               g@4                                                             gdsgn_arc_dsl@5 .                     
-.17:00@2    .               .                                               Ygus@2          ycats@5                         .               
-            .               .                                                                                               .               
-.17:30@2    .               .                               .               .                                               .                
-            .               .               .               Yjosh@3         .                                               .               
-.18:00@2    .               .               Ylgbtq_dinner@5                 gstart_dc@3                     Ylgbtq_dinner@4 .               
-            .               .                                                               .                               .               
-.18:30@2    .               .                                                               .                               .               
-            .               .                               g@2             .               .                               .               
-.19:00@2    .               .                                               .               .               .               .               
-            .               .               .               .               .               chiit@4         .               .               
-.19:30@2    .               .               .               .               .                               glg_repo@8      .               
-            .               .               .               .               .                                               .               
-.20:00@2    .               .               .               .               .                                               .               
-            .               .               .               gread_progind@9 .               gread_progind@7                 .               
-.20:30@2    .               .               .                               .                                               .               
-            .               .               .                               .                                               .               
-.21:00@2    .               Yjojo_rabbit@6  .                               gread_progind@3                                 .               
-            .                               .                                                                               .               
-.21:30@2    .                               .                                                               Rrepo_to_peng@2 .               
-            .                               .                               m@3                                             .               
-.22:00@2    .                               .                                               Rprogind_seen@2 Rarc_dsl_made@2 .               
-            .                               .                                                                               .               
-.           .02-08          .02-09          .02-10          .02-11          .02-12          .02-13          .02-14
+.09:30@2    .               .               .               .               Ricml_latex@2   Rgus_names@2    .               .               
+            .               .               .               .                                               .               .               
+.10:00@2    .               cweights@4      cweights@4      g@10            g@9             g@10            g@10            .               
+            .                                                                                                               .               
+.10:30@2    .                                                                                                               .               
+            .                                                                                                               .               
+.11:00@2    .               m@4             Rlog_getfit@2                                                                   .               
+            .                                                                                                               .               
+.11:30@2    .                               y@4                                                                             .               
+            .                                                                                                               .               
+.12:00@2    .               gdc_rulists@6                                                                                   .               
+            .                                                               Yhusayn@2                                       .               
+.12:30@2    .                               Rread_spelke@2  .                               .               .               .               
+            .                                               .               .               .               .               .               
+.13:00@2    .                               yprogsyn@6      g@10            yprogsyn@6      g@10            g@9             .               
+            .                                                                                                               .               
+.13:30@2    .               ycall_mapa@2                                                                                    .               
+            .                                                                                                               .               
+.14:00@2    .               .                                                                                               .               
+            .               gimpl_arc_dsl@6                                                                                 .               
+.14:30@2    .                               Rarc_slides@2                   .                                               .               
+            .                                                               m@4                                             .               
+.15:00@2    .                               Ydisc_arc@8                                                                     .               
+            .                                                                                               .               .               
+.15:30@2    .                                               .                               .               y@4             .               
+            .               .                               .               .               .                               .               
+.16:00@2    gdsgn_arc_dsl@4 cyoga@4                         g@10            g@10            ycats@6                         .               
+                                                                                                                            .               
+.16:30@2                                                                                                    .               .               
+                                                                                                            cmanus@7        .                     
+.17:00@2    gimpl_arc_dsl@4 .               g@6                                                                             .               
+                            gdc_rulists@4                                                   .                               .               
+.17:30@2                                                                                    m@4                             .                
+                                                                                                                            .               
+.18:00@2    .                                                                                                               .               
+            .               Rdc_rulelists@2                                                                                 .               
+.18:30@2    .                               .               .               .               .               .               .               
+            .               caquarium@4     cstretch@4      cswim@4         cweights@4      .               .               .               
+.19:00@2    gbotanize_arc@4                                                                 .               Yqueer_movies@8 .               
+                                                                                            chiit@4                         .               
+.19:30@2                                                                                                                    .               
+                            .               .               .               .                                               .               
+.20:00@2    gimpl_arc_dsl@4 gdcmt_arc_dsl@4 gicml_cite@2    Ymeet_house@4   .                                               .               
+                                                                            .               .                               .               
+.20:30@2                                    gicml_colors@8                  .               .                               .               
+                                                                            .               .                               .               
+.21:00@2    gfrmt_rulists@4 gmk_arcslides@4                 gicml_suppl@6   .               .               .               .               
+                                                                            .               .               .               .               
+.21:30@2                                                                    .               .               .               .               
+                                                                            .               .               .               .               
+.22:00@2    gdc_rulists@2   Rdsl_to_peng@2                                  .               .               .               .               
+                                                                            .               .               .               .               
+.           .02-15          .02-16          .02-17          .02-18          .02-19          .02-20          .02-21
