@@ -1,0 +1,341 @@
+# author: samtenka
+# change: 2020-02-09
+# create: 2020-02-09 
+# descrp: rocks
+
+!! A 22nd Century Constitution
+!!!! Samuel Tenka, 2020 February
+
+!!! Preface
+
+    This is a fantasy.  It is as much romantic wish fulfillment as it is
+    science-fictional speculation, and it lacks both plausibility and
+    thoughtful ethical examination.  It reconciles my preferences --- for rule
+    of law through textualist interpretation and for personal liberty as
+    imagined in modern times --- by changing the text.  It also tries to do
+    away with artifacts of a less connected age.
+
+!! Article I: The Legislature
+
+!!! I.a. A Bicameral Congress
+
+!!! I.b. The House of Representatives
+
+!!!! I.b.0. Membership and Terms
+
+    The House of Representatives shall have $1789$ seats in
+    correspondence with geographical districts so uniform
+    that no district exceeds another in census-measured population by a factor
+    of $21/20$.  A Representative's term shall endure $2$ years, and no person
+    shall serve for multiple consecutive terms in the House.
+
+!!!! I.b.1. Election
+
+    The Representative for each district shall be decided as follows.
+    Each citizen of voting age whose main residence falls within that district
+    may cast one vote for one candidate.
+    Meanwhile, the several candidates shall order themselves alphabetically.
+    Each candidate shall privately determine a real, $1000$-digit number
+    $x_i \in [0, 1]$.  Before election day, they shall publically announce
+    cryptographically secure hashes of their real numbers.  At the close of
+    the last ballot box, the candidates shall reveal $x_i$s, and the threshold
+    $X$ shall be computed as the sum of the $x_i$s mod $1$.  The votes shall
+    be tallied for each candidate, then in the order determined by the
+    candidates partially summed; the first candidate whose corresponding
+    partial sum exceeds the threshold $X$ shall earn the seat in question.
+    Each candidate shall be a citizen having attained at least
+    $25$ years of age at the time of election.
+ 
+    Should an unexpected vacancy arise, the Chief Executive of the relevant
+    state shall appoint a temporary Representative.
+
+!!!! I.b.2. Majority and Alternative Leaders
+
+    At each session's start, the convening Representatives shall together elect 
+    a Majority Leader by simple unweighted majority; those senators who
+    did not vote for the resulting Majority Leader shall nominate an Alternative
+    Leader by simple unweighted majority.  For these votes, the
+    Vice President shall resolve ties.  This process must resolve within four
+    weeks.
+
+    The Majority and Alternative Leaders shall preside over the House.
+
+!!! I.c. The Senate 
+
+!!!! I.c.0. Membership and Terms
+
+    The Senate shall have $2$ seats for each of the several States.
+    A senator's term shall endure $6$ years, and no person shall serve for
+    multiple consecutive terms in the Senate. 
+
+!!!! I.c.1. Election
+
+    The Several States shall upon entrance to the Union be divided as evenly
+    as possible into $3$ classes; the $i$th class shall elect one of its
+    senators in a year $6n + 2i$ and the other in a year $6n + 2i+1$.
+    A State's senatorial elections shall permit any citizen of voting age whose
+    main residence is that State to approve or disapprove of each senatorial
+    candidate; that candidate that receives the fewest disapprovals shall earn
+    the seat in question.
+    Each candidate shall be a citizen having attained at least
+    $30$ years of age at the time of election.
+
+    Should an unexpected vacancy arise, the Chief Executive of the relevant
+    state shall appoint a temporary Senator.
+
+!!!! I.c.2. Majority and Alternative Leaders
+ 
+    At each session's start, the convening senators shall together elect 
+    a Majority Leader by simple unweighted majority; those senators who
+    did not vote for the resulting Majority Leader shall nominate an Alternative
+    Leader by simple unweighted majority.  For these votes, the
+    Vice President shall resolve ties.  This process must resolve within four
+    weeks.
+
+    The Majority and Alternative Leaders shall preside over the Senate.
+
+!!!! I.c.3. Voting 
+
+    Each seat shall, at the start of its term, be allotted $1868$ points to be
+    spent on votes.  A senator may vote with integer weight $n+1 \geq 0$ by
+    spending $n^2$ points.  No vote may cause the allotted points to fall below
+    $0$.  The will of the Senate shall unless otherwise specified be determined by
+    majority from the weighted yeas and nays; no action shall be taken in case of a
+    tie.
+
+    The Senate shall adopt no rules requiring majorities other than those here
+    specified. 
+
+!!!! I.c.3. Procedure 
+
+    Any senator may propose a bill for discussion, and discussion shall have
+    a standard duration of $5$ days.
+    The Majority Leader may schedule votes to modify the duration of a bill's
+    discussion and to change chamber rules so long as they remain consistent
+    with this Constitution.  
+    The Majority and Alternative Leaders shall each month compose an ordered
+    sequence of items of business including discussion, speeches, and votes.
+    The Senate
+    shall consider bills by alternating between the two Leaders' lists,
+    beginning with the Majority Leader's and skipping redundancies. 
+    Should both Leaders so move, discussion shall be suspended on a bill.
+    Should either Leader so move, a vote will be held upon the end of
+    discussion. 
+    Should any senator use a weight other than $1$, the chamber's votes shall
+    be tallied precisely.
+    Should any fifth of Senators so move, the votes and proceedings shall be
+    recorded in the Senate Journal. 
+
+!!!! I.c.4. 
+    
+!!!! I.c.5. 
+    
+
+!!! I.d. Revenue and Monetary Powers
+!!! I.e. Other Powers
+
+!! Article II: The Executive
+
+!!! II.a. The Executive Hierarchy and Election
+    
+!!!! II.a.0. Structure
+
+    The President of the United States shall execute the Laws with
+    the assistance of a Vice President and a Cabinet.  The President,
+    Vice President, Secretary of State, Secretary of Defense, Secretary of the
+    Treasury, and Attorney General, shall be known as the Team of $6$.
+
+    The President and Vice President shall at time of election or appointment
+    be a citizen having attained at least $35$ and no more than $70$ years of
+    age.
+    No person shall serve for multiple consecutive terms as President.
+
+!!!! II.a.1. Ordinary Election
+
+    A Team of $6$ shall be elected every $4$ years from among
+    candidate teams, each of distinct persons and with every two teams disjoint.
+    Each citizen of voting age may approve or disapprove of each
+    candidate team.  A citizen's shall be multiplied bbby $\frac{n+2}{n}$,
+    where $n$ counts the number of Representatives in that citizen's State.
+    The team least disapproved in total shall be chosen.
+
+!!!! II.a.2. Emergency Succession
+
+    Should the President die, resign, or be removed, the first
+    listed --- among
+    the Vice President,
+    the Secretary of State,
+    the Secretary of Defense,
+    the Secretary of the Treasury, and
+    the Attorney General
+    --- shall immediately become President.  
+    The same shall occur should any majority of the remaining members of
+    the Team of $6$ deem the President incapacitated.
+
+    Should any other member of the Team of $6$ die, resign, or be removed,
+    the President shall fill each vacancy
+    with the approval of an unweighted majority of the Senate. 
+    The same shall occur should any majority of the remaining members of
+    the Team of $6$ deem a member incapacitated.
+
+    It is advised that the members of the Team of $6$ shall never
+    simultaneously occupy the same physical grounds. 
+
+!!! II.b. The President
+!!! II.c. The Vice President
+!!! II.d. The Cabinet
+
+!!!! II.d.0. Protected Organs of the Executive Branch
+
+    The Congress may by $2/3$s unweighted majorities in both houses inhibit all
+    present and future Executives from interfering with any part
+    of the executive branch save the armed forces;
+    and as the Congress may inhibit, so may it enable.
+    Upon ratification of this Constitution, the Federal Reserve and the
+    Federal Bureau of Investigation shall by default be so protected.
+
+!!!! II.d.1. The Departments 
+
+    The Secretary of State shall be the principal assistant to the President
+    in all matters relating to the Department of State, which shall
+    include embassies and subdepartments as the Congress may by law provide.
+
+    The Secretary of Defense shall shall be the principal assistant to the President
+    in all matters relating to the Department of Defense,
+    which shall include
+    an Army, Navy, and Airforce,
+    an Office of Homeland Security,
+    a Federal Emergency Management Agency,
+    National Security Agency,
+    and such subdepartments as the Congress may by law provide.
+
+    The Secretary of the Treasury shall be the principal assistant to the President
+    in all matters relating to the Department of the Treasury,
+    which shall include
+    a Bureau of Engraving and Printing,
+    a Federal Reserve,
+    an Internal Revenue Service,
+    and such subdepartments as the Congress may by law provide.
+
+    The Attorney General shall be the principal assistant to the President
+    in all matters relating to the Department of Justice, which shall
+    include a Federal Bureau of Investigation and such subdepartments as the
+    Congress may by law provide.
+
+!!! II.e. Ordinary Powers
+    
+    The President shall be the Commander in Chief of the military forces of
+    United States, and of the militia of the several States, when called into
+    the actual service of the United States. 
+
+    The President shall lack power to pardon persons or to veto laws.
+
+!!! II.f. Executive Orders
+
+!!! II.g. War Powers
+
+!!!! II.g.0. Emergency Conflicts
+    
+    The President shall exercise the armed forces abroad upon and only upon
+        an emergency created by a specific and likely potential or recent
+        attack of upon the territories, posessions, or armed forces of the
+        United States;
+        or in situations as the Congress may
+            by $2/3$s majorities in both houses
+            and with specific and prompt termination
+            conditions
+        describe;
+        or with Authorization for Use of Military Force, issued by the
+        Congress and specific as to duration, cause, and adversary; 
+
+    The President must inform the Congress within $48$ hours of the beginning
+    of any conflict begun without an Authorization of Use of Military Force.
+    Conflict includes deployment of armed forces personnel or of lethal weaponry.
+    Such conflicts must cease within $60$ days, barring Congressional approval.
+
+!! Article III: The Judiciary
+
+!!! III.a. The Courts
+    The federal courts shall consist of one Supreme Court, several Courts of
+    Appeals, and lower courts as Congress may by law provide.
+
+!!! III.b. The Supreme Court
+!!!! III.b.0. Membership and Terms
+    The Supreme Court shall have 9 voting seats and 3 nonvoting seats.
+    Should a vacancy arise among the voting seats, a most senior of the
+    nonvoting members shall rise into the vacated seat.  
+    Each justice shall serve one term of 15 years, with time on nonvoting
+    seats included, 
+    or as death, resignation, or impeachment interrupt.
+    The most senior Justice shall be known as Chief Justice.
+
+!!!! III.b.1. Appointment
+
+    The Chief Executives, or Governors, of the Several States shall fill a
+    vacancy as follows.  Each Governor shall nominate at most one
+    candidate.
+    Each candidate shall be a citizen having attained
+    at least $35$ and no more than $70$ years
+    of age at the time of nomination.
+    The Governors must together nominate
+    at least two candidates. 
+
+    Until one candidate remains, the Governors shall then declare their
+    approval or disapproval for each candidate, hence eliminating the most
+    disapproved candidate.  The youngest voting State shall break ties between
+    multiple maximally disapproved candidates.
+
+    In the final round of voting, should no two-thirds majority emerge, the
+    states comprising the majority, including in the case of a tie that youngest
+    voting State that broke the tie, shall be barred from voting for the next
+    vacancy-filling.  Those States shall once again be considered voting states
+    in the vacancy after the next.  To each State is hence assigned an evolving
+    bit of information; upon ratification, all States shall be considered
+    voting States except those from which the current Justices hail. 
+
+    This whole process shall complete within one twelve months of the original
+    vacancy.
+
+!!!! III.b.2. Membership
+!!!! III.b.3. Membership
+!!!! III.b.4. Membership
+
+!!! III.c. The Lower Courts
+
+!!! III.d. An Interpretive Guide
+!!! III.e. Enumeration of Powers
+!!! III.f. Judicial Review Power
+
+!! Article IV: The States and Supremacy
+
+!!! IV.a. A Federal Interface
+!!! IV.b. Citizenship and Census 
+!!! IV.c. Modifying the Union 
+!!! IV.d. Enumeration of Powers
+
+!! Article V: Amendments
+
+!!! V.a. Centennial Conventions
+!!! V.b. Ratification by States 
+!!! V.c. 
+!!! V.d. Protected Clauses 
+
+!! Article VI: Liberties and Rights
+
+!!! VI.a. Expression
+!!!! VI.a.0. At the Ballot Box
+!!!! VI.a.1. At the Ballot Box
+!!!! VI.a.2. At the Ballot Box
+!!!! VI.a.3. Speech and Writing
+!!!! VI.a.4. Peaceable Assembly
+
+!!! VI.b. Against Discrimination 
+!!!! VI.b.0. Religion
+!!!! VI.b.1. Race 
+!!!! VI.b.2. Gender 
+!!!! VI.b.3.  
+!!!! VI.b.4. 
+
+!!! VI.c.  
+!!! VI.d.  
+

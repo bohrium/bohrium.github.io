@@ -1,0 +1,221 @@
+# author: samtenka
+# change: 2020-02-09
+# create: 2020-02-09 
+# descrp: rocks
+
+!! A 22nd Century Constitution
+!!!! Samuel Tenka, 2020 February
+
+!!! Preface
+
+    This is a fantasy.  It is as much romantic wish fulfillment as it is
+    science-fictional speculation, and it lacks both plausibility and
+    thoughtful ethical examination.  It reconciles my preferences --- for rule
+    of law through textualist interpretation and for personal liberty as
+    imagined in modern times --- by changing the text.  It also tries to do
+    away with artifacts of a less connected age.
+
+!! Article I: The Legislature
+
+!!! I.a. A Bicameral Congress
+
+!!! I.b. The House of Representatives
+
+!!!! I.b.0. Membership, Terms, and Election
+    The House of Representatives shall have $1776$ seats in
+    correspondence with geographical districts so uniform
+    that no district exceeds another in census-measured population by a factor
+    of $21/20$.  A representative's term shall
+    endure $2$ years, and no person shall serve two consecutive terms in the
+    House.
+
+    The representative for each district shall be decided as follows.
+    Each Citizen of voting age whose main residence falls within that distict
+    may cast one vote for one candidate.
+    Meanwhile, the several candidates shall order themselves alphabetically.
+    Each candidate shall privately determine a real, $20$-digit number
+    $x_i \in [0, 1]$.  Before election day, they shall publically announce
+    cryptographically secure hashes of their real numbers.  At the close of
+    the last ballot box, the candidates shall reveal $x_i$s, and the threshold
+    $X$ shall be computed as the sum of the $x_i$s mod $1$.  The votes shall
+    be tallied for each candidate, then in the order determined by the
+    candidates partially summed; the first candidate whose corresponding
+    partial sum exceeds the threshold $X$ shall earn the seat in question.
+ 
+    Should an unexpected vacancy arise, the Chief Executive of the relevant
+    state shall appoint a temporary Representative.
+
+!!!! I.b.1. Majority and Alternative Leaders
+
+    At each session's start, the convening representatives shall together elect 
+    a majority leader by simple unweighted majority; those senators who
+    did not vote for the resulting Majority Leader shall nominate an Alternative
+    Leader by simple unweighted majority.  For these votes, the
+    Vice President shall resolve ties.  This process must resolve within four
+    weeks.
+
+!!! I.c. The Senate 
+!!!! I.c.0. Membership, Terms, and Election
+    The Senate shall have $2$ seats for each of the several States.
+    A senator's term shall endure $6$ years, and no person shall serve two
+    consecutive terms in the Senate.
+
+    The Several States shall upon entrance to the Union be divided as evenly
+    as possible into $3$ classes; the $i$th class shall elect one of its
+    senators in a year $6n + 2i$ and the other in a year $6n + 2i+1$.
+    A State's senatorial elections shall permit any Citizen of voting age whose
+    main residence is that State to approve or disapprove of each senatorial
+    candidate; that candidate that receives the fewest disapprovals shall earn
+    the seat in question.
+
+    Should an unexpected vacancy arise, the Chief Executive of the relevant
+    state shall appoint a temporary Senator.
+
+!!!! I.c.1. Majority and Alternative Leaders
+ 
+    At each session's start, the convening senators shall together elect 
+    a majority leader by simple unweighted majority; those senators who
+    did not vote for the resulting Majority Leader shall nominate an Alternative
+    Leader by simple unweighted majority.  For these votes, the
+    Vice President shall resolve ties.  This process must resolve within four
+    weeks.
+
+!!!! I.c.1. Voting 
+    Each seat shall, at the start of its term, 
+    be allotted $1789$ points to be spent on votes. 
+    A seat may vote with integer weight $n+1 \geq 0$ by spending $n^2$
+    points.  No vote may cause the allotted points to fall below $0$. 
+    The will of the Senate shall unless otherwise specified be determined by
+    strict majority among the weighted yeas and nays; no action shall be taken
+    in case of a tie.
+
+    Members may vote 
+
+    The Senate shall adopt no rules requiring majorities other than those here
+    specified. 
+
+!!!! I.c.2.  
+!!!! I.c.3. 
+!!!! I.c.4. 
+
+!!! I.d. Revenue and Monetary Powers
+!!! I.e. Other Powers
+
+!! Article II: The Executive
+
+!!! II.a. The Executive Hierarchy and Election
+    
+    The President of the United States shall lead the Executive Branch with
+    the assistance of a Vice President and their Cabinet.
+
+    The President, Vice President, and the four named members of the Cabinet
+    --- the Secretary of State, Secretary of Defense, Secretary of the Treasury,
+    and Attorney General --- shall be elected every $4$ years.  
+
+    No person may serve as President for more than one full term. 
+
+!!! II.b. The President
+!!! II.c. The Vice President
+!!! II.d. The Cabinet
+!!!! II.d.0. Membership and Appointment 
+
+    The Executive's Cabinet shall consist of
+        a Secretary of State,
+        a Secretary of Defense,
+        a Secretary of the Treasury,
+        an Attorney General,
+        a Secretary of Homeland Security,
+        a Secretary of the Interior,
+        a Secretary of Commerce,
+    and a number of department heads as the Congress may by law provide.
+
+!!!! II.d.1. Membership and Appointment 
+    
+!!! II.e. Order of Succession
+!!! II.f. War and Diplomacy Powers
+!!! II.g. Other Powers
+!!! II.h. State of the Union
+
+!! Article III: The Judiciary
+
+!!! III.a. The Courts
+    The federal courts shall consist of one Supreme Court, several Courts of
+    Appeals in correspondence with the seats of that court, and lower courts as
+    Congress may by law provide.
+
+!!! III.b. The Supreme Court
+!!!! III.b.0. Membership and Terms
+    The Supreme Court shall have 9 voting seats and 3 nonvoting seats.
+    Should a vacancy arise among the voting seats, a most senior of the
+    nonvoting members shall rise into the vacated seat.  
+    Each justice shall serve one term of 15 years, with time on nonvoting
+    seats included, 
+    or as death, resignation, or impeachment interrupt.
+    The most senior Justice shall be known as Chief Justice.
+
+!!!! III.b.1. Appointment
+    The Chief Executives, or Governors, of the Several States shall fill a
+    vacancy as follows.  The Governors shall each nominate at most one
+    candidate.  Candidates shall be Citizens within 30 and 60 years of age,
+    inclusive, at the time of nomination.  The Governors must together nominate
+    at least two candidates. 
+
+    Until one candidate remains, the Governors shall then declare their
+    approval or disapproval for each candidate, hence eliminating the most
+    disapproved candidate.  The youngest voting State shall break ties between
+    multiple maximally disapproved candidates.
+
+    In the final round of voting, should no two-thirds majority emerge, the
+    states comprising the majority, including in the case of a tie that youngest
+    voting State that broke the tie, shall be barred from voting for the next
+    vacancy-filling.  Those States shall once again be considered voting states
+    in the vacancy after the next.  To each State is hence assigned an evolving
+    bit of information; upon ratification, all States shall be considered
+    voting States except those from which the current Justices hail. 
+
+    This whole process shall complete within one twelve months of the original
+    vacancy.
+
+!!!! III.b.2. Membership
+!!!! III.b.3. Membership
+!!!! III.b.4. Membership
+
+!!! III.c. The Lower Courts
+
+!!! III.d. An Interpretive Guide
+!!! III.e. Enumeration of Powers
+!!! III.f. Judicial Review Power
+
+!! Article IV: The States and Supremacy
+
+!!! IV.a. A Federal Interface
+!!! IV.b. Citizenship and Census 
+!!! IV.c. Modifying the Union 
+!!! IV.d. Enumeration of Powers
+
+!! Article V: Amendments
+
+!!! V.a. Centennial Conventions
+!!! V.b. Ratification by States 
+!!! V.c. 
+!!! V.d. Protected Clauses 
+
+!! Article VI: Liberties and Rights
+
+!!! VI.a. Expression
+!!!! VI.a.0. At the Ballot Box
+!!!! VI.a.1. At the Ballot Box
+!!!! VI.a.2. At the Ballot Box
+!!!! VI.a.3. Speech and Writing
+!!!! VI.a.4. Peaceable Assembly
+
+!!! VI.b. Against Discrimination 
+!!!! VI.b.0. Religion
+!!!! VI.b.1. Race 
+!!!! VI.b.2. Gender 
+!!!! VI.b.3.  
+!!!! VI.b.4. 
+
+!!! VI.c.  
+!!! VI.d.  
+
