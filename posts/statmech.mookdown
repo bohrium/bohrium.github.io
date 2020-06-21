@@ -1,0 +1,84 @@
+# author: samtenka
+# change: 2020-06-20
+# create: 2020-06-16 
+# descrp: foundations of statistical mechanics 
+
+
+
+! Foundations of Statistical Mechanics
+
+    Statistical mechanics helps us predict the behavior of many-component
+physical systems via the technique of %averaging%.  Specifically, the recipe to
+predict a measurement of a system "at temperature $T$" is as follows.  We write
+down a certain probability distribution over the system's configuration space;
+the density at a configuration $x$ with energy $E(x)$ is $p(x) \propto
+\exp(-E(x)/T)$.  Note that this distribution is abstract: it is not clear what
+randomness, if any, it corresponds to.  For each configuration $x$, we compute
+the number $f(x)$ that the measurement would yield.  Then our prediction is the
+expectation of $f(x)$ with respect to the aforementioned distribution.
+
+For example, when $f=E$, the recipe helps us predict the system's total energy
+as a function of its temperature; we may thus compute the heat capacities of
+systems such as crystals, molecular gases, and blackbody radiation.  In fact,
+for a gas with very low pressure $p$ (force per area) and very low density $n$
+(particles per volume), the recipe predicts that $T = p/n$.  It was a priori
+unclear how to measure temperature; this result about gases helps us to
+calibrate our thermometers: the appropriate value of $T$ for a different system
+will be the $p/n$ of a low-pressure, low-density gas in equilibrium with the
+system.  
+
+    Our goal is to provide intuition for this recipe.  We will discuss two
+related questions.  *First*, why is measurement related to an average at all?
+*Second*, why does the average have the specific weights $\exp(-E(x)/T)$?
+
+#Various texts interpret the distribution as that of many temporally-separated
+#measurements over long times as the system evolves (@Halmos@), or of many small
+#parts of the overall system (@Khinchin@), or of many possible initial
+#conditions of the system (@Feynman@).   
+
+!! Boltzmann's Law 
+
+!!! Extensive Properties
+
+    Imagine two parcels of matter very far from each other.  Their joint
+probability is a product, and their joint energy is a sum.  Therefore, if we
+are to assign probabilities to system configurations, and if we insist that
+these probabilities are functions only of energy, then the probability must be
+exponential in the energy.  Thus, $\mathcal{P}(x) \propto \exp(-\beta E(x))$
+for some constant $\beta$ characteristic of the system's temperature.  We only
+used that energy is extensive (and later we will use that total energy is
+conserved); we could have spoken of volume, charge, angular momentum, or any
+other extensive quantity that is conserved in a laboratory room.  More
+generally, if we wish to assign probabilities that depend only on a finite set
+of extensive quantities (say volume $V$, energy $E$, and charge $C$) then the
+probability must be of form $\mathcal{P}(x) \propto \exp(-\alpha V(x) -\beta
+E(x) -\gamma C(x))$. 
+
+!!! The Natural Measure
+
+!! Averages or Concentration?
+
+!!! 
+
+!!! 
+
+!! Fluctuations in Time
+
+!!! Liouville's Theorem
+
+!!! Can Dynamics get Stuck?  
+
+    
+
+!! References
+
+    *Batterman*   ---  %Why Equilibrium Statistical Mechanics Works%        ---  1998
+
+    *Feynman*     ---  %Lectures on Statistical Mechanics%                  ---  1981
+
+    *Khinchin*    ---  %Mathematical Foundations of Statistical Mechanics%  ---  1960
+
+    *Penrose*     ---  %Foundations of Statistical Mechanics%               ---  1979
+
+    *Truesdell*   ---  %Six Lectures on Natural Philosophy%                 ---  1966
+

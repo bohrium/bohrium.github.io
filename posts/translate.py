@@ -1,5 +1,5 @@
 ''' author: samtenka
-    create: 2018-03-20
+    create: 2020-06-20
     change: 2017-12-22
     descr: implement an interpreter for Mookdown (my own markdown variant)
     usage: run `python translate.py NAME` 
@@ -21,8 +21,8 @@ def translate_link(source):
 
 def translate_line(line):
     ''' Convert a line of Mookdown into html'''
-    style_flags = {'*':False, '`':False, '%':False, '~':False}
-    style_tags  = {'*':'b',   '`':'tt',  '%':'em' , '~':'del'}
+    style_flags = {'*':False, '`':False, '%':False, '~':False, '@':False}
+    style_tags  = {'*':'b',   '`':'tt',  '%':'em' , '~':'del', '@':'span style="font-variant: small-caps";'}
     def process_special_char(c):
         style_flags[c] = not style_flags[c]
         return '<%s%s>' % ('' if style_flags[c] else '/', style_tags[c])
