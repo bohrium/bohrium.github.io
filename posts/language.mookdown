@@ -4,42 +4,53 @@
 # descrp: Mookdown: a Specification by Example 
 
 ! The `Mookdown` Guide 
+
 !!!! A Specification by Example
+
 !!!! See `bohrium.github.io/posts/language.mookdown` for the Mookdown that generated this page.
 
 !! Formatting Text
-    Mookdown permits *bold*, %italicized%, `monospaced`, and ~struckthrough~ text.
-    All 16 combinations are available.  For instance, *%`~this text has all 4 styles at once~`%*!
-    Even if you mistakenly *forget to close a style, 
-    it will reset on the next source line.
+    Mookdown permits *bold*, %italicized%, `monospaced`, and ~struckthrough~
+text.  All 16 combinations are available.  For instance, *%`~this text has all
+4 styles at once~`%*!  Even if you mistakenly *forget to close a style, it will
+reset on the next source line.
     
-    Newlines in the source do not induce newlines in the generated html.
-    So, to start a new paragraph, try two newlines.
-    Comments are line-based: start a line with `#` to comment the whole line out. 
+    Newlines in the source do not induce newlines in the generated html.  So,
+to start a new paragraph, try two newlines.  Comments are line-based: start a
+line with `#` to comment the whole line out. 
 # for instance, see the top of the source
     
-    Render math by enclosing in dollar signs: $\exp(A+B) \approx \exp(A)\exp(B)\exp([A,B]/2)$.
-    Move to display mode by %starting a new paragraph% and enclosing in %pairs% of dollar signs:
+    Render math by enclosing in dollar signs: $\exp(A+B) \approx
+\exp(A)\exp(B)\exp([A,B]/2)$.  Move to display mode by %starting a new
+paragraph% and enclosing in %pairs% of dollar signs:
     
     $$R_{\mu\nu} + (-\frac{1}{2}R + \Lambda)g_{\mu\nu} = 8\pi G T_{\mu\nu}$$
     
    
-    Beware: asterisks, percent signs, backticks, tildes, dollar signs, and angle brackets are all special characters.
-    Avoid using them for other purposes.  For instance, instead of angle brackets, opt for `\lt` and `\gt` in $\LaTeX$ code.
+    Beware: asterisks, percent signs, backticks, tildes, dollar signs, and
+angle brackets are all special characters.  Avoid using them for other
+purposes.  For instance, instead of angle brackets, opt for `\lt` and `\gt` in
+$\LaTeX$ code.
 
 !! Headers
-    Headers of all levels may include math and formatting.
-    However, bold styles are invisible, because headers are already bold.
+
+    Headers of all levels may include math and formatting.  However, bold
+styles are invisible, because headers are already bold.
 
 !!! %Sub%headers 
+
 !!!! $sub^2$headers
+
 !!!! I like to use $\LaTeX$ to $\fbox{BOX SUBSUBHEADERS}$
 
 !! Links and Figures
-    Links are rendered in bra/ket notation for url/linktext: <../index.html|here is %my% $\exp$traordinary *homepage*>.
-    Observe that formatting and math (but not nested links) is permitted in link text.
-    Remember to use `http://` in the URL for external links such as <http://www.google.com|to Google>.
 
-    In case the url has an image-type extension (`.png` or `.jpg`), the link renders as the image itself and the
-    linktext renders as a caption:
-    <../images/boundary/prod.png|Figure 0: Product Rule>
+    Links are rendered in bra/ket notation for url/linktext:
+<../index.html|here is %my% $\exp$traordinary *homepage*>.  Observe that
+formatting and math (but not nested links) is permitted in link text.  Remember
+to use `http://` in the URL for external links such as
+<http://www.google.com|to Google>.
+
+    In case the url has an image-type extension (`.png` or `.jpg`), the link
+renders as the image itself and the linktext renders as a caption:
+<../images/boundary/prod.png|Figure 0: Product Rule>

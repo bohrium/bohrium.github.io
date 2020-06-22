@@ -1,0 +1,705 @@
+# author: samtenka
+# change: 2020-06-21
+# create: 2020-06-21 
+# descrp: problyhedra
+
+
+
+! Problyhedra
+
+These are some notes relating to <https://youtu.be/Td_7_7MBHcU|my talk>
+about convex spaces and probability theory.
+
+!! Beyond Simplices: the Category $Conv$
+
+!!! The Category of Convex Spaces
+
+!!!! Probability Simplices
+
+
+!!!! Convex Spaces
+
+    Intuitively, a %convex space% is a space closed under convex combinations.
+Precisely, we consider a set $X$ equipped with a %mixture operation% $\mu:
+\Delta_X \to X$ from the space $\Delta_X \triangleq \left\{ f:X\to\RR_{\geq 0}:
+|\text{supp}(f)|\lt\infty\,\,\,\text{and}\,\,\,\sum_x f(x)=1 \right\}$ of
+formal finitary convex combinations of $X$'s elements to $X$.  We say that $X$
+is a %convex space% provided that $\mu(x \mapsto \delta_{x,y}) = y$ for each
+$y\in Y$ and that $ \mu(\sum_{i\in I} c_i f_i) = \mu(x \mapsto \sum_{i\in I}
+c_i \delta_{x,\mu(f_i)}) $ for all finite $I$ and all sequences of $c_i\in
+\RR_{\geq 0}$ and $f_i$ for which the two sides are defined.  Each valid $\mu$
+is determined by its restriction to functions with size-$2$ support, so we will
+sometimes conflate $\mu$ and this restriction, and for convenience we will
+sometimes write $ \mu(x \mapsto \alpha \delta_{x,v} + (1-\alpha) \delta_{x,w})
+\in X $ as $ \alpha v + (1-\alpha) w \in X $ when $v, w \in X$.
+
+!!!! Affine Morphisms
+
+    The morphisms in the category of convex spaces are those that preserve
+$\mu$.  More precisely, we observe that $\Delta$ is an endofunctor on the
+category of Sets, and we declare the morphisms from $(X,\mu_X)$ to $(Y, \mu_Y)$
+to be those functions $T:X \to Y$ such that $T \circ \mu_X = \mu_Y \circ
+\Delta(T)$.  We have defined a category.  We could have defined the category
+in fewer words --- as the %Eilenberge Moore category for $\Delta$% --- but we
+choose here to be very concrete.
+
+!!!! Exotic Spaces
+
+    Not every convex space is a subspace of some $\RR^n$.  A source of examples
+comes from the semilattices, i.e. the posets $X$ with binary joins $\vee$: a
+canonical mixture operation on $X$ is determined by is determined by the rule
+$\alpha v + (1-\alpha) w \triangleq v \vee w$ as $v,w$ range through $X$ and
+$\alpha$ ranges through $(0,1)$.  For example, say $X = \{\text{no},
+\text{maybe}, \text{yes}\}$, where $\text{no},\text{yes}\lt\text{maybe}$.  Then
+we have $(1/3) \text{no} + (2/3) \text{yes} = \text{maybe}$ and $(4/7)
+\text{no} + (3/7) \text{maybe} = \text{maybe}$.  This is a space not of
+%probabilities% but of %possibilities%!  Likewise, if $X = \{\text{zero},
+\text{poly}, \text{exp}\}$ with $\text{zero}\lt\text{poly}\lt\text{exp}$, then
+we have $(2/5) \text{zero} + (3/5) \text{poly} = \text{poly}$ and $(5/6)
+\text{poly} + (1/6) \text{exp} = \text{exp}$: we have a space of %sizes%.
+
+!!! Examples of Morphism Composition
+
+!!!! Marginalization
+!!!! Expectations
+!!!! Abstraction to Possibilities
+
+!!! Monoidal Structure and Useful Adjoints
+
+!!! Products and Independence
+
+!!!! Existence and Interpretation of Products
+!!!! A Pullback Example
+
+!!! Coproducts and Tagged Mixtures
+
+!!!! Existence and Interpretation of Coproducts
+!!!! A Pushout Example
+
+!! Tensor, Hom, and Bayes
+
+!!! Hom and Conditional Distributions
+
+!!!! Existence and Interpretation of Internal Homs
+!!!! Hom from Square to Interval
+
+!!! Tensor and Joint Distributions
+
+!!!! Existence and Interpretation of Tensor Products
+!!!! Product vs Coproduct vs Tensor of Two Intervals 
+
+!!! Bayes' Theorem
+
+!!! Visualizing the Monty Hall Problem
+
+!! Statistics: Fisher, Basu, and Bahadur
+
+!!! Statistics and their Properties
+!!!! What is a Statistic?
+!!!! Sufficiency, Mimimality, Completeness, and Ancillarity
+
+!!! Some Basic Theorems
+!!!! Fisher's Theorem
+!!!! Basu's Theorem
+!!!! Bahadur's Theorem
+
+!! References
+
+    I figured out this stuff by myself and for fun.
+    As usual, I found out that others had thought of
+    isomorphic ideas before me:
+
+    *FILL IN*
+
+#you guys have probably seen the how probabilities can use to parametrize the
+#space of distributions especially over finite set so today um well let me just
+#go straight over here so for example if you have three possibilities like snow
+#rain and sunny then if you want to represent that they'll always that's with
+#hundred percent chance they'll be snowing then you would put a point here it's
+#a 33 33 33 percent chance if you like here and if there's a half-caf chance of
+#snow and rain we'd have a point here so basically any point in this buildin
+#triangle represents the distribution over these three possibilities right so
+#simple these are very nice and we'll consider a category whose objects contain
+#the simplest C's but we'll see that if we add not believe all the sympathies
+#but all the convex algebra is or contacts XS I'll call them that gives us a bit
+#more elbow room to model things like independence and sufficient statistics
+#complete statistics and so forth so so well proceed in four steps first I'll
+#introduce you to this category room we will work in I'll telecon and we saw
+#before
+#
+#but we don't have to think about it that way but if you'd like to eat and then
+#after that we'll show that's very nice category will show that has all limits
+#and coherence has an internal hall and at any ceremony to that and using these
+#ideas we can express a notion of Independence and a notion of Bayes theorem or
+#both we'll just sort of do it my definition so both this for space to be able
+#to be true then after that I'll sketch sort of how to think about Bayesian
+#inference all the various graphs between the string diagrams this is the
+#sketchiest thing now show you which is why it's not a thing at the end and then
+#after that will actually prove some things which from this perspective or
+#trivial so will prove the Fisher factorization theorem
+#and Basu theorem and Bahadur's theorem and you've
+#probably seen these I mean they're followed by other names in the private
+#rediscovered a lot but these are basic views about sufficient statistics
+#
+#ok so let's begin by defining our category so so we have our category cons of
+#convex alphas and all the objects are just convex sets so I'll define there are
+#many ways to define it I'll just say very concretely fact to set this equipped
+#with a mixing operator mu from 0 1 m/s that satisfies that so we think of this
+#as we think of like uh I'll say Y it's going to be X plus 1 minus y ok so in
+#some sense this returns a convex combination of x and y um what does this have
+#to satisfy well all we require and this is just what falls out of that I'm very
+#poor construction is that mu of 0 X Y is X of sorry uh I guess of 1 mu 0 X y
+#equals y and furthermore I will write this out because it's messy but that its
+#distributive in the right way so that if you have so into it I'll just draw it
+#out like so
+#
+#so it's like distributivity but i guess the fact that we're
+#generalizing to finite area combinations not just combinations that wanted to
+#means that there's also some associativity involved if you want to prove this
+#for example for real for subsets of of real vector spaces does that answer your
+#question just really sure these are the morphisms are these are the hunters
+#these are the objects yeah yeah um but one of the morphisms well the morphisms
+#are just what you'd expect I mean and they also fall out of this construction
+#the morphisms are just the set maps that preserve the mixing operator counter
+#yeah yeah this is a category so so all all we want is that like F of well
+#calvess right now formally but it's just the thing that you would expect so
+#everyone see this okay I'll just write a few so we have FS s value parameterize
+#by T such that all what we want on top of musi of wool okay notice by the way
+#when I said this is a separate comment but notice when I say finite rate
+#combination I meant one or more we don't want to zero air your null area
+#combination because these are in stuff like a good example of these are the
+#affine spaces outside real spaces these don't have a zero rice there's no
+#notion of like that ok any questions about this category I'll give you two
+#examples of nice objects in this examples objects and morphisms well first of
+#all we have our friendly simplicity's so for example we have a zero symplectic
+#as empty we have a one simplex I'll just index them by the number of points
+#they have for the bit number of vertices one simplex we have for example three
+#simplex that looks like this and you can imagine as solid and we have a two
+#simplex we have other simplicity's there also some non simplices for example
+#there's a square and what we'll see later is that this parametrize is the space
+#of independent review shion's that our coin flips because they're two canonical
+#projections
+#
+#independence we'll see that movie out of simplex lab so is it ISM morphism from
+#one to Mac that's the same data as that's the same data as giving distribution
+#over whatever this represents or question mark well it's a collusion over this
+#work question work what I mean is it's the same as saying it says it's the same
+#as flip a coin and then you decide if you attend one of them you go to you go
+#to the first one it's second one you pick up that's the active generative model
+#actually over parametrize is it a little bit because like what if like what if
+#you're at this table and don't care what this thing is right but that's a good
+#question and I don't know how to communicate the answer so can we talk about it
+#out here yeah okay okay so we have co-products well let's let's let in 21
+#seconds thinking about it because I pick out a point on one of those like lines
+#that's going up half way between the two originals yeah oh how about like it's
+#a lot like the maybe monad in Haskell okay it's like in this particular case
+#where plus a note one yeah right so it's just saying well I can return none or
+#I don't know or error or this so a promising program which has it which returns
+#a type in this is like our paddles a program which returns this thing in this
+#Pentagon but it was a positive error is that okay I know you're working
+#probably sick program so that's not using this yeah yeah yeah okay is there a
+#probability that is there like a probability of doing one or the other which is
+#like how far oh yeah yeah there is switches and then you project down to get
+#like the distribution if you chose the point work yeah yeah in fact in fact
+#let's let's see that very concretely so whenever you have a with B okay well
+#there's a terminal element which okay I never actually said this or prove this
+#but it I think it's clear that there's a terminal element which is as a point
+#right and because of that we have a map from eight to one and a map from me to
+#one of by one I just need the once in life that is the point and so we have a
+#map to this right and this is just our familiar to write one plus one equals
+#two that's Russell's theorem and so this projection gives you the probability
+#that they are you right so this is Davis point is that okay so finally code
+#equalizers yeah
+#
+#the reason you'll see I mean just because I
+#don't want to get okay so code equalizers these are them is most mysterious but
+#they do exist okay so well I mean they exist by abstract nonsense right even
+#like and why is that well if you have F G I just realized I'm not consist in my
+#ears they go rice and there's a good luck but oh well so so Steve can throw
+#equalizer so we have a B and C and what is this well what we can do is we can
+#just say C is defined to me well first as a set what it's defined to be mod the
+#mod this right where but the question is what to this relations be now all
+#right I have to give this is obvious but I think it's nice to say it a little
+#bit more explicitly well so first of all we want this to be an affine relation
+#and by that I mean so I thought I mean if a if a is the same as B and C is the
+#same as D then we want any mixture so so mu mu what's another number e okay
+#this is bad I'll just say mu 0.64 generic thing of a six right so we say that
+#relation is a and it's like this and this is exactly what you need from four be
+#tuned sorry for C 20 Herakles mixing structure right and then the thing to
+#check is that an intersection of a pen relations is a fine and thus there
+#exists a minimal i heid relation and thus there exists an initial helmet right
+#so that's how you show that words okay this isn't it now the reason I say this
+#is mysterious is this is products you move aside a simplest land Khalif lasers
+#can move us out of probability land into possibility men because for example
+#like we perform is producing a quotient operation this is a Co equalizer or
+#some form so the rest of this talking with you is these but it's nice to know
+#that exist we'll use co-products though okay so uh now I'll erase this now
+#let's do some examples like and I already showed you something but um okay so
+#what do you think
+#
+#well if you build a square the right wave and equipped with economical
+#projection down and also to the side to to Abbey's to turn into single scenes
+#and a to simplex of course just granite Rises the space of weights on a coin
+#right so this so well later see how bounce abilities can encode independence
+#assumptions but first let me just show you how the more consumes core to so
+#what if the morphism for example from the point to the triangle look like this
+#well it just chooses an element right so the point is terminal so we can just
+#call this an element and it works very much like in the category of sense in
+#fact we'll see this in the Junction's lot a lot but I'll be for a minute so it
+#just looks like this okay any map here just specify just just specifies a
+#distribution so this illustrates our general idea that instead of thinking of
+#these objects as distributions we should think of the Maxis distribution itself
+#in fact what's a map from a non point for example from a triangle to a simplex
+#well that just memorizes a conditional distribution for example here let me
+#draw this a bit bigger so we have an interval like this and suppose we just
+#have a map that so this simplex is free it turns out and of course because
+#every point here is a combination of the three vertices we can specify an app
+#just by specifying where the three vertices of a linear no relations if it's
+#free obviously if one thinks about it everything is obvious that one thinks
+#about it okay so this is I'm sort of drawing the image here but you see what
+#we're doing is were just projecting it down here this is of course on the only
+#map but this is the map that is interesting to think about just very
+#illustrative
+#
+#what this means is well again I'm not sure whether it helps to have a concrete
+#example but suppose this is suppose that this snow rain and funny and suppose
+#this is you know I don't know so then what this would so what we have then is a
+#conditional distribution and listen write this as probability of a given B
+#where B is one of these three events an A is one of these two events does that
+#make sense so the data of this morphism precisely contains the data of this
+#conditional distribution when you said it's interesting when we are looking at
+#the projection down there's nothing about it being those like straight lines
+#that makes it right you can draw a lines from any vertex to any point on there
+#that's right yeah and is there a probability interpretation of what this
+#morphism does to a point it inside of yeah ocean uh well we'll get that's great
+#yeah we'll get to expectations in a bit what's nice well okay well yeah that's
+#a great question so suppose now that we have that we know some of the weather's
+#so so this is just a conditional distribution or if you'd really like we don't
+#even have to imagine that this distribution over these so we can write it like
+#this this is the notation where if the B doesn't is like this external non
+#probabilistic variable but just for simplicity of this always use this notation
+#even when it's not conventional but suppose we do have a prior over this so
+#what this what we can talk to this as prior probably of B given true or just
+#probably repeat okay and this tells us this gives us a prior over the weather
+#and if you compose these two maps just under this construction in the
+#composition is just composition of set maps then what you get is well in this
+#case you get the recycle is a projection is not because it's especially
+#important I guess but it's an it's nice to draw so that you get this point so
+#this point is the probability of a scarf or to the knot scarf just given this
+#prior river weather does that make sense so in other words okay let's go
+#straight through and I'm writing bigger than ice buckets I'll have to erase not
+#so in other words a function composition of automatically implements what this
+#is property that we have for Markov chains namely that equals okay that's very
+#nice now Alex asked about expectations and so one nice thing about generalizing
+#from simplices to convex sets in general is that R is also a convex set so for
+#example ok I'll erase this
+#
+#
+#suppose that we just map this into our and have so our looks like this oh sorry
+#and I'm suppose I I didn't spend I sort of thought abstractly while thinking
+#about this talk but now I realize you should probably have an example so let
+#let's just say like itchiness or something so let's say that if I wear a scarf
+#the itchiness is 7 and if I wear a not scarf the itchiness is to let's say
+#minus 2 just to be comfortable and and then what you guys is that function
+#composition gives you the expected value and so in other words function
+#composition automatically implements that expectation of pressures this puff of
+#a goodness T is the sum over all okay this is R&R of the probability that this
+#is perhaps a clunky way of writing it but it really shows how this is an apples
+#to this right does that make sense is a mistake I don't think this is a mistake
+#yeah okay right so we have this now you notice that all the slips that we
+#talked about simplicity's squares are our subsets are convex subsets of a real
+#vector space right but turns out that there's some exotic convex sets too and
+#the theory that will develop to the extent that will develop any theory at all
+#which is not a very true sentence but um will apply to them but I still haven't
+#figured out how to interpret them well so this is an interesting thing to just
+#think about perhaps during query and cooking time so uh here's an example of an
+#exotic algebra so let's start with our familiar interval okay but now let's
+#just take a quotient in my poster tie just means I'd like just working set for
+#example here's what it is so let's label this with zero one and that key is
+#that we identify the whole interior okay so what it looks like intuitively is
+#this blob like sort of a generic interior point which is a signal point okay so
+#we identified such a set of three things and I will suggestively call them yes
+#maybe and no okay so we have a set map here and using the sent map we can in
+#this let this inherit the mixing operator from this okay the thing to do is to
+#check it's will define it in terms that it is well defined and so we here have
+#this weird exotic convex set which has three points but they are all different
+#and and to the extent that this is a probability simplex I like to think of
+#this as a possibility simplex is something necessary necessarily not or either
+#okay so one thing I haven't thought about is how to translate stuff about
+#sufficient statistics and ancillary statistics completeness of statistics these
+#theorems into this sort of more discrete logic so I don't know I thought that
+#was really cool so just keep in mind this this is a nice counter example to
+#certain things for example this makes it clear that not every retract sorry
+#that not every epi is a act in a few other things but yeah what it's like 25
+#yes plus 25 now yeah it is yeah - yes plus one maybe even though we're mapping
+#the entire interior of that thing of one of the lungs yeah so so notice that in
+#this axiomatization we don't allow ourselves to cancel right so if it if we did
+#allow yourself to cancel then the fact that like a 1/3 is 2/3 mixed and 2/3 136
+#coincide what allows to you know solve this full rank matrix and see that like
+#maybe actually has to contain two points but we don't tell our eyes also cancel
+#we just sort of have this forward direction right in other words we don't we
+#don't say that say that the image of an interval that for amortizes the
+#coefficient has to be objective right so in this case the Vale both flexing so
+#the mixing rule for this it's just everything happy maybe unless it's for snot
+#- like yes plus yes is yes but okay any other questions
+#
+#this can I read the best of let me just do this again so back into it more
+#colorfully what's the product of these that's right yeah so it's a square and
+#but it's it's uh somewhere with some structure right so they're two projection
+#maps that that looked like this right I should have looked alone okay so um how
+#about a co-product of oh wait we already did all these okay yeah but that's
+#that's okay there there okay so we know this to be a tetrahedron and I'll just
+#draw it again and it looks different now how about tensor so okay so first I
+#haven't actually written anything about concern hum but it's intuitive AHA that
+#we have an internal time right because by like element Y flash component wise
+#mixing the hum set is a convex set okay so do do have an idea of what Homme is
+#so this right so what is this this is the this is the space of poitain
+#parametrized coins so how many dimensions do so first of all what's what's this
+#hum just a points to this a line yeah yeah it's a line right it's like this now
+#what's now okay so what's this so to specify a map from here to here synthesis
+#where you just have to specify a map from here to here and a map from here to
+#here right so what's the W almost it's the other one problem it's yeah exactly
+#it's a product now so it looks like this where like this but we see it sort of
+#different because of this is purple and both of these axes are careful right so
+#so does does that make sense so intuitively this is a cube while this is a
+#prism so for example if we have this and it looks like that but the
+#generalization of this is is this does that make sense okay so this just happen
+#is that low dimensional poisonous okay great so finally how about tensor I'll
+#I'll erase this bottom part of the cube so that we have space for tensor so
+#what do you think this tensor this is so my tensor I just mean the thing that's
+#ad going to hollom and it turns out exists so using your vector space intuition
+#you have an idea what tensor is and while you're thinking I'll just drop this
+#is getting better so first of all how many dimensions should it be Alissa's
+#you're a sickly thinking about this so so when you when you listen let's let's
+#move to vector space land right so and it said in the sense that tensor is sort
+#of left dish or free so we can move to back of space-time via this pre bunker
+#and hope that things work so so we're call this that sense is a two simplex it
+#moves to r2 right and since this is the truce implicit moves to our - so what's
+#our two tenths are our two how many dimensions is that or right two times
+#exactly yeah so this is four dimensions but nobody know how this as a this like
+#in convex lens looks like it's more dimensional so in fact you sort of see from
+#from the thing I erased you see from the thing I erased about how a triangle
+#goes to r3 that there's this all this off by one and this is really by one of
+#how like you know tech normalization it's a thing in probability right so it's
+#also one less degree of freedom and you think there is so so this should
+#correspond to something that's 4 minus 1 dimensional right it turns out that
+#corresponds to a tetrahedron but just like this is a prism but it and this is a
+#cube this is sort of a different type of treasure features in this sense if
+#this is purple and this is yellow then the way that this goes is that you have
+#a purple and a purple and a yellow and a yellow ok so that's what this young is
+#it not the case that tensor preserves like recent Lucy's um no answer does it
+#does yeah but the you know the maps that you that is equipped with her
+#different I think so yeah often I mean certainly I screw in the simplest C's
+#that's a great question yeah so I'm able to use the monoidal structure and come
+#but after this point I stop think about that got just so that's a good question
+#to ask okay any other questions okay so I'll give two more examples of this I'm
+#permitting okay okay so and then after that we'll skip part two and go oh I
+#will after this little even joking then I'll skip part even go to Part B okay
+#but okay so they're two more because I think this is really fun I think like
+#this is something that you clicked it up thought about so so the question for
+#you is what's um let's say this goes to this so this is I think you clearly
+#have enjoyed this and that's your clue so so the point is that we have two
+#independent or flips that are the condition for this one thing so how many
+#dimensions do you think it is well 1 3 yeah 3 exactly so you'll have some
+#three-dimensional solid whoa very good yeah indeed we have an optic we can
+#write here Wow wait how do you come at now because I showed you oh great ok
+#well very good so what I've showed you and let's just ponder this for a bit I
+#think it's really cool this shows us the geometry of this of this non-trivial
+#setting where we have a independent of B and these generates C right so this is
+#this starts to get into like graphical models and this is the space of all
+#possible such graphical models without a prior on A&E of course it had a prior
+#name D that's just this times a square right so I've drawn out so what do you
+#think some of this vertex is everything goes to zero matter mixes everything
+#goes to one and so okay does that make sense so it's it's cool you can get
+#every pala either in this way just because every politician is quotient of the
+#simplest but yeah when you said times so I'm thinking of like um of something
+#parametrized by something as like putting a prize wait put anymore a price well
+#you're gonna cry on this depends on this this is like sort of in some sense
+#portrait priors except that they're related because the prior well it's more
+#like lightning is because such an eccentric instructor yeah yeah great um one
+#other thing is this look so how many okay so we've established staff all the
+#old code limits and code and limits exist how many actually use them so I'll
+#show you how to interpret well okay you'll see I'll show you how to interpret a
+#pullback so
+#
+#so and this will be the last sort of polyhedral geometry thing
+#before we move on so suppose that we have something like this so I want to get
+#this right let's see so suppose we have this projection and it looks like this
+#so the projection goes this way and this other projection goes this way and
+#let's be kind to ourselves and get these to be the same point so so that it is
+#easier to draw okay sorry does that does that make sense okay I should have I
+#should have also pre-prepared this drawing so we have two projections and so
+#you can think of it as for example two experts one expert and so okay so so
+#there's this real estate in the world sparker naught star and then the two
+#experts one of them can see whether there's a scar versus commands had there be
+#a scar from that or got there no not especially does it not be aspire or maybe
+#sometimes they're just undecided and just do a funny look like ways with this
+#but you know like they find out they have a pre okay that's what the that's
+#what the equalizer part of this push out diagram says so what does this look
+#like and it turns out that's a degenerate off dekeydra nor was it different
+#lots of things I'll just draw it out for you in what we can interpret it I'm
+#sorry there's a such a graphic picture but we'll see okay so what it looks like
+#is this so it so first of all we have first all these are sort of these certain
+#there's a hinge well okay but we'll see so it looks like sorry guys let me try
+#this really thick so okay so it looks sort of like this so the idea is that
+#there's a 90s that idea is that there's a 90 degree angle here I mean this we
+#know there aren't angles here if I just wanted to see like what the actual
+#Speltz looks like and there's something that looks like this so the point is
+#that this this triangle is associated with this triangle say and this triangle
+#is associated with this triangle and then what we do is we carve out we carve
+#out out of 3d space this this sort of drawing of them so so it's sort of like a
+#tent where on these two planes you erect a square does that make sense and so
+#what's the point of this well the next thing about viewing these things in
+#terms of polyhedra is that you can see sir which slices of squares and scores
+#mean independence so what does this mean this means that if you condition you
+#condition on one of these if you condition on like the less I use condition on
+#necessarily there being less bar for necessarily there not being the sparkle or
+#something in between then there remaining then the conditioning distance taking
+#a slice or a toga and this line is this line right then you get a square being
+#that meaning that if you condition so here's the sort of generative network if
+#you condition on this that at least you are independent because they're square
+#so that's one way that you can interpret this okay any questions so so I like
+#to always get everything went that way well yeah well I mean the primary
+#process wasn't really this way because if it was this way that the thing is
+#that if the general process was the other way would actually have to go from
+#answer to because 8/10 review sort of all the joint combinations right so
+#another way to think about it is that we have a map just from a single expert
+#to the spark thing or you can think of a sort of the reverse from the scarf to
+#the single expert that's a little tag valued function what's the point the
+#point is that since we all have a map from like one of the coordinates to this
+#there's no there there's no space for the date of the interaction right for
+#example you can't say like expert X or X vertical spec okay oh no so I'm
+#running out of time so okay so I've been so some advice is that halfway through
+#to talk I should tell a joke and well we're way more than halfway through the
+#talk so it'll be a bad joke and some cues so first of all any questions after
+#this we'll do something completely different let's get to infinity okay no
+#questions okay so the joke is this what do you call someone who meets a
+#category three paper the co-holder the co-author okay okay so the last thing I
+#want to do is so spring audience I want to talk to you about statistics and
+#let's see and I'll just I'll just erase this thing I just true well actually
+#let me just summarize - really really quickly the idea is that you can define
+#okay let me just give you this inspirational diagram so so suppose that we have
+#some distribution from a point so we have a point to X and then after that what
+#we can do is we all have a map from X to X tensor X right this is just the
+#diagonal and so at least in this category we do so that we can split it and so
+#so what Bayes theorem says is that this object is the same thing as this object
+#is the same thing as this object okay so what basically it just does in string
+#diagram language is that you can slide this YX took my X to become a wyatt's
+#
+#yeah I'm just any trouble interpreting the second thing like alright these peas
+#like what you're calling the morphisms or is that actually a probability or
+#okay so so what I need let me let me replace it like this and so in this case
+#it would just be 1 or 0 so I guess what I mean is over a sorry wait what am I
+#even doing oh my goodness no okay no this is f ok yeah ok ok thank you I think
+#it's done over a right yeah thanks oh yeah this makes sense yeah thanks
+#anything else I mean okay so before but before I said to false things that they
+#cancelled so so I mean this is this is true and this go inside so a function
+#composition okay okay so now let's go on to the next thing now that we're
+#familiar with this category let's talk about the cola bits and so forth so cool
+#construction yeah oh that makes a lot of sense so let me just quickly go
+#through what the limits in colorists and tensor in Hamar and then we'll
+#actually see them what they mean so to show has all Coulomb let start with the
+#limits so first let's show has products and then also has three Blazers so oh
+#sorry one thing I should do before this okay yeah one thing I should do before
+#this is showing you a useful injunction so um as I alluded to the simplest
+#these are free and there's a and what I mean by that is is that there's an
+#injunction this is an assumption like this okay so given the set what you can
+#do is you can form the simplex whose vertices are about set right so I'll just
+#I'll just say I'll just say s goes to the S vertex simplice okay now with Emin
+#and given given a convex set you just forget it okay so here's a for example
+#functor he's a free hunger this is left i drink to this okay so we have this
+#nice thing we also have a free functor from cognitive beck and how it works is
+#that see maps to our to the US see over the relations of like all i happen
+#relations in see okay so this is and it's just it's a bit less obvious than
+#that it's almost equally obvious it sounds like the same order of magnitude and
+#of course he just goes to so this is another for you okay now let's dive into
+#this particularly thunder yeah free from cons to them and it's um see to this
+#thing that i'm putting our plus c over this so well this is is a vector space
+#generated by a basis in X by C so just take the elements of C as as formal
+#elements and you know this plus is direct sum so this is just like oh so you
+#got C is any complex C is any convex set yep for example if you don't think
+#that the second ones at the continue above all possible convicts yes did your
+#for me a vector space is not even Hilbert space yeah well yeah that's true so
+#this is not as one-dimensional in most cases yeah so it's not a builder today
+#list but we don't need any like inner product no we're here will be use
+#anything but like linear algebra looking things yeah however when we mod out by
+#this relation we get something that's usually fine dimensional for there so
+#this relation is generated by so whenever mu of any X Y it's generated by a X
+#so I'll write our for sort of the formal element in here so accident sleep and
+#X bar is in this product so X bar plus one minus ay Y bar z bar so it's just
+#generated it's a relation generated by keys so for example useful particularly
+#my not by the subspace generated by the span of penalties so this is just you
+#know a co-product and this is like a go equalizer this is the coke the leftist
+#construction which makes induce the free functor so because I just like the
+#vector space generated by like the lines if you take well sorry but I'm seeing
+#if you take like three inset and you go all go to calm you get this the other
+#place yeah the back you get the vector space containing the precinct let's has
+#its diet like as the you gotta get art 3:30 yeah you get art 3 and then if you
+#go back you get the embedding of the triangle in that vector space yeah yeah so
+#that's a great example so so this triangle would go to r3 this is this is an
+#embedding the simplex in in real space out people like see which is the you
+#know if you go this way is it easy to see what it is on the square that's
+#interval time interval that's an interesting question um I don't know well
+#let's think so it would also be three dimensional ah yes it would be are three
+#as well yeah I'm one way to see that this is sort of sketchy but you can think
+#of light like this construction doesn't really care about anything but sort of
+#just the dimension of this of just something in the interior so for instance so
+#you can model a square as this and then just you would embed like this and the
+#one difference is that even though it's isomorphic to this it's not canonically
+#isomorphic to like a standard r3 basis there are three with a standard basis
+#because like there are there are no three privileged accents but still are
+#think that's a cool okay so this is an injunction and it's using this we can be
+#inspired to guess what the Linux and Coulomb it's I could I erase this yeah oh
+#okay there's a lot of cool stuff on the street it's interesting so far okay
+#okay so um two minutes all right okay so products let's store that product
+#exists first so uh though so we have a forgetful hunger which has to preserve
+#limits right so that means as a set every limit will just be whatever it is in
+#set okay and from this design a sense so from this we can easily guess what
+#what the construction should be so in particular the product will just be as a
+#senate cartesian product with element wise mixing so this is element it's not
+#elementary to right this element yeah that's I mean sorry okay component wise
+#cool okay so we've already seen the square is actually I'll make a table after
+#this so so I'll draw the square as an example but let's go quickly - there's no
+#let's go quickly - oh it's okay - equalizers okay so same idea so it's just the
+#equalizer inset with mixing inherited from this so meaning that it will
+#actually be a subset right well it turns out that will be a convex subset if
+#you think about it so let me just draw me so same same as this well so okay so
+#okay so suppose you have suppose you have a square and it maps to the line two
+#ways so side so it pours onto line vertical line two ways okay what's what's
+#the equalizer at this diagram so it'll be the subset of points here which have
+#the same coordinates here so the equalizer will be this diagonal right okay so
+#that's just an example okay so co-products now to figure out what this is we
+#you should be inspired by this and of course this isn't enough data taxi so one
+#has to check this by one check every so for Coke products it's just the three
+#financially combinations I'm Terry convex combinations okay is this make sense
+#this is like a thing it has to be great so should I write this out or is it
+#quick can you give an example for Pfc oh great yeah so eg so what is what is
+#what's this product this any ideas like what it looks like what okay it not
+#quite order but it has his four points you ready it has for the promise of
+#squares the square has two times two points right but this thing will actually
+#have two plus two points yeah so what thing has two plus your point yes dr.
+#hedron's so okay so and here's how he's in bed so this immense here and this
+#and that's here and later we'll contrast this to the tensor products the tensor
+#of these two also looks like this but the way these embed is different well so
+#they don't embed actually built the way they have been yeah okay and you
+#interpret that yeah so this is this is probably I think the good guiding
+#example first of all is let me first show you what this with Ocala baseness but
+#then I'll redraw it because I don't have space so what's this it's just
+#actually let lets let's make this a Pentagon what's the Pentagon plus a dot
+#well that's just a pyramid that's just a pentagon shape based pyramid right so
+#probabilistically this gives you sort of the code it gives you a chance to play
+#like okay so if you're maybe thinking about probabilistic programming languages
+#this were just the Assam fight well yeah yeah you can go that way and and the
+#reason is between this and like a six step or is there yeah far as s6 simplex
+#is not three-dimensional right but what co-product preserves with simplicity is
+#that yeah so co-product yeah but this Pentagon is not a simply a yeah buddy
+#that's right so of innocent Bluffs plus and M simplex is intense Wisconsin plus
+#so it's the limiting things which have to do with
+#
+#it's very nice and you can you know Staffies to have like multiple conditions
+#to improve things about like P of a given B comma C but follow I just like
+#moving these around it's an instructor like we actually started start with this
+#by definition so we define we define a box like this to be a conditional if
+#it's like this so this is true by definition and then the conscience of the
+#theorem is that there exists such a thing always sometimes it's not unique and
+#that's the way of getting around normalization okay but well who cares about
+#things being unique yeah so uh oh great oh okay wait I must be off by law okay
+#great ten more minutes that's a lot so statistics so what I'll do is I'll erase
+#everything that we have space no no oh that so different subjects no more
+#geometry let's talk about statistics so the general framework is that we have
+#some parameters that generates some mess up some observations okay now what's a
+#statistic well a statistic is just just a map from XS okay um for convenience
+#we don't want s to be bigger for example we want to embed s in anything baby
+#wanting that best of your reach raft okay and this is like if you just think
+#about intuitive Li what physics might be like the average of your date or
+#something it's always there be traffic okay so what that looks like is that we
+#have s wait this is not right aha there yeah okay does that make sense so this
+#is our definite to the retrack for example of any so any spirit active
+#deterministic function if this is a simplex and this is a simplex we can make
+#sense of it whatever communistic function is namely a function that well okay
+#well okay there's a nice way of characterizing them which is that they commute
+#with this c'mon right operation right and there's a or we can just say that in
+#this very special case they are the maps that are the image of the three funky
+#yeah yeah I think we're still working this out for the crispy cannabic topic on
+#that thing so so but yeah so that's something for you okay so this is this is a
+#statistic this object is a statistic now there are some concepts in particular
+#what does it mean to be an ancillary statistic what it means to be sufficient
+#minimal sufficient and complete okay so I'll just I'll just draw them out so
+#what it means to be a sufficient statistic is that there exists an arrow here
+#so
+#
+#okay intuitively what this so that makes this commute of course that makes
+#theta 2 EPSA Siemens theta 2 SDX intuitively what this means is that X is
+#independent data given s because we have this Markov chain right just like that
+#a very big dating function composition has to do with Markov chains okay does
+#that make sense let's hope needs to be sufficient what does it mean to be
+#minimal sufficient well minimal sufficient it's just initial amongst the
+#fifties okay so it's just so this is again where the coal energy stuff comes in
+#but implicitly so wait has everyone seemed like sufficient statistics official
+#statistics yeah no okay well take this as a definition I promise you the
+#important link like in this stuff is actually mentioned in both so currently
+#okay so what's what's another nice concept is a concept of an athlete's
+#sadistic which is sort of the opposite so X so so if we have a statistic like
+#this an Ansel a statistic is one that depends only on the data not on theta
+#right data amount theta so how do you say that well I just say factors do one
+#okay so this is called an ancillary statistic and finally I'm not sure I'm
+#writing something finally we have the concept of okay fine we have the concept
+#of a complete statistic so we have a theta X s s Logistics is complete if
+#there's a map and so we always have this just by just defined to be this
+#composition okay so it's complete if there exists this question no let's see
+#because you said to insufficient oh oh oh sorry yeah let me think mmm complete
+#advices no that's not true yeah thank you those that one just doesn't commute
+#um what is well what is that what is the case here um yeah yeah I guess I guess
+#this is or how about yeah let's just consider complete sufficient statistics
+#and I broken this out before and I worked it out and it was right but I forgot
+#but if I promised I'd work out of here not the definitions can you just draw
+#that yeah that's what that I was just right let's just write this if we have if
+#you have something like this then if we call it complete it oh well let's just
+#let's just let's just consider complete submission statistics and we'll figure
+#this out later okay so so sufficient there do exist there do exist insufficient
+#complete statistics and incomplete sufficient statistics and the Stinney
+#expressed in terms of arrows there's just something I'm missing maybe it's what
+#Brendan said but this is enough for the three theorems that well let's say two
+#teams that we'll talk about so that this makes sense we have sufficiency
+#minimal sufficiency and Salinas and completely necessary okay what's the
+#definition of morphism well I miss your definition or more to the most
+#efficient system it's just some just a matter that commutes with this for
+#running over and the theta and Athena device okay so we have serum let's see
+#sufficient are independent from so this is a this is the theorem that's
+#actually used in real life of actually we're used we're all in the finite case
+#but you can probably extend this to the infinite case where we are working with
+#metrics instead of finding support distributions and if so then this theorem
+#just says for example that the sample mean the sample variance of a normal
+#distribution are independent this is non trivial to prove and this is the way
+#that people using food that and so this is by 6 p.m. and what I'm what I've
+#done is I've translated these words which are usually said in terms of measures
+#and stuff and not really in terms of looking in on maps just looking at the
+#objects into this thing into this language so that it's easy to prove but I
+#think that these are sort of be if one generalizes probably to just like a
+#string diagram theory then I think this is the right set of notions but ok so
+#how do we prove this well two minutes okay well will this prove posses the okay
+#so let's just write out what we have so sufficient so we have this this we have
+#this okay so wait this doesn't look right oh yeah
+#
+#
+#we actually let me doctor all there it's all let me just draw the areas that we
+#want so okay okay so um what does what does completeness mean well completeness
+#means that this triangle commutes right so it means that this triangle
+#completes what is sufficiency say it means that this triangle commutes oh right
+#yeah of course yes efficiency just means that this triangle kuso completeness
+#just yeah you're right Brendon completeness gets me that this triangle I mean
+#it's done isn't so the other triangle okay yeah so completeness or sufficiency
+#yeah inside this triangle commutes and what does ancillary miss mean it just
+#means that this kind of a commute okay therefore we have a map we have a map
+#that goes from s to 1 to T which is the same which commutes with s 2 X 2 T and
+#so what we have is that and remember T is generated from X so we have s X 1 the
+#fact that going from s to T is the same as factoring through 1 means that is
+#independent T okay does that make sense ok so that is the theorem and there are
+#other things you can do like let me just mention the statement and you can also
+#work it out with diagrams you can show that every bit of a minimal sufficient
+#exists then every complete sufficient is equal to that minimal sufficient and
+#this is called Bahuguna serum and the thing that you need is that if you have a
+#retract and then the arrow given by minimality then that's another minimal
+#error
+
+

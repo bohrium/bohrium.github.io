@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="../js/toggler.js"></script>
+    </head>
+    
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
+
+        $\newcommand{\NN}{\mathbb{N}}$
+        $\newcommand{\ZZ}{\mathbb{Z}}$
+        $\newcommand{\RR}{\mathbb{R}}$
+        $\newcommand{\CC}{\mathbb{C}}$
+
+        
+<p>
+<p>
+<p>
+<h2>  Problyhedra </h2>
+<p>
+These are some notes relating to 
+<a href="https://youtu.be/Td_7_7MBHcU">my talk</a>
+about convex spaces and probability theory.
+<p>
+<h3>  Beyond Simplices: the Category $Conv$ </h3>
+<p>
+<h4>  The Category of Convex Spaces </h4>
+<p>
+<h5>  Probability Simplices </h5>
+<p>
+<p>
+<h5>  Convex Spaces </h5>
+<p>
+    Intuitively, a <em>convex space</em> is a space closed under convex combinations.
+Precisely, we consider a set $X$ equipped with a <em>mixture operation</em> $\mu:
+\Delta_X \to X$ from the space $\Delta_X \triangleq \left\{ f:X\to\RR_{\geq 0}:
+|\text{supp}(f)|\lt\infty\,\,\,\text{and}\,\,\,\sum_x f(x)=1 \right\}$ of
+formal finitary convex combinations of $X$'s elements to $X$.  We say that $X$
+is a <em>convex space</em> provided that $\mu(x \mapsto \delta_{x,y}) = y$ for each
+$y\in Y$ and that $ \mu(\sum_{i\in I} c_i f_i) = \mu(x \mapsto \sum_{i\in I}
+c_i \delta_{x,\mu(f_i)}) $ for all finite $I$ and all sequences of $c_i\in
+\RR_{\geq 0}$ and $f_i$ for which the two sides are defined.  Each valid $\mu$
+is determined by its restriction to functions with size-$2$ support, so we will
+sometimes conflate $\mu$ and this restriction, and for convenience we will
+sometimes write $ \mu(x \mapsto \alpha \delta_{x,v} + (1-\alpha) \delta_{x,w})
+\in X $ as $ \alpha v + (1-\alpha) w \in X $ when $v, w \in X$.
+<p>
+<h5>  Affine Morphisms </h5>
+<p>
+    The morphisms in the category of convex spaces are those that preserve
+$\mu$.  More precisely, we observe that $\Delta$ is an endofunctor on the
+category of Sets, and we declare the morphisms from $(X,\mu_X)$ to $(Y, \mu_Y)$
+to be those functions $T:X \to Y$ such that $T \circ \mu_X = \mu_Y \circ
+\Delta(T)$.  We have defined a category.  We could have defined the category
+in fewer words --- as the <em>Eilenberge Moore category for $\Delta$</em> --- but we
+choose here to be very concrete.
+<p>
+<h5>  Exotic Spaces </h5>
+<p>
+    Not every convex space is a subspace of some $\RR^n$.  A source of examples
+comes from the semilattices, i.e. the posets $X$ with binary joins $\vee$: a
+canonical mixture operation on $X$ is determined by is determined by the rule
+$\alpha v + (1-\alpha) w \triangleq v \vee w$ as $v,w$ range through $X$ and
+$\alpha$ ranges through $(0,1)$.  For example, say $X = \{\text{no},
+\text{maybe}, \text{yes}\}$, where $\text{no},\text{yes}\lt\text{maybe}$.  Then
+we have $(1/3) \text{no} + (2/3) \text{yes} = \text{maybe}$ and $(4/7)
+\text{no} + (3/7) \text{maybe} = \text{maybe}$.  This is a space not of
+<em>probabilities</em> but of <em>possibilities</em>!  Likewise, if $X = \{\text{zero},
+\text{poly}, \text{exp}\}$ with $\text{zero}\lt\text{poly}\lt\text{exp}$, then
+we have $(2/5) \text{zero} + (3/5) \text{poly} = \text{poly}$ and $(5/6)
+\text{poly} + (1/6) \text{exp} = \text{exp}$: we have a space of <em>sizes</em>.
+<p>
+<h4>  Examples of Morphism Composition </h4>
+<p>
+<h5>  Marginalization </h5>
+<h5>  Expectations </h5>
+<h5>  Abstraction to Possibilities </h5>
+<p>
+<h4>  Monoidal Structure and Useful Adjoints </h4>
+<p>
+<h4>  Products and Independence </h4>
+<p>
+<h5>  Existence and Interpretation of Products </h5>
+<h5>  A Pullback Example </h5>
+<p>
+<h4>  Coproducts and Tagged Mixtures </h4>
+<p>
+<h5>  Existence and Interpretation of Coproducts </h5>
+<h5>  A Pushout Example </h5>
+<p>
+<h3>  Tensor, Hom, and Bayes </h3>
+<p>
+<h4>  Hom and Conditional Distributions </h4>
+<p>
+<h5>  Existence and Interpretation of Internal Homs </h5>
+<h5>  Hom from Square to Interval </h5>
+<p>
+<h4>  Tensor and Joint Distributions </h4>
+<p>
+<h5>  Existence and Interpretation of Tensor Products </h5>
+<h5>  Product vs Coproduct vs Tensor of Two Intervals  </h5>
+<p>
+<h4>  Bayes' Theorem </h4>
+<p>
+<h4>  Visualizing the Monty Hall Problem </h4>
+<p>
+<h3>  Statistics: Fisher, Basu, and Bahadur </h3>
+<p>
+<h4>  Statistics and their Properties </h4>
+<h5>  What is a Statistic? </h5>
+<h5>  Sufficiency, Mimimality, Completeness, and Ancillarity </h5>
+<p>
+<h4>  Some Basic Theorems </h4>
+<h5>  Fisher's Theorem </h5>
+<h5>  Basu's Theorem </h5>
+<h5>  Bahadur's Theorem </h5>
+<p>
+<h3>  References </h3>
+<p>
+    I figured out this stuff by myself and for fun.
+    As usual, I found out that others had thought of
+    isomorphic ideas before me:
+<p>
+    <b>FILL IN</b>
+<p>
+<p>
+<p>
+<p>
+    </body>
+</html>

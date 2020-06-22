@@ -3,7 +3,10 @@
 # create: 2020-04-05 
 # descrp:
 
-! Basic Definitions in Computability Theory
+! First Definitions in Formal Languages
+
+Whereas @Sipser@ defines *regular* and *decidable* languages algorithmically, this short note
+defines the same concepts algebraically. 
 
 !! Languages as Problems
 
@@ -84,4 +87,6 @@
     every accepting trajectory has a unique terminal tape (and likewise for
     rejecting trajectories). 
 
+!! References
 
+    *Sipser*   ---  %Introduction to the Theory of Computation%          ---  1997

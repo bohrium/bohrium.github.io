@@ -37,20 +37,27 @@ randomness, if any, it corresponds to.  For each configuration $x$, we compute
 the number $f(x)$ that the measurement would yield.  Then our prediction is the
 expectation of $f(x)$ with respect to the aforementioned distribution.
 <p>
-For example, when $f=E$, the recipe helps us predict the system's total energy
-as a function of its temperature; we may thus compute the heat capacities of
-systems such as crystals, molecular gases, and blackbody radiation.  In fact,
-for a gas with very low pressure $p$ (force per area) and very low density $n$
-(particles per volume), the recipe predicts that $T = p/n$.  It was a priori
-unclear how to measure temperature; this result about gases helps us to
-calibrate our thermometers: the appropriate value of $T$ for a different system
-will be the $p/n$ of a low-pressure, low-density gas in equilibrium with the
-system.  
+    For example, when $f=E$, the recipe helps us predict the system's total
+energy as a function of its temperature; we may thus compute the heat
+capacities of systems such as crystals, molecular gases, and blackbody
+radiation.  In fact, for a gas with very low pressure $p$ (force per area) and
+very low density $n$ (particles per volume), the recipe predicts that $T =
+p/n$.  It was a priori unclear how to measure temperature; this result about
+gases helps us to calibrate our thermometers: the appropriate value of $T$ for
+a different system will be the $p/n$ of a low-pressure, low-density gas in
+equilibrium with the system.  
 <p>
     Our goal is to provide intuition for this recipe.  We will discuss two
 related questions.  <b>First</b>, why is measurement related to an average at all?
 <b>Second</b>, why does the average have the specific weights $\exp(-E(x)/T)$?
-<p>
+These questions are difficult and we will not succeed beyond offering some
+partial intuition.  Indeed, there does not seem to be consensus even on the
+basic question of what physical variation the aformentioned distribution 
+fundamentally represents.
+Various texts interpret the distribution as that of many temporally-separated
+measurements over long times as the system evolves (<span style="font-variant: small-caps";>Halmos</span style="font-variant: small-caps";>), or of many small
+parts of the overall system (<span style="font-variant: small-caps";>Khinchin</span style="font-variant: small-caps";>), or of many possible initial
+conditions of the system (<span style="font-variant: small-caps";>Feynman</span style="font-variant: small-caps";>).   
 <p>
 <h3>  Boltzmann's Law  </h3>
 <p>
@@ -83,8 +90,6 @@ E(x) -\gamma C(x))$.
 <h4>  Liouville's Theorem </h4>
 <p>
 <h4>  Can Dynamics get Stuck?   </h4>
-<p>
-<p>
 <p>
 <h3>  References </h3>
 <p>
