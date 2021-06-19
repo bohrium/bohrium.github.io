@@ -20,24 +20,21 @@ expectation of $f(x)$ with respect to the aforementioned distribution.
     For example, when $f=E$, the recipe helps us predict the system's total
 energy as a function of its temperature; we may thus compute the heat
 capacities of systems such as crystals, molecular gases, and blackbody
-radiation.  In fact, for a gas with very low pressure $p$ (force per area) and
+radiation.  In fact, for a gas with very high pressure $p$ (force per area) and
 very low density $n$ (particles per volume), the recipe predicts that $T =
-p/n$.  It was a priori unclear how to measure temperature; this result about
-gases helps us to calibrate our thermometers: the appropriate value of $T$ for
-a different system will be the $p/n$ of a low-pressure, low-density gas in
-equilibrium with the system.  
+p/n$.  This result helps us to calibrate our thermometers: the appropriate
+value of $T$ for a different system will be the $p/n$ of a high-pressure,
+low-density gas in equilibrium with the system.  Thus, though it was a priori
+unclear how to measure temperature, the theory is falsifiable.
 
     Our goal is to provide intuition for this recipe.  We will discuss two
 related questions.  *First*, why is measurement related to an average at all?
 *Second*, why does the average have the specific weights $\exp(-E(x)/T)$?
-These questions are difficult and we will not succeed beyond offering some
-partial intuition.  Indeed, there does not seem to be consensus even on the
-basic question of what physical variation the aformentioned distribution 
-fundamentally represents.
-Various texts interpret the distribution as that of many temporally-separated
-measurements over long times as the system evolves (@Halmos@), or of many small
-parts of the overall system (@Khinchin@), or of many possible initial
-conditions of the system (@Feynman@).   
+In the process, we will attempt to interpret the average itself: is it
+fundamentally an average over many temporally-separated measurements of a
+single system (@Halmos@)?  Or an average over many small parts of the overall
+system (@Khinchin@)?  Or an average over many possible initial conditions of
+the system (@Feynman@)?   
 
 !! Boltzmann's Law 
 
@@ -71,15 +68,27 @@ E(x) -\gamma C(x))$.
 
 !!! Can Dynamics get Stuck?  
 
+    A monoatomic gas in a torus has a hamiltonian like
+    $$
+        \mathcal{H} = \sum_i h(p_i) + \delta \sum_{i,j} \tilde{h}(q_i, q_j)
+        \triangleq
+        \mathcal{H}_0 + \delta \mathcal{H}_{+}
+    $$ 
+    where $(\vec{p},\vec{q}) \in T^\star({(S^1)}^N)$, the co-tangent space of the torus.
+    We would like to say that
+
+
 !! References
 
-    *Batterman*   ---  %Why Equilibrium Statistical Mechanics Works%        ---  1998
+    *Batterman* --- %Why Equilibrium Statistical Mechanics Works%                       --- 1998
 
-    *Feynman*     ---  %Lectures on Statistical Mechanics%                  ---  1981
+    *Feynman*   --- %Lectures on Statistical Mechanics%                                 --- 1981
 
-    *Khinchin*    ---  %Mathematical Foundations of Statistical Mechanics%  ---  1960
+    *Khinchin*  --- %Mathematical Foundations of Statistical Mechanics%                 --- 1960
 
-    *Penrose*     ---  %Foundations of Statistical Mechanics%               ---  1979
+    *Lanford*   --- %Entropy and Equilibrium States in Classical Statistical Mechanics% --- 1973
 
-    *Truesdell*   ---  %Six Lectures on Natural Philosophy%                 ---  1966
+    *Penrose*   --- %Foundations of Statistical Mechanics%                              --- 1979
+
+    *Truesdell* --- %Six Lectures on Natural Philosophy%                                --- 1966
 

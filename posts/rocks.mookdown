@@ -4,53 +4,170 @@
 # descrp: rocks
 
 ! Rocks from the Ground Up
-!!!! Samuel Tenka, 2020 February
-
-!! Invitation to Geology
-    The study of the earth is, of course, the central science: after all, the
-    scientific community's center of mass sits firmly within our planet's rocky
-    body.  We thus aim to survey the composition and history of the earth.
-    We proceed analytically by presenting what is known about the subatomic
-    constituents of rocks and from there composing toward rocks and continents.
+!!!! Samuel Tenka, 2020
 
 !! What are Rocks?
-    It was surely an insight to our ancestors that rocks, normally so stable,
-    could be. 
 
-!!! Quantum Field Theory
-!!! Representations of the Lorentz Group
-!!! The Standard Model 
-!!! Molecules and Minerals 
+    Geology is, of course, the central science: after all, humanity's center of
+mass sits firmly within our planet's rocky interior.  These notes explore some
+of the amazing phenomena that sculpt the landscapes around us.  We begin by
+studying the subatomic constituents of matter; from there, we compose toward
+minerals, formations, and continents.
+    
+!!! (Non-relativistic) fields
 
-!!! Application: the Sheen of Metals
-!!! Application: the Formation of Earth
-!!! Application: the Magnetism of Ferrite??
-!!! Application: the Speed of Earthquakes
-!!! Application: the Crystallography of Clay
+    To do geology, we must locate events in space and time.  So let
+    us write $\mathcal{S}$ for space-time.  We model each type of subatomic
+    particle as a section $\psi$ of some vector bundle $\pi:E\to\mathcal{S}$
+    over $\mathcal{S}$.  The Lagrangian density is
+    $$
+        \bar{\psi} (D - m) \psi
+    $$
+    for some appropriate differential operator $D$.  Both the fibers and the
+    base of the bundle enjoy some important symmetries.
+    
+!!!! Rotation-symmetry of the base determines the shape of $\psi$
 
-!! Whence Come Rocks? 
+    Our space-time $\mathcal{S}$ enjoys rotation symmetries $SO(3)$.  We insist
+    that the Lagrangian density be invariant under rotation; in particular, the
+    mass term must be invariant and hence $SU(2)$ must act on each fiber.
+    The fiber $F$ will be some irreducible representation of $SU(2)$ and hence of
+    $\mathfrak{so}(3)$.  Let us classify these irreps.  We note that $J_x, J_y, J_z
+    \in \mathfrak{so}(3)$ form a basis, where each represents right-handed rotation
+    along its associated axis.  Since $x$-rotation swings the $y$-axis toward the
+    old $z$-axis, we have $[J_x, J_y]=+J_z$.  In general, $[J_i,J_j]=\epsilon_{ijk}
+    J_k$.  For a fixed irreducible representation $V$, $J_z$ has some eigenvector
+    $v$ with
+    $$
+        J_z v = \lambda v
+    $$
+    We note that
+    $$
+        J_z (J_x v) = J_x (J_z v) + [J_z, J_x] v 
+                    = (\lambda J_x + J_y) v 
+    $$
+    and likewise
+    $$
+        J_z (J_y v) = J_y (J_z v) + [J_z, J_y] v 
+                    = (\lambda J_y - J_x) v 
+    $$
+    Therefore,
+    $$
+        J_z (J_x \pm i J_y) v = (\lambda \mp i ) (J_x \pm i J_y) v 
+    $$
+    By irreducibility, $J_z$ has an eigenbasis $v_{\lambda + m i}$ indexed by its
+    integrally-spaced eigenvalues for $a\leq m \leq b$.  By compactness of $SU(2)$,
+    $\lambda$ is imaginary, without loss $0$.  In fact, the most symmetrical
+    situation that $a+b=0$ is always true.  Indeed, Let $\boxed{\pm} = (J_x \mp i
+    J_y)/\sqrt{2}$ so that
+        $[\boxed{+}, \boxed{-}] = i J_z$ and
+        $[i J_z, \boxed{\pm}] = \boxed{\pm}$.
+    Then one sees by repeated application of those commutators that
+    $$
+          0
+        = \boxed{-} \boxed{+}^{b-a+1} v_{ai}
+        = -(b-a+1)(b+a)/2
+    $$
+    so $a+b=0$.  In particular, we have $-b\leq m \leq b$ integrally spaced for
+    $2b$ a non-negative half-integer.  We have thus classified (and constructed)
+    all the complex representations of $SU(2)$.  The smallest non-trivial
+    representations have $b=1/2$ and $b=1$.  These are inhabited, for instance, 
+    by the electron and by the %triplet state% of the heavy Hydrogen nucleus.
 
-!!! Entropy and Boltzmann
-!!! Chemical Equilibrium  
-!!! Phase Transitions and Symmetry
-!!! Beyond Equilibrium 
+!!!! Spinors and vectors: how the Lagrangian density is a (scalar) density
 
-!!! Application: the Reasons for Rain 
-!!! Application: Rain and Erosion??
-!!! Application: the Origin of the Universe
-!!! Application: the Composition of Earth's Core
-!!! Application: the Precipitation of Calcium Carbonate
+    $SO(3)$ acts on $\mathcal{S}$.  In fact, this action('s complexification) is
+    $Hom(\pi_{1/2}, \pi_{1/2})$, which is two-times-two dimensional and splits into
+    a one-dimensional $\pi_0$ summand (acting on time) and a three-dimensional
+    $\pi_1$ summand (acting on space).
+    
+    In the case where $\psi$ is a section of $\pi_{1/2}$, we may thus interpret
+    the Lagrangian density precise as: 
+    $$
+        \bar{\psi}_c (\sigma^{c\mu}_{b} D^b_{a\mu} - m I^c_a ) \psi^{a}
+    $$
+    where $\sigma$ converts from $Hom(\pi_{1/2}, \pi_{1/2})$ to space-time vectors.
+    
+!!!! Phase-symmetry of the fiber determines the shape of $D$
 
-!! Are Rocks Alive?
-    Among the most pertinent questions available to the living scientist in
-    light of our central science is the question: *are rocks alive*? 
+    The field $\pi_b:E\to \mathcal{S}$ enjoys a connection $\nabla$ that preserves
+    magnitudes on the fibers and commutes with the $SU(2)$ action.  The connection
+    induces the $D$ that we invoke in the Lagrangian density
+    $$
+        \bar{\psi} (\sigma D - m) \psi
+    $$
+    Let us write $D$ more explicitly by comparing it to some trivialization of
+    $\pi_b$ (that respects magnitudes and commutes with the $SU(2)$ action). 
+    The connection form is a one-form $-i e A$ valued in
+    $\mathfrak{u}(2b)$ by norm-preservation and in  
+    $i\mathcal{R} = \mathfrak{u}(1) \subseteq \mathfrak{u}(2b)$ because, by
+    irreducibility, nothing but phases commutes with the action of $SU(2)$. 
+    In short, we may write
+    $$
+        D^b_{a\mu} = I^b_a (\partial_\mu - i e A_\mu)
+    $$
+    where $A$ is a real-valued one-form.  Likewise, the curvature form is a
+    two-form $-i F$ valued in $\mathfrak{u}(1)$.  In daily life, $\nabla$ is
+    nontrivial in that $F\neq 0$.  
 
-!!! A Darwinian Perspective on Rocks
-!!! Game Theory in Reproductive Strategies 
-!!! Phenomenology of Diversity
-!!! Instability via Positive Feedback Loops
+    It is a calculational convenience to choose a trivialization so that we may
+    write $\nabla$ in terms of $A$, but doing so involves arbitrary choices on
+    which physics does not depend.  Still, the connection restricted to
+    topologically nontrivial regions of $\mathcal{S}$ contains more information
+    than the curvature (due to holonomy), and physics depends on this information
+    (the *Aharonov–Bohm effect*).  Therefore, $A$ has too much information, $F$
+    has too little information, and $\nabla$ is just right as a physical model of
+    the connection. 
 
-!!! Application: Locomotion and Community in the Saltation of Sand
-!!! Application: Competition in Glacial Erosion
-!!! Application: Foreground-Background in Canyon Formation
-!!! Application: The Stickiness of Clay 
+    We promote the connection $\nabla$ to a field with its own dynamics determined
+    by a kinetic term $- F_{\mu\nu} F^{\mu\nu}$.  Adopting traditional
+    constants of proportionality, the resulting Lagrangian density is  
+    $$
+        \mathcal{L} = \bar{\psi} (\sigma D_e - m) \psi - \frac{1}{4} F_{\mu\nu} F^{\mu\nu}
+    $$
+
+!!! Quantum particles
+
+    The amplitude to go from a field configuration at time $t$ to another at
+time $t^\prime$ is an integral over the space $\mathcal{C}$ of interpolating
+field configurations:
+    $$
+        \int_{\mathcal{C}} \exp\left(-i \int_{\mathcal{S}} \mathcal{L}/\hbar\right) 
+    $$
+    In the free theory where $e=0$, we may solve exactly.  
+    Let us work in momentum space.
+
+!!! Atoms and bonds 
+!!! Molecules and minerals 
+
+!!! Application: the sheen of metals
+!!! Application: earth's magnetic field
+!!! Application: the speed of earthquakes
+!!! Application: the crystallography of clay
+
+#!! Whence Come Rocks? 
+#
+#!!! Entropy and Boltzmann
+#!!! Chemical equilibrium  
+#!!! Phase transitions and symmetry
+#!!! Beyond equilibrium 
+#
+#!!! Application: the reasons for rain 
+#!!! Application: rain and erosion??
+#!!! Application: the composition of earth's core
+#!!! Application: the precipitation of calcium carbonate
+#
+#!! Are Rocks Alive?
+#    Among the most pertinent questions available to the living scientist in
+#    light of our central science is the question: *are rocks alive*? 
+#
+#!!! A Darwinian perspective on rocks
+#!!! Game theory in reproductive strategies 
+#!!! Phenomenology of diversity
+#!!! Instability via positive feedback loops
+#
+#!!! Application: locomotion and community in the saltation of sand
+#!!! Application: competition in glacial erosion
+#!!! Application: foreground-background in canyon formation
+#!!! Application: the stickiness of clay 
+

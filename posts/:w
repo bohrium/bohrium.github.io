@@ -1,42 +1,22 @@
-<html>
-    <head>
-        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-        </script>
-        <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
-        <script type="application/javascript" src="../js/toggler.js"></script>
-    </head>
-    
-    <body>
-        <div id="togglerbody" style="text-align:center">
-            <button id="toggler"> repaint </button>
-            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
-        </div>
+# author: samtenka
+# change: 2020-01-07
+# create: 2020-01-07 
+# descrp: rocks
 
-        $\newcommand{\NN}{\mathbb{N}}$
-        $\newcommand{\ZZ}{\mathbb{Z}}$
-        $\newcommand{\RR}{\mathbb{R}}$
-        $\newcommand{\CC}{\mathbb{C}}$
+! Rocks from the Ground Up
+!!!! Samuel Tenka, 2020
 
-        
-<p>
-<h2>  Rocks from the Ground Up </h2>
-<h5>  Samuel Tenka, 2020 </h5>
-<p>
-<h3>  What are Rocks? </h3>
-<p>
+!! What are Rocks?
+
     Geology is, of course, the central science: after all, humanity's center of
 mass sits firmly within our planet's rocky interior.  These notes explore some
 of the amazing phenomena that sculpt the landscapes around us.  We begin by
 studying the subatomic constituents of matter; from there, we compose toward
 minerals, formations, and continents.
-<p>
-<h4>  (Non-relativistic) fields </h4>
-<p>
-    To do geology, we must locate events in space and time.  So let
+    
+!!! (Non-relativistic) fields
+
+    To do geology, we must speak of the %when% and %where% of events.  So let
     us write $\mathcal{S}$ for space-time.  We model each type of subatomic
     particle as a section $\psi$ of some vector bundle $\pi:E\to\mathcal{S}$
     over $\mathcal{S}$.  The Lagrangian density is
@@ -45,12 +25,12 @@ minerals, formations, and continents.
     $$
     for some appropriate differential operator $D$.  Both the fibers and the
     base of the bundle enjoy some important symmetries.
-<p>
-<h5>  Rotation-symmetry of the base determines the shape of $\psi$ </h5>
-<p>
+    
+!!!! Rotation-symmetry of the base determines the shape of $\psi$
+
     Our space-time $\mathcal{S}$ enjoys rotation symmetries $SO(3)$.  We insist
     that the Lagrangian density be invariant under rotation; in particular, the
-    mass term must be invariant and hence $SU(2)$ must act on each fiber.
+    mass term must be invariant and hence $SU(2)$ must act on the fibers of $E$.
     The fiber $F$ will be some irreducible representation of $SU(2)$ and hence of
     $\mathfrak{so}(3)$.  Let us classify these irreps.  We note that $J_x, J_y, J_z
     \in \mathfrak{so}(3)$ form a basis, where each represents right-handed rotation
@@ -92,24 +72,24 @@ minerals, formations, and continents.
     $2b$ a non-negative half-integer.  We have thus classified (and constructed)
     all the complex representations of $SU(2)$.  The smallest non-trivial
     representations have $b=1/2$ and $b=1$.  These are inhabited, for instance, 
-    by the electron and by the <em>triplet state</em> of the heavy Hydrogen nucleus.
-<p>
-<h5>  Spinors and vectors: how the Lagrangian density is a (scalar) density </h5>
-<p>
+    by the electron and by the %triplet state% of the heavy Hydrogen nucleus.
+
+!!!! Spinors and vectors: how the Lagrangian density is a (scalar) density
+
     $SO(3)$ acts on $\mathcal{S}$.  In fact, this action('s complexification) is
     $Hom(\pi_{1/2}, \pi_{1/2})$, which is two-times-two dimensional and splits into
     a one-dimensional $\pi_0$ summand (acting on time) and a three-dimensional
     $\pi_1$ summand (acting on space).
-<p>
+    
     In the case where $\psi$ is a section of $\pi_{1/2}$, we may thus interpret
     the Lagrangian density precise as: 
     $$
         \bar{\psi}_c (\sigma^{c\mu}_{b} D^b_{a\mu} - m I^c_a ) \psi^{a}
     $$
     where $\sigma$ converts from $Hom(\pi_{1/2}, \pi_{1/2})$ to space-time vectors.
-<p>
-<h5>  Phase-symmetry of the fiber determines the shape of $D$ </h5>
-<p>
+    
+!!!! Phase-symmetry of the fiber determines the shape of $D$
+
     The field $\pi_b:E\to \mathcal{S}$ enjoys a connection $\nabla$ that preserves
     magnitudes on the fibers and commutes with the $SU(2)$ action.  The connection
     induces the $D$ that we invoke in the Lagrangian density
@@ -126,28 +106,28 @@ minerals, formations, and continents.
     $$
         D^b_{a\mu} = I^b_a (\partial_\mu - i e A_\mu)
     $$
-    where $A$ is a real-valued one-form.  Likewise, the curvature form is a
-    two-form $-i F$ valued in $\mathfrak{u}(1)$.  In daily life, $\nabla$ is
-    nontrivial in that $F\neq 0$.  
-<p>
+    where $A$ is a real-valued one-form.
+
+    Likewise, the curvature form is a two-form $-i F$ valued in
+$\mathfrak{u}(1)$.  In daily life, $\nabla$ is nontrivial in that $F\neq 0$.  
+
     It is a calculational convenience to choose a trivialization so that we may
-    write $\nabla$ in terms of $A$, but doing so involves arbitrary choices on
-    which physics does not depend.  Still, the connection restricted to
-    topologically nontrivial regions of $\mathcal{S}$ contains more information
-    than the curvature (due to holonomy), and physics depends on this information
-    (the <b>Aharonov–Bohm effect</b>).  Therefore, $A$ has too much information, $F$
-    has too little information, and $\nabla$ is just right as a physical model of
-    the connection. 
-<p>
-    We promote the connection $\nabla$ to a field with its own dynamics determined
-    by a kinetic term $- F_{\mu\nu} F^{\mu\nu}$.  Adopting traditional
-    constants of proportionality, the resulting Lagrangian density is  
+write $\nabla$ in terms of $A$, but doing so involves arbitrary choices on
+which physics does not depend.  Still, the connection restricted to
+topologically nontrivial regions of $\mathcal{S}$ contains more information
+than the curvature (due to holonomy), and physics depends on this information
+(the *Aharonov–Bohm effect*).  Therefore, $A$ has too much information, $F$
+has too little information, and $\nabla$ is just right as a physical model of
+the connection. 
+
+    We promote the connection $\nabla$ to a field with its own dynamics.  Using
+traditional constants of proportionality, the resulting Lagrangian density is  
     $$
         \mathcal{L} = \bar{\psi} (\sigma D_e - m) \psi - \frac{1}{4} F_{\mu\nu} F^{\mu\nu}
     $$
-<p>
-<h4>  Quantum particles </h4>
-<p>
+
+!!! Quantum particles
+
     The amplitude to go from a field configuration at time $t$ to another at
 time $t^\prime$ is an integral over the space $\mathcal{C}$ of interpolating
 field configurations:
@@ -156,16 +136,38 @@ field configurations:
     $$
     In the free theory where $e=0$, we may solve exactly.  
     Let us work in momentum space.
-<p>
-<h4>  Atoms and bonds  </h4>
-<h4>  Molecules and minerals  </h4>
-<p>
-<h4>  Application: the sheen of metals </h4>
-<h4>  Application: earth's magnetic field </h4>
-<h4>  Application: the speed of earthquakes </h4>
-<h4>  Application: the crystallography of clay </h4>
-<p>
-<p>
-<p>
-    </body>
-</html>
+
+!!! Atoms and bonds 
+!!! Molecules and minerals 
+
+!!! Application: the sheen of metals
+!!! Application: earth's magnetic field
+!!! Application: the speed of earthquakes
+!!! Application: the crystallography of clay
+
+#!! Whence Come Rocks? 
+#
+#!!! Entropy and Boltzmann
+#!!! Chemical equilibrium  
+#!!! Phase transitions and symmetry
+#!!! Beyond equilibrium 
+#
+#!!! Application: the reasons for rain 
+#!!! Application: rain and erosion??
+#!!! Application: the composition of earth's core
+#!!! Application: the precipitation of calcium carbonate
+#
+#!! Are Rocks Alive?
+#    Among the most pertinent questions available to the living scientist in
+#    light of our central science is the question: *are rocks alive*? 
+#
+#!!! A Darwinian perspective on rocks
+#!!! Game theory in reproductive strategies 
+#!!! Phenomenology of diversity
+#!!! Instability via positive feedback loops
+#
+#!!! Application: locomotion and community in the saltation of sand
+#!!! Application: competition in glacial erosion
+#!!! Application: foreground-background in canyon formation
+#!!! Application: the stickiness of clay 
+
