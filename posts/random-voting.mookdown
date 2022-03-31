@@ -1,0 +1,119 @@
+# author: samtenka
+# change: 2021-07-27
+# create: 2021-08-03 
+# descrp: voting systems to undermine the two party system and its roots 
+
+! AGAINST PARTIES
+
+
+
+#==============================================================================
+!! POLITICAL PARTIES IN THE UNITED STATES
+
+#------------------------------------------------------------------------------
+!!! Collapse of Diverse Thought
+
+    Overton window.  The two business parties.
+
+#------------------------------------------------------------------------------
+!!! Gerrymandering
+
+#------------------------------------------------------------------------------
+!!! Contrast with Agile Coalitions
+
+#------------------------------------------------------------------------------
+!!! Our Experimental-Aesthetic Attitude
+
+
+
+#==============================================================================
+!! LINEAR VOTING TO ELECT REPRESENTATIVES
+
+#------------------------------------------------------------------------------
+!!! Aesthetics
+
+#------------------------------------------------------------------------------
+!!! Implementation
+
+!!!! procedure
+
+!!!! cryptography 
+
+!!!! text
+
+#------------------------------------------------------------------------------
+!!! Discussion and (De)Merits
+
+!!!! house size and bias-variance
+
+!!!! fringe elements and candidacy criteria
+ 
+!!!! comparison with sortition "voting"
+
+!!!! comparison with plurality voting
+
+
+
+#==============================================================================
+!! APPROVAL VOTING TO ELECT SENATORS (AND PRESIDENTS)
+
+#------------------------------------------------------------------------------
+!!! Aesthetics
+
+#------------------------------------------------------------------------------
+!!! Implementation
+
+#------------------------------------------------------------------------------
+!!! Discussion and (De)Merits
+
+!!!! unification of primaries and generals
+
+!!!! strategic approval voting
+
+!!!! comparison with ranked-choice voting
+
+!!!! comparison with plurality voting
+
+
+
+#==============================================================================
+!! QUADRATIC VOTING IN THE SENATE
+
+#------------------------------------------------------------------------------
+!!! Aesthetics
+
+    encourage deliberation, discussion, trade, compromise.  permit but penalize
+    extremism. 
+
+#------------------------------------------------------------------------------
+!!! Implementation
+
+!!!! procedure
+
+    Voting with integer weight $n$ on a bill costs ${n \choose 2}$ points.  No
+    senator may spend more than $N=100$ points during any term.  A bill passes
+    in the Senate if and only if it receives strictly more than $11/20$ths of
+    the unweighted vote and strictly more than $1/2$ of the weighted vote.
+
+    Costs will be exacted once a bill is approved by (a simple majority in) the
+    House.  
+
+    #The filibuster will be eliminated.
+
+!!!! proposal of bills 
+
+    
+
+!!!!  
+
+!!!! text
+
+#------------------------------------------------------------------------------
+!!! Discussion and (De)Merits
+
+!!!! bill proposal is a great power
+
+!!!! repetition and sapping 
+
+!!!! initialization of points
+

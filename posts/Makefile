@@ -2,6 +2,7 @@ rocks:
 	python3 translate.py rocks
 
 all:
+	python3 translate.py random-voting
 	python3 translate.py constitution
 	python3 translate.py manifold
 	python3 translate.py rocks
