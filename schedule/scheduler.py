@@ -1,5 +1,5 @@
 # author: samtenka
-# change: 2018-02-24
+# change: 2022-04-27
 # create: 2018-01-21
 # descrp: generate html table for schedule
 # usage: Ensure the following files are in your directory:
@@ -31,12 +31,13 @@ def print_cell(token):
         'r':('#eecccc','#888888','')                        ,
         'm':('#eeccee','#888888','')                        ,
         'y':('#eeeecc','#888888','')                        ,
-        'B':('#8888ff','#000000','font-weight: bold')       ,
-        'G':('#88ff88','#000000','font-weight: bold')       ,
-        'C':('#88ffff','#000000','font-weight: bold')       ,
-        'R':('#ff8888','#000000','font-weight: bold')       ,
-        'M':('#ff88ff','#000000','font-weight: bold')       ,
-        'Y':('#ffff88','#000000','font-weight: bold')       ,
+        'a':('#d0d0d0','#ffffff','font-variant: small-caps'),
+        'B':('#ccccee','#000000','font-weight: bold')       ,#'#8888ff'
+        'G':('#cceecc','#000000','font-weight: bold')       ,#'#88ff88'
+        'C':('#cceeee','#000000','font-weight: bold')       ,#'#88ffff'
+        'R':('#eecccc','#000000','font-weight: bold')       ,#'#ff8888'
+        'M':('#eeccee','#000000','font-weight: bold')       ,#'#ff88ff'
+        'Y':('#eeeecc','#000000','font-weight: bold')       ,#'#ffff88'
     }[color]
     return '\n    <td bgcolor="%s" style="color:%s;%s" rowspan=\"%d\">%s</td>' % (bg_color, fg_color, style, height, text)
     
