@@ -1,53 +1,53 @@
             SAT                 SUN                 MON                 TUE                 WED                 THU                 FRI         
-.09:00@2    .                   .                   .                   .                   .                   .                   . 
-            .                   .                   .                   .                   .                   .                   astart_walk@3
-.09:30@2    .                   .                   .                   .                   .                   .                     
+.09:00@2    .                   .                   .                   .                   .                   along_shower@3      . 
+            .                   .                   .                   .                   .                                       astart_walk@3
+.09:30@2    .                   .                   .                   .                   .                                         
             .                   .                   .                   .                   .                   .                     
-.10:00@2    .                   .                   .                   .                   .                   Mhousing@2          mcateg_entrop@8   
+.10:00@2    .                   .                   .                   .                   .                   Mhousing@2          mcomp_thermo@3    
             .                   .                   .                   .                   .                                         
 .10:30@2    .                   .                   g@6                 .                   .                   .                     
-            .                   .                                       .                   .                   .                     
-.11:00@2    g@12                g@8                                     g@12                .                   .                                          
-                                                                                            .                   .                     
-.11:30@2                                                                                    ano_cocosci@2       .                     
-                                                                                                                .                     
+            .                   .                                       .                   .                   astart_walk@3       . 
+.11:00@2    g@12                g@8                                     g@12                .                                       mpoly_func_ent@3       
+                                                                                            .                                         
+.11:30@2                                                                                    ano_cocosci@2       mpivot_zoom@2         
+                                                                                                                                    . 
 .12:00@2                                            mgreg@3                                 .                   msia@4              Mipad_loaner@2
                                                                                             .                                                       
-.12:30@2                                                                                    .                                       g@6
+.12:30@2                                                                                    .                                       g@4
                                                     .                                       .                                          
-.13:00@2                        .                   .                                       mcateg_entrop@4     .                     
-                                yyifan@7            .                                                           .                     
-.13:30@2                                            .                                                           .                     
-                                                    .                                                           .                     
-.14:00@2    .                                       .                   .                   Mkarene@4           .                   a@2   
-            .                                       .                   .                                       .                     
-.14:30@2    .                                       .                   .                                       .                   gdraft_josh_^date@4 
-            .                                       .                   .                                       .                     
-.15:00@2    .                   .                   .                   .                   g@8                 mbaez@4               
-            .                   .                   .                   .                                                             
+.13:00@2                        .                   .                                       mcateg_entrop@4     ghigher_mutinf@8      
+                                yyifan@7            .                                                                                 
+.13:30@2                                            .                                                                               mhigher_entrop@3
+                                                    .                                                                                 
+.14:00@2    .                                       .                   .                   Mkarene@4                                     
+            .                                       .                   .                                                           a@2 
+.14:30@2    .                                       .                   .                                                                                
+            .                                       .                   .                                                           gdraft_josh_^date@3
+.15:00@2    .                   .                   .                   .                   .                   mbaez@4               
+            .                   .                   .                   .                   apick_up_esc@2                            
 .15:30@2    .                   .                   y@4                 .                                                           y@4
-            .                   .                                       .                                                             
-.16:00@2    .                   ymama_call@4                            .                                       .                     
-            .                                                           .                                       .                     
-.16:30@2    .                                       .                   .                                       .                   ariemann_lance@2
-            .                                       .                   .                                       .                     
-.17:00@2    agym?@4             .                   .                   agym?@4             apick_up_esc@2      ajumprope?@4        aplan_sgd@2    
+            .                   .                                       .                   .                                         
+.16:00@2    .                   ymama_call@4                            .                   .                   aplan_sgd@2           
+            .                                                           .                   .                                         
+.16:30@2    .                                       .                   .                   gmutinf_mainiero@5  aplan_queerai@2     amssg_tuananh@2 
+            .                                       .                   .                                                             
+.17:00@2    agym?@4             .                   .                   agym?@4                                 ajumprope?@4        aconnect_lance@2
                                 .                   .                                                                                              
-.17:30@2                        .                   .                                       aplan_queerai@2                         amssg_rujian@2
-                                .                   .                                                                                 
-.18:00@2    .                   .                   g@12                g@12                .                   .                   atuan_anh@2
-            .                   .                                                           .                   .                     
-.18:30@2    .                   .                                                           .                   .                   . 
-            .                   .                                                           .                   .                   . 
-.19:00@2    .                   .                                                           .                   .                   . 
-            .                   .                                                           .                   .                   . 
-.19:30@2    .                   .                                                           .                   .                   . 
-            .                   .                                                           .                   .                   . 
-.20:00@2    .                   .                                                           .                   .                   . 
-            .                   .                                                           .                   .                   . 
-.20:30@2    .                   .                                                           .                   .                   . 
-            .                   .                                                           .                   .                   . 
-.21:00@2    .                   .                   .                   .                   .                   .                   . 
-            .                   .                   .                   .                   .                   .                   . 
-.21:30@2    .                   .                   .                   .                   .                   .                   . 
-            .                   .                   .                   .                   .                   .                   . 
+.17:30@2                        .                   .                                                                               amssg_rujian@2
+                                .                   .                                       ysimmy@4                                  
+.18:00@2    .                   .                   g@12                gorganize_papers@12                     gnear_markov@8      awhat_do_schwa@2
+            .                   .                                                                                                     
+.18:30@2    .                   .                                                                                                   . 
+            .                   .                                                           .                                       . 
+.19:00@2    .                   .                                                           .                                       . 
+            .                   .                                                           .                                       . 
+.19:30@2    .                   .                                                           .                                       . 
+            .                   .                                                           .                                       . 
+.20:00@2    .                   .                                                           .                   gplan_86_work@2     . 
+            .                   .                                                           .                                       . 
+.20:30@2    .                   .                                                           gplan_lin_lesson@6  gwatch_86_clips@3   . 
+            .                   .                                                                                                   . 
+.21:00@2    .                   .                   .                   .                                                           . 
+            .                   .                   .                   .                                       gsetup_vs_share@3   . 
+.21:30@2    .                   .                   .                   .                                                           . 
+            .                   .                   .                   .                                                           . 
