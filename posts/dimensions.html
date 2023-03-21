@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="../js/toggler.js"></script>
+    </head>
+    
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
+
+        $\newcommand{\NN}{\mathbb{N}}$
+        $\newcommand{\ZZ}{\mathbb{Z}}$
+        $\newcommand{\RR}{\mathbb{R}}$
+        $\newcommand{\CC}{\mathbb{C}}$
+
+        
+<p>
+<h2>  Dimensional Analysis via Group Actions </h2>
+<p>
+Here's a fun way to look at dimensional analysis.  There's
+nothing deep here --- just a reshuffling of concepts to make
+plain why, for instance, we may multiply but not add
+quantities of different units.
+<p>
+Motivation.  How can we exploit symmetry when doing physics?
+An ideal spring exemplifies physical symmetry.  Initially
+stationary at $x=L$, the spring obeys $m (d^2/dt^2)x = (d/dx)(k
+x^2 /2)$. We can imagine a variety $V$ of universes, each
+inhabited by a ruler, a clock, a massive ball, and an ideal
+spring.  Each universe induces a real numbered plot $x=f(t)$
+gotten by measuring the spring against the ruler, clock, ball.
+That Newton's law for the spring is homogeneous means that the
+group $\text{GL}(\mathbb{R},1)^3$ acts very nicely on $V$ by scaling the
+ruler,clock,ball and modifying the spring parameters $m,L,k$
+accordingly.  All quantities determined by Newton's law (e.g.
+spring period $T$) must thus also enjoy this symmetry.  What
+does this entail for $T$?
+<p>
+<b>Formal setup</b>.  We fix a group $S$ of physical symmetries and
+consider $S$-spaces (spaces on which $S$ acts).  We posit an
+$S$-space $V$ of conceivable worlds.  We call (equivariant!)
+maps from $V$ "experiments" or "quantities".  When $S$ acts
+trivially on a quantity's target, that quantity is "unitless".
+<p>
+<b>Key Observation</b>.  The category of unitless $S$-spaces under a
+given $S$-space $O^\prime$ has an initial object: the set of
+orbits of $O^\prime$.  Said another way: if a unitless quantity
+$e:V\to O$ depends only on $e^\prime :V\to O^\prime$--- that is, if there exists
+$f:O^\prime\to O$ with $e=fe^\prime$ --- then $f$ is constant on each orbit of
+$O^\prime$.
+<p>
+<b>Note</b>.  The set of orbits of $O^\prime$ is often easy to understand.
+E.g. when $S$ is a lie group smoothly acting on $O^\prime$, we can
+generically compute a local parameterization of the set of
+orbits: just take the tangent space of $O^\prime$ mod the tangent
+subspace induced by the lie algebra of $G$.  The situation thus
+lends itself to dimension counting.
+<p>
+<b>Example A</b>.  In the ideal spring system, $S=\text{GL}(\mathbb{R},1)^3$ induces
+three fundamental one-dimensional $S$-spaces --- call them
+$O_{\text{ruler}}, O_{\text{clock}}, O_{\text{ball}}$.  Tensors of these representations
+are also $S$-spaces.  $m,L,k$ are physical quantities that map to
+the $S$-spaces $O_{\text{ball}}$, $O_{\text{ruler}}$, and $O_{\text{stiff}} = O_{\text{mass}} \otimes O_{\text{clock}}^{\text{op}}
+\otimes O_{\text{clock}}^{\text{op}}$.  Here, $\otimes$ means tensor and $\text{op}$ means opposite
+action.  The period $T$ is also a physical quantity; it maps to
+$O_{\text{clock}}$.  So $T^\prime = T^2 k/m$ is a unitless quantity that by Newton
+depends only on $m,L,k$.  Therefore, $T^\prime = f(m,L,k)$
+where $f$ is
+constant on orbits in $O_{\text{ball}} \times O_{\text{ruler}} \times O_{\text{stiff}}$.  But $S$ acts
+transitively on that product.  So $T^\prime$ is a universal constant
+and we have found that $\text{period}^2 \cdot \text{spring stiffness} / \text{mass} =
+\text{constant}$.  Laplace transforms show this constant is $4\pi^2$.
+<p>
+<b>Remark</b>.  We might identify the class of $S$-spaces as the class
+of possible units a physical quantity might have.
+<p>
+<b>Example B</b>.  Consider a filled balloon.  We can ask for the
+"probability density" of molecules' translational velocities.
+We want the density $P$ at a velocity $v$.  A halving of spatial
+scale induces an octupling of $P$.  From experiment, we know
+that $P$ depends only on $v$, the molecular mass $m$, and the
+average molecular translational energy $E$.  We take
+$S=\text{SO}(3)\times\text{GL}(R,1)^3$, since dynamics is rotation symmetric.  We
+find that $(E/m)^{3/2} P$ is unitless and, like $P$, depends only on
+$v,m,E$.  The orbits of the latter triplet are parameterized by
+$mv^2 /E$.  So $(E/m)^{3/2} P = f(mv^2 /E)$ for some $f$.  Statistical
+mechanics shows $f$ is a dominated by an exponential decay.
+<p>
+<b>Admission</b>.  The $\text{SO}(3)$ above doesn't do much.  We introduced it
+only to erase it.  What follows is more interesting; it is a
+toy example of the reasoning used to constrain the terms in
+lagrangians for effective field theories.
+<p>
+<b>Example C</b>.  Consider the sound quality $Q$ of a finger
+dragging with velocity $D$ along a drum membrane stretched with
+strain tensor $T$.  We won't define $Q$ except to assume it is
+unitless and determined by $D,T$.  We posit $\text{SO}(2)$ symmetry given
+by spatial rotation.  Then $D$ inhabits the 2D vector
+representation and $T$ inhabits the 3D symmetric-tensor
+representation.  In light of the metric structure inherent in
+$\text{SO}(2)$, each dot product $DT^k D$ is in a unitless 1D rep.  We
+count $O^\prime$ as having $5=2+3$ dimensions and the set of orbits in
+$O^\prime$ as having $5-1=4$ dimensions (since $\text{SO}(2)$ is
+one-dimensional).  Thus, assuming genericity, the unitless
+four-tuple (of the first four instances of $DT^k D$) determines
+$Q: Q=f(DD,DTD,DTTD,DTTTD)$.  One expects $f $to be horribly
+nonlinear as it encodes acoustic psychology and nonhookean
+drum vibrations.
+<p>
+<b>Bewilderment</b>.  I wrote the above a couple years ago.  It
+suggests a greater knowledge of physics than I currently
+possess.
+<p>
+<h3>  References </h3>
+<p>
+I found inspiration from the examples in Hornung's small, lovely book:
+<p>
+    <b>Hornung</b>   ---  <em>Dimensional analysis</em>          ---  2006
+<p>
+I wrote this note as a 
+<a href="https://www.reddit.com/r/math/comments/riw7qb/dimensional_analysis_via_group_actions/">Reddit post</a>.
+In response to a neat comment about torque, I said:
+There is a natural way to compare energies with torques. A given torque
+corresponds to the energy required to oppose that torque for one revolution. I
+imagine that when working with mechanical linkages (e.g. the complicated steam
+engine ones that convert between linear and circular motions), it can be useful
+to add energies to torques etc.
+<p>
+    </body>
+</html>
