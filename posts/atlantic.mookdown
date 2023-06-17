@@ -1,7 +1,7 @@
 # author: samtenka
-# change: 2023-06-09
+# change: 2023-06-17
 # create: 2023-06-09
-# descrp: ~3600 word article to submit to one of:
+# descrp: anonymous ~3600 word article to submit to one of:
 #           atlantic                    (left  )
 #           nyt opinion                 (left  )
 #           christian science monitor   (center)
@@ -11,44 +11,55 @@
 ! Let "We" Convene Outside the Box
 !!!! Samuel Tenka, 2023
 
-This is an essay of advocacy and imagination for my fellow americans.  I aim to
+This is an essay of advocacy and imagination for my fellow Americans.  I aim to
 persuade you that it is time to amend our Constitution, and I shall do so by
-sparking our imaginations for what is possible.  Perhaps you will disagree; if
-so, I hope to read a letter from you, to learn.
+sparking our imaginations for what is possible.  Beyond the usual suspects ---
+amendments popular only within one major party --- there lies a wealth of
+smaller but impactful, potentially broadly popular structural reforms.  We
+citizens ought to discover and debate such potential amendments as routinely as
+we consider more urgent and concrete policies; this is long-term maintenance of
+our political body: the flossing that lets us to chew heartily even 50 years
+hence.
+#
+Advocating for constitutional amendements is, to me, no more quixotic than
+marking a presidential ballot, and worthwhile in the same ways, if not by
+expected utility then by some sacred meme of duty.
+#
+Perhaps you will disagree; if so, I hope to read a letter from you, to learn.
 
-I ask of you but this, dear reader: that during the ten minutes you take to
-skim this article, you don your political shoes uncomfortably backward.  Thus:
-#
-If abortions murder the innocent at a rate of a Haulocaust per decade, pretend
-they are humane healthcare for women unjustly penalized more than men for sex.
-#
-If we must regulate business to avert vulnerable coasts' climate ruin, pretend
-extreme floods are a worthy cost to compete (not to crumple) on a world stage.
-#
-If Mexico mainly sends us drug crime, job shortages, and alien values, pretend
-it's an Ellis Island for young, determined workers' pie-growing American Dream.
-#
-If affirmative action justly evens a field tilted by racist privilege, pretend
-it's a Lowellian quota that sees a poor Thai migrant as a color, not a mind.
-#
-If you have enjoyed any blockbuster movies recently, I'm betting you have a
-great capacity to temporarily imagine falsehoods, for the sake of exploring an
-idea, without impairing your cognitive function.
+I will refer to remarks on the Constitution by some of the Justices, Senators,
+and Presidents who served in this century:
+*A.Scalia*,
+*B.Obama*,
+*D.Trump*
+*E.Warren*,
+*J.Manchin*,
+*M.Romney*,
+*R.Ginsburg*,
+*R.Paul*,
+*S.Breyer*,
+*W.Rehnquist*.
+(Perhaps the absence of state-level officials biases me away from states
+rights).
 
+#   web.archive.org/web/20161018233021/https://www.donaldjtrump.com/press-releases/trump-pledges-to-drain-the-swamp
+#   lawliberty.org/donald-trump-and-the-political-philosophers/
+#   washingtonpost.com/news/powerpost/wp/2016/10/17/trump-proposes-five-year-ban-on-executive-branch-officials-and-lawmakers-who-want-to-become-lobbyists/
+#   npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial
+#   digressionsnimpressions.typepad.com/digressionsimpressions/2016/09/in-a-corrupt-republic-trump-will-rise.html
 
 !! Why?  A Bridge in Disrepair
 !!! the document, living and dead
-
-#Let us not follow Buridan's donkey or .
 
 I propose that we regard our Constitution as vital infrastructure, a bridge
 between the People and their Government.  Though infrastructure must be stable
 to be reliable, we should not confuse stability with immutability, reverence
 with repetition.  In the past half-century, we have more frequently observed
 deadlocked brinksmanship in Congress.  Our faith in the Supreme Court has
-eroded (whether in the Court's reading of Due Process in Roe v Wade, of Equal
-Protection in Bush v Gore, of Freedom of Speech in Citizens United vs FEC, or
-of Taxing and Spending in NFIB v Sebelius).  Yet, we've amended our
+eroded (whether in the Court's reading of Due Process in %Roe v Wade%, of Equal
+Protection in %Bush v Gore%, of Freedom of Speech in %Citizens United vs FEC%,
+
+or of Taxing and Spending in %NFIB v Sebelius%).  Yet, we've amended our
 Constitution only twice in the past 50 years --- both times arguably
 non-structurally.  We are failing to maintain our inheritance.
 
@@ -58,21 +69,95 @@ problems and that we can decisively address only by amending our great
 document.  Amendments need not advance one faction's interests while harming
 over another's: we are far from a zero-sum regime.
 
-
-
 !!! "nonpartisan" as a strict word
 !!! nonpartisan adjustments abound
 !!! a space of representative democracies
 
 !! What?  New Democratic Recipes as Modern Infrastructure
-!!! third ways in federalism
+
+!!! third ways in federalism and separation
+Part of the Constitution's genius is its partitioning of power between national
+and regional governments --- and, within each, between the judicial,
+legislative, and executive branches.  (Of course, State constitutions add flesh
+to the `republican form` clause).  Such separations inhibit the concentration
+of power in a tyrant; they also offer the benefits of specialization and
+modularity: cultural diversity between States is maintained, office holders may
+be experts rather than jacks of all trades, and the People may replace the
+specific office holders that disappoint them.
+
+This, Scalia argues, is the Constitution's structural heart.  
+
+!!!! independent state election boards
+!!!! quasi-constitutional parameters
+!!!! 
+
 !!! gentle aggregations: budgeting
+
 !!! chaos, or turn-taking?  randomness in the House
+
 !!! keeping the tension: appointing a moderate Court
 
 !! How?  Nucleation, Conventions, a Meta-Amendment
 !!! what to overcome
 !!! how to overcome it
 !!! a sample meta-amendment
+
+#-------  PART A : Multiple Paths to Amendment  -------------------------------
+!!!! Section I : Multiple Paths to Amendment
+
+The Congress or an Amending Convention may by sufficient majorities propose an
+amendment to this Constitution.  Thereupon, the Legislature of each State shall
+ratify or reject the amendment.  But if by 24 months of proposal that
+Legislature rejects or fails to decide on the amendment, the People of that
+State shall within an additional 24 months vote on the amendment, which shall
+be ratified if (3/5)s of their votes so say.  If and only if within 48 months
+of proposal (3/4)s of the States have ratified the amendment, the amendment
+shall become part of this Constitution.
+
+The Congress shall not propose an amendment without (2/3)s majorities in both
+Chambers.  The Amending Convention shall not propose an amendment without
+(2/3)s majorities in both unweighted and population-weighted senses.  When the
+Amending Convention computes a population-weighted vote, each Delegate's Yea or
+Nay shall be counted with multiplicity equal to the number of Representatives
+to which their State is entitled in the Congress.  And no Amendment shall be
+proposed that deprives a State, without its consent, of its equal suffrage in
+the Senate.
+
+#-------  PART B : Election and Duration of Convention  -----------------------
+!!!! Section II : Election and Duration of Convention
+
+In November of each 50th year, or of the earliest even year following the
+simultaneous request of the executive authorities of (2/3)s of the States, an
+Amending Convention shall begin.  To this Convention each State shall elect 2
+Delegates from among candidates, qualified to run for Senator, running
+specifically to become that State's Delegates.  Each voter may select any
+subset of candidates in their State, and that pair of candidates that
+intersects more voters' sets than any other pair shall be the State's
+delegation.  The State's excutive authority shall fill vacancies as they arise.
+
+The Amending Convention shall in the following January convene to draft and
+debate amendments to this Constitution.  Within 24 months of convening, the
+Convention shall conclude its work and shall have thus proposed zero, one, or
+multiple amendments.  At this time the Convention shall dissolve.
+
+#-------  PART C : Procedure and Privileges in the Amending Convention  -------
+!!!! Section III : Procedure and Privileges in the Amending Convention
+
+The Convention shall by (unweighted) majorities adopt or revise their rules of
+procedure and choose or replace their Director.  With the consent of an
+unweighted majority the Director shall appoint administrative officers,
+allocate general funds, and organize the Convention's deliberations.
+
+The Congress shall by law supply to each Delegate: remuneration, assistants,
+and funds comparable to those that a Senator annually enjoys; and to the
+Convention: clerks, security, and funds comparable to those that the Senate
+annually enjoys, and a physical convention hall befitting the occasion.
+
+The Delegates shall in all cases, except treason, felony, and breach of the
+peace, be privileged from arrest during their attendance in the convention
+hall, and in going to and returning from the same; and for any speech or
+debate, they shall not be questioned in any other place.
+
 !!! action and probability estimates
+
 
