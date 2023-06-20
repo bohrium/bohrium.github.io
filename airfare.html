@@ -28,7 +28,7 @@
         </div>
 
         <div class="separator" style="clear: both; text-align: center;">
-          <canvas height="800" id="myCanvas" style="border: 0px;" width="960"></canvas>
+          <canvas height="640" id="myCanvas" style="border: 0px;" width="640"></canvas>
           <div id="infobox">
         </div>
 
@@ -40,22 +40,51 @@
           let nb_modes = 4;
 
           let axlen = 5;
-          let ratio = 2.0; // qa_large_per_qa_small
+          let ratio = 3.0; // qa_large_per_qa_small
 
-          let dem_qx_large = 0.5;
-          let dem_qx_small = 1.5;
-          let dem_qx = dem_qx_large + dem_qx_small;
-          let dem_px = 3.0;
-          let dem_sx = -dem_px/dem_qx; // slope
+          function compute_points(DQXL, SPA) {
+            dem_qx_large = DQXL;
 
-          let sup_pa = 0.5;
-          let sup_sa = 0.5; // slope
-          let convert= (ratio * dem_qx_large + 1 * dem_qx_small) / dem_qx;
-          let sup_px = sup_pa * convert;
-          let sup_sx = sup_sa * convert; // slope
+            dem_qx_small = 1.0;
+            dem_qx = dem_qx_large + dem_qx_small;
 
-          let equ_qx = (dem_px-sup_px)/(sup_sx-dem_sx);
-          let equ_px = sup_px + sup_sx * equ_qx;
+            dem_px = 4.0;
+            dem_px_small = dem_px;
+            dem_px_large = dem_px;
+
+            dem_sx_small = -dem_px_small/dem_qx_small; // slope
+            dem_sx_large = -dem_px_large/dem_qx_large; // slope
+            dem_sx = -dem_px/dem_qx; // slope
+
+            dem_pa_small = dem_px_small               ;
+            dem_pa_large = dem_px_large/ratio         ;
+
+            dem_qa_small = dem_qx_small               ;
+            dem_qa_large = dem_qx_large*ratio         ;
+            dem_qa       = dem_qa_large + dem_qa_small;
+
+            dem_sa_small = -dem_pa_small/dem_qa_small  ;
+            dem_sa_large = -dem_pa_large/dem_qa_large  ;
+            dem_sa       = 1./((1./dem_sa_small) + (1./dem_sa_large));
+            //dem_sa       = -dem_pa_large/(dem_qa-dem_qa_kink);
+
+            dem_qa_kink = (dem_pa_small-dem_pa_large)/(-dem_sa_small);
+
+            sup_pa = SPA;
+            sup_sa = 0.25; // slope
+            convert= (ratio * dem_qx_large + 1 * dem_qx_small) / dem_qx;
+            sup_px = sup_pa * convert;
+            sup_sx = sup_sa * convert; // slope
+
+            equ_qx = (dem_px-sup_px)/(sup_sx-dem_sx);
+            equ_px = sup_px + sup_sx * equ_qx;
+
+            equ_qa = dem_qa_kink + (dem_pa_large - (sup_pa + sup_sa * dem_qa_kink))/(sup_sa-dem_sa);
+            //equ_pa = dem_pa_large+dem_sa*(equ_qa-dem_qa_kink);
+            equ_pa = sup_pa + sup_sa * equ_qa;
+          }
+          compute_points(1., 0.5);
+
 
           let canvas = document.getElementById("myCanvas");
           let context = canvas.getContext("2d");
@@ -67,168 +96,180 @@
           context.fillStyle = "#444";
           context.textAlign="center";
 
-          function a_from(x, y) { return (x - canvas.width  * 0.1) / (+ 640/axlen ); }
-          function b_from(x, y) { return (y - canvas.height * 0.9) / (- 640/axlen ); }
+          function a_from(x, y, lr) { return (x - canvas.width  * (lr ? .52 : .02)) / (+ (.46/.50)*320/axlen ); }
+          function b_from(x, y, lr) { return (y - canvas.height * 0.50) / (- (.46/.50)*320/axlen ); }
+          function x_from(a, b, lr) { return +a * (.46/.50)*320/axlen + canvas.width  * (lr ? .52 : .02); }
+          function y_from(a, b, lr) { return -b * (.46/.50)*320/axlen + canvas.height * 0.50; }
 
-          function x_from(a, b) { return +a * 640/axlen + canvas.width  * 0.1; }
-          function y_from(a, b) { return -b * 640/axlen + canvas.height * 0.9; }
-          function move_to(a, b) { context.moveTo(x_from(a, b), y_from(a, b)); }
-          function line_to(a, b) { context.lineTo(x_from(a, b), y_from(a, b)); }
-          function circ_at(a, b) { context.arc(x_from(a, b), y_from(a, b), 2, 0, Math.PI*2, false); }
+          function move_to(a, b, lr) { context.moveTo(x_from(a, b, lr), y_from(a, b, lr)); }
+          function line_to(a, b, lr) { context.lineTo(x_from(a, b, lr), y_from(a, b, lr)); }
+          function circ_at(a, b, lr) { context.arc(x_from(a, b, lr), y_from(a, b, lr), 2, 0, Math.PI*2, false); }
 
-          //function plot_line()
+          function plot_line(a,b,A,B, lr) {
+            let slope = (B-b)/(A-a);
+            let offset= b-a*slope;
+
+            B = Math.max(0,Math.min(axlen, B)); A=(B-offset)/slope;
+            b = Math.max(0,Math.min(axlen, b)); a=(b-offset)/slope;
+            A = Math.max(0,Math.min(axlen, A)); B=offset+A*slope;
+            a = Math.max(0,Math.min(axlen, a)); b=offset+a*slope;
+
+            move_to(a, b, lr);
+            line_to(A, B, lr);
+          }
+
+          function plot_line_offset_slope(offset, slope, lr) {
+            plot_line(0,offset,axlen,offset+slope*axlen, lr);
+          }
 
           onClick(0, 0);
 
           function resetCanvas() {
             context.clearRect(0, 0, canvas.width, canvas.height);
 
+            var lr = 0;
             /* equ-x fill: */
               context.beginPath();
               context.fillStyle="#ccf";
               context.lineWidth = 2;
-              move_to(equ_qx, equ_px);
-              line_to(0     , dem_px);
-              line_to(0     , sup_px);
-              line_to(equ_qx, equ_px);
+              move_to(equ_qx, equ_px, lr);
+              line_to(0     , dem_px, lr);
+              line_to(0     , sup_px, lr);
+              line_to(equ_qx, equ_px, lr);
               context.fill();
 
             context.beginPath();
             context.strokeStyle="#888";
             context.lineWidth = 2.5;
             /* dem-x curve: */
-              move_to(0     , dem_px);
-              line_to(dem_qx, 0     );
+              plot_line_offset_slope(dem_px, dem_sx, lr);
             /* sup-x curve: */
-              move_to(0     , sup_px);
-              let a = Math.min(axlen, (axlen-sup_px)/sup_sx);
-              line_to(a, sup_px + sup_sx * a);
+              plot_line_offset_slope(sup_px, sup_sx, lr);
             context.stroke();
 
             context.beginPath();
             context.strokeStyle="#888";
             context.lineWidth = 1.5;
             /* dem-x curve constituents: */
-              move_to(0           , dem_px);
-              line_to(dem_qx_large, 0     );
-              move_to(0           , dem_px);
-              line_to(dem_qx_small, 0     );
+              plot_line_offset_slope(dem_px_large, dem_sx_large, lr);
+              plot_line_offset_slope(dem_px_small, dem_sx_small, lr);
             context.stroke();
 
             /* equ-x point: */
               context.beginPath();
               context.strokeStyle="#444";
               context.lineWidth = 2;
-              circ_at(equ_qx, equ_px);
+              circ_at(equ_qx, equ_px, lr);
             context.stroke();
 
             context.beginPath();
             context.strokeStyle="#888";
             context.lineWidth = 1;
             /* x axis: */
-              move_to(0        , 0    );
-              line_to(axlen    , 0    );
-              line_to(axlen-.06, 0+.03);
-              line_to(axlen-.06, 0-.03);
-              line_to(axlen    , 0    );
+              move_to(0        , 0    , lr);
+              line_to(axlen    , 0    , lr);
+              line_to(axlen-.06, 0+.03, lr);
+              line_to(axlen-.06, 0-.03, lr);
+              line_to(axlen    , 0    , lr);
               for (i=1; i!=axlen; ++i) {
-                move_to(i, 0-.03);
-                line_to(i, 0+.03);
+                move_to(i, 0-.03, lr);
+                line_to(i, 0+.03, lr);
               }
             /* y axis: */
-              move_to(0    , 0        );
-              line_to(0    , axlen    );
-              line_to(0+.03, axlen-.06);
-              line_to(0-.03, axlen-.06);
-              line_to(0    , axlen    );
+              move_to(0    , 0        , lr);
+              line_to(0    , axlen    , lr);
+              line_to(0+.03, axlen-.06, lr);
+              line_to(0-.03, axlen-.06, lr);
+              line_to(0    , axlen    , lr);
               for (i=1; i!=axlen; ++i) {
-                move_to(0-.03, i);
-                line_to(0+.03, i);
+                move_to(0-.03, i, lr);
+                line_to(0+.03, i, lr);
               }
             context.stroke();
 
+            /* -----  _  --------------------------------------------------------------- */
+            lr = 1;
 
+            /* equ-a fill: */
+              context.beginPath();
+              context.fillStyle="#ccf";
+              context.lineWidth = 2;
+              line_to(0     , dem_pa_small, lr);
+              line_to(dem_qa_kink, dem_pa_large, lr);
+              line_to(equ_qa, equ_pa, lr);
+              line_to(0     , sup_pa, lr);
+              line_to(0     , dem_pa_small, lr);
+              context.fill();
 
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 2.5;
+            /* dem-a curve: */
+              plot_line(0,dem_pa_small,dem_qa_kink, dem_pa_large, lr);
+              plot_line(dem_qa_kink,dem_pa_large,dem_qa,0, lr);
+            /* sup-a curve: */
+              plot_line_offset_slope(sup_pa, sup_sa, lr);
+            context.stroke();
+
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 1.5;
+            /* dem-a curve constituents: */
+              plot_line_offset_slope(dem_pa_large, dem_sa_large, lr);
+              plot_line_offset_slope(dem_pa_small, dem_sa_small, lr);
+            context.stroke();
+
+            /* equ-a point: */
+              context.beginPath();
+              context.strokeStyle="#444";
+              context.lineWidth = 2;
+              circ_at(equ_qa, equ_pa, lr);
+            context.stroke();
+
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 1;
+            /* x axis: */
+              move_to(0        , 0    , lr);
+              line_to(axlen    , 0    , lr);
+              line_to(axlen-.06, 0+.03, lr);
+              line_to(axlen-.06, 0-.03, lr);
+              line_to(axlen    , 0    , lr);
+              for (i=1; i!=axlen; ++i) {
+                move_to(i, 0-.03, lr);
+                line_to(i, 0+.03, lr);
+              }
+            /* y axis: */
+              move_to(0    , 0        , lr);
+              line_to(0    , axlen    , lr);
+              line_to(0+.03, axlen-.06, lr);
+              line_to(0-.03, axlen-.06, lr);
+              line_to(0    , axlen    , lr);
+              for (i=1; i!=axlen; ++i) {
+                move_to(0-.03, i, lr);
+                line_to(0+.03, i, lr);
+              }
+            context.stroke();
           }
 
-          //function getdist(clickx, clicky) {
-          //  x = (clickx - canvas.width/2)/640.0;
-          //  y = (clicky - canvas.height/2)/640.0;
-          //  c = y/Math.pow(3.0, 0.5) + x + 1.0/3;
-          //  b = y/Math.pow(3.0, 0.5) - x + 1.0/3;
-          //  a = 1-(b+c);
-          //  //return ((0<=a) && (0<=b) && (0<=c));
-          //  var m = Math.min(0, a, b, c)-0.00005;
-          //  a -= m; b -= m; c -= m;
-          //  var M = a+b+c;
-          //  a /= M; b /= M; c /= M;
-          //  return [a, b, c];
-          //}
-          //function draw_egeod(abc, ABC) {
-          //  context.beginPath();
-          //  context.strokeStyle="#88F";
-          //  context.lineWidth = 2;
-          //  context.arc(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]), 2.5, 0, Math.PI * 2, false);
-          //  context.stroke();
-
-          //  context.beginPath();
-          //  context.strokeStyle="#88F";
-          //  context.lineWidth = 2;
-          //  context.arc(plot_x(ABC[0], ABC[1], ABC[2]), plot_y(ABC[0], ABC[1], ABC[2]), 2.5, 0, Math.PI * 2, false);
-          //  context.stroke();
-
-          //  context.beginPath();
-          //  context.strokeStyle="#88F";
-          //  context.lineWidth = 2;
-          //  context.moveTo(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]));
-          //  var i;
-          //  for (i=0; i!=201; ++i) {
-          //    e = [
-          //      Math.pow(ABC[0], i/200.0)*Math.pow(abc[0], 1.0-i/200.0),
-          //      Math.pow(ABC[1], i/200.0)*Math.pow(abc[1], 1.0-i/200.0),
-          //      Math.pow(ABC[2], i/200.0)*Math.pow(abc[2], 1.0-i/200.0)
-          //    ];
-          //    var esum = e[0] + e[1] + e[2];
-          //    e[0] /= esum;
-          //    e[1] /= esum;
-          //    e[2] /= esum;
-          //    context.lineTo(plot_x(e[0], e[1], e[2]), plot_y(e[0], e[1], e[2]));
-          //  }
-          //  context.stroke();
-          //}
           function onClick(clickx, clicky) {
             mode = (mode+1)%nb_modes;
           }
+
           function onMouseMove(e) {
             var clickx = e.clientX-rect.left;
             var clicky = e.clientY-rect.top;
-            var a = a_from(clickx, clicky);
-            var b = b_from(clickx, clicky);
+            var a = a_from(clickx, clicky, 0);
+            var b = b_from(clickx, clicky, 0);
 
             if (mode==0) {
-              dem_qx_large = a;
+              dem_qx_large = Math.max(0, a);
             } else if (mode==2) {
-              sup_pa = b;
+              sup_pa = Math.max(0,Math.min(dem_px/convert,b));
             }
-
-            //dem_qx_large = a;
-            dem_qx_small = 1.5;
-            dem_qx = dem_qx_large + dem_qx_small;
-            dem_px = 3.0;
-            dem_sx = -dem_px/dem_qx; // slope
-
-            //sup_pa = 0.5;
-            sup_sa = 0.5; // slope
-            convert= (ratio * dem_qx_large + 1 * dem_qx_small) / dem_qx;
-            sup_px = sup_pa * convert;
-            sup_sx = sup_sa * convert; // slope
-
-            equ_qx = (dem_px-sup_px)/(sup_sx-dem_sx);
-            equ_px = sup_px + sup_sx * equ_qx;
+            compute_points(dem_qx_large, sup_pa);
 
             resetCanvas();
-
-            //draw_egeod(abc, ABC);
           }
          </script>
 
