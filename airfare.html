@@ -1,0 +1,236 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/carboniferous.css">
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="application/javascript" src="js/toggler.js"></script>
+  </head>
+
+  <body>
+    <div id="togglerbody" style="text-align:center">
+      <button id="toggler"> repaint </button>
+      <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
+    </div>
+
+        <h2>A Toy Model of Airfare</h2>
+
+        <div>
+          We visualize dual-unit markets.
+          Click to toggle between moving one endpoint and the other.
+        </div>
+
+        <div class="separator" style="clear: both; text-align: center;">
+          <canvas height="800" id="myCanvas" style="border: 0px;" width="960"></canvas>
+          <div id="infobox">
+        </div>
+
+        <strong><div id="bookreviewtitle"; style="text-align: center"></div></strong>
+        <div id="bookreview"; style="text-align: left" scroll="no"></div>
+
+        <script>
+          let mode = 0;
+          let nb_modes = 4;
+
+          let axlen = 5;
+          let ratio = 2.0; // qa_large_per_qa_small
+
+          let dem_qx_large = 0.5;
+          let dem_qx_small = 1.5;
+          let dem_qx = dem_qx_large + dem_qx_small;
+          let dem_px = 3.0;
+          let dem_sx = -dem_px/dem_qx; // slope
+
+          let sup_pa = 0.5;
+          let sup_sa = 0.5; // slope
+          let convert= (ratio * dem_qx_large + 1 * dem_qx_small) / dem_qx;
+          let sup_px = sup_pa * convert;
+          let sup_sx = sup_sa * convert; // slope
+
+          let equ_qx = (dem_px-sup_px)/(sup_sx-dem_sx);
+          let equ_px = sup_px + sup_sx * equ_qx;
+
+          let canvas = document.getElementById("myCanvas");
+          let context = canvas.getContext("2d");
+          let rect = canvas.getBoundingClientRect();
+
+          canvas.addEventListener("mousemove", onMouseMove, false);
+          canvas.addEventListener("click", onClick, false);
+          context.font = "20px Century Gothic";
+          context.fillStyle = "#444";
+          context.textAlign="center";
+
+          function a_from(x, y) { return (x - canvas.width  * 0.1) / (+ 640/axlen ); }
+          function b_from(x, y) { return (y - canvas.height * 0.9) / (- 640/axlen ); }
+
+          function x_from(a, b) { return +a * 640/axlen + canvas.width  * 0.1; }
+          function y_from(a, b) { return -b * 640/axlen + canvas.height * 0.9; }
+          function move_to(a, b) { context.moveTo(x_from(a, b), y_from(a, b)); }
+          function line_to(a, b) { context.lineTo(x_from(a, b), y_from(a, b)); }
+          function circ_at(a, b) { context.arc(x_from(a, b), y_from(a, b), 2, 0, Math.PI*2, false); }
+
+          //function plot_line()
+
+          onClick(0, 0);
+
+          function resetCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            /* equ-x fill: */
+              context.beginPath();
+              context.fillStyle="#ccf";
+              context.lineWidth = 2;
+              move_to(equ_qx, equ_px);
+              line_to(0     , dem_px);
+              line_to(0     , sup_px);
+              line_to(equ_qx, equ_px);
+              context.fill();
+
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 2.5;
+            /* dem-x curve: */
+              move_to(0     , dem_px);
+              line_to(dem_qx, 0     );
+            /* sup-x curve: */
+              move_to(0     , sup_px);
+              let a = Math.min(axlen, (axlen-sup_px)/sup_sx);
+              line_to(a, sup_px + sup_sx * a);
+            context.stroke();
+
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 1.5;
+            /* dem-x curve constituents: */
+              move_to(0           , dem_px);
+              line_to(dem_qx_large, 0     );
+              move_to(0           , dem_px);
+              line_to(dem_qx_small, 0     );
+            context.stroke();
+
+            /* equ-x point: */
+              context.beginPath();
+              context.strokeStyle="#444";
+              context.lineWidth = 2;
+              circ_at(equ_qx, equ_px);
+            context.stroke();
+
+            context.beginPath();
+            context.strokeStyle="#888";
+            context.lineWidth = 1;
+            /* x axis: */
+              move_to(0        , 0    );
+              line_to(axlen    , 0    );
+              line_to(axlen-.06, 0+.03);
+              line_to(axlen-.06, 0-.03);
+              line_to(axlen    , 0    );
+              for (i=1; i!=axlen; ++i) {
+                move_to(i, 0-.03);
+                line_to(i, 0+.03);
+              }
+            /* y axis: */
+              move_to(0    , 0        );
+              line_to(0    , axlen    );
+              line_to(0+.03, axlen-.06);
+              line_to(0-.03, axlen-.06);
+              line_to(0    , axlen    );
+              for (i=1; i!=axlen; ++i) {
+                move_to(0-.03, i);
+                line_to(0+.03, i);
+              }
+            context.stroke();
+
+
+
+          }
+
+          //function getdist(clickx, clicky) {
+          //  x = (clickx - canvas.width/2)/640.0;
+          //  y = (clicky - canvas.height/2)/640.0;
+          //  c = y/Math.pow(3.0, 0.5) + x + 1.0/3;
+          //  b = y/Math.pow(3.0, 0.5) - x + 1.0/3;
+          //  a = 1-(b+c);
+          //  //return ((0<=a) && (0<=b) && (0<=c));
+          //  var m = Math.min(0, a, b, c)-0.00005;
+          //  a -= m; b -= m; c -= m;
+          //  var M = a+b+c;
+          //  a /= M; b /= M; c /= M;
+          //  return [a, b, c];
+          //}
+          //function draw_egeod(abc, ABC) {
+          //  context.beginPath();
+          //  context.strokeStyle="#88F";
+          //  context.lineWidth = 2;
+          //  context.arc(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]), 2.5, 0, Math.PI * 2, false);
+          //  context.stroke();
+
+          //  context.beginPath();
+          //  context.strokeStyle="#88F";
+          //  context.lineWidth = 2;
+          //  context.arc(plot_x(ABC[0], ABC[1], ABC[2]), plot_y(ABC[0], ABC[1], ABC[2]), 2.5, 0, Math.PI * 2, false);
+          //  context.stroke();
+
+          //  context.beginPath();
+          //  context.strokeStyle="#88F";
+          //  context.lineWidth = 2;
+          //  context.moveTo(plot_x(abc[0], abc[1], abc[2]), plot_y(abc[0], abc[1], abc[2]));
+          //  var i;
+          //  for (i=0; i!=201; ++i) {
+          //    e = [
+          //      Math.pow(ABC[0], i/200.0)*Math.pow(abc[0], 1.0-i/200.0),
+          //      Math.pow(ABC[1], i/200.0)*Math.pow(abc[1], 1.0-i/200.0),
+          //      Math.pow(ABC[2], i/200.0)*Math.pow(abc[2], 1.0-i/200.0)
+          //    ];
+          //    var esum = e[0] + e[1] + e[2];
+          //    e[0] /= esum;
+          //    e[1] /= esum;
+          //    e[2] /= esum;
+          //    context.lineTo(plot_x(e[0], e[1], e[2]), plot_y(e[0], e[1], e[2]));
+          //  }
+          //  context.stroke();
+          //}
+          function onClick(clickx, clicky) {
+            mode = (mode+1)%nb_modes;
+          }
+          function onMouseMove(e) {
+            var clickx = e.clientX-rect.left;
+            var clicky = e.clientY-rect.top;
+            var a = a_from(clickx, clicky);
+            var b = b_from(clickx, clicky);
+
+            if (mode==0) {
+              dem_qx_large = a;
+            } else if (mode==2) {
+              sup_pa = b;
+            }
+
+            //dem_qx_large = a;
+            dem_qx_small = 1.5;
+            dem_qx = dem_qx_large + dem_qx_small;
+            dem_px = 3.0;
+            dem_sx = -dem_px/dem_qx; // slope
+
+            //sup_pa = 0.5;
+            sup_sa = 0.5; // slope
+            convert= (ratio * dem_qx_large + 1 * dem_qx_small) / dem_qx;
+            sup_px = sup_pa * convert;
+            sup_sx = sup_sa * convert; // slope
+
+            equ_qx = (dem_px-sup_px)/(sup_sx-dem_sx);
+            equ_px = sup_px + sup_sx * equ_qx;
+
+            resetCanvas();
+
+            //draw_egeod(abc, ABC);
+          }
+         </script>
+
+  </body>
+</html>
