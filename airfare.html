@@ -36,7 +36,7 @@
         <div id="bookreview"; style="text-align: left" scroll="no"></div>
 
         <script>
-          let mode = 0;
+          let mode = 3;
           let nb_modes = 4;
 
           let axlen = 5;
@@ -123,10 +123,24 @@
             plot_line(0,offset,axlen,offset+slope*axlen, lr);
           }
 
-          onClick(0, 0);
+          resetCanvas();
 
           function resetCanvas() {
             context.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (mode==0) {
+              context.beginPath();
+              context.strokeStyle="#fc9";
+              context.lineWidth = 3.5;
+              plot_line(dem_qx_large-.001,0,dem_qx_large,axlen, 0);
+              context.stroke();
+            } else if (mode==2) {
+              context.beginPath();
+              context.strokeStyle="#fc9";
+              context.lineWidth = 2.5;
+              plot_line_offset_slope(sup_pa,0.01, 1);
+              context.stroke();
+            }
 
             var lr = 0;
             /* equ-x fill: */
@@ -251,15 +265,39 @@
                 line_to(0+.03, i, lr);
               }
             context.stroke();
+
+            let message = "x utility ".concat(String(x_utility().toFixed(2)));
+            context.fillText(message, x_from(axlen*.5,axlen*.95,0),y_from(axlen*.5,axlen*.95,0));
+
+            message = "a utility ".concat(String(a_utility().toFixed(2)));
+            context.fillText(message, x_from(axlen*.5,axlen*.95,1),y_from(axlen*.5,axlen*.95,1));
+          }
+
+          function x_utility() {
+            return (dem_px - sup_px) * equ_qx / 2;
+          }
+
+          function a_utility() {
+            return (
+              (dem_pa_small - dem_pa_large) * dem_qa_kink / 2
+             +(dem_pa_large - equ_pa       ) * (equ_qa - dem_qa_kink) / 2
+             +(dem_pa_large - equ_pa       ) * (        dem_qa_kink)
+             +(equ_pa        - sup_pa      ) * equ_qa       / 2
+            );
           }
 
           function onClick(clickx, clicky) {
             mode = (mode+1)%nb_modes;
+            //update_plots(clickx, clicky);
+            resetCanvas();
           }
 
           function onMouseMove(e) {
             var clickx = e.clientX-rect.left;
             var clicky = e.clientY-rect.top;
+            update_plots(clickx, clicky);
+          }
+          function update_plots(clickx, clicky) {
             var a = a_from(clickx, clicky, 0);
             var b = b_from(clickx, clicky, 0);
 
