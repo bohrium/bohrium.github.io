@@ -28,7 +28,7 @@
         </div>
 
         <div class="separator" style="clear: both; text-align: center;">
-          <canvas height="640" id="myCanvas" style="border: 0px;" width="640"></canvas>
+          <canvas height="960" id="myCanvas" style="border: 0px;" width="960"></canvas>
           <div id="infobox">
         </div>
 
@@ -66,7 +66,6 @@
             dem_sa_small = -dem_pa_small/dem_qa_small  ;
             dem_sa_large = -dem_pa_large/dem_qa_large  ;
             dem_sa       = 1./((1./dem_sa_small) + (1./dem_sa_large));
-            //dem_sa       = -dem_pa_large/(dem_qa-dem_qa_kink);
 
             dem_qa_kink = (dem_pa_small-dem_pa_large)/(-dem_sa_small);
 
@@ -80,7 +79,9 @@
             equ_px = sup_px + sup_sx * equ_qx;
 
             equ_qa = dem_qa_kink + (dem_pa_large - (sup_pa + sup_sa * dem_qa_kink))/(sup_sa-dem_sa);
-            //equ_pa = dem_pa_large+dem_sa*(equ_qa-dem_qa_kink);
+            if (equ_qa < dem_qa_kink) {
+              equ_qa = (dem_pa_small - sup_pa)/(sup_sa-dem_sa_small);
+            }
             equ_pa = sup_pa + sup_sa * equ_qa;
           }
           compute_points(1., 0.5);
@@ -96,10 +97,10 @@
           context.fillStyle = "#444";
           context.textAlign="center";
 
-          function a_from(x, y, lr) { return (x - canvas.width  * (lr ? .52 : .02)) / (+ (.46/.50)*320/axlen ); }
-          function b_from(x, y, lr) { return (y - canvas.height * 0.50) / (- (.46/.50)*320/axlen ); }
-          function x_from(a, b, lr) { return +a * (.46/.50)*320/axlen + canvas.width  * (lr ? .52 : .02); }
-          function y_from(a, b, lr) { return -b * (.46/.50)*320/axlen + canvas.height * 0.50; }
+          function a_from(x, y, lr) { return (x - canvas.width  * (lr ? .52 : .02)) / (+ (.46/.50)*480/axlen ); }
+          function b_from(x, y, lr) { return (y - canvas.height * 0.50) / (- (.46/.50)*480/axlen ); }
+          function x_from(a, b, lr) { return +a * (.46/.50)*480/axlen + canvas.width  * (lr ? .52 : .02); }
+          function y_from(a, b, lr) { return -b * (.46/.50)*480/axlen + canvas.height * 0.50; }
 
           function move_to(a, b, lr) { context.moveTo(x_from(a, b, lr), y_from(a, b, lr)); }
           function line_to(a, b, lr) { context.lineTo(x_from(a, b, lr), y_from(a, b, lr)); }
