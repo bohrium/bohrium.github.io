@@ -3,6 +3,7 @@
 <html>
   <head>
     <link id="pagestyle" rel="stylesheet" type="text/css" href="css/carboniferous.css">
+    <link rel="stylesheet" href="moo.css">
 
     <script src="jquery-3.3.1.min.js"></script>
     <script type="text/x-mathjax-config">
@@ -24,11 +25,25 @@
 
         <div>
           We visualize dual-unit markets.
+          Click to toggle between moving one endpoint and the other moo moo moo moo.
+          Click to toggle between moving one endpoint and the other moo moo moo moo.<a class="circ"><b>&#x00b0</b></a>
+          <span class="marginright">
+              <span style="margin-left:-10px;"><a class="arro"><b>&#x27f5</b></a></span> Moo goo
           Click to toggle between moving one endpoint and the other.
+          Click to toggle between moving one endpoint and the other.
+          Click to toggle between moving one endpoint and the other.
+          Click to toggle between moving one endpoint and the other.
+          Click to toggle between moving one endpoint and the other.
+          Click to toggle between moving one endpoint and the other.
+          </span>
+
+          Click to toggle between moving one endpoint and the other moo moo moo moo.
+          Click to toggle between moving one endpoint and the other moo moo moo moo.
+          Click to toggle between moving one endpoint and the other moo moo moo moo.
         </div>
 
         <div class="separator" style="clear: both; text-align: center;">
-          <canvas height="960" id="myCanvas" style="border: 0px;" width="960"></canvas>
+          <canvas height="800" id="myCanvas" style="border: 0px;" width="800"></canvas>
           <div id="infobox">
         </div>
 
@@ -97,10 +112,10 @@
           context.fillStyle = "#444";
           context.textAlign="center";
 
-          function a_from(x, y, lr) { return (x - canvas.width  * (lr ? .52 : .02)) / (+ (.46/.50)*480/axlen ); }
-          function b_from(x, y, lr) { return (y - canvas.height * 0.50) / (- (.46/.50)*480/axlen ); }
-          function x_from(a, b, lr) { return +a * (.46/.50)*480/axlen + canvas.width  * (lr ? .52 : .02); }
-          function y_from(a, b, lr) { return -b * (.46/.50)*480/axlen + canvas.height * 0.50; }
+          function a_from(x, y, lr) { return (x - canvas.width  * (lr ? .52 : .02)) / (+ (.46/.50)*400/axlen ); }
+          function b_from(x, y, lr) { return (y - canvas.height * 0.50) / (- (.46/.50)*400/axlen ); }
+          function x_from(a, b, lr) { return +a * (.46/.50)*400/axlen + canvas.width  * (lr ? .52 : .02); }
+          function y_from(a, b, lr) { return -b * (.46/.50)*400/axlen + canvas.height * 0.50; }
 
           function move_to(a, b, lr) { context.moveTo(x_from(a, b, lr), y_from(a, b, lr)); }
           function line_to(a, b, lr) { context.lineTo(x_from(a, b, lr), y_from(a, b, lr)); }
@@ -266,6 +281,7 @@
               }
             context.stroke();
 
+            context.fillStyle="#444";
             let message = "x utility ".concat(String(x_utility().toFixed(2)));
             context.fillText(message, x_from(axlen*.5,axlen*.95,0),y_from(axlen*.5,axlen*.95,0));
 
