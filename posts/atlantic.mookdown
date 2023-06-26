@@ -48,7 +48,15 @@ rights).
 #   npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial
 #   digressionsnimpressions.typepad.com/digressionsimpressions/2016/09/in-a-corrupt-republic-trump-will-rise.html
 
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
+
+
 !! Why?  A Bridge in Disrepair
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! the document, living and dead
 
 I propose that we regard our Constitution as vital infrastructure, a bridge
@@ -69,62 +77,226 @@ problems and that we can decisively address only by amending our great
 document.  Amendments need not advance one faction's interests while harming
 over another's: we are far from a zero-sum regime.
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! "nonpartisan" as a strict word
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! nonpartisan adjustments abound
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! a space of representative democracies
+
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
 
 !! What?  New Democratic Recipes as Modern Infrastructure
 
+Here I illustrate the kind of creative recipes I mean.  Though I am very fond
+of some of these ideas, my purpose here is not to advocate for those ideas in
+themselves but instead to exhibit as ripe-for-exploration a rich world of new
+constitutional structures.  We ought to explore this world with our
+imaginations and discuss what we find in our public forums.
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!!! gentle aggregations: budgeting
+
+!!!! type signature flexibility
+
+!!!! budgeting
+
+A principle
+
+!!!! 
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! third ways in federalism and separation
+
+!!!! bias vs variance; insulation
+
 Part of the Constitution's genius is its partitioning of power between national
 and regional governments --- and, within each, between the judicial,
 legislative, and executive branches.  (Of course, State constitutions add flesh
 to the `republican form` clause).  Such separations inhibit the concentration
-of power in a tyrant; they also offer the benefits of specialization and
-modularity: cultural diversity between States is maintained, office holders may
-be experts rather than jacks of all trades, and the People may replace the
-specific office holders that disappoint them.
+of power in a tyrant; through specialization and modularity they also permit
+office holders to be experts rather than jacks of all trades, maintain cultural
+diversity between States, and allow the People to replace only the specific
+office holders that disappoint them.
 
-This, Scalia argues, is the Constitution's structural heart.  
+This, Scalia argues, is the Constitution's structural heart.
 
 !!!! independent state election boards
-!!!! quasi-constitutional parameters
-!!!! 
 
-!!! gentle aggregations: budgeting
+!!!! quasi-constitutional parameters
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !!! chaos, or turn-taking?  randomness in the House
 
+!!!! randomness and proportionality
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! keeping the tension: appointing a moderate Court
 
+!!!! tension 
+!!!! regularity
+
+
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
+
 !! How?  Nucleation, Conventions, a Meta-Amendment
-!!! what to overcome
-!!! how to overcome it
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!!! overcoming inertia
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!!! design considerations in a meta-amendment
+
+#-------  Bottlenecks and Indeterminacies  ------------------------------------
+
+Our current amendment process suffers from bottlenecks and indeterminacies.
+
+Antonin Scalia warned against the `improvisation` of constitutional structure.
+
+The Constitution provides multiple paths toward amendment, but only one ---
+namely approval both by supermajorities within the national legislature and by
+a strong supermajority of regional legislatures --- has ever been tried.  This
+is a bottleneck because legislators may plausibly claim to be busy resolving
+more urgent matters of concrete policy, or that a proposed amendment requires
+further years of study, especially if a potential amendment would dilute
+legislative privilege or powers (c.f. Amendment 27's long history for a weak
+example).  It is often politically convenient to perpetually postpone the
+thorny issue of whether to ratify or reject an amendment (c.f. Scalia on Junior
+League Congress), and because the Constitution specifies no timeframe for
+ratification, proposed amendments may get lost in eternal indeterminacy.
+
+Ideally, an alternative path toward amendment would avoid these
+legislature-specific pitfalls; and indeed, the Constitution provides that
+`Conventions` may act in the stead of those legislatures, but it says nothing
+of the structure of these Conventions (save that a national convention must be
+called by the regional legislatures and vice versa).  This is a structural
+indeterminacy that leads to the bottleneck through the legislatures.
+
+We wish to devise a minimal change to Article 5 that specifies these
+ambiguities of timeframe and of convention structure.  Yet, the timeframe must
+allow, and the structure must force rather than steamroll over, deliberation.
+
+#-------  Timeframes  ---------------------------------------------------------
+
+The timeframe is straightforward enough, but it is a delicate problem to decide
+the methods by which the People shall convene and by which conventions shall
+propose or ratify amendments.
+
+#-------  Role of Conventions  ------------------------------------------------
+
+The principles I wish to preserve are these: that both national and regional
+conventions directly (rather than through intermediate layers) represent the
+People; and that a national convention's proposals reflect the broad consensus
+in both state-weighted and population-weighted senses that characterizes joint
+supermajorities in the House and Senate; and that
+
+Delegates to a convention are charged specifically with determining
+whether and what amendments seem necessary, so they lack both the excuse of
+busy-ness and the incentive toward powerful legislatures; they will not be
+re-elected so they lack an incentive toward avoiding divisive issues.
+
+#-------  Balance in the National Convention  ---------------------------------
+
+To force compromise and deliberation, I propose that we model the national
+convention after the Senate: each state sends two delegates elected directly by
+its People.  But to propose an amendment, the Convention must achieve
+supermajorities not only in the ordinary sense but also in a sense where each
+State's delegation is weighted proportionally to population.
+
+Suppose that folks differ in their weights on fundamental values by which one
+might judge an amendment.  For example, perhaps half of Americans prioritize
+Equality over Autonomy and other the other half prioritize Autonomy over
+Equality.  Call them blue and red, respectively.  If 55% of a State's voters
+are blue, and the other 45% red, it would seem contrary to the idea of
+proportional republican forms of government for both of that State's delegates
+to favor the blue view.
+
+Fortunately, since both delegates are elected at the same time, we can avoid
+such outcomes by modifying the election procedure.  Simply allow each voter to
+select any subset of candidates; and send as delegates that pair of candidates
+that intersects the greatest number of voters' subsets.  That a voter may
+select a set of candidates rather than a single candidate makes this system
+robust to `third-party` spoilers.  For example, a plausible situation is that
+in nearly all States, some nonempty set of red candidates and some nonempty set
+of blue candidates run, and that each of those two sets is the selection of
+more than (1/3) of voters.  The delegation of such a State then consists of one
+red and one blue delegate; it is the remaining voters that determine which blue
+and which red candidate.
+
+What demographic imbalance would it take for two blue delegates to be elected?
+
+Suppose slighty more than twice as many voters favor blue as favor red.  The
+blue team coordinates to nominate exactly two candidates; and one or more red
+candidates also run.  Blue voters coordinate so that each blue voter votes
+randomly for one of the two blue candidates.  Then the two candidates will.
+
+#-------  Regional Conventions  -----------------------------------------------
+
+We aim to allow direct popular input, to facilitate deliberation, and to do so
+with efficiency.
+
+I propose regional popular votes in place of more traditional regional
+conventions.
+
+The regional alternative to legislative ratification is triggered only when the
+State Legislature has rejected the amendment.  By this time, the amendment will
+already have had plentiful time in the spotlight as it is debated within
+Congress or within a Amending Convention, then debated within State
+Legislatures, for each citizen to have absorbed unexpected viewpoints and to
+have discussed and considered the amendment at length in public forums.  One
+also imagines that individual legislators will feel urgent political pressure
+to explain their reasoning for rejection to their constituents.  For this
+reason, the additional deliberation achieved through a regional convention
+seems superfluous.
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !!! a sample meta-amendment
 
-#-------  PART A : Multiple Paths to Amendment  -------------------------------
 !!!! Section I : Multiple Paths to Amendment
 
-The Congress or an Amending Convention may by sufficient majorities propose an
-amendment to this Constitution.  Thereupon, the Legislature of each State shall
-ratify or reject the amendment.  But if by 24 months of proposal that
+The Congress or an Amending Convention may, when they deem necessary, propose
+an amendment to this Constitution.  Thereupon, the Legislature of each State
+shall ratify or reject the amendment.  But if by 24 months of proposal that
 Legislature rejects or fails to decide on the amendment, the People of that
 State shall within an additional 24 months vote on the amendment, which shall
 be ratified if (3/5)s of their votes so say.  If and only if within 48 months
 of proposal (3/4)s of the States have ratified the amendment, the amendment
 shall become part of this Constitution.
 
-The Congress shall not propose an amendment without (2/3)s majorities in both
-Chambers.  The Amending Convention shall not propose an amendment without
-(2/3)s majorities in both unweighted and population-weighted senses.  When the
-Amending Convention computes a population-weighted vote, each Delegate's Yea or
-Nay shall be counted with multiplicity equal to the number of Representatives
-to which their State is entitled in the Congress.  And no Amendment shall be
-proposed that deprives a State, without its consent, of its equal suffrage in
-the Senate.
+But the Congress shall not propose an amendment without (2/3)s majorities in
+both Chambers.  Nor shall the Amending Convention propose an amendment without
+(2/3)s majorities both when each Delegate's Yea or Nay is counted with
+multiplicity equal to the number of Representatives to which their State is
+entitled in the Congress, and when each Delegate's Yea or Nay counts as one
+vote.  And no Amendment shall be proposed that deprives a State, without its
+consent, of its equal suffrage in the Senate.
 
-#-------  PART B : Election and Duration of Convention  -----------------------
-!!!! Section II : Election and Duration of Convention
+!!!! Section II : Election and Duration of the Amending Convention
 
 In November of each 50th year, or of the earliest even year following the
 simultaneous request of the executive authorities of (2/3)s of the States, an
@@ -140,8 +312,7 @@ debate amendments to this Constitution.  Within 24 months of convening, the
 Convention shall conclude its work and shall have thus proposed zero, one, or
 multiple amendments.  At this time the Convention shall dissolve.
 
-#-------  PART C : Procedure and Privileges in the Amending Convention  -------
-!!!! Section III : Procedure and Privileges in the Amending Convention
+!!!! Section III : The Amending Convention's Procedure and Privileges
 
 The Convention shall by (unweighted) majorities adopt or revise their rules of
 procedure and choose or replace their Director.  With the consent of an
@@ -151,13 +322,15 @@ allocate general funds, and organize the Convention's deliberations.
 The Congress shall by law supply to each Delegate: remuneration, assistants,
 and funds comparable to those that a Senator annually enjoys; and to the
 Convention: clerks, security, and funds comparable to those that the Senate
-annually enjoys, and a physical convention hall befitting the occasion.
+annually enjoys, and a physical convention hall befitting the occasion.  The
+Delegates shall in all cases, except treason, felony, and breach of the peace,
+be privileged from arrest during their attendance in the convention hall, and
+in going to and returning from the same; and for any speech or debate, they
+shall not be questioned in any other place.
 
-The Delegates shall in all cases, except treason, felony, and breach of the
-peace, be privileged from arrest during their attendance in the convention
-hall, and in going to and returning from the same; and for any speech or
-debate, they shall not be questioned in any other place.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~  _  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!!! action and probability estimates
+!!! actions and probability estimates
 
 
