@@ -14,23 +14,23 @@
         <script type="application/javascript" src="book_reviews.js"></script>
         <script type="application/javascript" src="js/toggler.js"></script>
     </head>
-    
+
     <body>
         <div id="togglerbody" style="text-align:center">
             <button id="toggler"> repaint </button>
             <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
         </div>
 
-            <h2>Sam's Reading List</h2> 
-    
+            <h2>Sam's Reading List</h2>
+
                 <div>
                     Here are books I've enjoyed.  Click big bubbles for notes.
-                    The ratings live in $[0, 1]$ and are computed as a weighted average of style, 
+                    The ratings live in $[0, 1]$ and are computed as a weighted average of style,
                     transcendence, humor, technical insight, human insight, stimulation density,
                     and overall enjoyment, with later terms having higher weight.  The ratings are
                     assigned quite harshly, so $0.5$ means "excellent".
                 </div>
- 
+
                 <div class="separator" style="clear: both; text-align: center;">
                     <canvas height="640" id="myCanvas" style="border: 0px;" width="853"></canvas>
                     <div id="infobox">
@@ -38,7 +38,7 @@
 
                 <strong><div id="bookreviewtitle"; style="text-align: center"></div></strong>
                 <div id="bookreview"; style="text-align: left" scroll="no"></div>
-    
+
 
                 <br>
                 <br>
@@ -47,7 +47,7 @@
                     this medium article</a>.
                 </div>
 
-    
+
                 <script>
                     var canvas = document.getElementById("myCanvas");
                     var bookreview = document.getElementById("bookreview");
@@ -57,17 +57,17 @@
                     canvas.addEventListener("click", onClick, false);
                     context.font = "20px Century Gothic";
                     context.fillStyle = "#444";
-                    context.textAlign="center"; 
+                    context.textAlign="center";
                     var offset = 60;
 
                     /*
                         title
-                        month of completion 
+                        month of completion
                         year of publication
                         author
 
                         holistic rating
-                        poetry 
+                        style and structure
                         transcendence
                         humor
                         technical insight
@@ -99,7 +99,7 @@
                         context.lineWidth = 3;
                         /* y axis: */
                             context.moveTo(offset, offset);
-                            context.lineTo(offset, canvas.height-offset) 
+                            context.lineTo(offset, canvas.height-offset)
                             context.rotate(-Math.PI/2);
                             context.fillText("Rating", -canvas.height/2, offset/2);
                             context.rotate(+Math.PI/2);
@@ -133,7 +133,7 @@
                             var bookx = get_book_x(i);
                             var booky = get_book_y(i);
                             var d2 = Math.pow(clickx-bookx,2) + Math.pow(clicky-booky,2);
-                            var color = "#88c"; 
+                            var color = "#88c";
                             context.lineWidth = books[i].length==9 ? 6 : 3;
                             if (d2<7.5*7.5) {
                                 color = "#4cf";
@@ -166,6 +166,6 @@
                         }
                     }
                </script>
- 
+
     </body>
 </html>
