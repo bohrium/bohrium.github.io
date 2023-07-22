@@ -1,14 +1,32 @@
 /*title                                date read publ   author            Ov   St   Tr   Hu   TI   HI   SD   review*/
 var books = [
-//-------  __  ----------------------------------------------------------------
-["Fluid Concepts, Analogies"        , "2012-01", 1979, "D.Hofstadter"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["Whales on Stilts"                 , "2012-02", 2005, "M.T.Anderson"   , 0.5, 1  , 0  , 1.5, 0  , 0  , 0  , ""],
+//-------  15  ----------------------------------------------------------------
+["Fluid Concepts, Creative Analogy" , "2012-01", 1979, "D.Hofstadter"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
 ["Surely You're Joking, Mr. Feynman", "2012-04", 1985, "R.P.Feynman"    , 1.5, 0  , 0  , 2  , 0  , 1.5, 1  , ""],
 ["Around the World in 80 Days"      , "2012-07", 1873, "J.Verne"        , 0.5, 0  , 0  , 0.5, 0  , 0  , 0.5, ""],
-["Presidential Anecdotes"           , "2012-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-["M is for Magic"                   , "2012-  ",     , "N.Gaiman"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["Konigsburg Stories"               , "2012-  ",     , "E.L.Konigsburg" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["Clue of the Linoleum Lederhosen"  , "2012-07", 2006, "M.T.Anderson"   , 1  , 0  , 0  , 1.5, 0  , 0.5, 0  , ""],
+["Presidential Anecdotes"           , "2012-  ", 1996, "P.F.Boller"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Huckleberry Finn"                 , "2012-08", 1885, "M.Twain"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["I am a Strange Loop"              , "2012-01", 2007, "D.Hofstadter"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Tales from the Brothers Grimm"    , "2012-02", 1812, "J.Grimm"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["The Know-It-All"                  , "2012-02", 2004, "A.J.Jacobs"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+["The Magical Maze"                 , "2012-  ", 1997, "I.Stewart"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["The Original Sherlock Holmes"     , "2012-08", 1905, "A.C.Doyle"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Cabinet of Math Curiosities"      , "2012-08", 2008, "I.Stewart"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Chased by Sea Monsters"           , "2012-08", 2004, "N.Marven"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Future is Wild"               , "2012-08", 2002, "D.Dixon"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Number Devil"                 , "2012-  ", 1997, "H.Enzensberger" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["The I Hate Mathematics Book"      , "2012-  ", 1975, "M.Burns"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Masters of Deception"             , "2012-  ", 2004, "A.Seckel"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+
+["Aha Gotcha"                       , "2012-  ",     , "M.Gardener"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Aha Insight"                      , "2012-  ",     , "M.Gardener"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Flatterland"                      , "2012-  ", 1991, "I.Stewart"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Order of Things"              , "2012-  ",     , "B.A.Kipfer"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Stick to Comics, Monkey Brain!"   , "2012-  ", 2008, "S.Adams"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Bill Peet, Autobiography"         , "2012-  ",     , "B.Peet"         , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Journey of Edward Tulane"         , "2012-  ",     , "K.DiCamillo"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Group Theory in the Bedroom"      , "2013-08", 2008, "B.Hayes"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 //-------  scioly year  -------------------------------------------------------
 ["Freshman Lectures on Physics"     , "2013-11",     , "R.P.Feynman"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
@@ -20,20 +38,38 @@ var books = [
 ["Connecticut Yankee in A's Court"  , "2013-12", 1889, "M.Twain"        , 1.5, 1  , 0  , 1.5, 0.5, 0.5, 2  , "reviews/connecticut-yankee.html"],
 ["Cartoon Microeconomics"           , "2013-12",     , ""               , 1.5, 1  , 0  , 1.5, 0.5, 0.5, 2  , "reviews/connecticut-yankee.html"],
 
-//-------  moving out year  ---------------------------------------------------
-["Metamagical Themas"               , "2014-  ",     , "D.Hofstadter"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["Abraham Lincoln, Vampire Hunter"  , "2013-11",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["ANSI C"                           , "2014-09", 1988, "B.W.Kernighan"  , 1  , 0.5, 0  , 0  , 1  , 0  , 0  , ""],
-["Pleasure of Finding Things Out"   , "2014-08", 1999, "R.P.Feynman"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-["A Mathematician's Apology"        , "2014-08", 1940, "G.H.Hardy"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-["The Diversity of Life"            , "2014-09", 1992, "E.O.Wilson"     , 1.5, 1  , 0  , 0  , 1  , 0  , 0  , ""],
-["Deviations from the Beaten Track" , "2014-  ",     , "R.P.Feynman"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
-["Letters of the Century"           , "2014-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["M is for Magic"                   , "2013-  ", 2007, "N.Gaiman"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Konigsburg Collection"        , "2013-  ",     , "E.L.Konigsburg" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Hyperbole and a Half"             , "2013-  ", 2013, "A.Brosh"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Diversity of Life"            , "2013-09", 1992, "E.O.Wilson"     , 1.5, 1  , 0  , 0  , 1  , 0  , 0  , ""],
+["Deviations from the Beaten Track" , "2013-  ", 2005, "R.P.Feynman"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Letters of the Century"           , "2013-  ", 1999, "L.Grunwald"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["A Mathematician's Apology"        , "2013-08", 1940, "G.H.Hardy"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Men of Mathematics"               , "2014-  ", 1937, "E.T.Bell"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
-//-------  __  ----------------------------------------------------------------
+["Metamagical Themas"               , "2014-  ",     , "D.Hofstadter"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Pleasure of Finding Things Out"   , "2014-08", 1999, "R.P.Feynman"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Great Physicists"                 , "2014-  ", 2001, "W.H.Cropper"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Physics, Astronomy, Math"         , "2014-  ", 1991, "T.Ferris"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["The Tao is Silent"                , "2012-  ",     , "R.M.Smullyan"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["B.C., Philosophical Fantasies"    , "2012-  ",     , "R.M.Smullyan"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Calvin and Hobbes, Collected"     , "2012-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Frank Lloyd Wright Revealed"      , "2012-  ",     , "R.King"         , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+//-------  moving out year  ---------------------------------------------------
+
+["Abraham Lincoln, Vampire Hunter"  , "2014-11",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["ANSI C"                           , "2014-09", 1988, "B.W.Kernighan"  , 1  , 0.5, 0  , 0  , 1  , 0  , 0  , ""],
+["Medea"                            , "2014-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Kingpin"                          , "2014-  ", 2011, "K.Poulsen"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Modern Physics"                   , "2014-  ",     , "K.Krane"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["Modern Quantum Mechanics"         , "2014-  ",     , "J.J.Sakurai"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+["What is the Name of this Book?"   , "2012-  ",     , "R.M.Smullyan"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["The Lady or the Tiger?"           , "2012-  ",     , "R.M.Smullyan"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+//-------  18  ----------------------------------------------------------------
 ["The Periodic Table"               , "2015-10", 1975, "P.Levi"         , 0.5, 0  , 0.5, 0  , 0.5, 2  , 0  , ""],
 ["The Selfish Gene"                 , "2015-07", 1976, "R.Dawkins"      , 0.5, 0  , 0  , 0  , 1.5, 0  , 1  , ""],
-["Tales of the Brothers Grimm"      , "2015-07",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
     /**/
     /**/
     /**/
@@ -49,9 +85,9 @@ var books = [
     /**/
     /**/
     /**/
-    /**/
+["Selected Writings on Computing"   , "2012-  ",     , "E.W.Dijkstra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
-//-------  __  ----------------------------------------------------------------
+//-------  20  ----------------------------------------------------------------
 ["Cat's Cradle"                     , "2017-01", 1963, "K.Vonnegut"     , 1  , 1  , 0.5 , 1  , 0.5, 0  , 2  , ""],
 ["Slaughterhouse Five"              , "2017-01", 1969, "K.Vonnegut"     , 0.5, 0.5, 0   , 1  , 0.5, 0.5, 0  , ""],
 ["Pale Fire"                        , "2017-03", 1962, "V.Nabokov"      , 1.5, 1  , 0   , 1  , 0.5, 0  , 0.5, "reviews/pale-fire.html"],
@@ -137,7 +173,7 @@ var books = [
     /**/
     /**/
 
-//-------  post covid year  ---------------------------------------------------
+//-------  25  ----------------------------------------------------------------
 ["Differential Forms"               , "2022-07", 1995, "H.Cartan"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Forms in Algebraic Topology"      , "2022-06", 1995, "R.Bott"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 ["Morse Theory"                     , "2022-12", 1963, "J.Milnor"       , 2  , 2  , 0   , 0  , 0.5, 0  , 1.5, ""],
@@ -162,17 +198,19 @@ var books = [
 ["The Mysteries of Pittsburgh"      , "2023-07", 1988, "M.Chabon"       , 1  , 1  , 0.5 , 1  , 0  , 1.5, 1.5, ""],
 ["The Final Solution"               , "2023-07", 2004, "M.Chabon"       , 1.5, 2  , 0.5 , 0.5, 0  , 0.5, 1.5, ""],
 ["Machine"                          , "2023-07", 2019, "S.Steinberg"    , 1  , 2  , 1   , 0.5, 0.5, 2  , 2  , ""],
-["Jekyll and Hyde"                  , "2023-07", 1886, "R.L.Stevenson"  , 1  , 0.5, 0.5 , 0  , 0  , 0  , 2  , ""], *
-//["Lolita"                           , "2023-  ",     , "V.Nabokov"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["Exercises in Style"               , "2023-  ",     , "R.Queneau"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+["Jekyll and Hyde"                  , "2023-07", 1886, "R.L.Stevenson"  , 1  , 0.5, 0.5 , 0  , 0  , 1  , 2  , ""],
+//["Lolita"                           , "2023-  ", 1955, "V.Nabokov"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Exercises in Style"               , "2023-  ", 1947, "R.Queneau"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
-//["Thermal Properties of Solids"     , "2023-  ",     , "H.J.Goldsmid"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["The Essential Scalia"             , "2023-  ",     , "A.Scalia"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Why is Sex Fun"                   , "2023-  ",     , "J.Diamond"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["Soft Interfaces"                  , "2023-  ",     , "P.G.deGennes"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["At Swim-Two-Birds"                , "2023-  ",     , "F.OBrien"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["Nine Stories (Bananafish etc)"    , "2023-  ",     , "J.D.Salinger"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["The Man Who Had No Idea"          , "2023-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Stories: Man With No Idea, etc"   , "2023-  ", 1978, "T.M.Hirsch"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Madame Bovary"                    , "2023-  ", 1856, "G.Flaubert"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Thermal Properties of Solids"     , "2023-  ", 1965, "H.J.Goldsmid"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["The Essential Scalia"             , "2023-  ", 2020, "A.Scalia"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Why is Sex Fun"                   , "2023-  ", 1997, "J.Diamond"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Soft Interfaces"                  , "2023-  ", 1994, "P.G.deGennes"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+
+//["At Swim-Two-Birds"                , "2023-  ", 1939, "F.OBrien"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Nine Stories (Bananafish etc)"    , "2023-  ", 1953, "J.D.Salinger"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Kinetic Theory of Dense Gases"    , "2023-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 
 //["Summerhill Radical Child Rearing" , "2023-  ", 1960, "A.S.Neill"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2016?*/
@@ -210,7 +248,37 @@ var books = [
 //[""                                 , "2023-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //
 
-
+//["Codex Seraphinianus"              , "2022-  ", 1983, "L.Serafini"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["To Mock a Mockingbird"            , "2012-  ",     , "R.M.Smullyan"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["The Cube Made Interesting"        , "2023-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Galois Theory"                    , "2023-  ",     , "I.Stewart"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Induction and Analogy in Math"    , "2023-  ", 1954, "G.Polya"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Mathematical Omnibus"             , "2023-  ", 2007, "D.Fuchs"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Automatic Control Systems"        , "2023-  ", 2003, "B.C.Kuo"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Nature of Statistical Learning"   , "2023-  ", 1995, "V.N.Vapnik"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Mathematical Omnibus"             , "2023-  ", 2007, "D.Fuchs"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["37 Bamboos Growing in India"      , "2023-  ", 2007, "S.S.R.Bennet"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Adaptation in Systems"            , "2023-  ", 1992, "J.H.Holland"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Prometheus Unbound"               , "2023-  ", 1898, "P.B.Shelley"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Predicate Calculus, Programs"     , "2023-  ", 1988, "E.W.Dijkstra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Animal Camouflage"                , "2023-  ",     , "A.Portman"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["First Course in Nomography"       , "2023-  ",     , "S.Brodetsky"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["The Catastrophic Universe"        , "2023-  ",     , "A.G.Pacholczyk" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["How the World Works"              , "2019-05", 2012, "N.Chomsky"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Matrix Computations"              , "2019-05", 2013, "G.H.Golub"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Geometric Mechanics on Manifolds" , "2019-05", 2005, "O.Calin"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Castable Polyurethane Elastomers" , "2019-05", 2008, "I.Clemitson"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Art and Craft of Poetry"          , "2019-05", 1994, "M.J.Bugeja"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Learning in Embedded Systems"     , "2018-12", 1990, "L.P.Kaelbling"  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Watership Down"                   , "2018-12",     , "R.Adams"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Patterns of Survival"             , "2018-12",     , "L.J.Milne"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["New Hacker's Dictionary"          , "2018-12", 1991, "E.S.Raymond"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Literate Programming"             , "2018-12", 1992, "D.E.Knuth"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Hitchhiker's Guide to the Galaxy" , "2012-  ",     , "D.Adams"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
+//["Poetry Like Bread"                , "2012-  ", 2000, "M.Espada"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Computational Complexity"         , "2012-  ", 2009, "S.Arora"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["How to Count"                     , "2012-  ",     , "R.B.J.T.Allenby", 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Quantum Statistical Mechanics"    , "2012-  ", 2009, "W.C.Schieve"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 /* ========================================================================= */
 /* =  TO READ SOON  ======================================================== */
@@ -280,7 +348,6 @@ var books = [
 
 /* -----  literature (other)  ----------------*/
 
-//["Madame Bovary"                    , "2023-  ", 1856, "G.Flaubert"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Walk by Swann's Place"            , "2023-  ", 1913, "M.Proust"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Invitation to a Beheading"        , "2023-  ",     , "V.Nabokov"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Selected Olinger Stories"         , "2023-  ",     , "J.Updike"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
@@ -385,7 +452,6 @@ var books = [
 //["Sensual Quadratic Form"           , "2021-  ", 1997, "J.H.Conway"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Nomography"                       , "2019-  ", 1964, "D.P.Adams"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["The Sartorialist"                 , "2019-04", 2009, "S.Schuman"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Codex Seraphinianus"              , "2022-  ", 1983, "L.Serafini"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 /* -----  fun, honest science  --------------------------------------------- */
 
@@ -418,7 +484,6 @@ var books = [
 
 /* -----  how to do cool stuff  -------------------------------------------- */
 
-//["Learning in Embedded Systems"     , "2018-12", 1990, "L.P.Kaelbling"  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Stats and Scientific Inference"   , "2018-12", 1956, "R.A.Fisher"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Computation Despite Noise"        , "2018-12", 1963, "S.Winograd"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Cybernetics"                      , "2018-12", 1948, "N.Wiener"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
