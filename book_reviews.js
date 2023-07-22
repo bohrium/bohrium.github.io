@@ -118,12 +118,10 @@ var books = [
 ["The Final Solution"               , "2023-07", 2004, "M.Chabon"       , 1.5, 2  , 0.5 , 0.5, 0  , 0.5, 1.5, ""],
 ["Machine"                          , "2023-07", 2019, "S.Steinberg"    , 1  , 2  , 1   , 0.5, 0.5, 2  , 2  , ""],
 
-
 /* ========================================================================= */
 /* =  TO READ SOON  ======================================================== */
 /* ========================================================================= */
 
-//[""                                 , "2022-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Lolita"                           , "2023-  ",     , "P.Levi"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["At Swim-Two-Birds"                , "2023-  ",     , "F.OBrien"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Neon Bible"                   , "2018-08", 1954, "J.K.Toole"      , 1  , 1.5, 0   , 0  , 0  , 0.5, 0  , ""],
@@ -142,6 +140,16 @@ var books = [
 //["Soft Interfaces"                  , "2023-  ",     , "P.G.deGennes"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Why is Sex Fun"                   , "2023-  ",     , "J.Diamond"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Thermal Properties of Solids"     , "2023-  ",     , "H.J.Goldsmid"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+];
+
+//
+//
+//
+//[""                                 , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//
+//
+//
 
 /* ========================================================================= */
 /* =  TO READ EVENTUALLY?  ================================================= */
@@ -169,6 +177,16 @@ var books = [
 //["Just So Stories"                  , "2018-12", 1902, "R.Kipling"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["White Noise"                      , "2018-11", 1985, "D.DeLillo"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
+//["Puddnhead Wilson"                 , "2023-  ",     , "M.Twain"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Lost in the Fun House"            , "2023-  ", 1968, "J.Barth"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Sot-Weed Factor"              , "2023-  ", 1950, "J.Barth"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Giles Goat-Boy"                   , "2023-  ", 1966, "J.Barth"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Emma"                             , "2023-  ",     , "J.Austen"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Ulysses"                          , "2023-  ", 1922, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Man Who Had No Idea"          , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+
+
 /* -----  literature (fiction, reflective and/or nostalgic)  ----------------*/
 
 //["The Sea Birds Are Still Alive"    , "2018-12", 1982, "T.C.Bambara"    , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -182,9 +200,17 @@ var books = [
 //["Song of Solomon"                 , "2018-09", 1977, "T.Morrison"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Something Wicked This Way Comes"  , "2019-03", 1962, "R.Bradbury"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Winesburg, Ohio"                  , "2019-05", 1919, "S.Anderson"     , 0  , 2  , 0   , 0.5, 0  , 1  , 0  , ""],
+//["The Killers; Old Man and the Sea" , "2023-  ",     , "E.Hemingway"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
-/* -----  literature (fiction, reflective and/or nostalgic)  ----------------*/
+//["Madame Bovary"                    , "2023-  ", 1856, "G.Flaubert"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Walk by Swann's Place"            , "2023-  ", 1913, "M.Proust"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["M is for Magic"                   , "2023-  ",     , "N.Gaiman"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
+/* -----  literature (other)  ----------------*/
+
+//["Dr. Jekyll and Mr. Hyde"          , "2023-  ",     , "R.L.Stevenson"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Metamorphosis"                , "2023-  ", 1915, "F.Kafka"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//
 //["Point Counter Point"              , "2023-  ",     , "A.Huxley"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Brave New World"                  , "2018-08", 1932, "A.Huxley"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Sea, The Sea"                 , "2018-08", 1978, "I.Murdoch"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -198,6 +224,25 @@ var books = [
 //["Midnight's Children"             , "2018-08", 1981, "S.Rushdie"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Sun Also Rises"              , "2018-08", 1926, "E.Hemingway"    , 0  , 1  , 0   , 0  , 0  , 1  , 0  , ""],
 
+//["A Room of One's Own"              , "2023-  ", 1929, "V.Woolf"        , 0  , 0  , 0   , 0  , 0  , 1  , 0  , ""],
+//["Bleak House"                      , "2023-  ", 1853, "C.Dickens"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Great Expectations"               , "2023-  ",     , "C.Dickens"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Dead"                         , "2023-  ", 1914, "J.Joyce"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Mansfield Park"                   , "2023-  ", 1814, "J.Austen"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Dead Souls"                       , "2023-  ", 1842, "N.Gogol"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Overcoat"                     , "2023-  ", 1842, "N.Gogol"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Signal Man"                   , "2023-  ", 1866, "C.Dickens"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["A Simple Heart"                   , "2023-  ", 1877, "G.Flaubert"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Anna Karenin"                     , "2023-  ", 1877, "L.Tolstoy"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Death of Ivan Ilyich"             , "2023-  ", 1886, "L.Tolstoy"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Suicide Club"                 , "2023-  ", 1878, "R.L.Stevenson"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Trial"                        , "2023-  ", 1925, "F.Kafka         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Plan of a Novel"                  , "2023-  ", 1816, "J.Austen"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Bananafish"                       , "2023-  ", 1948, "J.D.Salinger"   , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["The Happiest I've Been"           , "2023-  ",     , "J.Updike"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Moby Dick"                        , "2023-  ", 1851, "H.Melville"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Billy Budd"                       , "2023-  ", 1891, "H.Melville"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
 /* -----  literature (essays, memoirs)  ------------------------------------ */
 
 //["On Earth We're Briefly Gorgeous"  , "2018-12",     , "O.Vuong"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -208,6 +253,12 @@ var books = [
 
 /* -----  biography, straightforward memoirs  ------------------------------ */
 
+//["Deviations from the Beaten Track" , "2023-  ",     , "R.P.Feynman"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Presidential Anecdotes"           , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Double Helix"                     , "2023-  ", 1968, "J.D.Watson"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+
+//["A Great Improvisation"            , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Life of Frederick Douglass"      , "2018-08", 1845, "F.Douglass"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["My Memoirs"                      , "2018-08", 2018, "P.T.Kho"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Enrico Fermi"                     , "2019-06", 1970, "E.Segre"        , 1  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -234,6 +285,9 @@ var books = [
 //["A History of Western Philosophy" , "2018-12", 1945, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["In Praise of Idleness etc"       , "2018-12", 1935, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["The Conquest of Happiness"       , "2018-09", 1930, "B.Russell"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
+//["Te of Piglet"                     , "2023-  ",     , "B.Hoff"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Webster's Unafraid Dictionary"    , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 /* -----  museums  --------------------------------------------------------- */
 
@@ -275,6 +329,9 @@ var books = [
 //["Art of Sorting and Searching"     , "2021-  ", 1998, "M.Sipser"       , 0  , 0  , 0   , 0  , 1  , 0  , 0.5, ""],
 //["Calculating Functional Programs"  , "2021-  ",     , "Gibbons"        , 0  , 0  , 0   , 0  , 1  , 0  , 0.5, ""],
 
+//["Six Easy Pieces"                  , "2023-  ",     , "R.P.Feynman"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Philosophy of Set Theory"         , "2023-  ",     , "M.Tiles"        , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+
 /* -----  how to do cool stuff  -------------------------------------------- */
 
 //["Learning in Embedded Systems"     , "2018-12", 1990, "L.P.Kaelbling"  , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -287,6 +344,9 @@ var books = [
 //["Structured Programming"           , "2019-06", 1972, "O.J.Dahl"       , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
 
 /* -----  curiosity about mathematical physics and physical chemistry  ----- */
+
+//["Very Special Relativity"          , "2023-  ",     , "S.Bais"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
+//["Kinetic Theory of Dense Gases"    , "2023-  ",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 
 //["Unusually Special Relativity"     , "2022-  ", 2021, "A.Dragan"       , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Gauge Variational Principles"     , "2021-  ", 2010, "D.Bleecker"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
@@ -403,5 +463,5 @@ var books = [
 //["How to Write an Autobio Novel"    , "2019-05", 2018, "A.Chee"         , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],
 //["Note to Self"                    , "2018-08", 2017, "C.Franta"       , 0  , 1  , 0   , 0  , 0  , 0  , 0  , ""],
 
-];
+
 
