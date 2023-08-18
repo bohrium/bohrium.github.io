@@ -36,7 +36,7 @@ var books = [
 ["The Devouring Fungus"             , "2013-04", 1990, "K.Jennings"     , 1  , 0  , 0  , 0  , 1  , 2  , 0.5, ""],
 ["Godel Escher Bach"                , "2013-06", 1979, "D.Hofstadter"   , 1.5, 2  , 0  , 2  , 1.5, 0  , 2  , ""],
 ["Connecticut Yankee in A's Court"  , "2013-12", 1889, "M.Twain"        , 1.5, 1  , 0  , 1.5, 0.5, 0.5, 2  , "reviews/connecticut-yankee.html"],
-["Cartoon Microeconomics"           , "2013-12",     , ""               , 1.5, 1  , 0  , 1.5, 0.5, 0.5, 2  , "reviews/connecticut-yankee.html"],
+["Cartoon Microeconomics"           , "2013-12",     , ""               , 1.5, 1  , 0  , 1.5, 0.5, 0.5, 2  , ""],
 
 ["M is for Magic"                   , "2013-  ", 2007, "N.Gaiman"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 ["The Konigsburg Collection"        , "2013-  ",     , "E.L.Konigsburg" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
@@ -70,14 +70,15 @@ var books = [
 //-------  18  ----------------------------------------------------------------
 ["The Periodic Table"               , "2015-10", 1975, "P.Levi"         , 0.5, 0  , 0.5, 0  , 0.5, 2  , 0  , ""],
 ["The Selfish Gene"                 , "2015-07", 1976, "R.Dawkins"      , 0.5, 0  , 0  , 0  , 1.5, 0  , 1  , ""],
-    /**/
-    /**/
-    /**/
+["Ingredients"                      , "2019-12", 2010, "P.Mirams"       , 0.5, 1  , 0  , 0  , 0.5, 0  , 1  , ""],/*TODO REVIEW*/
+["The Flame Alphabet"               , "2012-11", 2012, "B.Marcus"       , 0.5, 0  , 0  , 0  , 0  , 0  , 0.5, ""],
+["The Wild Numbers"                 , "2012-11", 1998, "P.Schogt"       , 0.5, 0  , 0  , 0  , 0  , 0  , 1  , ""],
     /**/
     /**/
     /**/
 
 //-------  coming out year  ---------------------------------------------------
+["Selected Writings on Computing"   , "2012-  ",     , "E.W.Dijkstra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 ["Adventures of Kavalier and Clay"  , "2016-03", 2000, "M.Chabon"       , 1  , 0  , 0.5 , 0  , 0  , 1  , 0.5, ""],
     /**/
     /**/
@@ -85,7 +86,6 @@ var books = [
     /**/
     /**/
     /**/
-["Selected Writings on Computing"   , "2012-  ",     , "E.W.Dijkstra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 //-------  20  ----------------------------------------------------------------
 ["Cat's Cradle"                     , "2017-01", 1963, "K.Vonnegut"     , 1  , 1  , 0.5 , 1  , 0.5, 0  , 2  , ""],
@@ -135,6 +135,10 @@ var books = [
 ["The Tale of the Unknown Island"   , "2019-06", 1998, "J.Saramango"    , 1  , 2  , 2   , 0  , 0  , 1  , 2  , ""],
 ["Secret Life of Salvador Dali"     , "2019-09", 1942, "S.Dali"         , 1  , 1  , 0   , 2  , 0.5, 2  , 0  , ""],
 
+//["Cosmic Constitutional Theory"     , "2019-12",     , "J.W.Harvey"     , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW*/
+//["Six Amendements"                  , "2019-12",     , "J.P.Stevens"    , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW*/
+//["Great Cases in Constitutional Law", "2019-12",     , ""               , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW*/
+
 ["The Extended Phenotype"           , "2016-11", 1982, "R.Dawkins"      , 1.5, 0  , 0   , 0  , 2  , 0  , 1  , ""],/*TODO REVIEW?*/
 ["Thinking Fast and Slow"           , "2019-03", 2011, "D.Kahneman"     , 1.5, 0  , 0   , 0  , 2  , 1.5, 1.5, ""],
 ["Category Theory for Programmers"  , "2019-01", 2017, "B.Milewski"     , 0  , 0.5, 0   , 0  , 0.5, 0  , 0.5, ""],
@@ -142,7 +146,8 @@ var books = [
 ["Math Foundations of Stat Mech"    , "2019-06", 1949, "A.I.Kinchin"    , 0.5, 0  , 0.5 , 0  , 1  , 0  , 0  , ""],
 ["Naked"                            , "2019-09", 1997, "D.Sedaris"      , 0  , 0  , 0   , 0.5, 0  , 1  , 0  , ""],/*TODO REVIEW*/
 ["The Anatomy of Prose"             , "2019-  ", 1954, "M.Boulton"      , 1  , 1  , 0   , 0  , 1 ,  0  , 0  , ""],/*TODO REVIEW*/
-["Ingredients"                      , "2019-12", 2010, "P.Mirams"       , 0.5, 1  , 0   , 0  , 0.5, 0  , 1  , ""],/*TODO REVIEW*/
+    /**/
+
 
 //-------  covid year A  ------------------------------------------------------
 ["How to be an Anti-Racist"         , "2020-  ", 2019, "I.X.Kendi"      , 0  , 0  , 0   , 0  , 0  , 0  , 0  , ""],/*TODO REVIEW?*/
@@ -199,9 +204,13 @@ var books = [
 ["The Final Solution"               , "2023-07", 2004, "M.Chabon"       , 1.5, 2  , 0.5 , 0.5, 0  , 0.5, 1.5, ""],
 ["Machine"                          , "2023-07", 2019, "S.Steinberg"    , 1  , 2  , 1   , 0.5, 0.5, 2  , 2  , ""],
 ["Jekyll and Hyde"                  , "2023-07", 1886, "R.L.Stevenson"  , 1  , 0.5, 0.5 , 0  , 0  , 1  , 2  , ""],
-//["Lolita"                           , "2023-  ", 1955, "V.Nabokov"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["Exercises in Style"               , "2023-  ", 1947, "R.Queneau"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
+//["Lolita"                           , "2023-  ", 1955, "V.Nabokov"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Death in Venice"                  , "2023-  ", 1912, "T.Mann"         , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Felix Krull"                      , "2023-  ", 1954, "T.Mann"         , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+
+//["Doctor Faustus"                   , "2023-  ", 1947, "T.Mann"         , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["As I Lay Dying"                   , "2023-  ", 1930, "W.Faulkner"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 //["Stories: Man With No Idea, etc"   , "2023-  ", 1978, "T.M.Hirsch"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 //["Madame Bovary"                    , "2023-  ", 1856, "G.Flaubert"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Thermal Properties of Solids"     , "2023-  ", 1965, "H.J.Goldsmid"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
@@ -209,36 +218,43 @@ var books = [
 //["Why is Sex Fun"                   , "2023-  ", 1997, "J.Diamond"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 //["Soft Interfaces"                  , "2023-  ", 1994, "P.G.deGennes"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 
+//["The Ancestor's Tale"              , "2019-02",     , "R.Dawkins       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Attention and Effort"             , "2021-  ",     , "Kahneman"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Dunes"                            , "2019-03", 2013, "A.Warren"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+
 //["At Swim-Two-Birds"                , "2023-  ", 1939, "F.OBrien"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
 //["Nine Stories (Bananafish etc)"    , "2023-  ", 1953, "J.D.Salinger"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Kinetic Theory of Dense Gases"    , "2023-  ",     , ""               , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Lost in the Fun House"            , "2023-  ", 1968, "J.Barth"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["How Charts Lie"                   , "2023-  ",     , "A.Cairo"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 //["Summerhill Radical Child Rearing" , "2023-  ", 1960, "A.S.Neill"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2016?*/
 //["How Surfaces Intersect in Space"  , "2023-  ", 1995, "J.S.Carter"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2019?*/
-//["Singularity Theory, Applications" , "2023-  ", 1990, "V.I.Arnold"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished*/
+//["Singularity Theory, Applications" , "2023-  ", 1990, "V.I.Arnold"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2021?*/
 //["Sex Tips from a Gay Man"          , "2023-  ", 1997, "D.Anderson"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2020?*/
+//["The Shape of Math Arguments"      , "2023-  ", 1988, "A.J.M.vGasteren", 0  , 0  , 2  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2020?*/
+//["Functional Data Structures"       , "2023-  ", 1998, "C.Okasaki"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2020?*/
+
 //["On Earth We're Briefly Gorgeous"  , "2023-  ",     , "O.Vuong"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Hideous Men and Other Essays"     , "2023-  ",     , "D.F.Wallace"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["In Defense of Democracy"          , "2023-  ",     , "R.Fuller"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
-//["Ulysses"                          , "2023-  ", 1922, "J.Joyce"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-
-//["Data Structures Algorithms"       , "2023-  ", 1987, "R.E.Tarjan"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["The Shape of Math Arguments"      , "2023-  ", 1988, "A.J.M.vGasteren", 0  , 0  , 2  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2020?*/
-//["Gems of Computer Science"         , "2023-  ", 1998, "U.Schoning"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Combinatorial Species, Trees"     , "2023-  ", 1998, "G.Labelle"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Advanced Data Structures"         , "2023-  ", 2020, "S.Shailendra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Functional Data Structures"       , "2023-  ", 1998, "C.Okasaki"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],/*NOTE: mostly finished ~ 2020?*/
-//["Radically Elementary Probability" , "2023-  ", 1987, "E.Nelson"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Constitutional Design Principles" , "2023-  ", 2006, "D.S.Lutz"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-
-//["The Swimming-Pool Library"        , "2023-  ", 1988, "A.Hollinghurst" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Puddnhead Wilson"                 , "2023-  ",     , "M.Twain"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Lost in the Fun House"            , "2023-  ", 1968, "J.Barth"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Ulysses"                          , "2023-  ", 1922, "J.Joyce"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Letters to a Young Contrarian"    , "2023-  ", 2005, "C.Hitchens"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["How Charts Lie"                   , "2023-  ",     , "A.Cairo"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["The Neon Bible"                   , "2023-  ", 1954, "J.K.Toole"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Song of Achilles"                 , "2023-  ",     , "M.Miller"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Cat's Paws and Catapults"         , "2023-  ",     , "S.Vogel"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+//["In Defense of Democracy"          , "2023-  ",     , "R.Fuller"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], *
+//["Data Structures Algorithms"       , "2023-  ", 1987, "R.E.Tarjan"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Gems of Computer Science"         , "2023-  ", 1998, "U.Schoning"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Combinatorial Species, Trees"     , "2023-  ", 1998, "G.Labelle"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Advanced Data Structures"         , "2023-  ", 2020, "S.Shailendra"   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Radically Elementary Probability" , "2023-  ", 1987, "E.Nelson"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+
+//["Exercises in Style"               , "2023-  ", 1947, "R.Queneau"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["The Swimming-Pool Library"        , "2023-  ", 1988, "A.Hollinghurst" , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
+//["Puddnhead Wilson"                 , "2023-  ",     , "M.Twain"        , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 ];
 
@@ -363,6 +379,7 @@ var books = [
 //["God of Small Things"              , "2023-  ",     , "A.Roy"          , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Paradise Lost"                    , "2023-  ",     , "J.Milton"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
+//["The Iliad and Odyssey"            , "2023-  ",     , "W.Marris"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""], // inspired faulkner
 //["The Iliad and Odyssey"            , "2023-  ",     , "E.Wilson"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["The Iliad and Odyssey"            , "2023-  ",     , "R.Lombardo"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["The Iliad and Odyssey"            , "2023-  ",     , "R.Fagles"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
@@ -454,10 +471,6 @@ var books = [
 //["The Sartorialist"                 , "2019-04", 2009, "S.Schuman"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 /* -----  fun, honest science  --------------------------------------------- */
-
-//["The Ancestor's Tale"              , "2019-02",     , "R.Dawkins       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Attention and Effort"             , "2021-  ",     , "Kahneman"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
-//["Dunes"                            , "2019-03", 2013, "A.Warren"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 
 //["Morphogenesis"                    , "2018-12", 1951, "J.T.Bonner"     , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Foundations of Social Evolution"  , "2021-  ", 1998, "S.A.Frank"      , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
