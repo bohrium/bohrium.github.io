@@ -1,0 +1,84 @@
+# author: samtenka
+# change: 2023-06-06
+# create: 2023-06-06
+# descrp:
+
+! elliptic functions for the busy mammal
+
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
+!! introduction
+###
+!!! hello
+
+###
+!!! the exponential function's triple crown
+
+###
+!!! the gamma function
+## themes: multidimensional measures (radial)
+
+###
+!!! the confluent functions
+!!!! airy
+# themes: wkb turning points, cusps of light, cubic action
+# also parabolic cylinder etc
+!!!! bessel
+# themes: diluting energy, trigonometric action
+# also modified etc
+!!!! exponential integrals
+# also incomplete gamma
+
+###
+!!! the elliptic functions
+## themes: anharmonic oscillators
+
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
+!! elliptic functions
+!!! double periodicity and weierstrass
+!!! elliptic integrals and jacobi
+!!!
+!!! excel at integration
+
+#==============================================================================
+#===  _  ======================================================================
+#==============================================================================
+!! applications in physics
+
+###
+!!! spinning tops and buckled beams
+
+###
+!!! anharmonic oscillators
+
+!!!! polynomial potentials
+!!!! pendula
+!!!! water waves
+!!!! nonlinear schrodinger
+!!!! kdv and solitons
+
+###
+!!! incompressible flows
+
+!!!! water through a faucet
+!!!! a parallel plate condensor
+!!!! field around a current loop
+!!!!
+!!!!
+
+###
+!!! satellites and projectiles
+!!!! mercury a la einstein; relativistic charge
+!!!! classical dihydrogen cation
+!!!! charge in a linear magnetic field
+!!!! a rotating bullet
+!!!! cubic air drag
+
+###
+!!! miscellany
+!!!! meniscus
+!!!! heat equation
+
