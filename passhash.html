@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="css/carboniferous.css">
+
+        <script src="jquery-3.3.1.min.js"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="words.js"></script>
+        <script type="application/javascript" src="js/toggler.js"></script>
+    </head>
+
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
+
+                <h2>Geometry of a Simplex</h2>
+
+
+                <div>
+                    We visualize the 1-dimensional exponential families
+                    within the space of distributions over $3$ outcomes.
+                    Click to toggle between moving one endpoint and the other.
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+
+
+                <input type="password" id="passwordbox">
+                <strong><div id="texthash">WOAH</div></strong>
+
+                <script>
+                    let pp = document.getElementById("passwordbox");
+                    let hh = document.getElementById("texthash")
+                    let m = BigInt(words.length);
+                    var phase;
+                    function insecurehash(s) {
+                        return BigInt("0x"+CryptoJS.MD5(s).toString());
+                    }
+                    function updatehash() {
+                        let h = insecurehash(pp.value)+phase;
+                        hh.innerHTML = words[Number(h % m)];
+                    }
+                    phase = BigInt(words.indexOf("cow"))-insecurehash("")%m + m;
+                    updatehash()
+                    pp.onchange     = updatehash;
+                    pp.onpaste      = updatehash;
+                    pp.onkeypress   = updatehash;
+                    pp.oninput      = updatehash;
+               </script>
+
+    </body>
+</html>
