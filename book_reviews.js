@@ -204,6 +204,8 @@ var books = [
 ["The Final Solution"               , "2023-07", 2004, "M.Chabon"       , 1.5, 2  , 0.5 , 0.5, 0  , 0.5, 1.5, ""],
 ["Machine"                          , "2023-07", 2019, "S.Steinberg"    , 1  , 2  , 1   , 0.5, 0.5, 2  , 2  , ""],
 ["Jekyll and Hyde"                  , "2023-07", 1886, "R.L.Stevenson"  , 1  , 0.5, 0.5 , 0  , 0  , 1  , 2  , ""],
+];
+
 
 //["The Essential Scalia"             , "2023-  ", 2020, "A.Scalia"       , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
 //["Euphonics"                        , "2023-  ", 2023, "J.Woodhouse"    , 0  , 0  , 0  , 0  , 0  , 0  , 0  , ""],
