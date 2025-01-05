@@ -13,7 +13,7 @@ function getCookie(cname) {
     return null;
 }
 
-var styles = ["white", "desert", "surf", "carboniferous", "beach"];
+var styles = ["beach", "white", "desert", "surf", "carboniferous"];
 var current_style_index = null;
 function current_style() {
     return styles[current_style_index];
@@ -41,7 +41,7 @@ function initate() {
     var cookie_style_index = getCookie("style_index");
     if (cookie_style_index == null) {
         setCookie("style_index", "0");
-        current_style_index = 0; 
+        current_style_index = 0;
     } else {
         current_style_index = parseInt(cookie_style_index);
     }
