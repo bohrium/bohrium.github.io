@@ -14,7 +14,9 @@
 $\newcommand{\sfA}{{\mathsf{A}}}$
 $\newcommand{\sfH}{{\mathsf{H}}}$
 $\newcommand{\sfr}{{\mathsf{r}}}$
+$\newcommand{\sfx}{{\mathsf{x}}}$
 $\newcommand{\sfy}{{\mathsf{y}}}$
+$\newcommand{\sfz}{{\mathsf{z}}}$
 #
 $\newcommand{\Ee}{{\mathbb{E}}}$
 $\newcommand{\Rr}{{\mathbb{R}}}$
@@ -22,7 +24,9 @@ $\newcommand{\Rr}{{\mathbb{R}}}$
 $\newcommand{\aA}{{\mathcal{A}}}$
 $\newcommand{\fF}{{\mathcal{L}}}$
 $\newcommand{\hH}{{\mathcal{H}}}$
+$\newcommand{\nN}{{\mathcal{N}}}$
 $\newcommand{\pP}{{\mathcal{P}}}$
+$\newcommand{\xX}{{\mathcal{X}}}$
 $\newcommand{\yY}{{\mathcal{Y}}}$
 #
 #
@@ -69,7 +73,7 @@ uncertainty.
 
 !!! Bayes
 In the Bayes setup, we assume known a distribution \(\pi\in\pP^\hH\) that we
-use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\)
+use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
 
 !!! Minimax
 In the Minimax setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
@@ -80,13 +84,89 @@ In the Minimax setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
 
 #---  _  ----------------------------------------------------------------------
 !! Estimation and Information Geometry
-!!!
-!!!
+
+!!! KL Geometry
+Estimation fits into our starting setup with \(\hH\) and \(\aA\) both equal to
+some continuous parameter space \(\xX\), and with \(r\) some notion of
+closeness.  It thus behooves us to analyze this space \(\xX\) of distributions
+on \(\yY\) geometrically.  The key notion of different-ness between two
+distributions is the *KL Divergence*
+\[
+    D(p:q) = \Ee_{y\sim p}[\log(p(y)/q(y))]
+\]
+that measures our average excess surprise when we expect samples from \(q\) but
+instead get samples from \(p\).  This divergence is *not symmetric*!  Also,
+when the right-hand-side is not defined, we define the value to be infinite.
+
+!!! Classical Quadratic Theory of Estimation
+
+!!! Cramer-Rao Bound and Bias-Variance Tradeoff
+
+!!! Multiple Parameters
+Here are some interesting geometric effects when \(\xX\) has high dimension
+(such as \(3\)).
+
+!!!! Shrinkage
+Take the standard Gaussian likelihood model: \(\sfy=x+\sfz\) where
+\(\sfz\sim\nN(0,I)\).  The data of an estimator is the data of a vector field
+\(v(y)\) inducing estimate \(\hat\sfx=y-v(y)\).  Then a leading approximation
+for the square loss at \(x\) is
+\[
+    1 - 2 \text{div} v + \|v\|^2
+\]
+This approximation is valid when \(\text{div}v\) and \(v\cdot{}v\) both change
+very slowly (compared to the natural length scale of \(sfz\)'s spread).  We
+improve on the obvious estimator when
+\[
+\text{div}v\geq\|v\|^2/2
+\]
+The key is that the LHS has a chance of scaling with the dimension
+to overwhelm the RHS.  Even for constant \(\|v\|\) (imagine a field of
+unit-vectors), there's enough angular elbow room so that we can arrange for
+divergences everywhere to be positive simultaneously.
+#
+((It's not enough to just argue by scaling that we can
+make the RHS arbitrarily small by vertically scaling v, since we want an
+improvement at every \(x\) %simultaneously%.))
+
+For example, suppose \(\vec v(y) = u(\|y\|) (\vec y/\|y\|)\) is radial.  Then
+(choose a basis at \(y\) that includes \(y/\|y\|\)) the divergence has a radial
+term \(u\pr\) and \(m-1\) angular terms \(u/\|y\|\).  This angular contribution
+represents that the surface area of radius-\(r\) balls decreases as \(r\)
+decreases, by \(\text{SA}\pr/\text{SA}=(m-1)/r\).
+#
+Anyway, combining with \(\|v\|^2=u^2\) let's write a condition for improvement:
+\[
+    u\pr + ((m-1)/r) u \geq u^2/2
+\]
+Under the ansatz \(u(r)=\alpha r^p\), this condition reads \((p+m-1) r^{p-1}
+\geq (\alpha/2) r^{2p}\), or \(r^{p+1}\leq 2/(\alpha(p+m-1))\).  Pay special
+attention to \(p=1,-1\), which correspond respectively to Gaussian and certain
+%unnormalized%-powerlaw priors.
+#
+For example, setting \(u(r)=\alpha r\) (the gaussian prior case) satisfies this
+bound when \(m\geq \alpha r^2/2\), that is for \(r\ll \sqrt{m/\alpha}\).  We'd
+like to modify this to have the same behavior.
+
+An elegant way to get both behaviors is \(u(r) = \alpha r/(R^2+r^2)\), which for
+\(R\gg 1\) much larger that \(z\)'s noise scale and \(\alpha\ll 1\) verifies
+the small derivative assumptions on \(\text{div}v\) and \(v^2\).
+
+This is a (regularized) *James Stein estimator*.  It corresponds to a certain
+%unnormalized%-Cauchy prior.
+
+#!!!! Nuisance Parameters
+#!!!! Curvature
 
 #---  _  ----------------------------------------------------------------------
 !! Asymptotics
-!!!
-!!!
+!!! 
+!!! 
+
+#---  _  ----------------------------------------------------------------------
+!! Inference Methods: Stochastic Approximation
+!!! 
+!!! 
 
 #---  _  ----------------------------------------------------------------------
 !! Special Topics
