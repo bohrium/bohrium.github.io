@@ -1,0 +1,11 @@
+aside, .aside {
+ display: inline;
+ float: right;
+ position: relative;
+ width: 20vw;
+ margin-right: -22vw;
+ font-size: 16px;
+}
+main {
+  margin-right: 20%;
+}

@@ -1,0 +1,185 @@
+# author: samtenka
+# change: 2025-01-19
+# create: 2025-01-19
+# descrp:
+#
+#
+#
+#
+#
+
+! Precis of EECS 437
+# !!!! Samuel Tenka, 2025
+
+$\newcommand{\sfA}{{\mathsf{A}}}$
+$\newcommand{\sfH}{{\mathsf{H}}}$
+$\newcommand{\sfr}{{\mathsf{r}}}$
+$\newcommand{\sfy}{{\mathsf{y}}}$
+#
+$\newcommand{\Ee}{{\mathbb{E}}}$
+$\newcommand{\Rr}{{\mathbb{R}}}$
+#
+$\newcommand{\aA}{{\mathcal{A}}}$
+$\newcommand{\fF}{{\mathcal{L}}}$
+$\newcommand{\hH}{{\mathcal{H}}}$
+$\newcommand{\pP}{{\mathcal{P}}}$
+$\newcommand{\yY}{{\mathcal{Y}}}$
+#
+#
+$\newcommand{\sto}{\rightsquigarrow}$
+
+#---  _  ----------------------------------------------------------------------
+!! Decision Theory
+!!! Setup
+Let's model decision-making in the face of uncertainty.  Nature's unknown
+configuration \(\sfH\in\hH\) determines a reward landscape on the action-space
+\(\aA\).  We take an action \(\sfA\in\aA\) based on noisy evidence
+\(\sfy\in\yY\) of \(\sfH\).  Formally, the dependencies are{|((We write \(U\sto
+V\) for the set \(U\to\pP^V\) of functions from \(U\) to the distributions on
+\(V\), regarded as stochastic maps from \(U\) to \(V\).))|} \(p:\hH\sto\yY\)
+and \(r:\hH\times\aA\sto\Rr\) and \(s:\yY\sto\aA\); we know \(p,r\) and must
+design \(s\).
+
+#   \(
+#   \begin{tikzcd}
+#   y \arrow[d, dashed] & H \arrow[l] \arrow[d] \\
+#   A \arrow[r]         & r
+#   \end{tikzcd}
+#   \)
+
+The data flow looks like this:
+\[
+\sfy\sim p(\sfH)
+\qquad
+\sfA\sim s(\sfy)
+\qquad
+\sfr\sim r(\sfA,\sfH)
+\]
+We want the reward \(\sfr\) to be high in expectation.  At this point, we can
+take expectations with respect to \(\sfy,\sfA\) but not \(\sfH\), so we get
+a reward function \(R_s:\hH\to\Rr\).
+
+In other words, two methods for collapsing (aggregating) a bunch of values, one
+for each \(H\), are: take the MIN (worst-case) or take the AVERAGE with respect
+to some distribution.  That is, we evaluate the quality of a strategy \(s\) as
+\(\min_\sfH{}R_s(\sfH)\) or as \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
+#
+These are two philosophically different ways of handling
+uncertainty.
+
+!!! Bayes
+In the Bayes setup, we assume known a distribution \(\pi\in\pP^\hH\) that we
+use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\)
+
+!!! Minimax
+In the Minimax setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
+
+!!! Relationship via Duality
+
+!!! Pictures for Binary Case
+
+#---  _  ----------------------------------------------------------------------
+!! Estimation and Information Geometry
+!!!
+!!!
+
+#---  _  ----------------------------------------------------------------------
+!! Asymptotics
+!!!
+!!!
+
+#---  _  ----------------------------------------------------------------------
+!! Special Topics
+!!! Universal Featurization
+!!! Diffusion Models
+
+
+!! Appendix: Math Helpers
+Here are some math concepts we'll use.  Plus, as a %lagniappe%, some we won't.
+
+!!! Basic Linear Algebra
+!!!!
+!!!!
+!!!! Convexity and Duality
+
+!!! Basic Calculus
+!!!! Jacobian, Gradient
+!!!! Hessian, Laplacian
+!!!! Aside on Gradient Descent
+!!!! Connections and Curvature
+
+!!!! Topology
+#Abstraction is the removal of irrelevant detail; generalization, the
+#inclusion of
+
+Let's think about subsets of the Cartesian plane.  A collection of equations
+like \(x=y\) or \(x^2+y^2=1\) or \(\max(1,x^2+y^2)=1\) determines a plane
+subset of simultaneous solutions.  More precisely, we require each equation to
+read \(f(x,y)=0\) where \(f\) is some *continuous* function to the reals.  Call
+a subset that arises in this way @Clean@.  The @Clean@ subsets are closed under
+arbitrary intersection.  And by multiplication they are also closed under
+finitary union.
+
+
+
+The notions we'll use are *closure*.
+
+Intuitively, the closed sets are those cut out by sets of equations such as
+
+!!!!! Compactness
+Suppose an infinite family of closed sets has empty intersection.  One way this
+can happen is if a finite sub-family has empty intersection.  In this case, we
+say the infinitary intersection is empty for @silly reasons@.
+#
+A set is *compact* when every empty infinitary intersection of closed sets is
+empty for silly reasons.
+#
+The significance of compactness comes from two consequences: (a) that compact
+sets push forward under continuous maps to compact sets; (b) that
+
+
+!!! Basic Statistics
+!!!! Axioms of Expectation
+Consider a set \(X\) and an assignment \(E:\fF\to\Rr\) of real
+numbers to each function in some set \(\fF\subseteq X\to\Rr\).
+We insist that \(\fF\) contains all constant functions and is closed
+under linear combination, and that:
+#
+\(E((x\mapsto c))=c\) and
+#
+\(E(f+\lambda g)=E(f)+\lambda{}E(g)\).
+#
+We also insist on monotonicity: that when \(f\leq{}g\) pointwise then
+\(E(f)\leq{}E(g)\).
+Such a system is @Self-Consistent Assignment of Expectation Values@.
+
+From such an Assignment we can read off probabilities (the expectation value of
+indicator functions) of sets that are well-behaved enough for their indicator
+functions to be contained in \(F\).
+
+!!!! Dis-integration ; Conditional and Marginal
+!!!! Independence and Averaging
+!!!! Moments and Cumulants
+!!!! Aside on Concentration
+
+
+!!! Basic Physics
+!!!! Extremal Principles
+Why do physics classes focus so much on %how things move%?  There's probably a
+good reason, but I still find it fun to imagine an alternative: the physics of
+%which configurations don't move%.  The key fact that allows us to make
+quantitative predictions is this: *the universe is cold*!  So in many
+situations we are permitted to assume that energy is minimized; this puts
+strong constraints on what the stable configuration(s) are, as well as a
+criterion for instability.
+
+More generally, if \(Q\) is an extensive conserved quantity, then we may expect
+
+# (By the way, the formal substitution \(-\beta\leftrightarrow{}i/\hbar\) gives
+# a quantitative correspondence between thermodynamics and quantum mechanics, a
+# profound bridge conjectured by P.Dirac and developed by R.Feynman.)
+
+!!!! Harmonic Oscillators, Quadratics and Gaussians
+!!!! Ising-Stanley Models and Critical Phenomena
+# !!!!!
+# !!!!! Polymers and Self-Avoiding Walks
