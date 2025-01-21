@@ -1,5 +1,5 @@
 # author: samtenka
-# change: 2025-01-19
+# change: 2025-01-21
 # create: 2025-01-19
 # descrp:
 #
@@ -33,8 +33,17 @@ $\newcommand{\yY}{{\mathcal{Y}}}$
 $\newcommand{\sto}{\rightsquigarrow}$
 
 #---  _  ----------------------------------------------------------------------
+!!! Hallo
+Here is an incomplete --- and, I bet, sometimes incorrect --- list of musings
+on some class topics.  The point is say old ideas in new ways, to aid digestion.
+# One has to learn something twice in order to really learn it; apply
+# recursively.
+I believe in %binocular% vision for depth perception.
+
+#---  _  ----------------------------------------------------------------------
 !! Decision Theory
-!!! Setup
+!!! Two Approaches to Uncertainty: Bayes, Minimax
+!!!! Setup
 Let's model decision-making in the face of uncertainty.  Nature's unknown
 configuration \(\sfH\in\hH\) determines a reward landscape on the action-space
 \(\aA\).  We take an action \(\sfA\in\aA\) based on noisy evidence
@@ -71,16 +80,17 @@ to some distribution.  That is, we evaluate the quality of a strategy \(s\) as
 These are two philosophically different ways of handling
 uncertainty.
 
-!!! Bayes
+!!!! Bayes vs Minimax
 In the Bayes setup, we assume known a distribution \(\pi\in\pP^\hH\) that we
 use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
 
-!!! Minimax
 In the Minimax setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
 
-!!! Relationship via Duality
+!!!! Relationship via Duality
 
 !!! Pictures for Binary Case
+
+!!! Entropy
 
 #---  _  ----------------------------------------------------------------------
 !! Estimation and Information Geometry
@@ -103,7 +113,7 @@ when the right-hand-side is not defined, we define the value to be infinite.
 !!! Cramer-Rao Bound and Bias-Variance Tradeoff
 
 !!! Multiple Parameters
-Here are some interesting geometric effects when \(\xX\) has high dimension
+Here are some interesting geometric effects when \(\xX\) has high dimension \(m\)
 (such as \(3\)).
 
 !!!! Shrinkage
@@ -141,8 +151,9 @@ Anyway, combining with \(\|v\|^2=u^2\) let's write a condition for improvement:
 \]
 Under the ansatz \(u(r)=\alpha r^p\), this condition reads \((p+m-1) r^{p-1}
 \geq (\alpha/2) r^{2p}\), or \(r^{p+1}\leq 2/(\alpha(p+m-1))\).  Pay special
-attention to \(p=1,-1\), which correspond respectively to Gaussian and certain
-%unnormalized%-powerlaw priors.
+attention to \(p=1,-1\), which are MAP estimators respectively for Gaussian and certain
+%unnormalized%-powerlaw priors.  (And, even better,
+%Least-Squares-under-Posterior estimators for that Gaussian).
 #
 For example, setting \(u(r)=\alpha r\) (the gaussian prior case) satisfies this
 bound when \(m\geq \alpha r^2/2\), that is for \(r\ll \sqrt{m/\alpha}\).  We'd
@@ -152,8 +163,34 @@ An elegant way to get both behaviors is \(u(r) = \alpha r/(R^2+r^2)\), which for
 \(R\gg 1\) much larger that \(z\)'s noise scale and \(\alpha\ll 1\) verifies
 the small derivative assumptions on \(\text{div}v\) and \(v^2\).
 
-This is a (regularized) *James Stein estimator*.  It corresponds to a certain
+This is a (regularized) *James Stein estimator*.  It is MAP for a certain
 %unnormalized%-Cauchy prior.
+
+
+#   Now, let's get rough intuition for what a not-improvable estimator would look
+#   like (I don't know how to get a closed form, and the details will be very very
+#   sensitive to the particular setup, e.g. if we modify the constant-isotropic
+#   gaussian data assumption).  We've shown that for \(m\geq 3\) the obvious
+#   estimator is improvable.  Suppose \(u\) represents a not-improvable estimator.
+#   What does it look like?  Well, every perturbation \(s\) will make \(u+s\) worse
+#   (or break-even) at at least one point \(x\).  Let's consider the case where
+#   \(s\) is very small (i.e., ask for a local minimum) and concentrated near \(x\)
+#   and analyze this using the same moment model above.
+#   
+#   We get that the benefit of \(s\) is:
+#   \[
+#       \div{u+s}-(u+s)^2/2
+#      -\div{u  }+(u  )^2/2
+#       =
+#       \div{s}-u\cdot s - s^2/2
+#   \]
+#   For \(s\) local and very small, we'll ignore \(s^2\).
+#   Write \(s(y) = \vec{A}(y-x) \exp(-P(y-x)^2/2) \), where \(A\) is an affine function.
+#   Write \(E\) for that exponential factor.
+#   Then \(\div{s}(y) = E\) and \((u\cdot s)(y)= (u\cdot A(y-x)) E\)
+#   # TODO: try gaussian...
+
+
 
 #!!!! Nuisance Parameters
 #!!!! Curvature
@@ -245,21 +282,192 @@ functions to be contained in \(F\).
 
 !!! Basic Physics
 !!!! Extremal Principles
+!!!!! Expect Low Energies
 Why do physics classes focus so much on %how things move%?  There's probably a
 good reason, but I still find it fun to imagine an alternative: the physics of
 %which configurations don't move%.  The key fact that allows us to make
 quantitative predictions is this: *the universe is cold*!  So in many
 situations we are permitted to assume that energy is minimized; this puts
 strong constraints on what the stable configuration(s) are, as well as a
-criterion for instability.
+criterion for instability.{|I can't resist mentioning another extremal principle
+that controls the way things do move when they move: the Principle of Least Action.|}
 
-More generally, if \(Q\) is an extensive conserved quantity, then we may expect
+!!!!! High Energies are Exponentially Improbable
+The leading order correction to the energy-minimizing picture is to quantify
+how much more %improbable% high-energy configurations are than low-energy ones.
+This is only the leading correction, since it neglects the dynamics of how and
+on what timescale we move from from probable to improbable configurations, etc.
+I will now spell out the Key Formula; in so doing I shall in 5 minutes teach you all of
+statistical mechanics.
+
+If \(Q\) collects together all the extensive conserved quantities (energy,
+electric charge, etc) relevant to a physics situation, we posit that most
+macroscopic quantities of interest end up being functions of \(Q\).  A
+microscopic picture makes this plausible: there is a random walk.
+#
+Let us further posit that it makes sense to assign to each system \(X\) a
+volume \(P_X(Q)\) over values of \(Q\) for \(X\).  Intuitively,
+this is proportional to the volume of the subset of configurations that have
+the assigned value of \(Q\).
+#
+We posit that \(S = \log P\) is extensive in the sense that when we set
+together, side-by, side two systems \(X,X\pr\) with negligible interactions,
+then \(\log P_{X,X\pr}(Q,Q\pr) = \log P_X(Q) + \log P_{X\pr}(Q\pr)\).
+#
+Since \(S\) is extensive, if we put together a large number \(M\) of similar
+negligibly-interacting systems, then the overall \(S\) is the \(M\)-factor
+convolution of the individual systems' \(S\)s (by \(Q\)'s extensivity).  Convolution
+of nice functions tends to make them smoother (think of central limit theorem).
+We expect, then, that \(S\) for large systems looks smooth.  Let us posit this
+as another axiom.
+#
+Say, now, that we have a system-of-interest \(X\) very-weakly interacting with
+a huge "bath" \(B\).  We have \(Q_X+Q_B=Q_{X,B}\).  The "bath" is so big that
+\(S_B(Q_B)\) is differentiable with respect to \(Q_B\), and is so much bigger
+than \(X\) that this derivative is constant in the range of values \(Q_B\)
+could take, and (say) equal to the derivative at the constant \(Q_{X,B}\).  Then
+\(
+    P_{X,B}(Q_X,Q_B)
+    =
+    P_X(Q_X) P_B(Q_B)
+    =
+    P_X(Q_X) \exp(S_B(Q_B))
+    \approx
+    P_X(Q_X) \exp(S_B(Q_X) + (\nabla S_B(Q_{X,B}))\cdot (Q_B-Q_{X,B}))
+    \propto
+    P_X(Q_X) \exp(- (\nabla S_B(Q_{X,B}))\cdot Q_X)
+\)
+
+!!!!! The Exponential Rates are Recognizable Quantities
+There are common names for the components of \(\nabla S\) when our conserved
+extensive quantities are Energy and Volume.  The partial
+derivative along energy is called Coldness \(\beta\) and we %define%
+temperature as \(T=1/\beta\) (for historical reasons there's a factor called
+Boltzmann's constant, which from the microscopic physics perspective is no more
+fundamental than the conversion constant from nanometers to yards).  The partial
+along volume relates to pressure \(p\) (nonstandard name \(\gamma\)):
+\[
+    \beta = \partial{S}/\partial{E}
+    \qquad
+    \gamma = \partial{S}/\partial{V}
+    \qquad
+    T \triangleq 1/\beta
+    \qquad
+    p \triangleq \gamma/\beta
+\]
+Here, \(\beta\) tells us how greedy the system is for energy (cold systems
+are yearning hungrily for any extra energy they can snatch) and \(gamma\) tells
+us how greedy the system is for volume.
+
+The definition of \(p\) agrees with the idea that pressing the system to reduce
+\(V\) while maintaining \(S\) has \(p=-(\partial{E}/\partial{V})_S\).  Just
+draw the triangle to see the minus one sign in a chain rule loop.  The
+constraint of constant \(S\) means that as the gas gets hotter as we squeeze
+it, we forbid that heat energy to leak out of the system to the cooler ambient
+lab; otherwise, the change in \(E\) would undercount the work we did.
+
+
+!!!!! Example of the Ideal Gas
+For a large number \(N\) free particles with no internal structure, the only microscopic
+degrees of freedom are position and momentum.  What's the volume in
+configuration space for given \(V=L^3\) and \(E\)?  Well, each of \(3N\)
+position components ranges through a size-\(L\) interval; likewise, each of the
+\(3N\) momentum components has on average \(\epsilon=E/(3N)\) much energy,
+hence in effect ranges through an interval of size
+\(\propto\sqrt{\epsilon/(2m)}\propto\sqrt{\epsilon}\).  Thus:
+# a \(\sqrt{E}^{3N-1}/\sqrt{E}\) factor from momentum, since momentum's
+# magnitude is proportional to \(\sqrt{E}\) and there is a
+# (\(3N-1\)-dimensional) sphere's worth of directions, but that spherical shell
+# has thickness proportional to \(1/\sqrt{E}\).
+###
+# a \(\sqrt{E/(3N)}^{3N}\) factor from momentum, since each of \(3N\) momentum
+# degrees of freedom has on average \(\epsilon=E/(3N)\) much energy and thus
+# ranges through values of rough size \(\propto\pm\sqrt{\epsilon/(2m)}\), and since
+# \(2m\) doesn't change we'll ignore it:
+\[
+S \approx 3N\log(L\sqrt{E/(3N)})
+\]
+whence \(T=(2/3)E/N\) and \(p=(2/3)E/(VN)\).  It follows
+that{|The usual conversion factor \(R\), as in our previous discussion of
+Boltzmann's constant, is a historical accident stemming from early workers'
+attachement to false scale symmetry.)|}
+\[
+pV=NT
+\]
+
+# {|
+# Intuition for the surface area \(\text{SA}_{d-1}\) of a \(d-1\)-dimensional unit
+# sphere (imagine it embedded in \(d\)-dimensional euclidean space) for very
+# large \(d\).  Say we have \(d\) independent standard normal variables.  They
+# determine a vector \(\vec{r}\).  This vector's length has length close to \(r\approx \sqrt{d}\), by
+# additivity of variances, with spread on the order of \(1\).  That is,
+# the vector is overwhelmingly likely to land within a spherical shell of radius
+# \(\sqrt{d}\) and thickness \(\propto{}1\).  But the probability
+# density is \(\exp(-\|r\|^2/2)\), which within the shell is nearly a uniform
+# density with value \(1/\sqrt{2\pi e}^d\).  So we have
+# \[
+# 1
+# \approx
+# \text{prob land within shell}
+# =
+# \text{shell volume}\cdot \text{density}
+# \approx
+# (\text{SA}_{d-1}\cdot \sqrt{d}^{d-1} \cdot 1) \cdot 1/\sqrt{2\pi e}^d
+# \]
+# And we conclude \(\text{SA}_{d-1}{}\approx{}\sqrt{2\pi e/d}^d\).
+# |}
+
+Due to this simple relationship, and because close-to-ideal-gases are for many
+lab applications easily found, we can take the ideal gas behavior as giving an
+alternative, experimentally-accessible definition of temperature (with
+pressure=Force/area).
+
+Let's compute the heat capacity of an ideal gas.  Since \(E=(3/2)NT\) we get
+\(C\triangleq{}\partial{E}/\partial{T}=(3/2)N\).  More generally, when we have
+a large number \(M\) of degrees of freedom, in each of which the energy
+function is quadratic, then those d.o.f.s contribute \(M/2\) to the heat
+capacity.  Here, we had \(M=3N\) since each particle contributes 3 quadratic
+terms \(p_x^2/2m, p_y^2/2m, p_z^2/2m\) to the energy.  A crystal (ensemble of
+ideal springs) would have greater heat capacity because its energy has further
+quadratic terms depending on position, not just momentum.
+
+!!!!! Summary
+So now you know all of statistical mechanics.  The rest consists of ingenious
+math tricks for efficiently computing expectation values of various
+quantities-of-interest with respect to the exponential probability measure we
+constructed above.  But if you're okay doing calculations inefficiently, then
+you've got everything you need to, for instance, compute the heat capacity of a
+hot dielectric crystal (dielectric means the electron degrees of freedom are
+less confusing and hot means we can ignore quantum effects) or the percent
+atmospheric oxygenation at various altitudes and temperatures (just plug in the
+gravitational potential for different molecular weights).
+
+!!!! A Rich Example:Ising -Stanley Models and Critical Phenomena
+#!!!!! Ideal Gas
+
+!!!!! Warning
+Remember that all this StatMech is but a simple model of Nature's
+incomprehensible complexity.  It never %perfectly% applies --- even worse, its
+scope of reasonable application is quite tricky to spell out.{|Then again,
+Euclid's ideal triangles are absent from real life, and neither carpenter nor
+cartographer can crisply delineate this ideal concept's range of applicability.
+Despite this, flat plane geometry dramatically enhances our ability to solve
+real-world problems.|}  Fortunately, the 20th century supports this empirical
+fact about humans: that through exposure to standard StatMech examples, STEM
+majors cultivate good-enough of a gut instinct for StatMech's scope that they
+make good (true,useful) predictions.  The previous sentence is an antidote to a
+common disease encountered in the study of StatMech, namely the disease of
+extrapolating to a cosmic philosophy --- of "%Time's Universal Arrow%" or
+"%Anthropic Principles from a Multiversal Probability Distribution%" --- from
+the formulas we derived using intuition trained only on our more mundane experience
+with ice cubes and steam.
 
 # (By the way, the formal substitution \(-\beta\leftrightarrow{}i/\hbar\) gives
 # a quantitative correspondence between thermodynamics and quantum mechanics, a
 # profound bridge conjectured by P.Dirac and developed by R.Feynman.)
 
-!!!! Harmonic Oscillators, Quadratics and Gaussians
-!!!! Ising-Stanley Models and Critical Phenomena
+!!!!
 # !!!!!
 # !!!!! Polymers and Self-Avoiding Walks
+
+!!!! Applications to Markov Chain Monte Carlo
