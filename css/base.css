@@ -1,5 +1,9 @@
+html {
+    width:750px;
+}
+
 #togglerbody {
-    width: 900px;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 
@@ -28,8 +32,8 @@
 body {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 
-    width: 900px;
-    margin-left: auto;
+    width: 550px;
+    margin-left: 1em;
     margin-right: auto;
 
     text-align: justify;
@@ -59,7 +63,7 @@ h4 {
 }
 
 h5 {
-    width: 600px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
 
@@ -76,3 +80,29 @@ a:hover {
 }
 
 
+
+/* Wide viewport */
+@media (min-width: 400px) {
+    .aside {
+        display: inline;
+        float: left;
+        clear: left;
+        position: relative;
+        width: 745px;
+        height: 0%;
+    }
+    .asideinner {
+        display: inline;
+        float: right;
+        clear: right;
+        position: relative;
+        text-align: left;
+        font-size: 75%;
+        width: 185px;
+        top: -2em;
+    }
+
+    .asideinner:hover {
+        font-weight: bold;
+    }
+}
