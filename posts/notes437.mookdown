@@ -1,5 +1,5 @@
 # author: samtenka
-# change: 2025-01-21
+# change: 2025-01-26
 # create: 2025-01-19
 # descrp:
 #
@@ -38,20 +38,57 @@ Here is an incomplete --- and, I bet, sometimes incorrect --- list of musings
 on some class topics.  The point is say old ideas in new ways, to aid digestion.
 # One has to learn something twice in order to really learn it; apply
 # recursively.
-I believe in %binocular% vision for depth perception.
+I believe in depth perception through binocular vision.
 
 #---  _  ----------------------------------------------------------------------
 !! Decision Theory
 !!! Two Approaches to Uncertainty: Bayes, Minimax
-!!!! Setup
-Let's model decision-making in the face of uncertainty.  Nature's unknown
-configuration \(\sfH\in\hH\) determines a reward landscape on the action-space
-\(\aA\).  We take an action \(\sfA\in\aA\) based on noisy evidence
-\(\sfy\in\yY\) of \(\sfH\).  Formally, the dependencies are{|((We write \(U\sto
-V\) for the set \(U\to\pP^V\) of functions from \(U\) to the distributions on
-\(V\), regarded as stochastic maps from \(U\) to \(V\).))|} \(p:\hH\sto\yY\)
-and \(r:\hH\times\aA\sto\Rr\) and \(s:\yY\sto\aA\); we know \(p,r\) and must
-design \(s\).
+!!!! Dramatis Personae
+Let's model decision-making in the face of uncertainty.  We're uncertain about
+some aspect \(\sfH\) of the world.  We wish we knew \(\sfH\) because we've
+gotta decide some action \(\sfA\) to take, and depending on \(\sfH\) different
+actions may be "best".  That is, our overall reward \(\sfr\) depends on both
+\(\sfA\) and \(\sfH\).  Helpfully, a clue \(\sfy\) tells us (noisily)
+about
+\(\sfH\).  Now: %how do we choose \(\sfA\) upon observing \(\sfy\)?%
+#Upon acting, we receive a reward \(\sfr\);
+#we want to choose \(\sfA\) (based on \(\sfy\)) to get high rewards "on average".
+
+So \(\sfy\) depends on \(\sfH\); \(\sfA\) depends (via a strategy we choose) on
+\(\sfy\); and \(\sfr\) depends on \(\sfA,\sfH\).  Let's model these
+dependencies as probabilistic; the data flows like:
+\[
+\sfy\sim p(\cdot;\sfH)
+\qquad
+\sfA\sim s(\cdot;\sfy)
+\qquad
+\sfr\sim r(\cdot;\sfA,\sfH)
+\]
+As engineering specs we're given a probability model \(p\) and reward model
+\(r\).  We must design a *strategy* \(s\) that says, for each value of
+\((A,y)\), how likely we are to set \(\sfA=A\) upon observing \(\sfy=y\).{|
+Why do we allow \(\sfA\) to depend probabilistically on \(\sfy\)?  Answer:
+we'll encounter situations where %bluffing% is important.
+|}
+# , for each possible value
+# \(y\) for \(\sfy\), a probability distribution over actions from which we sample
+# our actual action in cases where \(\sfy=y\).
+We'll care about rewards only through their expected values, so we can assume
+without loss that \(\sfr\) is a deterministic function of \(\sfA,\sfH\).
+
+#
+(Mnemonic:
+the unknown world-state \(\sfH\) is %H'olam Haba%)
+
+
+# Nature's unknown
+# configuration \(\sfH\in\hH\) determines a reward landscape on the action-space
+# \(\aA\).  We take an action \(\sfA\in\aA\) based on noisy evidence
+# \(\sfy\in\yY\) of \(\sfH\).  Formally, the dependencies are{|((We write \(U\sto
+# V\) for the set \(U\to\pP^V\) of functions from \(U\) to the distributions on
+# \(V\), regarded as stochastic maps from \(U\) to \(V\).))|} \(p:\hH\sto\yY\)
+# and \(r:\hH\times\aA\sto\Rr\) and \(s:\yY\sto\aA\); we know \(p,r\) and must
+# design \(s\).
 
 #   \(
 #   \begin{tikzcd}
@@ -60,17 +97,19 @@ design \(s\).
 #   \end{tikzcd}
 #   \)
 
-The data flow looks like this:
+We want to choose \(s\) to get high rewards \(\sfr\) "on average".  How do we
+quantify this for a given candidate \(s\)?  Well, *if we knew* that \(\sfH=H\)
+then we could compute our expected reward:
 \[
-\sfy\sim p(\sfH)
-\qquad
-\sfA\sim s(\sfy)
-\qquad
-\sfr\sim r(\sfA,\sfH)
+R_s(H) \triangleq
+\Ee_{\sfy\sim p(\cdot;H)}\,
+\Ee_{\sfA\sim s(\cdot;\sfy)}\,
+\Ee_{\sfr\sim r(\cdot;\sfA,\sfH)}\,\,
+\sfr
 \]
-We want the reward \(\sfr\) to be high in expectation.  At this point, we can
-take expectations with respect to \(\sfy,\sfA\) but not \(\sfH\), so we get
-a reward function \(R_s:\hH\to\Rr\).
+
+we have probability distributions respect to \(\sfy,\sfA\) but not \(\sfH\), so
+we get a reward function \(R_s:\hH\to\Rr\).
 
 In other words, two methods for collapsing (aggregating) a bunch of values, one
 for each \(H\), are: take the MIN (worst-case) or take the AVERAGE with respect
@@ -86,9 +125,60 @@ use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
 
 In the Minimax setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
 
+!!!! Likelihood Ratios
+
+# We've discussed two aggregation functions (Bayes and Minimax) from the numbers
+# \(R_s(H_0),R_s(H_1)),\cdots\) to a total objective.
+
 !!!! Relationship via Duality
 
-!!! Pictures for Binary Case
+!!! Pictures for Binary and Related Cases
+
+!!!! 2 Hypotheses and 2 Actions
+
+When \(\hH=\{H_0,H_1\}\) and \(\aA=\{A_0,A_1\}\) are both size-\(2\) sets, then
+(either some \(A\) is best for all \(H\)s and we are done or) we can by
+re-labeling assume that \(A_i\) is best under \(H_i\).  We may regard \(A_i\)
+as the action of "guessing that the situation is \(H_i\)".  It's traditional to
+put \(H_1\) as "something happening"{|e.g. a certain stratum witnessing a
+certain crinoid genus's extinction, a Higgs decay at the LHC, a vaccine being
+effective in trials, there existing a typo in %Deathly Hallows%, etc|} and
+\(H_0\) as a more neutral alternative; our
+%language will reflect this
+tradition but there's of course nothing in our math that treats \(H_1,H_0\)
+asymmetrically.
+
+Any strategy \(s:\yY\sto\aA\) then induces two failure rates
+\(F_i\triangleq{}P(s(\sfy)\neq{}A_i;H_i)\), namely the rate \(F_1\) of missed
+detection and the rate \(F_0\) of false alarm.  We know that thresholding on
+likelihood ratios (with a weighted coin flip in case of a tie) gives an good
+family of strategies; this draws a %curve% in the \((F_0,F_1)\)-plane.
+
+Any choice of cost structure simply shifts and stretches that square into some
+axis-aligned rectangle in the cost-cost plane.  If additionally we choose a
+prior then we may transform again to the expectedcost-expectedcost plane by
+scaling each axis by the probability of its associated hypothesis.
+#
+Under a minimax adversary we want to choose the all-equal-costs point.
+#
+Under a Bayesian framework we want to maximize the expectation-of-costs
+functional and thus in the expectedcost-expectedcost plane find a point at
+which there is all-equal-slopes.
+
+See this beautiful duality!
+
+Note: the area within the curve is the AUROC, the probability of correct
+binary ranking.
+
+!!!! 3 Hypotheses and 3 Actions
+Here we in general run into a kind of voting paradox, to do with the fact that
+the number (3 factorial) of rankings on \(A\) exceeds the number (3) of \(H\)s.
+Let us restrict focus to an especially simple case where the reward matrix is
+the identity.
+
+!!!! 3 Hypotheses and 2 Actions
+
+!!!! 2 Hypotheses and 3 Actions
 
 !!! Entropy
 
@@ -176,7 +266,7 @@ This is a (regularized) *James Stein estimator*.  It is MAP for a certain
 #   (or break-even) at at least one point \(x\).  Let's consider the case where
 #   \(s\) is very small (i.e., ask for a local minimum) and concentrated near \(x\)
 #   and analyze this using the same moment model above.
-#   
+#
 #   We get that the benefit of \(s\) is:
 #   \[
 #       \div{u+s}-(u+s)^2/2
@@ -197,13 +287,13 @@ This is a (regularized) *James Stein estimator*.  It is MAP for a certain
 
 #---  _  ----------------------------------------------------------------------
 !! Asymptotics
-!!! 
-!!! 
+!!!
+!!!
 
 #---  _  ----------------------------------------------------------------------
 !! Inference Methods: Stochastic Approximation
-!!! 
-!!! 
+!!!
+!!!
 
 #---  _  ----------------------------------------------------------------------
 !! Special Topics
@@ -287,65 +377,82 @@ Why do physics classes focus so much on %how things move%?  There's probably a
 good reason, but I still find it fun to imagine an alternative: the physics of
 %which configurations don't move%.  The key fact that allows us to make
 quantitative predictions is this: *the universe is cold*!  So in many
-situations we are permitted to assume that energy is minimized; this puts
-strong constraints on what the stable configuration(s) are, as well as a
-criterion for instability.{|I can't resist mentioning another extremal principle
-that controls the way things do move when they move: the Principle of Least Action.|}
+situations may assume that energy is minimized;{|I can't resist
+mentioning a second (and
+class-unrelated) extremal principle that says how things move when they %do%
+move: the Principle of Least Action.  Google it for your general enrichment.
+The two principles engage in a
+profound analogy \(\text{energy}:\text{action}::1/T:-i/\hbar\) due to Dirac and
+Feynman.
+#
+That is, quantum fluctuations obey the same equations as thermal fluctuations
+when the temperature is Planck's constant times \(\sqrt{-1}\)!
+# The quantum propagation of matter obeys the same laws as the diffusion of
+# heat when the temperature is Planck's constant divided by \(\sqrt{-1}\)!
+Taking \(T\to 0\) (or \(\hbar\to 0\)) minimizes energy (or action); non-zero
+parameters give us thermal (or quantum) corrections.
+|}
+this (helps us predict instability and) severely constrains the stable
+configuration(s).
 
 !!!!! High Energies are Exponentially Improbable
 The leading order correction to the energy-minimizing picture is to quantify
 how much more %improbable% high-energy configurations are than low-energy ones.
-This is only the leading correction, since it neglects the dynamics of how and
-on what timescale we move from from probable to improbable configurations, etc.
-I will now spell out the Key Formula; in so doing I shall in 5 minutes teach you all of
+(I say "leading correction", since we neglect %how and on what% timescales
+improbable configurations evolve to probable ones.) I will now spell
+out the Key Formula; I'll thereby in 5 minutes teach you all of
 statistical mechanics.
 
 If \(Q\) collects together all the extensive conserved quantities (energy,
 electric charge, etc) relevant to a physics situation, we posit that most
-macroscopic quantities of interest end up being functions of \(Q\).  A
-microscopic picture makes this plausible: there is a random walk.
+macroscopic quantities of interest end up being functions of \(Q\).
 #
-Let us further posit that it makes sense to assign to each system \(X\) a
-volume \(P_X(Q)\) over values of \(Q\) for \(X\).  Intuitively,
-this is proportional to the volume of the subset of configurations that have
-the assigned value of \(Q\).
+# TODO
+# A microscopic picture makes this plausible: there is a random walk.
+#
+Suppose it makes sense to assign to each system \(X\) a size \(P_X(Q)\) of the
+subset of \(X\)'s configurations that have the assigned value of \(Q\).
 #
 We posit that \(S = \log P\) is extensive in the sense that when we set
 together, side-by, side two systems \(X,X\pr\) with negligible interactions,
 then \(\log P_{X,X\pr}(Q,Q\pr) = \log P_X(Q) + \log P_{X\pr}(Q\pr)\).
 #
-Since \(S\) is extensive, if we put together a large number \(M\) of similar
+Since \(S\) and \(Q\) are extensive, if we put together a large number \(M\) of similar
 negligibly-interacting systems, then the overall \(S\) is the \(M\)-factor
-convolution of the individual systems' \(S\)s (by \(Q\)'s extensivity).  Convolution
-of nice functions tends to make them smoother (think of central limit theorem).
-We expect, then, that \(S\) for large systems looks smooth.  Let us posit this
-as another axiom.
-#
+convolution of the individual systems' \(S\)s.
+Convolution of nice functions tends to make them smoother (think of central
+limit theorem).  Let us assume, then, that \(S\) for large systems looks
+smooth.
+
 Say, now, that we have a system-of-interest \(X\) very-weakly interacting with
 a huge "bath" \(B\).  We have \(Q_X+Q_B=Q_{X,B}\).  The "bath" is so big that
 \(S_B(Q_B)\) is differentiable with respect to \(Q_B\), and is so much bigger
 than \(X\) that this derivative is constant in the range of values \(Q_B\)
 could take, and (say) equal to the derivative at the constant \(Q_{X,B}\).  Then
-\(
+\[
     P_{X,B}(Q_X,Q_B)
     =
     P_X(Q_X) P_B(Q_B)
     =
     P_X(Q_X) \exp(S_B(Q_B))
-    \approx
-    P_X(Q_X) \exp(S_B(Q_X) + (\nabla S_B(Q_{X,B}))\cdot (Q_B-Q_{X,B}))
+\]
+Now, estimating \(S_B(Q_B)\approx (\nabla S_B(Q_{X,B}))\cdot (Q_B-Q_{X,B})\),
+we see
+\[
+    \cdots
     \propto
     P_X(Q_X) \exp(- (\nabla S_B(Q_{X,B}))\cdot Q_X)
-\)
+\]
 
 !!!!! The Exponential Rates are Recognizable Quantities
 There are common names for the components of \(\nabla S\) when our conserved
 extensive quantities are Energy and Volume.  The partial
 derivative along energy is called Coldness \(\beta\) and we %define%
-temperature as \(T=1/\beta\) (for historical reasons there's a factor called
+temperature as \(T=1/\beta\).{|For historical reasons there's a factor called
 Boltzmann's constant, which from the microscopic physics perspective is no more
-fundamental than the conversion constant from nanometers to yards).  The partial
-along volume relates to pressure \(p\) (nonstandard name \(\gamma\)):
+fundamental than the conversion constant from nanometers to yards.|}
+The partial along volume relates to pressure \(p\) (nonstandard name
+\(\gamma\)):
 \[
     \beta = \partial{S}/\partial{E}
     \qquad
@@ -356,8 +463,8 @@ along volume relates to pressure \(p\) (nonstandard name \(\gamma\)):
     p \triangleq \gamma/\beta
 \]
 Here, \(\beta\) tells us how greedy the system is for energy (cold systems
-are yearning hungrily for any extra energy they can snatch) and \(gamma\) tells
-us how greedy the system is for volume.
+are yearning hungrily for any extra energy they can snatch) and \(\gamma\)
+tells us how greedy the system is for volume.
 
 The definition of \(p\) agrees with the idea that pressing the system to reduce
 \(V\) while maintaining \(S\) has \(p=-(\partial{E}/\partial{V})_S\).  Just
@@ -390,7 +497,7 @@ S \approx 3N\log(L\sqrt{E/(3N)})
 whence \(T=(2/3)E/N\) and \(p=(2/3)E/(VN)\).  It follows
 that{|The usual conversion factor \(R\), as in our previous discussion of
 Boltzmann's constant, is a historical accident stemming from early workers'
-attachement to false scale symmetry.)|}
+attachment to false scale symmetry.|}
 \[
 pV=NT
 \]
@@ -427,9 +534,10 @@ Let's compute the heat capacity of an ideal gas.  Since \(E=(3/2)NT\) we get
 a large number \(M\) of degrees of freedom, in each of which the energy
 function is quadratic, then those d.o.f.s contribute \(M/2\) to the heat
 capacity.  Here, we had \(M=3N\) since each particle contributes 3 quadratic
-terms \(p_x^2/2m, p_y^2/2m, p_z^2/2m\) to the energy.  A crystal (ensemble of
-ideal springs) would have greater heat capacity because its energy has further
-quadratic terms depending on position, not just momentum.
+terms \(p_x^2/2m, p_y^2/2m, p_z^2/2m\) to the energy.  A hot crystal (ensemble
+of ideal springs; assume hot so can ignore quantum) would have greater heat capacity because its energy has
+twice as many quadratic terms per particle: 3 new ones for position adding to
+the 3 old ones for momentum.
 
 !!!!! Summary
 So now you know all of statistical mechanics.  The rest consists of ingenious
@@ -442,31 +550,137 @@ less confusing and hot means we can ignore quantum effects) or the percent
 atmospheric oxygenation at various altitudes and temperatures (just plug in the
 gravitational potential for different molecular weights).
 
-!!!! A Rich Example:Ising -Stanley Models and Critical Phenomena
-#!!!!! Ideal Gas
+!!!! A Rich Example: Ising-Stanley Models and Critical Phenomena
+!!!!! System Description
+Imagine a \(D=2\)-dimensional square grid with a huge number \(L\times{}L\) of
+nodes.  At each node is some abstract unit vector with \(d=1\) component.  So
+each configuration of this system is described by \(L^D\) many \(d\)-component
+unit vectors \(\vec v_i\), one for each node \(i\).  We posit that the energy
+of a configuration is a sum over edges \(i-j\) of \(-J \vec v_i \cdot \vec
+v_j\).  This says that neighboring nodes like to have aligned vectors.
+Opposing that tendency toward local order is thermal jiggling.  At very cold
+temperatures, the order wins and in a typical configuration vectors will all be
+nearly aligned; at very hot temperatures, thermal jiggling wins and in a
+typical configuration vectors will look nearly uncorrelated.  What do typical
+typical configurations look like at intermediate temperatures?
 
-!!!!! Warning
+In our \(D=2,d=1\) setting, we have a grid of cells, each of which is \(+1\) or
+\(-1\).  The phrasing in terms of \(D,d\) is merely an invitation for the
+reader to imagine related systems.  This \((D,d)\)-plane turns out to be a very
+rich space.
+
+!!!!! Partition Function
+The probability of a configuration \(X\pr\) at coldness \(\beta\) is
+\[
+\exp(-\beta E(X\pr)) / \sum_{\text{configurations}\,X} \exp(-\beta E(X))
+\]
+We give a name to that denominator: the *partition function* \(Z(\beta)\).  See
+that \(d(\log{Z})/d\beta\) is the expected value of the system's energy.
+Physically, the partition function is the effective phase-space-volume of the
+system when it's at coldness \(\beta\).
+
+Since the energy \(E\) is a sum over edges, the exponential-of-energy is a
+product-over-edges:
+\[
+\exp(-\beta E(X)) = \prod_{i-j} \exp(+\beta J \vec{v}_i\cdot\vec{v}_j)
+                  = \prod_{i-j} \sum_k (+\beta J \vec{v}_i\cdot\vec{v}_j)^k/k!
+\]
+Imagine distributing out that product; a particular term is a product over some
+small constellation of edges (with multiplicity \(k\)).  Suppose the overall
+constellation involves some node \(i\) an %odd% number of times.  Then when we
+sum that term over all possible configurations, there are exactly as many
+configurations with \(\vec{v}_i=+s\) as with \(\vec{v}_i=-s\), so this sum is
+\(0\).  Therefore, we may consider only those constellations where every node
+has %even% degree.  Each such "even" constellation is a union of simple loops
+(a loop has one connected component and in a loop each node has degree \(2\)).
+
+!!!!! Qualitative Aspects
+Consider \(D=2\) and \(d=1\), the classic square-grid discrete-spin ising
+model.  At very cold temperatures, we may expect high correlations between
+two nodes distance \(\ell\) apart.  They will differ only when there are an odd
+number of grain-boundaries separating them.
+
+A very cold system will tend not to have much grain boundary area.  So we may
+imagine that when two nodes differ it's because of a roughly tubular grain
+boundary around part of the line segment connecting the two nodes.  If the tube
+has diameter \(\Delta\) and length \(\Lambda\) then it has surface area about
+\(2 \Delta^{D-2} (\Delta + (D-1) \Lambda)\).
+
+# So imagine such a grain boundary --- if it has diameter \(l\) and is roughly
+# convex it has about \(\text{SA}=2Dl^{D-1}\) much surface area and thus incurs
+# energetic cost about \(2 \beta J \text{SA}\).
+
+
+
+# On the other hand,
+# the larger the surface area the more configurations of local wrinkling are possible,
+# so we get an entropic benefit.
+# Let's work as if each of \(\text{SA}\) panels can be aligned along any of the
+# \(D\) axes, so the entropic benefit is \(\log(D) \text{SA}\).
+# # This wrinkling happens at the \(D\text{SA}\) many joints
+# # between surface-area elements, and each joint can be one of \(3\)
+# # possibilities: flat, inward-curving, or outward-curving.  Let's approximate
+# # these variables as independent.
+# We then get an entropic benefit of
+# \(D\log(3)\text{SA}\).  We see that when
+# \[
+# \beta J \ll log(D)/2
+# \]
+# the entropic effect wins and we are no longer in an ordered state: correlations
+# between nodes decay exponentially with distance; a froth of bubbles is favored
+# to form and grow.
+#
+# 2.2 2.26
+# 3.3 4.51
+# 4.4 6.68
+#
+# 0.34657359027997264
+# 0.5493061443340549
+# 0.6931471805599453
+#
+# .442
+# .221
+# .149
+
+!!!!! Warning{|My viewpoint here comes from Feynman and Truesdell|}
 Remember that all this StatMech is but a simple model of Nature's
-incomprehensible complexity.  It never %perfectly% applies --- even worse, its
-scope of reasonable application is quite tricky to spell out.{|Then again,
+incomprehensible complexity.  It never %perfectly% applies.  Even worse, its
+scope of reasonable application, though large, is tricky to spell out:
+the notion of a system being "%close enough to equilibrium%" not only lacks
+some measurement device to operationally define it but in fact also depends on
+which questions one wants to answer!{|Then again,
 Euclid's ideal triangles are absent from real life, and neither carpenter nor
 cartographer can crisply delineate this ideal concept's range of applicability.
 Despite this, flat plane geometry dramatically enhances our ability to solve
-real-world problems.|}  Fortunately, the 20th century supports this empirical
-fact about humans: that through exposure to standard StatMech examples, STEM
-majors cultivate good-enough of a gut instinct for StatMech's scope that they
-make good (true,useful) predictions.  The previous sentence is an antidote to a
-common disease encountered in the study of StatMech, namely the disease of
-extrapolating to a cosmic philosophy --- of "%Time's Universal Arrow%" or
-"%Anthropic Principles from a Multiversal Probability Distribution%" --- from
-the formulas we derived using intuition trained only on our more mundane experience
-with ice cubes and steam.
+real-world problems.|}
+#
+For example, a warehouse's pressurized steel can of chlorine gas is in
+"equilibrium" if we want to analyze heat capacity but not if we want to analyze
+corrosion (since eventually, the system will reach a truer equilibrium where
+the can gets corroded and the gas escapes).
+#
+Fortunately, the 20th century supports this empirical fact about humans: that
+through exposure to standard StatMech examples, STEM majors cultivate
+good-enough of a gut instinct for StatMech's scope that their predictions end
+up being numerous, correct, and useful.
+
+The previous paragraph is an antidote to a common disease encountered in the
+study of StatMech, namely the disease of extrapolating --- from formulas that
+codify intuitions trained only on our everyday experience with ice cubes
+and kettle steam --- to a cosmic philosophy of "Time's Universal Arrow" and
+"Consciousness as an Entropy Engine" and "Anthropic Principles from a
+Multiversal Probability Distribution".  One might say this disease reflects
+excess enthusiasm.  I'd respond that the Nature we can measure deserves our
+enthusiasm even more than the Nature we can't.  Let even those who bend cosmic
+remember how richly wondrous phenomena pack into everyday experience.
+Isn't there magic in a snowflake's melting?
+
 
 # (By the way, the formal substitution \(-\beta\leftrightarrow{}i/\hbar\) gives
 # a quantitative correspondence between thermodynamics and quantum mechanics, a
 # profound bridge conjectured by P.Dirac and developed by R.Feynman.)
 
-!!!!
+#!!!!
 # !!!!!
 # !!!!! Polymers and Self-Avoiding Walks
 
