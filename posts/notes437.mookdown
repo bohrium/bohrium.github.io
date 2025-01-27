@@ -369,6 +369,45 @@ functions to be contained in \(F\).
 !!!! Moments and Cumulants
 !!!! Aside on Concentration
 
+!!!! Example densities: the Student-t family
+Consider the *student-t* family of (unnormalized) densities{|Use limits to
+define the density at special values of \(a\): \(y^\epsilon\to{1}\) and
+\((1+\epsilon y)^{1/\epsilon}\to\exp(y)\).|}
+\[
+p(x) \propto \frac{1}{\sqrt{1+ax^2}^{1+1/a}}
+\]
+This is defined on
+#\([-1/\sqrt{-a},+1/\sqrt{-a}]\)
+for \(|x|\leq{1/\sqrt{{}|a|{}}}\) when \(a\) is negative and
+on the whole real line when \(a\) is non-negative.  It is always normalizable.
+
+The parameter \(a\) tells us how much heavier the tail is than a Gaussian:
+\(a\lt{0}\) gives bounded distributions,
+\(a\gt{0}\) gives power-law tails, and
+\(a=0\) gives a Gaussian.
+#
+If we take \(a\to-\infty\) while horizontally and vertically scaling
+appropriately, we get the Jeffries distribution \(p(x)\propto\sqrt{(1-x)(1+x)}\).
+#
+If we take \(a\to+\infty\) while horizontally and vertically scaling
+appropriately, we get an unnormalizable Coulomb distribution
+\(p(x)\propto{}1/|x|\).
+
+In summary:
+\[
+\underbrace{-\infty}_{\text{Jeffries}}
+\quad\underbrace{-1}_{\text{uniform}}
+\quad\underbrace{-1/2}_{\text{semi-circle}}
+\quad\underbrace{0}_{\text{normal}}
+\quad\underbrace{+1/2}_{\text{3pt student}}
+\quad\underbrace{+1}_{\text{Cauchy}}
+\quad\underbrace{+\infty}_{\text{Coulomb}}
+\]
+A "3-point student" variable{|up to scaling by \(\sqrt{n/(n-1)}\)|} describes
+the standardized error \((\mu-Mean)/\sqrt{Var/n}\) of our mean estimate, where
+we estimate Mean and Variance from \(n=3\) samples, and the underlying
+distribution is Gaussian.  The sample-size \(n=3\) is interesting it is the
+smallest that exceeds the number of unknown parameters \(\mu,\sigma^2\).
 
 !!! Basic Physics
 !!!! Extremal Principles
