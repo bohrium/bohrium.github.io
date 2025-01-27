@@ -428,7 +428,8 @@ Say, now, that we have a system-of-interest \(X\) very-weakly interacting with
 a huge "bath" \(B\).  We have \(Q_X+Q_B=Q_{X,B}\).  The "bath" is so big that
 \(S_B(Q_B)\) is differentiable with respect to \(Q_B\), and is so much bigger
 than \(X\) that this derivative is constant in the range of values \(Q_B\)
-could take, and (say) equal to the derivative at the constant \(Q_{X,B}\).  Then
+could take, and (say) equal to the derivative at the constant \(Q_{X,B}\).
+Then
 \[
     P_{X,B}(Q_X,Q_B)
     =
@@ -444,15 +445,21 @@ we see
     P_X(Q_X) \exp(- (\nabla S_B(Q_{X,B}))\cdot Q_X)
 \]
 
+Two systems in equilibrium have the same \(\nabla S\)s.
+
 !!!!! The Exponential Rates are Recognizable Quantities
-There are common names for the components of \(\nabla S\) when our conserved
-extensive quantities are Energy and Volume.  The partial
-derivative along energy is called Coldness \(\beta\) and we %define%
-temperature as \(T=1/\beta\).{|For historical reasons there's a factor called
-Boltzmann's constant, which from the microscopic physics perspective is no more
-fundamental than the conversion constant from nanometers to yards.|}
-The partial along volume relates to pressure \(p\) (nonstandard name
-\(\gamma\)):
+There are common names for the components of \(\nabla S_X\) when our conserved
+extensive quantities are Energy and Volume.  The partial along energy is
+\(X\)'s *coldness* \(\beta\); it says how greedy \(X\) is for energy:
+the colder \(X\) is, the more hungrily it yearns for any extra energy it can
+snatch.  Coldness is so fundamental that we %define% *temperature* in terms of
+coldness: \(T\triangleq{}1/\beta\).{|For historical reasons there's a factor
+called Boltzmann's constant, which from the microscopic physics perspective is
+no more fundamental than the conversion constant from nanometers to yards.|}
+
+Likewise, the partial \(\gamma\) along volume is a kind of "expansiveness", or
+greediness for volume.  It measures desire to expand.  We define *pressure* as
+\(p\triangleq{}\gamma/\beta\).
 \[
     \beta = \partial{S}/\partial{E}
     \qquad
@@ -462,21 +469,32 @@ The partial along volume relates to pressure \(p\) (nonstandard name
     \qquad
     p \triangleq \gamma/\beta
 \]
-Here, \(\beta\) tells us how greedy the system is for energy (cold systems
-are yearning hungrily for any extra energy they can snatch) and \(\gamma\)
-tells us how greedy the system is for volume.
 
-The definition of \(p\) agrees with the idea that pressing the system to reduce
-\(V\) while maintaining \(S\) has \(p=-(\partial{E}/\partial{V})_S\).  Just
-draw the triangle to see the minus one sign in a chain rule loop.  The
-constraint of constant \(S\) means that as the gas gets hotter as we squeeze
-it, we forbid that heat energy to leak out of the system to the cooler ambient
-lab; otherwise, the change in \(E\) would undercount the work we did.
+How does \(p\) relate to good ol' force-per-area?  Well, imagine putting \(X\)
+into a piston with a sliding ceiling of area-\(A\) and weight \(mg\).{|Do this
+in a vacuum so that we can ignore squeezing from the atmosphere.  In
+particular, the ceiling and external world's entropy is constant with respect
+to the changes we consider.|}  What's
+the most probable ceiling height?  Well, lowering the ceiling by \(\Delta{h}\)
+has two effects: the weight loses energy \(\Delta{E}=(mg\Delta h)\) to \(X\),
+so \(S_X\) increases by \(\beta\Delta{E}\); and \(X\) loses volume
+\(\Delta{V}=A\Delta h\), so \(S_X\) decreases by \(\gamma\Delta{V}\).  At the
+most probable ceiling height, \(S_X\) is maximized, so the two changes have
+to balance out:
+\[
+\beta\Delta{E} = \gamma\Delta{V}
+\qquad
+p\triangleq\gamma/\beta = \Delta{E}/\Delta{V} = mg/A
+\]
+We have recovered the force-per-area rule from our more fundamental statistical
+picture.
 
+By the way, note
+\(p=(\partial{S}/\partial{V})_E/(\partial{S}/\partial{E})_V=-(\partial{E}/\partial{V})_S\).
 
 !!!!! Example of the Ideal Gas
-For a large number \(N\) free particles with no internal structure, the only microscopic
-degrees of freedom are position and momentum.  What's the volume in
+For a large number \(N\) free particles with no internal structure, the only
+microscopic degrees of freedom are position and momentum.  What's the volume in
 configuration space for given \(V=L^3\) and \(E\)?  Well, each of \(3N\)
 position components ranges through a size-\(L\) interval; likewise, each of the
 \(3N\) momentum components has on average \(\epsilon=E/(3N)\) much energy,
@@ -539,6 +557,47 @@ of ideal springs; assume hot so can ignore quantum) would have greater heat capa
 twice as many quadratic terms per particle: 3 new ones for position adding to
 the 3 old ones for momentum.
 
+#   !!!!! Connecting abstract definitions of \(T,p\) to lab measurements.
+#   
+#   Above we defined
+#   \[
+#   T\triangleq{}1/(\partial{S}/\partial{E})_V
+#   \qquad
+#   p\triangleq{}+(\partial{S}/\partial{E})_V/(\partial{S}/\partial{V})_E
+#   =-(\partial{E}/\partial{V})_S
+#   \]
+#   and claimed that these equal the familiar notions of temperature and pressure.
+#   
+#   Let's see why.  First, let's pin down in terms of actual lab measurements what
+#   we mean by these familiar notions of temperature and pressure.  Imagine \(X\) a
+#   liter of (non-ideal) fluid that would be safe{|this is my cute way of ruling
+#   out exciting systems like stellar plasma or liquid helium, which would call for
+#   different lab setups|} for and from a child's play.
+#   #
+#   Contain \(X\) in a chamber with a sliding area-\(A\) wall; let a spring squeeze
+#   the wall from the outside.  Soon the spring will exert a constant force \(F\).
+#   The *measured pressure* \(\tilde{p}=F/A\) is the force-per-area.
+#   # (i.e., work-per-volume).
+#   #
+#   Keep a piston containing \(2.41\) grams{|i.e., a trillion trillion atoms|} of
+#   Helium gas at a constant low pressure \(p_{\text{He}}\).  Soon the piston will have a
+#   constant volume \(V_{\text{He}}\).  The *measured temperature* \(\tilde{T}=p_{\text{He}}V_{\text{He}}/10^{24}\) is
+#   (a trillionth of a trillionth of) the pressure-times-volume.
+#   
+#   Now, \(p=-(\partial{E}/\partial{V})_S\)
+#   
+#   And our previous ideal gas analysis shows \(\tilde{T}\triangleq{}pV/N=T\).
+
+
+#
+# The definition of \(p\) agrees with the idea that pressing the system to reduce
+# \(V\) while maintaining \(S\) has \(p=-(\partial{E}/\partial{V})_S\).  Just
+# draw the triangle to see the minus one sign in a chain rule loop.  The
+# constraint of constant \(S\) means that as the gas gets hotter as we squeeze
+# it, we forbid that heat energy to leak out of the system to the cooler ambient
+# lab; otherwise, the change in \(E\) would undercount the work we did.
+
+
 !!!!! Summary
 So now you know all of statistical mechanics.  The rest consists of ingenious
 math tricks for efficiently computing expectation values of various
@@ -550,61 +609,61 @@ less confusing and hot means we can ignore quantum effects) or the percent
 atmospheric oxygenation at various altitudes and temperatures (just plug in the
 gravitational potential for different molecular weights).
 
-!!!! A Rich Example: Ising-Stanley Models and Critical Phenomena
-!!!!! System Description
-Imagine a \(D=2\)-dimensional square grid with a huge number \(L\times{}L\) of
-nodes.  At each node is some abstract unit vector with \(d=1\) component.  So
-each configuration of this system is described by \(L^D\) many \(d\)-component
-unit vectors \(\vec v_i\), one for each node \(i\).  We posit that the energy
-of a configuration is a sum over edges \(i-j\) of \(-J \vec v_i \cdot \vec
-v_j\).  This says that neighboring nodes like to have aligned vectors.
-Opposing that tendency toward local order is thermal jiggling.  At very cold
-temperatures, the order wins and in a typical configuration vectors will all be
-nearly aligned; at very hot temperatures, thermal jiggling wins and in a
-typical configuration vectors will look nearly uncorrelated.  What do typical
-typical configurations look like at intermediate temperatures?
-
-In our \(D=2,d=1\) setting, we have a grid of cells, each of which is \(+1\) or
-\(-1\).  The phrasing in terms of \(D,d\) is merely an invitation for the
-reader to imagine related systems.  This \((D,d)\)-plane turns out to be a very
-rich space.
-
-!!!!! Partition Function
-The probability of a configuration \(X\pr\) at coldness \(\beta\) is
-\[
-\exp(-\beta E(X\pr)) / \sum_{\text{configurations}\,X} \exp(-\beta E(X))
-\]
-We give a name to that denominator: the *partition function* \(Z(\beta)\).  See
-that \(d(\log{Z})/d\beta\) is the expected value of the system's energy.
-Physically, the partition function is the effective phase-space-volume of the
-system when it's at coldness \(\beta\).
-
-Since the energy \(E\) is a sum over edges, the exponential-of-energy is a
-product-over-edges:
-\[
-\exp(-\beta E(X)) = \prod_{i-j} \exp(+\beta J \vec{v}_i\cdot\vec{v}_j)
-                  = \prod_{i-j} \sum_k (+\beta J \vec{v}_i\cdot\vec{v}_j)^k/k!
-\]
-Imagine distributing out that product; a particular term is a product over some
-small constellation of edges (with multiplicity \(k\)).  Suppose the overall
-constellation involves some node \(i\) an %odd% number of times.  Then when we
-sum that term over all possible configurations, there are exactly as many
-configurations with \(\vec{v}_i=+s\) as with \(\vec{v}_i=-s\), so this sum is
-\(0\).  Therefore, we may consider only those constellations where every node
-has %even% degree.  Each such "even" constellation is a union of simple loops
-(a loop has one connected component and in a loop each node has degree \(2\)).
-
-!!!!! Qualitative Aspects
-Consider \(D=2\) and \(d=1\), the classic square-grid discrete-spin ising
-model.  At very cold temperatures, we may expect high correlations between
-two nodes distance \(\ell\) apart.  They will differ only when there are an odd
-number of grain-boundaries separating them.
-
-A very cold system will tend not to have much grain boundary area.  So we may
-imagine that when two nodes differ it's because of a roughly tubular grain
-boundary around part of the line segment connecting the two nodes.  If the tube
-has diameter \(\Delta\) and length \(\Lambda\) then it has surface area about
-\(2 \Delta^{D-2} (\Delta + (D-1) \Lambda)\).
+#   !!!! A Rich Example: Ising-Stanley Models and Critical Phenomena
+#   !!!!! System Description
+#   Imagine a \(D=2\)-dimensional square grid with a huge number \(L\times{}L\) of
+#   nodes.  At each node is some abstract unit vector with \(d=1\) component.  So
+#   each configuration of this system is described by \(L^D\) many \(d\)-component
+#   unit vectors \(\vec v_i\), one for each node \(i\).  We posit that the energy
+#   of a configuration is a sum over edges \(i-j\) of \(-J \vec v_i \cdot \vec
+#   v_j\).  This says that neighboring nodes like to have aligned vectors.
+#   Opposing that tendency toward local order is thermal jiggling.  At very cold
+#   temperatures, the order wins and in a typical configuration vectors will all be
+#   nearly aligned; at very hot temperatures, thermal jiggling wins and in a
+#   typical configuration vectors will look nearly uncorrelated.  What do typical
+#   typical configurations look like at intermediate temperatures?
+#
+#   In our \(D=2,d=1\) setting, we have a grid of cells, each of which is \(+1\) or
+#   \(-1\).  The phrasing in terms of \(D,d\) is merely an invitation for the
+#   reader to imagine related systems.  This \((D,d)\)-plane turns out to be a very
+#   rich space.
+#
+#   !!!!! Partition Function
+#   The probability of a configuration \(X\pr\) at coldness \(\beta\) is
+#   \[
+#   \exp(-\beta E(X\pr)) / \sum_{\text{configurations}\,X} \exp(-\beta E(X))
+#   \]
+#   We give a name to that denominator: the *partition function* \(Z(\beta)\).  See
+#   that \(d(\log{Z})/d\beta\) is the expected value of the system's energy.
+#   Physically, the partition function is the effective phase-space-volume of the
+#   system when it's at coldness \(\beta\).
+#
+#   Since the energy \(E\) is a sum over edges, the exponential-of-energy is a
+#   product-over-edges:
+#   \[
+#   \exp(-\beta E(X)) = \prod_{i-j} \exp(+\beta J \vec{v}_i\cdot\vec{v}_j)
+#                     = \prod_{i-j} \sum_k (+\beta J \vec{v}_i\cdot\vec{v}_j)^k/k!
+#   \]
+#   Imagine distributing out that product; a particular term is a product over some
+#   small constellation of edges (with multiplicity \(k\)).  Suppose the overall
+#   constellation involves some node \(i\) an %odd% number of times.  Then when we
+#   sum that term over all possible configurations, there are exactly as many
+#   configurations with \(\vec{v}_i=+s\) as with \(\vec{v}_i=-s\), so this sum is
+#   \(0\).  Therefore, we may consider only those constellations where every node
+#   has %even% degree.  Each such "even" constellation is a union of simple loops
+#   (a loop has one connected component and in a loop each node has degree \(2\)).
+#
+#   !!!!! Qualitative Aspects
+#   Consider \(D=2\) and \(d=1\), the classic square-grid discrete-spin ising
+#   model.  At very cold temperatures, we may expect high correlations between
+#   two nodes distance \(\ell\) apart.  They will differ only when there are an odd
+#   number of grain-boundaries separating them.
+#
+#   A very cold system will tend not to have much grain boundary area.  So we may
+#   imagine that when two nodes differ it's because of a roughly tubular grain
+#   boundary around part of the line segment connecting the two nodes.  If the tube
+#   has diameter \(\Delta\) and length \(\Lambda\) then it has surface area about
+#   \(2 \Delta^{D-2} (\Delta + (D-1) \Lambda)\).
 
 # So imagine such a grain boundary --- if it has diameter \(l\) and is roughly
 # convex it has about \(\text{SA}=2Dl^{D-1}\) much surface area and thus incurs
