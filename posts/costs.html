@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="./aside.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="../js/toggler.js"></script>
+    </head>
+    
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
+
+        $\newcommand{\NN}{\mathbb{N}}$
+        $\newcommand{\ZZ}{\mathbb{Z}}$
+        $\newcommand{\RR}{\mathbb{R}}$
+        $\newcommand{\CC}{\mathbb{C}}$
+        $\newcommand{\pr}{^\prime}$
+        $\newcommand{\prpr}{^{\prime\prime}}$
+        $\newcommand{\wrap}[1]{\left(#1\right)}$
+
+        
+<p>
+<p>
+<h2>  Bayes in the Tropics: Focused Worst-Case Decisions </h2>
+<p>
+Here we explore an adversary-flavored alternative to Bayesian decision making.
+It's not supposed to supplant Bayes; it's just an interestingly different
+formulation of what it means to act well and of what data we need to determine
+good action.  An optimistic outcome would be that with further study we find
+intuitive resonance with this framing in some of our daily decision making.
+<p>
+The idea is simply to specify world-salience in units of dollars, rather than
+of probability.  Whereas Wald's minimax framework constructs a Bayes prior from
+a given cost function, our formulation eschews Bayes priors altogether, using a
+different concept, one not depending on the cost function, to express
+world-salience.
+<p>
+I thank Greg Wornell, Jimmy Koppel, and others for inspiring this post.
+<p>
+<h4>  Modeling World-Salience </h4>
+Fix a finite nonempty set \(W\) of worlds and another, \(A\), of actions.
+We're unsure which world we're in.  We seek, for each costfunction
+\(c:A\to{}W\to{}\RR\), an action \(a:A\) that achieves low "cost across
+worlds".
+<p>
+This aggregation does not need to treat the worlds symmetrically: intuitively,
+some worlds are more <b>salient</b> to our decision problem than others.
+A Bayesian models salience via a <b>prior</b>
+\(p:\Delta(W)\subset{}W\to\RR\); then an action's aggregated cost is
+\[
+    C_p(a) \triangleq \sum_{w:W} c(a)(w) \cdot p(w)
+\]
+We'll today study a different procedure --- call it the method of the Azidians
+--- that models salience via an <b>offset</b> \(o:W\to\RR\) and defines an action's
+aggregated cost as
+\[
+    C^o(a) \triangleq \bigvee_{w:W} c(a)(w) - o(w)
+\]
+Up to a merely conventional sign on \(o\), we've simply translated a formula
+for the semiring \((\RR, +, \cdot)\) to a formula for the semiring \((\RR,
+\vee, +)\).  <sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160Pure mathematicians call such translations
+(usually with opposite sign convention so that we use min instead of max)
+
+<a href="https://en.wikipedia.org/wiki/Tropical_geometry">tropical</a>.</span></span>
+<p>
+Azidians make decisions in minimax fashion.  They pick an action based on which
+an adversary chooses a world; the catch is that when the adversary chooses
+world \(w\), they must pay \(o(w)\) dollars to the Azidian.  Thus, the adversary
+is disincentivized from picking large-\(o\) worlds.  Large-\(o\) worlds are
+less salient to decision-making.
+<p>
+<h4>  Bayes, Azid, and Wald </h4>
+<p>
+<p>
+<p>
+<h4>  Large-N I.I.D. </h4>
+<p>
+<h4>  Example: Least Squares </h4>
+<p>
+<p>
+<h3>  References </h3>
+<p>
+<b>Wald</b> --- <em>Statistical Decision Functions, \(\S1.4\)</em> --- 1950
+<p>
+<p>
+    </body>
+</html>

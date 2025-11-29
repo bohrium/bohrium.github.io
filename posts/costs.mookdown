@@ -1,0 +1,67 @@
+# author: samtenka
+# change: 2025-11-29
+# descrp: focused worst-case decision making
+
+
+! Bayes in the Tropics: Focused Worst-Case Decisions
+
+Here we explore an adversary-flavored alternative to Bayesian decision making.
+It's not supposed to supplant Bayes; it's just an interestingly different
+formulation of what it means to act well and of what data we need to determine
+good action.  An optimistic outcome would be that with further study we find
+intuitive resonance with this framing in some of our daily decision making.
+
+The idea is simply to specify world-salience in units of dollars, rather than
+of probability.  Whereas Wald's minimax framework constructs a Bayes prior from
+a given cost function, our formulation eschews Bayes priors altogether, using a
+different concept, one not depending on the cost function, to express
+world-salience.
+
+I thank Greg Wornell, Jimmy Koppel, and others for inspiring this post.
+
+# -----------------------------------------------------------------------------
+!!! Modeling World-Salience
+Fix a finite nonempty set \(W\) of worlds and another, \(A\), of actions.
+We're unsure which world we're in.  We seek, for each costfunction
+\(c:A\to{}W\to{}\RR\), an action \(a:A\) that achieves low "cost across
+worlds".
+
+This aggregation does not need to treat the worlds symmetrically: intuitively,
+some worlds are more *salient* to our decision problem than others.
+A Bayesian models salience via a *prior*
+\(p:\Delta(W)\subset{}W\to\RR\); then an action's aggregated cost is
+\[
+    C_p(a) \triangleq \sum_{w:W} c(a)(w) \cdot p(w)
+\]
+We'll today study a different procedure --- call it the method of the Azidians
+--- that models salience via an *offset* \(o:W\to\RR\) and defines an action's
+aggregated cost as
+\[
+    C^o(a) \triangleq \bigvee_{w:W} c(a)(w) - o(w)
+\]
+Up to a merely conventional sign on \(o\), we've simply translated a formula
+for the semiring \((\RR, +, \cdot)\) to a formula for the semiring \((\RR,
+\vee, +)\).  {|Pure mathematicians call such translations
+(usually with opposite sign convention so that we use min instead of max)
+<https://en.wikipedia.org/wiki/Tropical_geometry|tropical>.|}
+
+Azidians make decisions in minimax fashion.  They pick an action based on which
+an adversary chooses a world; the catch is that when the adversary chooses
+world \(w\), they must pay \(o(w)\) dollars to the Azidian.  Thus, the adversary
+is disincentivized from picking large-\(o\) worlds.  Large-\(o\) worlds are
+less salient to decision-making.
+
+!!! Bayes, Azid, and Wald
+
+
+
+# -----------------------------------------------------------------------------
+!!! Large-N I.I.D.
+
+!!! Example: Least Squares
+
+
+!! References
+
+*Wald* --- %Statistical Decision Functions, \(\S1.4\)% --- 1950
+
