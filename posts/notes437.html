@@ -1,26 +1,42 @@
-# author: samtenka
-# change: 2025-01-28
-# create: 2025-01-19
-# descrp:
-#
-#
-#
-#
-#
+<html>
+    <head>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/carboniferous.css">
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="./aside.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="application/javascript" src="../js/toggler.js"></script>
+    </head>
+    
+    <body>
+        <div id="togglerbody" style="text-align:center">
+            <button id="toggler"> repaint </button>
+            <h1 style="margin: 0 auto"><a href="../index.html"><div id="title">Samuel Tenka</div></a></h1>
+        </div>
 
-! Precis of EECS 437
-# !!!! Samuel Tenka, 2025
+        $\newcommand{\NN}{\mathbb{N}}$
+        $\newcommand{\ZZ}{\mathbb{Z}}$
+        $\newcommand{\RR}{\mathbb{R}}$
+        $\newcommand{\CC}{\mathbb{C}}$
+        $\newcommand{\pr}{^\prime}$
+        $\newcommand{\prpr}{^{\prime\prime}}$
+        $\newcommand{\wrap}[1]{\left(#1\right)}$
 
+        
+<p>
+<h2>  Precis of EECS 437 </h2>
+<p>
 $\newcommand{\sfA}{{\mathsf{A}}}$
 $\newcommand{\sfH}{{\mathsf{H}}}$
 $\newcommand{\sfr}{{\mathsf{r}}}$
 $\newcommand{\sfx}{{\mathsf{x}}}$
 $\newcommand{\sfy}{{\mathsf{y}}}$
 $\newcommand{\sfz}{{\mathsf{z}}}$
-#
 $\newcommand{\Ee}{{\mathbb{E}}}$
 $\newcommand{\Rr}{{\mathbb{R}}}$
-#
 $\newcommand{\aA}{{\mathcal{A}}}$
 $\newcommand{\fF}{{\mathcal{F}}}$
 $\newcommand{\hH}{{\mathcal{H}}}$
@@ -29,33 +45,25 @@ $\newcommand{\nN}{{\mathcal{N}}}$
 $\newcommand{\pP}{{\mathcal{P}}}$
 $\newcommand{\xX}{{\mathcal{X}}}$
 $\newcommand{\yY}{{\mathcal{Y}}}$
-#
-#
 $\newcommand{\sto}{\rightsquigarrow}$
-
-#---  _  ----------------------------------------------------------------------
-!!! Hallo
+<p>
+<h4>  Hallo </h4>
 Here is an incomplete --- and, I bet, sometimes incorrect --- list of musings
 on some class topics.  The point is aid digestion by saying old ideas in new
 ways.
-# One has to learn something twice in order to really learn it; apply
-# recursively.
 I believe in depth perception through binocular vision.
-
-#---  _  ----------------------------------------------------------------------
-!! Decision Theory
-!!! Two Approaches to Uncertainty: Bayes, Adversary
-!!!! Dramatis Personae
+<p>
+<h3>  Decision Theory </h3>
+<h4>  Two Approaches to Uncertainty: Bayes, Adversary </h4>
+<h5>  Dramatis Personae </h5>
 Let's model decision-making in the face of uncertainty.  We're uncertain about
 some aspect \(\sfH\) of the world.  We wish we knew \(\sfH\) because we've
 gotta decide some action \(\sfA\) to take, and depending on \(\sfH\) different
 actions may be "best".  That is, our overall reward \(\sfr\) depends on both
 \(\sfA\) and \(\sfH\).  Helpfully, a clue \(\sfy\) tells us (noisily)
 about
-\(\sfH\).  Now: %how do we choose \(\sfA\) upon observing \(\sfy\)?%
-#Upon acting, we receive a reward \(\sfr\);
-#we want to choose \(\sfA\) (based on \(\sfy\)) to get high rewards "on average".
-
+\(\sfH\).  Now: <em>how do we choose \(\sfA\) upon observing \(\sfy\)?</em>
+<p>
 So \(\sfy\) depends on \(\sfH\); \(\sfA\) depends (via a strategy we choose) on
 \(\sfy\); and \(\sfr\) depends on \(\sfA,\sfH\).  Let's model these
 dependencies as probabilistic; the data flows like:
@@ -67,40 +75,20 @@ dependencies as probabilistic; the data flows like:
 \sfr\sim r(\cdot;\sfA,\sfH)
 \]
 As engineering specs we're given a probability model \(p\) and reward model
-\(r\).  We must design a *strategy* \(s\) that says, for each value of
-\((A,y)\), how likely we are to set \(\sfA=A\) upon observing \(\sfy=y\).{|
+\(r\).  We must design a <b>strategy</b> \(s\) that says, for each value of
+\((A,y)\), how likely we are to set \(\sfA=A\) upon observing \(\sfy=y\).<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160
 Why do we allow \(\sfA\) to depend probabilistically on \(\sfy\)?  Answer:
-we'll encounter situations where %bluffing% is important.
-|}
-# , for each possible value
-# \(y\) for \(\sfy\), a probability distribution over actions from which we sample
-# our actual action in cases where \(\sfy=y\).
+we'll encounter situations where <em>bluffing</em> is important.
+</span></span>
 We'll care about rewards only through their expected values, so we can assume
 without loss that \(\sfr\) is a deterministic function of \(\sfA,\sfH\).
-
-#
-# (Mnemonic:
-# the unknown world-state \(\sfH\) is %H'olam Haba%)
-
-
-# Nature's unknown
-# configuration \(\sfH\in\hH\) determines a reward landscape on the action-space
-# \(\aA\).  We take an action \(\sfA\in\aA\) based on noisy evidence
-# \(\sfy\in\yY\) of \(\sfH\).  Formally, the dependencies are{|((We write \(U\sto
-# V\) for the set \(U\to\pP^V\) of functions from \(U\) to the distributions on
-# \(V\), regarded as stochastic maps from \(U\) to \(V\).))|} \(p:\hH\sto\yY\)
-# and \(r:\hH\times\aA\sto\Rr\) and \(s:\yY\sto\aA\); we know \(p,r\) and must
-# design \(s\).
-
-#   \(
-#   \begin{tikzcd}
-#   y \arrow[d, dashed] & H \arrow[l] \arrow[d] \\
-#   A \arrow[r]         & r
-#   \end{tikzcd}
-#   \)
-
+<p>
+<p>
+<p>
+<p>
+<p>
 We want to choose \(s\) to get high rewards \(\sfr\) "on average".  How do we
-quantify this for a given candidate \(s\)?  Well, *if we knew* that \(\sfH=H\)
+quantify this for a given candidate \(s\)?  Well, <b>if we knew</b> that \(\sfH=H\)
 then we could compute our expected reward:
 \[
 R_s(H) \triangleq
@@ -109,135 +97,129 @@ R_s(H) \triangleq
 \Ee_{\sfr\sim r(\cdot;\sfA,\sfH)}\,\,
 \sfr
 \]
-
+<p>
 we have probability distributions respect to \(\sfy,\sfA\) but not \(\sfH\), so
 we get a reward function \(R_s:\hH\to\Rr\).
-
+<p>
 In other words, two methods for collapsing (aggregating) a bunch of values, one
 for each \(H\), are: take the MIN (worst-case) or take the AVERAGE with respect
 to some distribution.  That is, we evaluate the quality of a strategy \(s\) as
 \(\min_\sfH{}R_s(\sfH)\) or as \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
-#
 These are two philosophically different ways of handling
 uncertainty.
-
-!!!! Bayes vs Adversarial
+<p>
+<h5>  Bayes vs Adversarial </h5>
 In the Bayes setup, we assume known a distribution \(\pi\in\pP^\hH\) that we
 use as a prior on \(\hH\).  We want to \(\Ee_{\sfH\sim\pi}R_s(\sfH)\).
-
+<p>
 In the Adversarial setup, we maximize \(\min_\sfH{}R_s(\sfH)\).
-
-!!!! Likelihood Ratios
-
-# We've discussed two aggregation functions (Bayes and Minimax) from the numbers
-# \(R_s(H_0),R_s(H_1)),\cdots\) to a total objective.
-
-!!!! Relationship via Duality
-
-!!! Pictures for Binary and Related Cases
-
-!!!! 2 Hypotheses and 2 Actions
-
+<p>
+<h5>  Likelihood Ratios </h5>
+<p>
+<p>
+<h5>  Relationship via Duality </h5>
+<p>
+<h4>  Pictures for Binary and Related Cases </h4>
+<p>
+<h5>  2 Hypotheses and 2 Actions </h5>
+<p>
 When \(\hH=\{H_0,H_1\}\) and \(\aA=\{A_0,A_1\}\) are both size-\(2\) sets, then
 (either some \(A\) is best for all \(H\)s and we are done or) we can by
 re-labeling assume that \(A_i\) is best under \(H_i\).  We may regard \(A_i\)
 as the action of "guessing that the situation is \(H_i\)".  It's traditional to
-put \(H_1\) as "something happening"{|e.g. a certain stratum witnessing a
+put \(H_1\) as "something happening"<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160e.g. a certain stratum witnessing a
 certain crinoid genus's extinction, a Higgs decay at the LHC, a vaccine being
-effective in trials, there existing a typo in %Deathly Hallows%, etc|} and
+effective in trials, there existing a typo in <em>Deathly Hallows</em>, etc</span></span> and
 \(H_0\) as a more neutral alternative; our
-%language will reflect this
+<em>language will reflect this</em>
 tradition but there's of course nothing in our math that treats \(H_1,H_0\)
 asymmetrically.
-
+<p>
 Any strategy \(s:\yY\sto\aA\) then induces two failure rates
 \(F_i\triangleq{}P(s(\sfy)\neq{}A_i;H_i)\), namely the rate \(F_1\) of missed
 detection and the rate \(F_0\) of false alarm.  We know that thresholding on
 likelihood ratios (with a weighted coin flip in case of a tie) gives an good
-family of strategies; this draws a %curve% in the \((F_0,F_1)\)-plane.
-
+family of strategies; this draws a <em>curve</em> in the \((F_0,F_1)\)-plane.
+<p>
 Any choice of cost structure simply shifts and stretches that square into some
 axis-aligned rectangle in the cost-cost plane.  If additionally we choose a
 prior then we may transform again to the expectedcost-expectedcost plane by
 scaling each axis by the probability of its associated hypothesis.
-#
 Under a minimax adversary we want to choose the all-equal-costs point.
-#
 Under a Bayesian framework we want to maximize the expectation-of-costs
 functional and thus in the expectedcost-expectedcost plane find a point at
 which there is all-equal-slopes.
-
+<p>
 See this beautiful duality!
-
+<p>
 Note: the area within the curve is the AUROC, the probability of correct
 binary ranking.
-
-!!!! 3 Hypotheses and 2 Actions
+<p>
+<h5>  3 Hypotheses and 2 Actions </h5>
 Now our plot is a product of \(3\) simplices each with \(2\) corners.  It's
 three dimensional.
-
+<p>
 The reachable region is a convex set containing the two matching corners
 \((0,0,0),(1,1,1)\).
-
-!!!! 2 Hypotheses and 3 Actions
+<p>
+<h5>  2 Hypotheses and 3 Actions </h5>
 Now our plot is a product of \(2\) simplices each with \(3\) corners.  It's
 four dimensional.  It's a product of two triangles.  We can imagine a
 triangular prism growing in height from height 0: corresponding to corners of
 the non-obvious triangle are: the initial triangle, the final top face, and the
 final bottom face.
-
+<p>
 The reachable region is a convex set containing the \(3\) matching corners
 \((a,a),(b,b),(c,c)\).  That is, it contains the triangle where one corner of
 the initial stretches to become a diagonal line segment on an opposite
 rectangle of the final prism.
-
+<p>
 A different embedding into our space-and-time imagination is this.
 The matching corners are a spatial triangle in a single instant.  How might
 we imagine the other \(6\) corners?  Well, they divide into three opposing
 pairs \((a,b),(b,a);\cdots\).  Embed \((a,b),(b,a)\) on the midpoint of the
 \((a,a)-(b,b)\) edge, but shifted forward and backward in time.
-
-!!!! 3 Hypotheses and 3 Actions
-
+<p>
+<h5>  3 Hypotheses and 3 Actions </h5>
+<p>
 Here we in general run into a kind of voting paradox, to do with the fact
 that the number (3 factorial) of rankings on \(A\) exceeds the number (3) of
 \(H\)s.  Let us restrict focus to an especially simple case where the reward
 matrix is the identity.
-
+<p>
 A full plot is a product of \(3\) simplices each with \(3\) corners.  It's six
 dimensional.
-
-
-
-
-
-!!! Entropy
-
-#---  _  ----------------------------------------------------------------------
-!! Estimation and Information Geometry
-
-!!! KL Geometry
+<p>
+<p>
+<p>
+<p>
+<p>
+<h4>  Entropy </h4>
+<p>
+<h3>  Estimation and Information Geometry </h3>
+<p>
+<h4>  KL Geometry </h4>
 Estimation fits into our starting setup with \(\hH\) and \(\aA\) both equal to
 some continuous parameter space \(\xX\), and with \(r\) some notion of
 closeness.  It thus behooves us to analyze this space \(\xX\) of distributions
 on \(\yY\) geometrically.  The key notion of different-ness between two
-distributions is the *KL Divergence*
+distributions is the <b>KL Divergence</b>
 \[
     D(p:q) = \Ee_{y\sim p}[\log(p(y)/q(y))]
 \]
 that measures our average excess surprise when we expect samples from \(q\) but
-instead get samples from \(p\).  This divergence is *not symmetric*!  Also,
+instead get samples from \(p\).  This divergence is <b>not symmetric</b>!  Also,
 when the right-hand-side is not defined, we define the value to be infinite.
-
-!!! Classical Quadratic Theory of Estimation
-
-!!! Cramer-Rao Bound and Bias-Variance Tradeoff
-
-!!! Multiple Parameters
+<p>
+<h4>  Classical Quadratic Theory of Estimation </h4>
+<p>
+<h4>  Cramer-Rao Bound and Bias-Variance Tradeoff </h4>
+<p>
+<h4>  Multiple Parameters </h4>
 Here are some interesting geometric effects when \(\xX\) has high dimension \(m\)
 (such as \(3\)).
-
-!!!! Shrinkage
+<p>
+<h5>  Shrinkage </h5>
 Take the standard Gaussian likelihood model: \(\sfy=x+\sfz\) where
 \(\sfz\sim\nN(0,I)\).  The data of an estimator is the data of a vector field
 \(v(y)\) inducing estimate \(\hat\sfx=y-v(y)\).  Then a leading approximation
@@ -255,17 +237,15 @@ The key is that the LHS has a chance of scaling with the dimension
 to overwhelm the RHS.  Even for constant \(\|v\|\) (imagine a field of
 unit-vectors), there's enough angular elbow room so that we can arrange for
 divergences everywhere to be positive simultaneously.
-#
 ((It's not enough to just argue by scaling that we can
 make the RHS arbitrarily small by vertically scaling v, since we want an
-improvement at every \(x\) %simultaneously%.))
-
+improvement at every \(x\) <em>simultaneously</em>.))
+<p>
 For example, suppose \(\vec v(y) = u(\|y\|) (\vec y/\|y\|)\) is radial.  Then
 (choose a basis at \(y\) that includes \(y/\|y\|\)) the divergence has a radial
 term \(u\pr\) and \(m-1\) angular terms \(u/\|y\|\).  This angular contribution
 represents that the surface area of radius-\(r\) balls decreases as \(r\)
 decreases, by \(\text{SA}\pr/\text{SA}=(m-1)/r\).
-#
 Anyway, combining with \(\|v\|^2=u^2\) let's write a condition for improvement:
 \[
     u\pr + ((m-1)/r) u \geq u^2/2
@@ -273,124 +253,91 @@ Anyway, combining with \(\|v\|^2=u^2\) let's write a condition for improvement:
 Under the ansatz \(u(r)=\alpha r^p\), this condition reads \((p+m-1) r^{p-1}
 \geq (\alpha/2) r^{2p}\), or \(r^{p+1}\leq 2/(\alpha(p+m-1))\).  Pay special
 attention to \(p=1,-1\), which are MAP estimators respectively for Gaussian and certain
-%unnormalized%-powerlaw priors.  (And, even better,
-%Least-Squares-under-Posterior estimators for that Gaussian).
-#
+<em>unnormalized</em>-powerlaw priors.  (And, even better,
+<em>Least-Squares-under-Posterior estimators for that Gaussian).</em>
 For example, setting \(u(r)=\alpha r\) (the gaussian prior case) satisfies this
 bound when \(m\geq \alpha r^2/2\), that is for \(r\ll \sqrt{m/\alpha}\).  We'd
 like to modify this to have the same behavior.
-
+<p>
 An elegant way to get both behaviors is \(u(r) = \alpha r/(R^2+r^2)\), which for
 \(R\gg 1\) much larger that \(z\)'s noise scale and \(\alpha\ll 1\) verifies
 the small derivative assumptions on \(\text{div}v\) and \(v^2\).
-
-This is a (regularized) *James Stein estimator*.  It is MAP for a certain
-%unnormalized%-Cauchy prior.
-
-
-#   Now, let's get rough intuition for what a not-improvable estimator would look
-#   like (I don't know how to get a closed form, and the details will be very very
-#   sensitive to the particular setup, e.g. if we modify the constant-isotropic
-#   gaussian data assumption).  We've shown that for \(m\geq 3\) the obvious
-#   estimator is improvable.  Suppose \(u\) represents a not-improvable estimator.
-#   What does it look like?  Well, every perturbation \(s\) will make \(u+s\) worse
-#   (or break-even) at at least one point \(x\).  Let's consider the case where
-#   \(s\) is very small (i.e., ask for a local minimum) and concentrated near \(x\)
-#   and analyze this using the same moment model above.
-#
-#   We get that the benefit of \(s\) is:
-#   \[
-#       \div{u+s}-(u+s)^2/2
-#      -\div{u  }+(u  )^2/2
-#       =
-#       \div{s}-u\cdot s - s^2/2
-#   \]
-#   For \(s\) local and very small, we'll ignore \(s^2\).
-#   Write \(s(y) = \vec{A}(y-x) \exp(-P(y-x)^2/2) \), where \(A\) is an affine function.
-#   Write \(E\) for that exponential factor.
-#   Then \(\div{s}(y) = E\) and \((u\cdot s)(y)= (u\cdot A(y-x)) E\)
-#   # TODO: try gaussian...
-
-
-
-#!!!! Nuisance Parameters
-#!!!! Curvature
-
-#---  _  ----------------------------------------------------------------------
-!! Asymptotics
-!!!
-!!!
-
-#---  _  ----------------------------------------------------------------------
-!! Inference Methods: Stochastic Approximation
-!!!
-!!!
-
-#---  _  ----------------------------------------------------------------------
-!! Special Topics
-!!! Universal Featurization
-!!! Diffusion Models
-
-
-!! Appendix: Math Helpers
-Here are some math concepts we'll use.  Plus, as a %lagniappe%, some we won't.
-
-!!! Basic Linear Algebra
-!!!!
-!!!!
-!!!! Convexity and Duality
-
-!!! Basic Calculus
-!!!! Jacobian, Gradient
-!!!! Hessian, Laplacian
-!!!! Aside on Gradient Descent
-!!!! Connections and Curvature
-
-!!!! Topology
-#Abstraction is the removal of irrelevant detail; generalization, the
-#inclusion of
-
+<p>
+This is a (regularized) <b>James Stein estimator</b>.  It is MAP for a certain
+<em>unnormalized</em>-Cauchy prior.
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<h3>  Asymptotics </h3>
+<h3> ! </h3>
+<h3> ! </h3>
+<p>
+<h3>  Inference Methods: Stochastic Approximation </h3>
+<h3> ! </h3>
+<h3> ! </h3>
+<p>
+<h3>  Special Topics </h3>
+<h4>  Universal Featurization </h4>
+<h4>  Diffusion Models </h4>
+<p>
+<p>
+<h3>  Appendix: Math Helpers </h3>
+Here are some math concepts we'll use.  Plus, as a <em>lagniappe</em>, some we won't.
+<p>
+<h4>  Basic Linear Algebra </h4>
+<h4> ! </h4>
+<h4> ! </h4>
+<h5>  Convexity and Duality </h5>
+<p>
+<h4>  Basic Calculus </h4>
+<h5>  Jacobian, Gradient </h5>
+<h5>  Hessian, Laplacian </h5>
+<h5>  Aside on Gradient Descent </h5>
+<h5>  Connections and Curvature </h5>
+<p>
+<h5>  Topology </h5>
+<p>
 Let's think about subsets of the Cartesian plane.  A collection of equations
 like \(x=y\) or \(x^2+y^2=1\) or \(\max(1,x^2+y^2)=1\) determines a plane
 subset of simultaneous solutions.  More precisely, we require each equation to
-read \(f(x,y)=0\) where \(f\) is some *continuous* function to the reals.  Call
-a subset that arises in this way @Clean@.  The @Clean@ subsets are closed under
+read \(f(x,y)=0\) where \(f\) is some <b>continuous</b> function to the reals.  Call
+a subset that arises in this way <span style="font-variant: small-caps">Clean</span>.  The <span style="font-variant: small-caps">Clean</span> subsets are closed under
 arbitrary intersection.  And by multiplication they are also closed under
 finitary union.
-
-
-
-The notions we'll use are *closure*.
-
+<p>
+<p>
+<p>
+The notions we'll use are <b>closure</b>.
+<p>
 Intuitively, the closed sets are those cut out by sets of equations such as
-
-!!!!! Compactness
+<p>
+<h6>  Compactness </h6>
 Suppose an infinite family of closed sets has empty intersection.  One way this
 can happen is if a finite sub-family has empty intersection.  In this case, we
-say the infinitary intersection is empty for @silly reasons@.
-#
-A set is *compact* when every empty infinitary intersection of closed sets is
+say the infinitary intersection is empty for <span style="font-variant: small-caps">silly reasons</span>.
+A set is <b>compact</b> when every empty infinitary intersection of closed sets is
 empty for silly reasons.
-#
 The significance of compactness comes from two consequences: (a) that compact
 sets push forward under continuous maps to compact sets; (b) that
-
-
-!!! Basic Probability
-!!!! Overview
+<p>
+<p>
+<h4>  Basic Probability </h4>
+<h5>  Overview </h5>
 How might we math-ify "uncertainty"?  If we know how to reason about variables
 of type \(X\), how do we reason about variables of type
-\(\texttt{randomvaluein}\,X\)?{|I use this programming-ish language on purpose.
+\(\texttt{randomvaluein}\,X\)?<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160I use this programming-ish language on purpose.
 The \(\texttt{randomvaluein}\) is a type constructor, just as
 \(\texttt{listof}\) and \(\texttt{etthernullor}\) and
 \(\texttt{dictfromstringsto}\) and \(\texttt{predicateonsubsetsof}\) are type
-constructors.|}
-
+constructors.</span></span>
+<p>
 We do so by generalizing evaluation of functions \(f:X\to\Rr\): a value
 \(x\in{X}\) is "as good as" the map \(\epsilon_x\) that takes \(f\) as input
 and returns \(f(x)\).  By "as good as" I mean that different \(x\)s lead to
 different \(\epsilon_x\)s, so no information is lost.
-#
 Can we recognize the \(\epsilon_x\)s among all functions of type \((X\to
 \Rr)\to\Rr\)?  Yes: they are precisely those that commute with all
 functions \(t:\Rr\to\Rr\) in the sense that \(\epsilon(t\circ f) =
@@ -399,24 +346,18 @@ arguments and demand that
 \(\epsilon((x\mapsto{t(f(x),\cdots,g(x))}))=t(\epsilon(f),\cdots,\epsilon(g))\);
 this any-ary constraint is equivalent to the unary constraint and is intellectually
 rewarding.  Examples:
-###
-When \(t(y)=c\) is constant: \(\epsilon((x\mapsto c))=c\) *normalization*.
-#
+When \(t(y)=c\) is constant: \(\epsilon((x\mapsto c))=c\) <b>normalization</b>.
 One way to generalize the constants rule is by going to one higher degree (constant
 plus linear term):
-When \(t(y,y\pr)=5+y+6y\pr\): \(\epsilon(5+f+6g)=5+\epsilon(f)+6\epsilon(g)\) *linearity*.
-#
+When \(t(y,y\pr)=5+y+6y\pr\): \(\epsilon(5+f+6g)=5+\epsilon(f)+6\epsilon(g)\) <b>linearity</b>.
 When \(t(y)=(0\,\text{if}\,5\leq{y}\leq{8}\,\text{else}\,1)\) is a bounds check:
-when \(f\) maps into \([5,8]\) then \(\epsilon(f)\) is in that same interval (*positivity*).
+when \(f\) maps into \([5,8]\) then \(\epsilon(f)\) is in that same interval (<b>positivity</b>).
 This generalizes the constancy rule.
-# TODO: discuss how In light of linearity, range-preservation is equivalent to
-# monotonicity (pointwise dominance implies ordering of expectations).
-###
 In short:
 \[
 X \cong \{\epsilon:(X\to\Rr)\to\Rr\,\text{that commute with all}\,t\}
 \]
-
+<p>
 Let's relax this by asking just for the affine and positivity part of
 commutativity: what do we get if we demand only the normalization and linearity
 rules (for this paragraph, suppose for simplicity that \(X\) is finite
@@ -428,13 +369,13 @@ We get the set of probability distributions on \(X\)!  Here, their interface is
 through expectation values; it's easy enough to recover masses: just take
 expectations of functions that are \(1\) or \(0\) according to whether we are
 inside or outside the set whose mass we want.
-
+<p>
 When \(X\) is infinite, we modify definitions to allow \(\epsilon\)'s domain
 to be a nice subset of \(X\to\Rr\); this is how we get around the fact that some
-functions have no expectation values.{|for example, look up Banach-Tarski paradox|}
-
-Cute summary: to start, \(\epsilon\) stood for %evaluation%;
-now it stands for %expectation%.  More content-fully:
+functions have no expectation values.<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160for example, look up Banach-Tarski paradox</span></span>
+<p>
+Cute summary: to start, \(\epsilon\) stood for <em>evaluation</em>;
+now it stands for <em>expectation</em>.  More content-fully:
 \[
 \texttt{randomvaluein}\,X
 \cong
@@ -451,59 +392,34 @@ affine-combination and bounds-check transforms.  Which \(\fF\) we choose
 depends on the situation we're analyzing.  But in practice only familiar
 \(\fF\)s show up, the kind we don't need to think about because we're only
 taking expectations of friendly rather than pathological functions.
-# TODO: worry that this is a bit different than space of probability measures
-# consistent with given sigma algebra, due to ordinary divergences
-#
-# TODO: also worry that we want \fF closed under countable union (i.e., max)?!
-# ... i.e., want to ask that epsilon obeys some kind of continuity property.
-
-#       !!!! Axioms of Expectation
-#       Consider a set \(X\) and an assignment \(E:\fF\to\Rr\) of real
-#       numbers to each function in some set \(\fF\subseteq X\to\Rr\).
-#       We insist that \(\fF\) contains all constant functions and is closed
-#       under linear combination, and that:
-#       #
-#       \(E((x\mapsto c))=c\) and
-#       #
-#       \(E(f+\lambda g)=E(f)+\lambda{}E(g)\).
-#       #
-#       We also insist on monotonicity: that when \(f\leq{}g\) pointwise then
-#       \(E(f)\leq{}E(g)\).
-#       Such a system is @Self-Consistent Assignment of Expectation Values@.
-#
-#       From such an Assignment we can read off probabilities (the expectation value of
-#       indicator functions) of sets that are well-behaved enough for their indicator
-#       functions to be contained in \(F\).
-
-!!!! Dis-integration ; Conditional and Marginal
-!!!! Independence and Averaging
-!!!! Moments and Cumulants
-!!!! Aside on Concentration
-
-!!!! Example densities: the Student-t family
-Consider the *student-t* family of (unnormalized) densities{|Use limits to
+<p>
+<p>
+<h5>  Dis-integration ; Conditional and Marginal </h5>
+<h5>  Independence and Averaging </h5>
+<h5>  Moments and Cumulants </h5>
+<h5>  Aside on Concentration </h5>
+<p>
+<h5>  Example densities: the Student-t family </h5>
+Consider the <b>student-t</b> family of (unnormalized) densities<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160Use limits to
 define the density at special values of \(a\): \(y^\epsilon\to{1}\) and
-\((1+\epsilon y)^{1/\epsilon}\to\exp(y)\).|}
+\((1+\epsilon y)^{1/\epsilon}\to\exp(y)\).</span></span>
 \[
 p(x) \propto \frac{1}{\sqrt{1+ax^2}^{1+1/a}}
 \]
 This is defined on
-#\([-1/\sqrt{-a},+1/\sqrt{-a}]\)
 for \(|x|\leq{1/\sqrt{{}|a|{}}}\) when \(a\) is negative and
 on the whole real line when \(a\) is non-negative.  It is always normalizable.
-
+<p>
 The parameter \(a\) tells us how much heavier the tail is than a Gaussian:
 \(a\lt{0}\) gives bounded distributions,
 \(a\gt{0}\) gives power-law tails, and
 \(a=0\) gives a Gaussian.
-#
 If we take \(a\to-\infty\) while horizontally and vertically scaling
 appropriately, we get the Jeffries distribution \(p(x)\propto\sqrt{(1-x)(1+x)}\).
-#
 If we take \(a\to+\infty\) while horizontally and vertically scaling
 appropriately, we get an unnormalizable Coulomb distribution
 \(p(x)\propto{}1/|x|\).
-
+<p>
 In summary:
 \[
 \underbrace{-\infty}_{\text{Jeffries}}
@@ -514,67 +430,56 @@ In summary:
 \quad\underbrace{+1}_{\text{Cauchy}}
 \quad\underbrace{+\infty}_{\text{Coulomb}}
 \]
-A "minimal student" aka "3-point student" variable{|up to scaling by
-\(\sqrt{n/(n-1)}\)|} describes the standardized error
+A "minimal student" aka "3-point student" variable<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160up to scaling by
+\(\sqrt{n/(n-1)}\)</span></span> describes the standardized error
 \((\mu-Mean)/\sqrt{Var/n}\) of our mean estimate, where we estimate Mean and
 Variance from \(n=3\) samples, and the underlying distribution is Gaussian.
 The sample-size \(n=3\) is interesting it is the smallest that exceeds the
 number of unknown parameters \(\mu,\sigma^2\).
-
-!!! Basic Physics
-!!!! Extremal Principles
-!!!!! Expect Low Energies
-Why do physics classes focus so much on %how things move%?  There's probably a
+<p>
+<h4>  Basic Physics </h4>
+<h5>  Extremal Principles </h5>
+<h6>  Expect Low Energies </h6>
+Why do physics classes focus so much on <em>how things move</em>?  There's probably a
 good reason, but I still find it fun to imagine an alternative: the physics of
-%which configurations don't move%.  The key fact that allows us to make
-quantitative predictions is this: *the universe is cold*!  So in many
-situations may assume that energy is minimized;{|I can't resist
+<em>which configurations don't move</em>.  The key fact that allows us to make
+quantitative predictions is this: <b>the universe is cold</b>!  So in many
+situations may assume that energy is minimized;<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160I can't resist
 mentioning a second (and
-class-unrelated) extremal principle that says how things move when they %do%
+class-unrelated) extremal principle that says how things move when they <em>do</em>
 move: the Principle of Least Action.  Google it for your general enrichment.
 The two principles engage in a
 profound analogy \(\text{energy}:\text{action}::1/T:-i/\hbar\) due to Dirac and
 Feynman.
-#   #
 That is, quantum fluctuations obey the same equations as thermal fluctuations
 when the temperature is Planck's constant times \(\sqrt{-1}\)!
-#   # The quantum propagation of matter obeys the same laws as the diffusion of
-#   # heat when the temperature is Planck's constant divided by \(\sqrt{-1}\)!
-#   Taking \(T\to 0\) (or \(\hbar\to 0\)) minimizes energy (or action); non-zero
-#   parameters give us thermal (or quantum) corrections.
-|}
+</span></span>
 this (helps us predict instability and) severely constrains the stable
 configuration(s).
-
-!!!!! High Energies are Exponentially Improbable
+<p>
+<h6>  High Energies are Exponentially Improbable </h6>
 The leading order correction to the energy-minimizing picture is to quantify
-how much more %improbable% high-energy configurations are than low-energy ones.
-(I say "leading correction", since we neglect %how and on what% timescales
+how much more <em>improbable</em> high-energy configurations are than low-energy ones.
+(I say "leading correction", since we neglect <em>how and on what</em> timescales
 improbable configurations evolve to probable ones.) I will now spell
 out the Key Formula; I'll thereby in 5 minutes teach you all of
 statistical mechanics.
-
+<p>
 If \(Q\) collects together all the extensive conserved quantities (energy,
 electric charge, etc) relevant to a physics situation, we posit that most
 macroscopic quantities of interest end up being functions of \(Q\).
-#
-# TODO
-# A microscopic picture makes this plausible: there is a random walk.
-#
 Suppose it makes sense to assign to each system \(X\) a size \(P_X(Q)\) of the
 subset of \(X\)'s configurations that have the assigned value of \(Q\).
-#
 We posit that \(S = \log P\) is extensive in the sense that when we set
 together, side-by, side two systems \(X,X\pr\) with negligible interactions,
 then \(\log P_{X,X\pr}(Q,Q\pr) = \log P_X(Q) + \log P_{X\pr}(Q\pr)\).
-#
 Since \(S\) and \(Q\) are extensive, if we put together a large number \(M\) of similar
 negligibly-interacting systems, then the overall \(S\) is the \(M\)-factor
 convolution of the individual systems' \(S\)s.
 Convolution of nice functions tends to make them smoother (think of central
 limit theorem).  Let us assume, then, that \(S\) for large systems looks
 smooth.
-
+<p>
 Say, now, that we have a system-of-interest \(X\) very-weakly interacting with
 a huge "bath" \(B\).  We have \(Q_X+Q_B=Q_{X,B}\).  The "bath" is so big that
 \(S_B(Q_B)\) is differentiable with respect to \(Q_B\), and is so much bigger
@@ -595,21 +500,21 @@ we see
     \propto
     P_X(Q_X) \exp(- (\nabla S_B(Q_{X,B}))\cdot Q_X)
 \]
-
+<p>
 Two systems in equilibrium have the same \(\nabla S\)s.
-
-!!!!! The Exponential Rates are Recognizable Quantities
+<p>
+<h6>  The Exponential Rates are Recognizable Quantities </h6>
 There are common names for the components of \(\nabla S_X\) when our conserved
 extensive quantities are Energy and Volume.  The partial along energy is
-\(X\)'s *coldness* \(\beta\); it says how greedy \(X\) is for energy:
+\(X\)'s <b>coldness</b> \(\beta\); it says how greedy \(X\) is for energy:
 the colder \(X\) is, the more hungrily it yearns for any extra energy it can
-snatch.  Coldness is so fundamental that we %define% *temperature* in terms of
-coldness: \(T\triangleq{}1/\beta\).{|For historical reasons there's a factor
+snatch.  Coldness is so fundamental that we <em>define</em> <b>temperature</b> in terms of
+coldness: \(T\triangleq{}1/\beta\).<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160For historical reasons there's a factor
 called Boltzmann's constant, which from the microscopic physics perspective is
-no more fundamental than the conversion constant from nanometers to yards.|}
-
+no more fundamental than the conversion constant from nanometers to yards.</span></span>
+<p>
 Likewise, the partial \(\gamma\) along volume is a kind of "expansiveness", or
-greediness for volume.  It measures desire to expand.  We define *pressure* as
+greediness for volume.  It measures desire to expand.  We define <b>pressure</b> as
 \(p\triangleq{}\gamma/\beta\).
 \[
     \beta = \partial{S}/\partial{E}
@@ -620,12 +525,12 @@ greediness for volume.  It measures desire to expand.  We define *pressure* as
     \qquad
     p \triangleq \gamma/\beta
 \]
-
+<p>
 How does \(p\) relate to good ol' force-per-area?  Well, imagine putting \(X\)
-into a piston with a sliding ceiling of area-\(A\) and weight \(mg\).{|Do this
+into a piston with a sliding ceiling of area-\(A\) and weight \(mg\).<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160Do this
 in a vacuum so that we can ignore squeezing from the atmosphere.  In
 particular, the ceiling and external world's entropy is constant with respect
-to the changes we consider.|}  What's
+to the changes we consider.</span></span>  What's
 the most probable ceiling height?  Well, lowering the ceiling by \(\Delta{h}\)
 has two effects: the weight loses energy \(\Delta{E}=(mg\Delta h)\) to \(X\),
 so \(S_X\) increases by \(\beta\Delta{E}\); and \(X\) loses volume
@@ -639,11 +544,11 @@ p\triangleq\gamma/\beta = \Delta{E}/\Delta{V} = mg/A
 \]
 We have recovered the force-per-area rule from our more fundamental statistical
 picture.
-
+<p>
 By the way, note
 \(p=(\partial{S}/\partial{V})_E/(\partial{S}/\partial{E})_V=-(\partial{E}/\partial{V})_S\).
-
-!!!!! Example of the Ideal Gas
+<p>
+<h6>  Example of the Ideal Gas </h6>
 For a large number \(N\) free particles with no internal structure, the only
 microscopic degrees of freedom are position and momentum.  What's the volume in
 configuration space for given \(V=L^3\) and \(E\)?  Well, each of \(3N\)
@@ -651,53 +556,23 @@ position components ranges through a size-\(L\) interval; likewise, each of the
 \(3N\) momentum components has on average \(\epsilon=E/(3N)\) much energy,
 hence in effect ranges through an interval of size
 \(\propto\sqrt{\epsilon/(2m)}\propto\sqrt{\epsilon}\).  Thus:
-# a \(\sqrt{E}^{3N-1}/\sqrt{E}\) factor from momentum, since momentum's
-# magnitude is proportional to \(\sqrt{E}\) and there is a
-# (\(3N-1\)-dimensional) sphere's worth of directions, but that spherical shell
-# has thickness proportional to \(1/\sqrt{E}\).
-###
-# a \(\sqrt{E/(3N)}^{3N}\) factor from momentum, since each of \(3N\) momentum
-# degrees of freedom has on average \(\epsilon=E/(3N)\) much energy and thus
-# ranges through values of rough size \(\propto\pm\sqrt{\epsilon/(2m)}\), and since
-# \(2m\) doesn't change we'll ignore it:
 \[
 S \approx 3N\log(L\sqrt{E/(3N)})
 \]
 whence \(T=(2/3)E/N\) and \(p=(2/3)E/(VN)\).  It follows
-that{|The usual conversion factor \(R\), as in our previous discussion of
+that<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160The usual conversion factor \(R\), as in our previous discussion of
 Boltzmann's constant, is a historical accident stemming from early workers'
-attachment to false scale symmetry.|}
+attachment to false scale symmetry.</span></span>
 \[
 pV=NT
 \]
-
-# {|
-# Intuition for the surface area \(\text{SA}_{d-1}\) of a \(d-1\)-dimensional unit
-# sphere (imagine it embedded in \(d\)-dimensional euclidean space) for very
-# large \(d\).  Say we have \(d\) independent standard normal variables.  They
-# determine a vector \(\vec{r}\).  This vector's length has length close to \(r\approx \sqrt{d}\), by
-# additivity of variances, with spread on the order of \(1\).  That is,
-# the vector is overwhelmingly likely to land within a spherical shell of radius
-# \(\sqrt{d}\) and thickness \(\propto{}1\).  But the probability
-# density is \(\exp(-\|r\|^2/2)\), which within the shell is nearly a uniform
-# density with value \(1/\sqrt{2\pi e}^d\).  So we have
-# \[
-# 1
-# \approx
-# \text{prob land within shell}
-# =
-# \text{shell volume}\cdot \text{density}
-# \approx
-# (\text{SA}_{d-1}\cdot \sqrt{d}^{d-1} \cdot 1) \cdot 1/\sqrt{2\pi e}^d
-# \]
-# And we conclude \(\text{SA}_{d-1}{}\approx{}\sqrt{2\pi e/d}^d\).
-# |}
-
+<p>
+<p>
 Due to this simple relationship, and because close-to-ideal-gases are for many
 lab applications easily found, we can take the ideal gas behavior as giving an
 alternative, experimentally-accessible definition of temperature (with
 pressure=Force/area).
-
+<p>
 Let's compute the heat capacity of an ideal gas.  Since \(E=(3/2)NT\) we get
 \(C\triangleq{}\partial{E}/\partial{T}=(3/2)N\).  More generally, when we have
 a large number \(M\) of degrees of freedom, in each of which the energy
@@ -707,174 +582,48 @@ terms \(p_x^2/2m, p_y^2/2m, p_z^2/2m\) to the energy.  A hot crystal (ensemble
 of ideal springs; assume hot so can ignore quantum) would have greater heat capacity because its energy has
 twice as many quadratic terms per particle: 3 new ones for position adding to
 the 3 old ones for momentum.
-
-#   !!!!! Connecting abstract definitions of \(T,p\) to lab measurements.
-#
-#   Above we defined
-#   \[
-#   T\triangleq{}1/(\partial{S}/\partial{E})_V
-#   \qquad
-#   p\triangleq{}+(\partial{S}/\partial{E})_V/(\partial{S}/\partial{V})_E
-#   =-(\partial{E}/\partial{V})_S
-#   \]
-#   and claimed that these equal the familiar notions of temperature and pressure.
-#
-#   Let's see why.  First, let's pin down in terms of actual lab measurements what
-#   we mean by these familiar notions of temperature and pressure.  Imagine \(X\) a
-#   liter of (non-ideal) fluid that would be safe{|this is my cute way of ruling
-#   out exciting systems like stellar plasma or liquid helium, which would call for
-#   different lab setups|} for and from a child's play.
-#   #
-#   Contain \(X\) in a chamber with a sliding area-\(A\) wall; let a spring squeeze
-#   the wall from the outside.  Soon the spring will exert a constant force \(F\).
-#   The *measured pressure* \(\tilde{p}=F/A\) is the force-per-area.
-#   # (i.e., work-per-volume).
-#   #
-#   Keep a piston containing \(2.41\) grams{|i.e., a trillion trillion atoms|} of
-#   Helium gas at a constant low pressure \(p_{\text{He}}\).  Soon the piston will have a
-#   constant volume \(V_{\text{He}}\).  The *measured temperature* \(\tilde{T}=p_{\text{He}}V_{\text{He}}/10^{24}\) is
-#   (a trillionth of a trillionth of) the pressure-times-volume.
-#
-#   Now, \(p=-(\partial{E}/\partial{V})_S\)
-#
-#   And our previous ideal gas analysis shows \(\tilde{T}\triangleq{}pV/N=T\).
-
-
-#
-# The definition of \(p\) agrees with the idea that pressing the system to reduce
-# \(V\) while maintaining \(S\) has \(p=-(\partial{E}/\partial{V})_S\).  Just
-# draw the triangle to see the minus one sign in a chain rule loop.  The
-# constraint of constant \(S\) means that as the gas gets hotter as we squeeze
-# it, we forbid that heat energy to leak out of the system to the cooler ambient
-# lab; otherwise, the change in \(E\) would undercount the work we did.
-
-
-!!!!! Summary
+<p>
+<p>
+<p>
+<p>
+<p>
+<h6>  Summary </h6>
 So now you know all of statistical mechanics.  The rest consists of ingenious
 math tricks for efficiently computing expectation values of various
 quantities-of-interest with respect to the exponential probability measure we
 constructed above.  But if you're okay doing calculations inefficiently --- the
 way Archimedes did calculus --- then you've got everything you need to, for
-instance, compute the heat capacity of a hot dielectric crystal{|dielectric
+instance, compute the heat capacity of a hot dielectric crystal<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160dielectric
 means the electron degrees of freedom are less confusing and hot means we can
-ignore quantum effects|} or the percent atmospheric oxygenation at various
+ignore quantum effects</span></span> or the percent atmospheric oxygenation at various
 altitudes and temperatures (just plug in the gravitational potential for
 different molecular weights).
-
-#   !!!! A Rich Example: Ising-Stanley Models and Critical Phenomena
-#   !!!!! System Description
-#   Imagine a \(D=2\)-dimensional square grid with a huge number \(L\times{}L\) of
-#   nodes.  At each node is some abstract unit vector with \(d=1\) component.  So
-#   each configuration of this system is described by \(L^D\) many \(d\)-component
-#   unit vectors \(\vec v_i\), one for each node \(i\).  We posit that the energy
-#   of a configuration is a sum over edges \(i-j\) of \(-J \vec v_i \cdot \vec
-#   v_j\).  This says that neighboring nodes like to have aligned vectors.
-#   Opposing that tendency toward local order is thermal jiggling.  At very cold
-#   temperatures, the order wins and in a typical configuration vectors will all be
-#   nearly aligned; at very hot temperatures, thermal jiggling wins and in a
-#   typical configuration vectors will look nearly uncorrelated.  What do typical
-#   typical configurations look like at intermediate temperatures?
-#
-#   In our \(D=2,d=1\) setting, we have a grid of cells, each of which is \(+1\) or
-#   \(-1\).  The phrasing in terms of \(D,d\) is merely an invitation for the
-#   reader to imagine related systems.  This \((D,d)\)-plane turns out to be a very
-#   rich space.
-#
-#   !!!!! Partition Function
-#   The probability of a configuration \(X\pr\) at coldness \(\beta\) is
-#   \[
-#   \exp(-\beta E(X\pr)) / \sum_{\text{configurations}\,X} \exp(-\beta E(X))
-#   \]
-#   We give a name to that denominator: the *partition function* \(Z(\beta)\).  See
-#   that \(d(\log{Z})/d\beta\) is the expected value of the system's energy.
-#   Physically, the partition function is the effective phase-space-volume of the
-#   system when it's at coldness \(\beta\).
-#
-#   Since the energy \(E\) is a sum over edges, the exponential-of-energy is a
-#   product-over-edges:
-#   \[
-#   \exp(-\beta E(X)) = \prod_{i-j} \exp(+\beta J \vec{v}_i\cdot\vec{v}_j)
-#                     = \prod_{i-j} \sum_k (+\beta J \vec{v}_i\cdot\vec{v}_j)^k/k!
-#   \]
-#   Imagine distributing out that product; a particular term is a product over some
-#   small constellation of edges (with multiplicity \(k\)).  Suppose the overall
-#   constellation involves some node \(i\) an %odd% number of times.  Then when we
-#   sum that term over all possible configurations, there are exactly as many
-#   configurations with \(\vec{v}_i=+s\) as with \(\vec{v}_i=-s\), so this sum is
-#   \(0\).  Therefore, we may consider only those constellations where every node
-#   has %even% degree.  Each such "even" constellation is a union of simple loops
-#   (a loop has one connected component and in a loop each node has degree \(2\)).
-#
-#   !!!!! Qualitative Aspects
-#   Consider \(D=2\) and \(d=1\), the classic square-grid discrete-spin ising
-#   model.  At very cold temperatures, we may expect high correlations between
-#   two nodes distance \(\ell\) apart.  They will differ only when there are an odd
-#   number of grain-boundaries separating them.
-#
-#   A very cold system will tend not to have much grain boundary area.  So we may
-#   imagine that when two nodes differ it's because of a roughly tubular grain
-#   boundary around part of the line segment connecting the two nodes.  If the tube
-#   has diameter \(\Delta\) and length \(\Lambda\) then it has surface area about
-#   \(2 \Delta^{D-2} (\Delta + (D-1) \Lambda)\).
-
-# So imagine such a grain boundary --- if it has diameter \(l\) and is roughly
-# convex it has about \(\text{SA}=2Dl^{D-1}\) much surface area and thus incurs
-# energetic cost about \(2 \beta J \text{SA}\).
-
-
-
-# On the other hand,
-# the larger the surface area the more configurations of local wrinkling are possible,
-# so we get an entropic benefit.
-# Let's work as if each of \(\text{SA}\) panels can be aligned along any of the
-# \(D\) axes, so the entropic benefit is \(\log(D) \text{SA}\).
-# # This wrinkling happens at the \(D\text{SA}\) many joints
-# # between surface-area elements, and each joint can be one of \(3\)
-# # possibilities: flat, inward-curving, or outward-curving.  Let's approximate
-# # these variables as independent.
-# We then get an entropic benefit of
-# \(D\log(3)\text{SA}\).  We see that when
-# \[
-# \beta J \ll log(D)/2
-# \]
-# the entropic effect wins and we are no longer in an ordered state: correlations
-# between nodes decay exponentially with distance; a froth of bubbles is favored
-# to form and grow.
-#
-# 2.2 2.26
-# 3.3 4.51
-# 4.4 6.68
-#
-# 0.34657359027997264
-# 0.5493061443340549
-# 0.6931471805599453
-#
-# .442
-# .221
-# .149
-
-!!!!! Warning{|My viewpoint here comes from Feynman and Truesdell|}
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<h6>  Warning<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160My viewpoint here comes from Feynman and Truesdell</span></span> </h6>
 Remember that all this StatMech is but a simple model of Nature's
-incomprehensible complexity.  It never %perfectly% applies.  Even worse, its
+incomprehensible complexity.  It never <em>perfectly</em> applies.  Even worse, its
 scope of reasonable application, though large, is tricky to spell out:
-the notion of a system being "%close enough to equilibrium%" not only lacks
+the notion of a system being "<em>close enough to equilibrium</em>" not only lacks
 some measurement device to operationally define it but in fact also depends on
-which questions one wants to answer!{|Then again,
+which questions one wants to answer!<sup><span class="gray">&#9679</span></sup><span class="aside"><span class="asideinner"><span class="gray">&#9679</span>&#160Then again,
 Euclid's ideal triangles are absent from real life, and neither carpenter nor
 cartographer can crisply delineate this ideal concept's range of applicability.
 Despite this, flat plane geometry dramatically enhances our ability to solve
-real-world problems.|}
-#
+real-world problems.</span></span>
 For example, a warehouse's pressurized steel can of chlorine gas is in
 "equilibrium" if we want to analyze heat capacity but not if we want to analyze
 corrosion (since eventually, the system will reach a truer equilibrium where
 the can gets corroded and the gas escapes).
-#
 Fortunately, the 20th century supports this empirical fact about humans: that
 through exposure to standard StatMech examples, STEM majors cultivate
 good-enough of a gut instinct for StatMech's scope that their predictions end
 up being numerous, correct, and useful.
-
+<p>
 The previous paragraph is an antidote to a common disease encountered in the
 study of StatMech, namely the disease of extrapolating --- from formulas that
 codify intuitions trained only on our everyday experience with ice cubes
@@ -885,14 +634,11 @@ excess enthusiasm.  I'd respond that the Nature we can measure deserves our
 enthusiasm even more than the Nature we can't.  Let even those who bend cosmic
 remember how richly wondrous phenomena pack into everyday experience.
 Isn't there magic in a snowflake's melting?
-
-
-# (By the way, the formal substitution \(-\beta\leftrightarrow{}i/\hbar\) gives
-# a quantitative correspondence between thermodynamics and quantum mechanics, a
-# profound bridge conjectured by P.Dirac and developed by R.Feynman.)
-
-#!!!!
-# !!!!!
-# !!!!! Polymers and Self-Avoiding Walks
-
-!!!! Applications to Markov Chain Monte Carlo
+<p>
+<p>
+<p>
+<p>
+<h5>  Applications to Markov Chain Monte Carlo </h5>
+<p>
+    </body>
+</html>

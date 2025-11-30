@@ -7,191 +7,425 @@
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
         </script>
-        <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
         <script type="application/javascript" src="js/toggler.js"></script>
     </head>
 
     <body>
+        <button id="toggler" style="position:absolute"> repaint </button>
         <div id="togglerbody" style="text-align:center">
-            <button id="toggler"> repaint </button>
             <h1 style="margin: 0 auto"><a href="index.html"><div id="title">Samuel Tenka</div></a></h1>
         </div>
-            <h2> Notes </h2>
+        <h2> Notes </h2>
 
-                <div id="leadership">
+        <div id="leadership">
 
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/turing.html">
-                                <img src="images/cow-chicken.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Turing Monoids </div>
-                        <div class="leader-info"> 2020-04 </div>
-                    </div>
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/dimensions.html">
+                        <img src="images/cow-munch.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Dimensional Analysis </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> 2021-12 </div>
+            </div>
 
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/probly.html">
-                                <img src="images/cow-tail.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Problyhedra </div>
-                        <div class="leader-info"> 2019-02 </div>
-                    </div>
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/constitution.html">
+                        <img src="images/cow-carving.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Game Theory for the US Constitution </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
 
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/statmech.html">
-                                <img src="images/cow-carving.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Statistical Mechanics </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/costs.html">
+                        <img src="images/cow-rain.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Tropical Bayes </div>
+                <div class="leader-info"> Focused Worst-Case Decision-Making </div>
+                <div class="leader-info"> 2025-11; under construction </div>
+            </div>
 
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/smalin.html">
-                                <img src="images/cow-character.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Music Animation </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/turing.html">
+                        <img src="images/cow-chicken.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Turing Monoids </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> 2020-04 </div>
+            </div>
 
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/dimensions.html">
-                                <img src="images/cow-munch.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Dimensional Analysis </div>
-                        <div class="leader-info"> 2021-12 </div>
-                    </div>
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/probly.html">
+                        <img src="images/cow-tail.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Problyhedra </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> 2019-02 </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/schwa.html">
+                        <img src="images/cow-two-percent.png">
+                    </a>
+                </div>
+                <div class="leader-name"> "You Choose" Control Flow </div>
+                <div class="leader-info"> RL for Coding with Holes </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/nloglogn.html">
+                        <img src="images/cow-float.png">
+                    </a>
+                </div>
+                <div class="leader-name"> N LogLogN Sorting </div>
+                <div class="leader-info"> Entropic Arguments and a new Lower Bound </div>
+                <div class="leader-info"> 2022?? ; under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/gaussians.html">
+                        <img src="images/cow-bullseye.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Gaussians </div>
+                <div class="leader-info"> Two Parts: Basics and Binomials </div>
+                <div class="leader-info"> 2025-10; under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/smalin.html">
+                        <img src="images/cow-tictac.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Music Animation </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/statmech.html">
+                        <img src="images/cow-bubble.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Statistical Mechanics </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/funcarch.html">
+                        <img src="images/cow-scuba.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Functorial Architecture </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/geology.html">
+                        <img src="images/cow-leaf.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Geology </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/reptheory.html">
+                        <img src="images/cow-mooriarty.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Rep Theory Diagrams </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/sgd.html">
+                        <img src="images/cow-marker.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Feynman Diagrams and SGD Dynamics </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/holes.html">
+                        <img src="images/cow-picasso.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Two Kinds of Hole </div>
+                <div class="leader-info"> Prequel to the Hopf Fibration </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/forcing.html">
+                        <img src="images/cow-character.png">
+                    </a>
+                </div>
+                <div class="leader-name"> What is Forcing? </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/boundary.html">
+                        <img src="images/cow-snow.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Boundary Topology </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> 2016-12 ; under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/fiftythree-tet.html">
+                        <img src="images/cow-grid.png">
+                    </a>
+                </div>
+                <div class="leader-name"> 53-tet Music </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-taco.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Caramelizing Veggies </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-hills.png">
+                    </a>
+                </div>
+                <div class="leader-name"> An Interpolative Webcomic </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-block.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Context Stacks </div>
+                <div class="leader-info"> Less Evil Globals </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-blanket.png">
+                    </a>
+                </div>
+                <div class="leader-name"> What is the James Stein Estimator? </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> 2025-01 ; under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-pail.png">
+                    </a>
+                </div>
+                <div class="leader-name"> On Bundles </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/.html">
+                        <img src="images/cow-ribbon.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Analysis of the US Judiciary </div>
+                <div class="leader-info"> </div>
+                <div class="leader-info"> under construction </div>
+            </div>
 
 
 
-                    <!--
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/boundary.html">
-                                <img src="images/cow-bubble.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Boundary Topology </div>
-                        <div class="leader-info"> 2016-12 </div>
-                    </div>
 
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/cotopology.html">
-                                <img src="images/cow-bullseye.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Cotopology </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-float.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Learning Bounds </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-grid.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Randomness in Computation </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-leaf.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Geology </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-                    --!>
-
-                    <!--
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-mooriarty.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Rep Theory Diagrams </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-pail.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Rotations </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-two-percent.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Lipschitz and Wasserstein </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-picasso.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Syntax, Semantics, Learning </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-                    --!>
-
-                    <!--
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-rain.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Umbrellas </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-
-                    <div class="leader-box">
-                        <div class="leader-portrait">
-                            <a href="posts/conditionals.html">
-                                <img src="images/cow-scuba.png">
-                            </a>
-                        </div>
-                        <div class="leader-name"> Functorial Architecture </div>
-                        <div class="leader-info"> under construction </div>
-                    </div>
-                    --!>
-
-               </div>
+        </div>
     </body>
 </html>
+
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/boundary.html">
+                        <img src="images/cow-bubble.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Boundary Topology </div>
+                <div class="leader-info"> 2016-12 </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/cotopology.html">
+                        <img src="images/cow-bullseye.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Cotopology </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/learningbounds.html">
+                        <img src="images/cow-float.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Learning Bounds </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/randomness.html">
+                        <img src="images/cow-grid.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Randomness in Computation </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/geology.html">
+                        <img src="images/cow-leaf.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Geology </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/reptheory.html">
+                        <img src="images/cow-mooriarty.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Rep Theory Diagrams </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/rotations.html">
+                        <img src="images/cow-pail.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Rotations </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/lipschitz-wasserstein.html">
+                        <img src="images/cow-two-percent.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Lipschitz and Wasserstein </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/synsem.html">
+                        <img src="images/cow-picasso.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Syntax, Semantics, Learning </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/umbrellas.html">
+                        <img src="images/cow-rain.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Umbrellas </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+            <!--
+            <div class="leader-box">
+                <div class="leader-portrait">
+                    <a href="posts/funcarch.html">
+                        <img src="images/cow-scuba.png">
+                    </a>
+                </div>
+                <div class="leader-name"> Functorial Architecture </div>
+                <div class="leader-info"> under construction </div>
+            </div>
+            -->
+
+

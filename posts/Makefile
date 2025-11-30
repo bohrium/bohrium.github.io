@@ -1,3 +1,13 @@
+costs:
+	python3 translate.py costs
+
+437:
+	python3 translate.py notes437
+
+new:
+	python3 translate.py holes
+	python3 translate.py harmony
+
 atlantic:
 	python3 translate.py atlantic
 

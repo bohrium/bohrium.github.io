@@ -1,7 +1,7 @@
 # author: samtenka
-# change: 2020-06-20
-# create: 2020-06-16 
-# descrp: foundations of statistical mechanics 
+# change: 2024-12-20
+# create: 2025-01-05
+# descrp: foundations of statistical mechanics
 
 
 
@@ -34,9 +34,9 @@ In the process, we will attempt to interpret the average itself: is it
 fundamentally an average over many temporally-separated measurements of a
 single system (@Halmos@)?  Or an average over many small parts of the overall
 system (@Khinchin@)?  Or an average over many possible initial conditions of
-the system (@Feynman@)?   
+the system (@Feynman@)?
 
-!! Boltzmann's Law 
+!! Boltzmann's Law
 
 !!! Extensive Properties
 
@@ -52,28 +52,28 @@ other extensive quantity that is conserved in a laboratory room.  More
 generally, if we wish to assign probabilities that depend only on a finite set
 of extensive quantities (say volume $V$, energy $E$, and charge $C$) then the
 probability must be of form $\mathcal{P}(x) \propto \exp(-\alpha V(x) -\beta
-E(x) -\gamma C(x))$. 
+E(x) -\gamma C(x))$.
 
 !!! The Natural Measure
 
 !! Averages or Concentration?
 
-!!! 
+!!!
 
-!!! 
+!!!
 
 !! Fluctuations in Time
 
 !!! Liouville's Theorem
 
-!!! Can Dynamics get Stuck?  
+!!! Can Dynamics get Stuck?
 
     A monoatomic gas in a torus has a hamiltonian like
     $$
         \mathcal{H} = \sum_i h(p_i) + \delta \sum_{i,j} \tilde{h}(q_i, q_j)
         \triangleq
         \mathcal{H}_0 + \delta \mathcal{H}_{+}
-    $$ 
+    $$
     where $(\vec{p},\vec{q}) \in T^\star({(S^1)}^N)$, the co-tangent space of the torus.
     We would like to say that
 

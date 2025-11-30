@@ -2,8 +2,10 @@ html {
     width:750px;
 }
 
+/*---------------------------------------------------------------------------*/
+
 #togglerbody {
-    width: 600px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
 
@@ -27,48 +29,56 @@ html {
     font-size: 55px;
 }
 
-
+/*---------------------------------------------------------------------------*/
 
 body {
-    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-
     width: 550px;
-    margin-left: 1em;
+    margin-left: 10px;
     margin-right: auto;
-
     text-align: justify;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 h1 {
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-    font-size: 55px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 0; */
     text-align: center;
+    font-size: 55px;
+    font-weight: normal;
 }
 
 h2 {
-    font-size: 45px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    font-size: 45px;
 }
 
 h3 {
+    width: 550px;
+    margin-left:0;
+    margin-right: auto;
+    text-align: justify;
     font-size: 35px;
-    text-align: center;
 }
 
 h4 {
+    width: 550px;
+    margin-left:0;
+    margin-right: auto;
+    text-align: justify;
     font-size: 25px;
-    text-align: center;
 }
 
 h5 {
     width: 550px;
-    margin-left: auto;
+    margin-left:0;
     margin-right: auto;
-
+    text-align: justify;
     font-size: 15px;
-    text-align: center;
 }
 
 a {
@@ -79,7 +89,7 @@ a:hover {
     text-decoration: none;
 }
 
-
+/*---------------------------------------------------------------------------*/
 
 /* Wide viewport */
 @media (min-width: 400px) {
@@ -88,7 +98,7 @@ a:hover {
         float: left;
         clear: left;
         position: relative;
-        width: 745px;
+        width: 740px;
         height: 0%;
     }
     .asideinner {
@@ -98,7 +108,7 @@ a:hover {
         position: relative;
         text-align: left;
         font-size: 75%;
-        width: 185px;
+        width: 180px;
         top: -2em;
     }
 
