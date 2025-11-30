@@ -11,14 +11,14 @@
 .leader-box {
     width: 180px;
     padding: 0 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .leader-portrait {
     position: relative;
     width: 180px;
     height: 180px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
     border-radius: 33%;
     overflow: hidden;
 }
@@ -31,7 +31,7 @@
     text-align: center;
     color: rgb(64, 64, 128);
     font-weight:  bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .leader-info {
