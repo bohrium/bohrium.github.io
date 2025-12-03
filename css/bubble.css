@@ -1,23 +1,26 @@
 #leadership {
-    width: 750px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-
     margin-top: 40px;
 }
+                             #leadership { width:  450px; }
+@media (min-width:  750px) { #leadership { width:  750px; } }
+@media (min-width: 1050px) { #leadership { width: 1050px; } }
+@media (min-width: 1350px) { #leadership { width: 1350px; } }
+@media (min-width: 1650px) { #leadership { width: 1650px; } }
 
 .leader-box {
-    width: 180px;
-    padding: 0 20px;
-    margin-bottom: 5px;
+    width: 190px;
+    padding: 0 15px;
+    margin-bottom: 15px;
 }
 
 .leader-portrait {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
     margin: 0 auto 5px auto;
     border-radius: 33%;
     overflow: hidden;
@@ -38,5 +41,5 @@
     text-align: center;
     color: rgb(128, 128, 128);
     font-style: italic;
-    font-size: 14px;
+    font-size: 12px;
 }
