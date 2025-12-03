@@ -1,23 +1,23 @@
-#leadership {
+#bubbles {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     margin-top: 40px;
 }
-                             #leadership { width:  450px; }
-@media (min-width:  750px) { #leadership { width:  750px; } }
-@media (min-width: 1050px) { #leadership { width: 1050px; } }
-@media (min-width: 1350px) { #leadership { width: 1350px; } }
-@media (min-width: 1650px) { #leadership { width: 1650px; } }
+                             #bubbles { width:  450px; }
+@media (min-width:  750px) { #bubbles { width:  750px; } }
+@media (min-width: 1050px) { #bubbles { width: 1050px; } }
+@media (min-width: 1350px) { #bubbles { width: 1350px; } }
+@media (min-width: 1650px) { #bubbles { width: 1650px; } }
 
-.leader-box {
+.bubble-box {
     width: 190px;
     padding: 0 15px;
     margin-bottom: 15px;
 }
 
-.leader-portrait {
+.bubble-portrait {
     position: relative;
     width: 190px;
     height: 190px;
@@ -26,18 +26,18 @@
     overflow: hidden;
 }
 
-.leader-portrait img {
+.bubble-portrait img {
     width: 100%;
 }
 
-.leader-name {
+.bubble-name {
     text-align: center;
     color: rgb(64, 64, 128);
     font-weight:  bold;
     font-size: 16px;
 }
 
-.leader-info {
+.bubble-info {
     text-align: center;
     color: rgb(128, 128, 128);
     font-style: italic;
