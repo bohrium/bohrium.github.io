@@ -1,4 +1,7 @@
 # TODO: do file by file for timestamp reasons
+math:
+	python3 translate.py math
+
 new:
 	python3 translate.py airline
 	python3 translate.py boundary

@@ -3,7 +3,154 @@
 # create: 2025-12-03
 # descrp:
 
-! Title
+! Phrasebook for Math Modeling
+
+These notes, broken into 24 lessons, are a math curriculum for very motivated
+folks who wanna get into physics, machine learning, etc but don't have special
+math background beyond highschool math plus intellectual maturity.  By
+%intellectual maturity% I mean that invaluable bag of attitudes and
+understandings that recognizes how names and named are different, that learns
+general patterns from specific examples, that values "what if"s, etc.
+
+Topic-wise, it's my reworking of the actually practical parts of college math.
+Whereas college math in my country typically focuses a lot on Calculus, I think
+that concepts relating to Probability and Linear maps are more important, for a
+well-educated-hence-happier citizenry, than most of the calculus details in
+current curricula.  So here we have 4 lessons each on: @Probability@, then
+@Calculus@, then @Linear Maps@; we then mix these ideas when examining
+@Geometry in the Small@ and @Uncertainty about the Infinite@; we end with a
+grab bag of @Special topics@ that illustrate how these math ideas help us
+analyze interesting problems.
+
+#*CONTENTS*:
+At a finer grain, here's what's inside:
+
+  @Grades of belief@
+; @Bayes law and independence@
+; @Expectations and abstraction@
+; @Application: minimax game theory@
+; @Limits, Derivatives@
+; @Integration, DiffEQs, Exp@
+; @Texture of the Continuum: Taming Pathology@
+; @Taylor Series and Asymptotics@
+; @Maps as Matrices@
+; @Dimension and Determinant@
+; @Vectors vs Covectors@
+; @Inner Products and Geometry@
+; @Taylor in Multiple Variables@
+; @Densities and Integration@
+; @Vector Fields@
+; @Gaussians and Spheres@
+; @Probability Densities@
+; @Central limit theorem@
+; @Theory of measurement: statistics and error propagation@
+; @Statistical manifolds@
+; @Fourier analysis and oscillations@
+; @Control theory and optimization@
+; @Regression and smooth models@
+; @Energy-based models and statmech@
+
+#!! Probability
+!!! Grades of belief
+!!!! Credence levels as numbers
+@Probability theory@ is a math encoding of some of our
+
+The idea is that we have a bunch of statements --- each apt to be true-or-false
+ (rather than a command, or question, or super-vague) --- and we want to put a
+number on each statement that says how much we believe it.   
+
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Bayes law and independence
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Expectations and abstraction
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Application: minimax game theory
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+
+#!! Calculus
+!!! Limits, Derivatives
+!!!! Approximation
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Integration, DiffEQs, Exp
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Texture of the Continuum: Taming Pathology
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Taylor Series and Asymptotics
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+
+#!! Linear maps
+!!! Maps as Matrices
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Dimension and Determinant
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Vectors vs Covectors
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!! Inner Products and Geometry
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+!!!! 
+
+#!! Geometry in the Small
+!!! Taylor in Multiple Variables
+!!! Densities and Integration
+!!! Vector Fields
+!!! Gaussians and Spheres
+
+#!! Uncertainty about the Infinite
+!!! Probability Densities
+!!! Central limit theorem
+!!! Theory of measurement: statistics and error propagation
+!!! Statistical manifolds
+
+#!! Special topics
+!!! Fourier analysis and oscillations
+!!! Control theory and optimization
+!!! Regression and smooth models
+!!! Energy-based models and statmech
 
 !! References
 
