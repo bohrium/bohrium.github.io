@@ -1,119 +1,168 @@
 # author: samtenka
-# change: 2021-07-27
-# create: 2021-08-03 
-# descrp: voting systems to undermine the two party system and its roots 
-
-! AGAINST PARTIES
+# change: 2026-01-03
+# create: 2021-08-03
+# descrp: voting systems to undermine the two party system and its roots
 
 
+*ILLUSTRATION 1* --- It suffices to show how to
+jointly determine one coinflip, for by repetition this yields enough randomness
+to determine an election's outcome.  To jointly determine one coinflip, each
+Candidate, prior to election, privately records a sequence of 1000 coinflips,
+sealing this record in an envelope to be stored in the public trust.
+(Practically, to save an hour of tedium, a trusted computer-saavy team member
+does this by computer.)  After election, each Candidate announces their
+sequence, and the joint coinflip is be "HEADS" if within the Candidates'
+announced sequences together there are an odd number of HEADS --- counting only
+those announcements that, as checked against public unsealing of the envelopes,
+were faithful.
 
-#==============================================================================
-!! POLITICAL PARTIES IN THE UNITED STATES
+*ANALYSIS OF ILLUSTRATION 1* --- The two key properties are (A) that
+any one candidate's choice of sequence can arbitrarily change the joint outcome
+and (B) that these choices, and also the voting choices of the People, are not
+affected by the choice-of-sequence of other Candidates.  What guarantees (B) is
+that the choices were made privately before the election, using the envelopes
+as a "commitment scheme" (one also must guarantee that each Candidate's choice
+of whether or not to faithfully announce their sequence is not influenced by
+other Candidates' announcements, a minor problem within the realm of problems
+already solved by current techniques to multiply supervise ballot-counting).
+Even if Candidates conspire, so long as some Candidate is not in the
+conspiracy, then the latter's fair randomness makes the joint sequence fairly
+random.  Moreover, if a Candidate uses any even-somewhat-predictable
+sequence-generation method then a conspiracy of competing Candidates could
+exploit that predictability to the former Candidates' detriment, so it behooves
+the former Candidate to use actual fair randomness.  The system is therefore
+robust to large-but-not-unanimous conspiracies.  The analysis is similar for
+the case where each Candidate belongs to some conspiracy but no conspiracy
+contains all Candidates.  Except by a unanimous conspiracy of candidates, this
+system produces fair randomness.
 
-#------------------------------------------------------------------------------
-!!! Collapse of Diverse Thought
+*ILLUSTRATION 2* --- we may refine the method to
+be more to-the-publicly-verifiably-fair as follows.  Have each Candidate
+publicly label their envelope with some "digest" of the private sequence
+within.  A "digest" is a message related to the private sequence that does not
+reveal the private sequence, but that together with a purported private
+sequence can be used to check whether the latter is authentic.  This is akin to
+the 17th century habit of scientists to announce anagrams of latin sentences
+characterizing their discoveries; this way, they could claim priority without
+revealing their ongoing work, for when a priority dispute arises they could
+reveal the scrambled sentence.  For many decades we have a plentiful supply of
+digest-methods built on the combination of many simple arithmetic operations
+into an intractable-to-invert mess.  So by publicly announcing digests, one
+allows each member of the public --- if they have pen and paper and a spare
+weekend, or if they have a computer and a spare minute --- to verify whether an
+announced sequence was faithful.
 
-    Overton window.  The two business parties.
-
-#------------------------------------------------------------------------------
-!!! Gerrymandering
-
-#------------------------------------------------------------------------------
-!!! Contrast with Agile Coalitions
-
-#------------------------------------------------------------------------------
-!!! Our Experimental-Aesthetic Attitude
-
-
-
-#==============================================================================
-!! LINEAR VOTING TO ELECT REPRESENTATIVES
-
-#------------------------------------------------------------------------------
-!!! Aesthetics
-
-#------------------------------------------------------------------------------
-!!! Implementation
-
-!!!! procedure
-
-!!!! cryptography 
-
-!!!! text
-
-#------------------------------------------------------------------------------
-!!! Discussion and (De)Merits
-
-!!!! house size and bias-variance
-
-!!!! fringe elements and candidacy criteria
- 
-!!!! comparison with sortition "voting"
-
-!!!! comparison with plurality voting
-
-
-
-#==============================================================================
-!! APPROVAL VOTING TO ELECT SENATORS (AND PRESIDENTS)
-
-#------------------------------------------------------------------------------
-!!! Aesthetics
-
-#------------------------------------------------------------------------------
-!!! Implementation
-
-#------------------------------------------------------------------------------
-!!! Discussion and (De)Merits
-
-!!!! unification of primaries and generals
-
-!!!! strategic approval voting
-
-!!!! comparison with ranked-choice voting
-
-!!!! comparison with plurality voting
-
-
-
-#==============================================================================
-!! QUADRATIC VOTING IN THE SENATE
-
-#------------------------------------------------------------------------------
-!!! Aesthetics
-
-    encourage deliberation, discussion, trade, compromise.  permit but penalize
-    extremism. 
-
-#------------------------------------------------------------------------------
-!!! Implementation
-
-!!!! procedure
-
-    Voting with integer weight $n$ on a bill costs ${n \choose 2}$ points.  No
-    senator may spend more than $N=100$ points during any term.  A bill passes
-    in the Senate if and only if it receives strictly more than $11/20$ths of
-    the unweighted vote and strictly more than $1/2$ of the weighted vote.
-
-    Costs will be exacted once a bill is approved by (a simple majority in) the
-    House.  
-
-    #The filibuster will be eliminated.
-
-!!!! proposal of bills 
-
-    
-
-!!!!  
-
-!!!! text
-
-#------------------------------------------------------------------------------
-!!! Discussion and (De)Merits
-
-!!!! bill proposal is a great power
-
-!!!! repetition and sapping 
-
-!!!! initialization of points
+#! AGAINST PARTIES
+#
+#
+#
+##==============================================================================
+#!! POLITICAL PARTIES IN THE UNITED STATES
+#
+##------------------------------------------------------------------------------
+#!!! Collapse of Diverse Thought
+#
+#    Overton window.  The two business parties.
+#
+##------------------------------------------------------------------------------
+#!!! Gerrymandering
+#
+##------------------------------------------------------------------------------
+#!!! Contrast with Agile Coalitions
+#
+##------------------------------------------------------------------------------
+#!!! Our Experimental-Aesthetic Attitude
+#
+#
+#
+##==============================================================================
+#!! LINEAR VOTING TO ELECT REPRESENTATIVES
+#
+##------------------------------------------------------------------------------
+#!!! Aesthetics
+#
+##------------------------------------------------------------------------------
+#!!! Implementation
+#
+#!!!! procedure
+#
+#!!!! cryptography
+#
+#!!!! text
+#
+##------------------------------------------------------------------------------
+#!!! Discussion and (De)Merits
+#
+#!!!! house size and bias-variance
+#
+#!!!! fringe elements and candidacy criteria
+#
+#!!!! comparison with sortition "voting"
+#
+#!!!! comparison with plurality voting
+#
+#
+#
+##==============================================================================
+#!! APPROVAL VOTING TO ELECT SENATORS (AND PRESIDENTS)
+#
+##------------------------------------------------------------------------------
+#!!! Aesthetics
+#
+##------------------------------------------------------------------------------
+#!!! Implementation
+#
+##------------------------------------------------------------------------------
+#!!! Discussion and (De)Merits
+#
+#!!!! unification of primaries and generals
+#
+#!!!! strategic approval voting
+#
+#!!!! comparison with ranked-choice voting
+#
+#!!!! comparison with plurality voting
+#
+#
+#
+##==============================================================================
+#!! QUADRATIC VOTING IN THE SENATE
+#
+##------------------------------------------------------------------------------
+#!!! Aesthetics
+#
+#    encourage deliberation, discussion, trade, compromise.  permit but penalize
+#    extremism.
+#
+##------------------------------------------------------------------------------
+#!!! Implementation
+#
+#!!!! procedure
+#
+#    Voting with integer weight $n$ on a bill costs ${n \choose 2}$ points.  No
+#    senator may spend more than $N=100$ points during any term.  A bill passes
+#    in the Senate if and only if it receives strictly more than $11/20$ths of
+#    the unweighted vote and strictly more than $1/2$ of the weighted vote.
+#
+#    Costs will be exacted once a bill is approved by (a simple majority in) the
+#    House.
+#
+#    #The filibuster will be eliminated.
+#
+#!!!! proposal of bills
+#
+#
+#
+#!!!!
+#
+#!!!! text
+#
+##------------------------------------------------------------------------------
+#!!! Discussion and (De)Merits
+#
+#!!!! bill proposal is a great power
+#
+#!!!! repetition and sapping
+#
+#!!!! initialization of points
 
