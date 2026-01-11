@@ -1,0 +1,523 @@
+# author: samtenka
+# change: 2026-01-01
+# create: 2025-12-20
+# descrp:
+
+! Stronger Bicameralism
+
+(This essay concerns some of the constitutional changes proposed in
+<./constitution-250.html|A Sci-Fi Constitution>.)
+
+We Americans{|except Ben Franklin and Nebraskans in their eccentric wisdom|}
+celebrate our bicameral system.  When working at its best, it protects
+individual rights by requiring broad national consensus before allowing our
+out-of-state neighbors from disabling the old rules that protect us, or from
+making new rules we have to follow.  The measure of broad consensus is whether
+three different bodies (House, Senate, President) --- elected in three
+different manners on three different timescales according to three different
+spatial slicings-up of the country --- ALL agree that a proposed change helps
+more than harms.
+
+To enhance this requirement of consensus, we might lean into the individual
+characters of the Congress's two Chambers.  The ideal fairy tale goes like
+this: the House is a hot melting pot of diverse and zany passions, the stage
+for the People's grand polyphony; the Senate, a cool deliberator where even the
+less powerful States can claim a voice.  I propose to strengthen bicameralism
+by making the fairy tale a bit more true.
+
+!! The Senate
+
+The 17th Amendment was proposed and ratified in response to rampant corruption:
+State legislators in essence put Senate seats for sale.  But the 17th
+Amendment's spirit, one of anti-corruption-via-popular-vote, can be preserved
+while also enhancing protections of local democracy: simply allow the State
+legislators to prepare the menu of candidates from which the People choose.
+Two desiderata: (A) even a lopsided legislature should produce a diverse menu,
+and (B) even if a majority of legislators are bribable and bribed, the menu
+should contain one or more "clean" candidates.
+
+We kill two birds by letting minority groups of legislators nominate
+candidates.  Let any group of, say, 1/5 of the State legislators{|The original
+Article I gives precedent for the U.S.  Constitution breaking encapsulation to
+depend on the membership structure of individual State Legislatures.|} nominate
+one candidate, with no one belonging to multiple groups.  Then the People by
+*single transferable vote*{|In this system, each voter ranks one or more
+candidates (1st, 2nd, etc).  We'll do steps of elimination, so as useful
+shorthand let's say a candidate is at some step a voter's "favorite" when the
+voter ranks the candidate as best among un-eliminated candidates.  The system
+is: SO LONG AS MULTIPLE CANDIDATES REMAIN, ELIMINATE THE CANDIDATE WHO IS THE
+FEWEST VOTERS' FAVORITE.  (The remaining candidate wins.)  Crucially, though
+candidates are eliminated, ballots are not: if my first choice got eliminated,
+then my ballot still matters in favoring my second choice over my third choice
+etc.|} select a winner.
+
+Under a two party system, unless a legislature is 80-percent Blue or 80-percent
+Red, there will be at least one candidate from each major party.  In fact,
+since SingleTransferableVote does not have major "spoiler" effects, we expect 4
+candidates.  Say a State's pro-Banana caucus, which originally would have
+nominated a certain pro-Banana candidate (who peels from the stem), is big
+enough that by splitting it could nominate two candidates.  The half of those
+pro-Banana legislators who are sympathetic to a different pro-Banana candidate
+(who peels from the tip) would not jeopardize the pro-Banana cause if they
+split off to nominate that candidate; so we'd get two meaningfully different
+pro-Banana candidates.
+#
+Legislators who want to avoid appearing complicit in narrowing voters' choices
+to just 2 --- a complaint apparently common among voters both Red and Blue ---
+and legislators whose ideas and emphases differ, even slightly, from the exact
+median preference of their party --- would be incentivized to increase the menu
+size.  For this reason, there'd typically be 4 candidates.
+
+Moreover, the SingleTransferableVote tends to reward moderation and civility.
+Mudslinging toward another candidate has the cost of worsening one's ranking on
+the ballots of those who like that candidate.  Say the anti-Bananas are
+sufficiently more popular than the pro-Bananas so that it is a given that an
+anti-Banana will win; if the anti-Bananas are divided between one extreme and
+one moderate candidate, then the pro-Banana voters' rankings will tip the
+balance in favor of the moderate candidate.  Result: a moderate anti-Banana
+candidate.
+
+As for bribery: under the original Article I, a mere majority of (upper house)
+legislators could sell Senate seats; but in the typical multiple-groups
+scenario, unless 4/5ths of the legislators succumb to bribery, the people would
+have at least one "clean" candidate to choose.  And since such bribery when it
+happens would be less effective, it would probably happen less to begin with.
+
+The proposed change, in line with the 17th Amendment, has the People choose
+their Senator; moreover, the choice would, under our current two-party system,
+have the richness of primary elections in addition to general elections.  The
+key difference is that it is subgroups of State legislators, rather than the
+local branches (and the primaries they have so much power over) of naion-wide
+Parties with national platforms, that select the menu.  Thus, these candidates
+would tend to be more sympathetic to effecting the policies of the People ---
+whether these be Blue or Red policies --- via State government rather than
+National government.
+
+The 1/5 threshold could have been any smallish fraction.  I chose it for
+aesthetic unity.  For, the smallest constant fraction that the old-and-actual
+Constitution mentions is 1/5: a minority of Senators or Representatives of that
+size may force the presentation (through their respective Chamber's journal) of
+information to the People.  This lax threshold for information-flow to the
+People resonates with the proposed process by which State legislators recommend
+candidates to the People.
+
+!! The House
+
+To amplify the House's direct and fiery character, one would want a voting
+system that *FIXES GERRYMANDERING*, and, more strongly, that is
+Concentration-Unswayed, i.e., that represents each minority no matter their
+geographic concentration.  To illustrate, imagine two worlds: in World A, one
+third of all districts are entirely Star-Bellied, and the remaining districts
+are entirely Plain-Bellied.  In World B, every single district is one-third
+Star-Bellied and two-thirds Plain-Bellied.  The Star-Bellies should, of course,
+have one third of the House in World A.  What I mean by Concentration-Unswayed
+is that the Star-Bellies should enjoy the same House representation in the two
+worlds.  A Concentration-Unswayed voting system would, because it is impervious
+to gerrymandering and for other reasons, amplify the House's ideal character.
+
+Yet, of the many Concentration-Unswayed voting systems, the better-known ones
+tend to rely on non-local representation.  But Local representation is our
+American way.  Your Representative's job{|unless you're in Puerto Rico or D.C.
+or a minor Territory; I'm sorry.|} is to represent you whether or not you voted
+for them, and likewise for all in your neighborhood.  This softly rules out
+voting systems that enlarge our (already large) districts into multi-member
+districts or that, folding in our centuries-long resistance against pure
+factionalism, recognize Parties rather than People as the fundamental electable
+unit.{|One could maintain locality for these methods by radically enlarging or
+time-splitting the House or by complicated methods whereby local candidates
+affiliate with national parties that in turn rank their affiliates, so that,
+earning by global vote a budget of seats, their ranking and budget together
+determine which of their affiliates win --- hence the word "softly".|}
+
+So, to get a Concentration-Unswayed, Local voting system seems to require some
+*TURN-TAKING*: I, Star-Bellied, agree with my two Plain-Bellied neighbors that
+I will get my candidate this election and they will get theirs in the next two.
+Making a table of who agrees with whom, we schedule which subgroups control
+which of the next several elections.  Now, this is horribly complicated,
+especially as folks move within and between States; worse --- and this is a
+fundamental flaw if we seek democracy --- this remember-a-past-table method
+does not accomodate people who over time change their mind!  We seek a system
+that is Memoryless.
+
+Fortunately, there is a way out --- a very simple system that is simultaneously
+Concentration-Unswayed, Local, and Memoryless.  In this system, the lifetime
+experience of a citizen (one engaged enough to vote) in their more than two
+dozen House elections, would be, if, say, they happen to be always in a
+minority of size one-third, that in close to one third of those elections their
+favored candidate wins.  If half of the time they are in a minority of
+size-one-third minority and the other half in a size-two-thirds majority, then
+in close to half of their lifetime elections their favorite candidate will win.
+And so forth.
+
+The system is this: select each election's winner with probability
+%proportional to votes received%, that is, randomly.  With dice as our
+turn-taking mechanism, no memory is needed.
+
+We, unlike 250 years ago, are a numerate nation.  To the worry that "Whoever
+controls the dice controls the outcome" we may answer that the metaphorical die
+roll shall be the joint responsibility of the election's candidates, by any of
+the many methods of randomness-aggregation, relying on basic arithmetic, that
+are not just fair but in fact *to-the-public-verifiably fair*.  Such systems
+have the properties that: (A) they generate randomness that will then by a
+deterministic process be used to threshold election counts, so that recounts
+can be performed with no problem; (B) unless the candidates unanimously
+conspire to cheat in a coordinated way, then the resulting die rolls are truly
+fair (example: if at least one candidate doesn't cheat, or if all Blue
+candidates cheat together and all Red candidates cheat together, but these two
+groups do not collaborate, then the resulting die rolls are truly fair); (C)
+ordinary members of the public, with pen and paper and spare weekend, or with a
+computer and a spare minute, can via basic arithmetic verify that an election
+outcome was fair, again assuming there is no unanimous conspiracy.
+
+#I speak of replicable (for ballot recounts)
+
+#{|<./random-voting.html|Click here for a gentle introduction to the relevant
+#arithmetic ideas>.|}
+
+It would be understandable if one feels anxious about turn-taking.  Something
+feels %unfair% about a 60-percent majority getting their way only 60-percent of
+the time, and in particular perhaps not getting their way this year!  Here
+again, the facilitation via randomness of turn-taking establishes formal
+properties to assuage our worry.  Key is that turns are uncorrelated between
+distinct districts.  Switching viewpoint from that of single voters across all
+their years to that of single years across all their voters, we see by "Laws of
+Large Numbers" that the House in every year will have nearly proportional
+representation.  How nearly?  Say that about 50-percent of voters{|weighted, as
+usual, by voter engagement and by the ratio of each State's seats in the House
+to its population|} vote for the Star-Bellied cause.  Then we expect with
+probability 95-percent (i.e., with exceptions only every forty years) less than
+4.7 percentage-points of deviation from this quantity.
+# --- 45.3 to 54.7 percent --- in the House.
+For comparison, this once-in-forty-year deviation under the turn-taking system
+is a bit smaller than the current system's typical deviation of 6.3
+percentage-points over the past 20
+years.{|"6.3 percentage-points" is a root-mean-square, over 10 elections, of
+the difference between national House representation fractions and national
+voting fractions, and counting only the two major parties.  Our computation of
+national voting fraction differs from a simple national sum-of-votes in two
+ways: (a) we normalize away voter engagement, so a district has the same weight
+whether its voters submitted 1000 or 100000 ballots, and (b) each district has
+the same weight; e.g.  Delaware-at-large (population 1.0 million) and
+Wyoming-at-large (population 0.6 million) both have weight one.  We count
+candidates who officially affiliate with Democrats or Republicans, and no
+others.  When an election has multiple candidates of the same party, we sum their votes.
+We merge all parties with "Democrat" in their name (e.g. Minnesota's DFL), and
+analogously with "Republican" (no party counts as both).  I used
+<https://electionlab.mit.edu/data|the MIT election lab's data>.|}
+#   2024   1.1 -   1.1
+#   2022   2.1 -   1.9
+#   2020  -2.3 -  -4.3
+#   2018  -8.3 - -11.6
+#   2016  10.8 -   0.0
+#   2014  13.6 -   4.0
+#   2012   7.8 -  -1.7
+#   2010  11.3 -   4.9
+#   2008 -18.0 - -14.4
+#   2006  -7.1 - -12.6
+#
+#   0.0, 0.2, 2.0, 3.3, 10.8, 9.6, 9.5, 6.4, -3.6, 5.5
+#   6.308724118235001
+
+We could eliminate very unpopular candidates by imposing a threshold before
+consideration for turn-taking.  This may assuage fears of some Horrible Fascist
+Minority gaining a few seats among the House's many hundreds.  Such fear is the
+typical anti-populist fear that is the bass line to the praise, which Blue
+voters give during Red eras and Red voters give during Blue eras, of indirect
+democracy with checks and balances.  And indeed, not just the moat between "few
+seats" and "a majority of seats" but also our bicameral system (the House by
+itself cannot make law) give strong answer to the fear.  Still, requiring a low
+threshold does little to erode the benefits listed and may calm the anxious
+mind.  So we pick a fraction --- as in our discussion of the Senate, 1/5 has
+among various small fractions the benefit of aesthetic unity.  Another way it
+phrase it is: if your candidate is so unpopular that it'd take longer on
+average than the time between censuses for their turn to come, then they are
+too unpopular to be considered.  This is because 5 House elections occur
+between consecutive censuses.
+
+#Contrast to the standard threshold quoted to define egregious gerrymandering,
+#namely deviations of more than 3.5-percent{|This is a threshold on *efficiency
+#gaps*.  If in each State the voters split 50-50 Star-Plain, and if the
+#resulting House was 46.5-53.5 Star-Plain, then the national efficiency gap would be|}
+
+#the House is a stage for expression, not
+#wise consensus.
+
+#Recalling the Bicameral theme, and that the House has
+#almost no power by itself, whether or not it is diverse and zany.  For, checking
+#the House is the Senate.  So, how about the Senate?
+
+!! Overall
+
+Zooming out to our Bicameral theme: each seat of the House is a stage for
+expression, not wise consensus.  We further this ideal via
+@MemorylessTurnTaking@, which fixes gerrymandering, and due to LawOfLargeNumbers
+faithfully reflects the electorate's makeup, and gives voice to minorities ---
+those we strongly agree with and those we strongly disagree with.  Meanwhile,
+the Senate is the great moderator.  We further this ideal by @GroupNomination@
+and @SingleTransferableVote@, the first installing a subtle moderating force
+toward State autonomy and the second a mechanism that helps moderate candidates
+--- those that unexcitingly unite supermajorities rather than intensely dazzle
+mere pluralities --- to win.
+
+This pair of changes to how Representatives and Senators are elected has the
+pleasant property of political balance, for, as I gather, proportional House
+representation is considered a Blue cause, and State influence over the Senate
+a Red one.  (Aside: to be honest, I don't understand why.  Gerrymandering{|by
+which e.g. Maryland has hurt Red voters and North Carolina has hurt Blue
+voters, such effects
+<https://isps.yale.edu/news/blog/2023/06/partisan-gerrymandering-mostly-cancels-out-at-national-level-study-shows|by some metrics roughly canceling nationally>|} hurts both
+Blue and Red voters and, more importantly, should offend the republican
+sensibilities of every American.  As for the Senate as protector of local
+democratic self-government: #among the small States there are both many Blue
+and many Red States and, more importantly, the erosion of the power of States
+to self-regulate{|e.g. Blue voters may object that 2005's PLCAA enfeebles local
+democratic regulation of guns, or that judges confirmed by a modern Senate may,
+in interpreting the Comstock Act, prevent local democratic processes from
+ensuring abortion pill access; meanwhile, Red voters may object that 2010's ACA
+disables local democratic processes from determining how to balance the health
+of children against other costly projects|} has in this century been negatively
+felt and much protested by both the Red and the Blue.)
+
+Summary:
+
+*ELECTION TO THE SENATE* --- The State Legislature shall, in the May before the
+election, nominate a number of candidates, with any group of one fifth of its
+legislators duly sworn permitted to nominate one candidate; but no two groups
+shall overlap.  And from these candidates, the people of the State shall by
+@SingleTransferableVote@ elect their Senator.  That is: each voter shall rank
+one or more candidates, and so long as multiple candidates remain, that
+candidate shall be eliminated who is, according to the voters' rankings of the
+candidates yet un-eliminated, the first choice of the fewest voters; the
+remaining candidate shall win.
+
+*ELECTION TO THE HOUSE* --- The people of the State shall by
+@MemorylessTurnTaking@ elect their Representatives.  That is: the State
+Legislature having determined one district for each seat, each voter shall
+select one candidate; the district's winner shall be chosen, from among the
+plurality candidate and all candidates receiving one fifth of all votes, with
+probability proportional to votes received, and this randomness shall be
+independent of all other elections.
+
+
+!! Appendix: Verifiably Fair Generation of Randomness
+
+Here I'll explain how to craft a VerifiablyFair protocol by which several
+candidates in an election can jointly "roll a die" so as to pick a winner with
+probability proportional to number of votes received.
+
+!!! First a word on Recounts
+
+First, momentarily putting aside the issue of fairness, how can "die rolls"
+pick a winner?  One way is to stack the ballots in alphabetical order --- first
+come all the ballots that mark "Alice", then all those that mark "Bob", and so
+forth.  Next, randomly uniformly choose a number \(x\) between \(0.0\) and
+\(1.0\), and select the ballot that is a fraction \(x\) of the way from the
+start of the stack to the end: the candidate marked by that stack wins.  Since
+each ballot is equally likely to be selected, the candidates have
+winning-chance proportional to the votes they receive, as desired.{|Since we
+imagined the ballots as stacked alphabetically, we don't have to actually
+physically stack them: it's easy to figure out what the outcome %would be% if
+we did stack them, based on \(x\) and on the election tallies; also, if a
+recount is called, we just use the same \(x\) together with the modified
+election tallies.  Unless \(x\) originally landed very close to one of the
+liminal ballots between one candidate's part of the stack and another, or
+unless the recount drastically changes the tallies, the recount will not change
+the winner.|}
+
+Now, how do use "die rolls" to choose \(x\)?  Well, just as we can use two
+rolls of a \(10\)-sided die to get a number up to a hundred, we can use six
+rolls to uniformly randomly select one of the million numbers between \(0.0\)
+and \(1.0\) with six digit after the decimal place.  As this resolution is more
+than enough for practical purposes, our task is reduced to VerifiablyFairly
+performing a joint roll of a \(10\)-sided die.
+
+!!! Reminders about how digits and sums work
+
+ TODO
+
+!!! Hashes
+
+Say you've made an astonishing scientific discovery, but being a jealous and
+secretive person want to sit on it for a while before announcing it, perhaps to
+get a head-start building on it.  Yet if you don't announce immediately, you
+worry that someone else will discovery the same, then by announcing their
+discovery will appear in the public eye to have scooped you.  What should you
+do about this dilemma?
+
+The 17th century solution of Hooke, Newton, and others was this: to announce a
+an %anagram% of a description of the discovery.  The anagram was
+pretty hard to unscramble, so announcing it did not jeopardize the secret.  But if
+a priority dispute arose, then the discoverer could reveal the original
+(unscrambled) description; though it was hard to unscramble the anagram, it was
+easy to check if any purported decoding was authentic.  This is how these petty
+geniuses secured priority.
+
+In modern times, we have better versions of the same scheme.  Two problems{|
+A third problem is that the description of the discovery was sometimes quite
+vague, potentially amplifying problem (B); but this is neither here nor there.
+|}
+with anagrams of short latin sentences that Hooke et al used to describe their
+discoveries: (A) with large but plausible effort and luck somebody %could%
+unscramble the anagram, leaking the secret; (B) a "discoverer" could
+potentially contrive some super-flexible anagram{|probably with lots of vowels
+and common consonants|} to be "unscrambled" post hoc to any of a large range of
+descriptions.  Basic arithmetic on large numbers helps us address both (A) and
+(B).
+
+For example, there are fast algorithms for generating random prime numbers of a
+given number of digits.  Generate two \(1000\)-digit prime numbers \(p\) and
+\(q\), then set \(n=p\cdot{}q\), their product.  From the product \(n\) alone,
+it is very very hard to figure out \(p\) and \(q\) --- brute force, using a
+classical computer the size of the earth, would still require much much more
+time than the age of the universe.  This will help us address (A).  Yet by high
+school facts about factorization, there is only one answer:
+\(p\cdot{}q=q\cdot{}p=n\) and no other pair of integers-at-least-two multiplies
+to \(n\).  This will help us address (B).
+
+To put this to work, say that the "secret" we want to create an "anagram" for
+is some \(500\)-digit number \(s\).  Appending to \(s\) a random
+\(100\) digits to get \(s^\prime\), and generating \(p\) and \(q\) (say
+for definiteness \(p\) is smaller), we announce both \(n=p\cdot{}q\) and the
+last \(600\) digits of \(p+s^\prime\).
+That's a mouthful, but the point is that (A) from the announced data we
+can't{|There are technically much better
+examples of the kind of "modern anagram" we are discussing --- examples we have
+even more faith are computationally intractable even by quantum computers ---
+but we'll stick with this example for simplicity.|}
+figure out \(s\); and (B) that from a further announcement (of \(n\) and a
+purported \(s\)) the public can verify whether the purported \(s\) coincides
+with the original \(s\).
+
+# Actually, since we know \(p\) is odd, we can figure out whether or not
+# \(s\) is odd by looking at the last digit announced.  This flaw arises because
+# we wanted to simplify the exposition.  An adequate fix is to concatenate, say,
+# \(100\) random digits to \(s\) and then report the last \(600\) digits of the
+# \(p+\text{that concatenation}\).
+
+# Have each candidate publicly label their envelope with some "digest" of the
+# private sequence within.  A "digest" is a message related to the private
+# sequence that does not reveal the private sequence, but that together with a
+# purported private sequence can be used to check whether the latter is
+# authentic.  This is akin to the 17th century habit of scientists to announce
+# anagrams of latin sentences characterizing their discoveries; this way, they
+# could claim priority without revealing their ongoing work, for when a priority
+# dispute arises they could reveal the scrambled sentence.  For many decades we
+# have a plentiful supply of digest-methods built on the combination of many
+# simple arithmetic operations into an intractable-to-invert mess.  So by
+# publicly announcing digests, one allows each member of the public --- if they
+# have pen and paper and a spare weekend, or if they have a computer and a spare
+# minute --- to verify whether an announced sequence was faithful.
+
+!!! Illustrations
+
+*ILLUSTRATION I* --- To jointly roll a \(10\)-sided die, each candidate, prior
+to election, privately records a random digit (0 thru 9), sealing their digit
+in an envelope to be stored in the public trust.  After election, the envelopes
+are unsealed and the joint outcome is defined as the last digit of the sum
+of the candidates' digits.
+
+*ANALYSIS OF ILLUSTRATION I* --- The good case is where each candidate
+generates their private digit by actually random means, perhaps by rolling
+their own \(10\)-sided die.  It's obvious that in this good case, the outcome
+is a uniformly random digit.
+
+What's neat is that even with huge amounts of bad faith, the outcome is still a
+uniformly random digit.  The two key properties are (A) that any one
+candidate's choice of digit can arbitrarily change the joint outcome and (B)
+that each candidate's choice , being private, affects neither the choices of
+other candidates or the ballots of the People.  What guarantees (A) is that any
+digit can be gotten (as an answer's last digit) from any digit by adding the
+appropriate digit.  What guarantees (B) is that the choices were made privately
+before the election, using the envelopes as a "commitment scheme".
+
+For example, suppose the candidate Xavier is ganged up on by a conspiracy of
+all the other candidates.  Since Xavier is late in the alphabet, the other
+candidates conspire to try to make the joint outcome small, close to 0 rather
+than 9.  But if Xavier generates his digit by actually rolling a die, then no
+matter what the conspiracy does in response (which can't depend on the actual
+roll, by (B)) the joint outcome will be uniformly random (at root by (A)).
+Moreover, Xavier is by winning chances dis-incentivized from choosing an even
+somewhat-predictable digit; for, if Xavier indulged some non-random
+tendency (perhaps to choose his favorite number 7) then the conspiracy could
+exploit that tendency (in this case by choosing 3, so that the joint outcome is
+0).  That is, even if Xavier isn't intrinsically invested in good-faith
+behavior, so long as he does not cooperate with the conspiracy against him: the
+outcome will be uniformly random.{|Similar analyses establish
+the same outcome when, for instance, every candidate belongs to some conspiracy
+(perhaps there is a big Red conspiracy and a big Blue conspiracy), so long as
+these conspiracies are disconnected.  The key tool in such analyses is the
+assumption that each candidate works rationally toward some goal (which does
+not need to be related to that candidate winning), and what justifies this
+assumption in practice is that in this "game of multiple added dice", rational
+behavior isn't trick or complicated to discern.|} Through more general analyses
+of the same kind, we find that: *Unless the candidates unanimously conspire,
+the outcome will be a uniformly random digit.*
+
+... Now, Illustration I generates just one digit, but we can use the same idea
+to generate many random digits ...
+
+*ILLUSTRATION II* --- To generate \(1000\) random digits, each candidate
+privately records a random \(1000\)-digit sequence in an envelope to be stored
+in the public trust.{|Practically, to save four hours of tedium, a trusted
+computer-saavy member of the campaign team does this by computer.|} After
+election, the envelopes are unsealed and the joint outcome is defined as the
+last \(1000\) digits of the sum of the candidates' sequences, regarded as
+numbers.
+
+#As noted also above: even if candidates conspire, so long as some Candidate is
+#not in the conspiracy, then the latter's fair randomness makes the joint
+#sequence fairly random.  Moreover, if a candidate uses any
+#even-somewhat-predictable sequence-generation method then a conspiracy of
+#competing candidates could exploit that predictability to the former
+#candidates' detriment, so it behooves the former candidate to use actual fair
+#randomness.  The system is therefore robust to large-but-not-unanimous
+#conspiracies.  The analysis is similar for the case where each candidate
+#belongs to some conspiracy but no conspiracy contains all candidates.  Except
+#by a unanimous conspiracy of candidates, this system produces fair randomness.
+
+... Illustration II generates fair randomness but not verifiably fair
+randomness.  The public can watch on TV how the envelopes were deposited, kept
+safe, and drawn out, but this is still a bit dissatisfying.  How would a
+controversy be resolved in which a candidate claims their envelope's entries
+were tampered with?  We can use the HASHING idea mentioned above to replace
+physical envelopes by a verifiably fair mechanism. ...
+
+*ILLUSTRATION III* --- To generate \(1000\) random digits, each candidate
+privately records a random \(1000\)-digit sequence.  Each candidate publicly
+announces a "hash" of their sequence, such that from the hash alone the
+sequence cannot be inferred and such that  the public may, by comparing against
+the hash, check whether any purported sequence is the same as the actual
+sequence.  After election, the candidates announce their private sequences, and
+the joint outcome is defined as the last \(1000\) digits of the sum of the
+candidates' sequences, regarded as numbers, counting only those sequences
+that, as checked against the hashes, were faithful.
+
+*ANALYSIS OF ILLUSTRATION III* --- 
+
+ {|One also must guarantee that each candidate's choice
+of whether or not to faithfully announce their sequence is not influenced by
+other candidates' announcements, a minor problem within the realm of problems
+already solved by current techniques to multiply supervise ballot-counting|}
+
+Note: even if we want to use just a few digits of randomness, say 6 digits,
+it's important to have the hashed secret be many many more digits; for if the
+secret is only 6 digits, then by brute force (over a million possibilities,
+which is quite easy on a computer) the secret could be inferred from the hash.
+
+#*ILLUSTRATION 2* --- we may refine the method to
+#be more to-the-publicly-verifiably-fair as follows.  Have each candidate
+#publicly label their envelope with some "digest" of the private sequence
+#within.  A "digest" is a message related to the private sequence that does not
+#reveal the private sequence, but that together with a purported private
+#sequence can be used to check whether the latter is authentic.  This is akin to
+#the 17th century habit of scientists to announce anagrams of latin sentences
+#characterizing their discoveries; this way, they could claim priority without
+#revealing their ongoing work, for when a priority dispute arises they could
+#reveal the scrambled sentence.  For many decades we have a plentiful supply of
+#digest-methods built on the combination of many simple arithmetic operations
+#into an intractable-to-invert mess.  So by publicly announcing digests, one
+#allows each member of the public --- if they have pen and paper and a spare
+#weekend, or if they have a computer and a spare minute --- to verify whether an
+#announced sequence was faithful.
+
+

@@ -15,7 +15,7 @@ ratified.
 Scroll down to *Article 0* for the good stuff.  Before then are some
 extra-textual remarks.
 
-!!! Kinds of Change
+!!! Style of Changes
 
 The changes are roughly of 5 kinds, which arranged from least to most radical are:
 # {|
@@ -26,24 +26,23 @@ The changes are roughly of 5 kinds, which arranged from least to most radical ar
 # \end{align}
 # \]
 # |}
-
 CLERICAL STANDARDIZATION, to bring spelling and grammar and
 Capitalization to modern standards;
-
+#
 ORGANIZATION, to group related provisions under titled sections and to remove
 provisions no longer in effect;{|for instance, integrating amendments
 into the body, and deleting provisions whose sole purpose was to protect Slavery|}
-
+#
 CODIFICATION, to license or mandate, in text, structual conventions already
 deeply in place but not written in the old-and-actual Constitution;{|e.g. the practice of
 judicial review, or the incorporation to the States of parts of the Bill of
 Rights|}
-
+#
 DISAMBIGUATION, to supply concrete procedure for those exceptional cases where
 no procedure is written;{|such as who
 can suspend habeas corpus, or how a State may legally secede, or by what method
 delegates to a constitutional convention shall be elected|}
-
+#
 MODIFICATION, to create new provisions, or to remove old ones, in a local
 manner so as to adhere to the global framework of the old-and-actual Constitution.
 
@@ -74,301 +73,28 @@ revision of plausibly very broad appeal, not to act as benevolent dictator:
 today we play a game of moderation.  Even the more major changes are, for this
 reason, in essence conservative.
 
+!!! Content of Changes
+
 Having remarked above on form and purpose, I turn now to content.  The more
-major changes mainly concern three ideas: stronger BICAMERALISM, the closing of
-LOOPHOLES, and the undermining of those old incentives toward FACTIONALISM.  I
-remark on each in turn...
+major changes mainly concern three ideas:
+stronger <./bicameralism.html|BICAMERALISM>, including fixing of gerrymandering
+in the House and greater moderation in the Senate; the closing of LOOPHOLES,
+such as how indecisive algorithms empower politicians in proportion to how willing
+they are to break norms, and protecting numbers like Supreme Court size that
+right now are too easy to change; and the undermining of those old incentives
+toward FACTIONALISM.  Click on those three big words for much more detail!
 
-ELEGANCE TODO
+# ELEGANCE TODO
 
-!!! Stronger Bicameralism
-
-We Americans{|except Ben Franklin and Nebraskans in their eccentric wisdom|}
-celebrate our bicameral system.  When working at its best, it protects
-individual rights by requiring broad national consensus before allowing our
-out-of-state neighbors from disabling the old rules that protect us, or from
-making new rules we have to follow.  The measure of broad consensus is whether
-three different bodies (House, Senate, President) --- elected in three
-different manners on three different timescales according to three different
-spatial slicings-up of the country --- ALL agree that a proposed change helps
-more than harms.
-
-To enhance this requirement of consensus, we might lean into the individual
-characters of the Congress's two Chambers.  The ideal fairy tale goes like
-this: the House is a hot melting pot of diverse and zany passions, the stage
-for the People's grand polyphony; the Senate, a cool deliberator where even the
-less powerful States can claim a voice.  I propose to strengthen bicameralism
-by making the fairy tale a bit more true.
-
-!!!! The Senate
-
-The 17th Amendment was proposed and ratified in response to rampant corruption:
-State legislators in essence put Senate seats for sale.  But the 17th
-Amendment's spirit, one of anti-corruption-via-popular-vote, can be preserved
-while also enhancing protections of local democracy: simply allow the State
-legislators to prepare the menu of Candidates from which the People choose.
-Two desiderata: (A) even a lopsided legislature should produce a diverse menu,
-and (B) even if a majority of legislators are bribable and bribed, the menu
-should contain one or more "clean" Candidates.
-
-We kill two birds by letting minority groups of legislators nominate
-candidates.  Let any group of, say, 1/5 of the State legislators{|The original
-Article I gives precedent for the U.S.  Constitution breaking encapsulation to
-depend on the membership structure of individual State Legislatures.|} nominate
-one Candidate, with no one belonging to multiple groups.  Then the People by
-*single transferable vote*{|In this system, each voter ranks one or more
-Candidates (1st, 2nd, etc).  We'll do steps of elimination, so as useful
-shorthand let's say a Candidate is at some step a voter's "favorite" when the
-voter ranks the Candidate as best among un-eliminated Candidates.  The system
-is: SO LONG AS MULTIPLE CANDIDATES REMAIN, ELIMINATE THE CANDIDATE WHO IS THE
-FEWEST VOTERS' FAVORITE.  (The remaining Candidate wins.)  Crucially, though
-candidates are eliminated, ballots are not: if my first choice got eliminated,
-then my ballot still matters in favoring my second choice over my third choice
-etc.|} select a winner.
-
-Under a two party system, unless a legislature is 80-percent Blue or 80-percent
-Red, there will be at least one candidate from each major party.  In fact,
-since SingleTransferableVote does not have major "spoiler" effects, we expect 4
-candidates.  Say a State's pro-Banana caucus, which originally would have
-nominated a certain pro-Banana candidate (who peels from the stem), is big
-enough that by splitting it could nominate two candidates.  The half of those
-pro-Banana legislators who are sympathetic to a different pro-Banana candidate
-(who peels from the tip) would not jeopardize the pro-Banana cause if they
-split off to nominate that candidate; so we'd get two meaningfully different
-pro-Banana candidates.
+# !!! LOOPHOLES
 #
-Legislators who want to avoid appearing complicit in narrowing voters' choices
-to just 2 --- a complaint apparently common among voters both Red and Blue ---
-and legislators whose ideas and emphases differ, even slightly, from the exact
-median preference of their party --- would be incentivized to increase the menu
-size.  For this reason, there'd typically be 4 Candidates.
-
-Moreover, the SingleTransferableVote tends to reward moderation and civility.
-Mudslinging toward another candidate has the cost of worsening one's ranking on
-the ballots of those who like that candidate.  Say the anti-Bananas are
-sufficiently more popular than the pro-Bananas so that it is a given that an
-anti-Banana will win; if the anti-Bananas are divided between one extreme and
-one moderate candidate, then the pro-Banana voters' rankings will tip the
-balance in favor of the moderate candidate.  Result: a moderate anti-Banana
-candidate.
-
-As for bribery: under the original Article I, a mere majority of (upper house)
-legislators could sell Senate seats; but in the typical multiple-groups
-scenario, unless 4/5ths of the legislators succumb to bribery, the people would
-have at least one "clean" Candidate to choose.  And since such bribery when it
-happens would be less effective, it would probably happen less to begin with.
-
-The proposed change, in line with the 17th Amendment, has the People choose
-their Senator; moreover, the choice would, under our current two-party system,
-have the richness of primary elections in addition to general elections.  The
-key difference is that it is subgroups of State legislators, rather than the
-local branches (and the primaries they have so much power over) of naion-wide
-Parties with national platforms, that select the menu.  Thus, these candidates
-would tend to be more sympathetic to effecting the policies of the People ---
-whether these be Blue or Red policies --- via State government rather than
-National government.
-
-The 1/5 threshold could have been any smallish fraction.  I chose it for
-aesthetic unity.  For, the smallest constant fraction that the old-and-actual
-Constitution mentions is 1/5: a minority of Senators or Representatives of that
-size may force the presentation (through their respective Chamber's journal) of
-information to the People.  This lax threshold for information-flow to the
-People resonates with the proposed process by which State legislators recommend
-candidates to the People.
-
-
-
-!!!! The House
-
-To amplify the House's direct and fiery character, one would want a voting
-system that *FIXES GERRYMANDERING*, and, more strongly, that is
-Concentration-Unswayed, i.e., that represents each minority no matter their
-geographic concentration.  To illustrate, imagine two worlds: in World A, one
-third of all districts are entirely Star-Bellied, and the remaining districts
-are entirely Plain-Bellied.  In World B, every single district is one-third
-Star-Bellied and two-thirds Plain-Bellied.  The Star-Bellies should, of course,
-have one third of the House in World A.  What I mean by Concentration-Unswayed
-is that the Star-Bellies should enjoy the same House representation in the two
-worlds.  A Concentration-Unswayed voting system would, because it is impervious
-to gerrymandering and for other reasons, amplify the House's ideal character.
-
-Yet, of the many Concentration-Unswayed voting systems, the better-known ones
-tend to rely on non-local representation.  But Local representation is our
-American way.  Your Representative's job{|unless you're in Puerto Rico or D.C.
-or a minor Territory; I'm sorry.|} is to represent you whether or not you voted
-for them, and likewise for all in your neighborhood.  This softly rules out
-voting systems that enlarge our (already large) districts into multi-member
-districts or that, folding in our centuries-long resistance against pure
-factionalism, recognize Parties rather than People as the fundamental electable
-unit.{|One could maintain locality for these methods by radically enlarging or
-time-splitting the House or by complicated methods whereby local candidates
-affiliate with national parties that in turn rank their affiliates, so that,
-earning by global vote a budget of seats, their ranking and budget together
-determine which of their affiliates win --- hence the word "softly".|}
-
-So, to get a Concentration-Unswayed, Local voting system seems to require some
-*TURN-TAKING*: I, Star-Bellied, agree with my two Plain-Bellied neighbors that
-I will get my candidate this election and they will get theirs in the next two.
-Making a table of who agrees with whom, we schedule which subgroups control
-which of the next several elections.  Now, this is horribly complicated,
-especially as folks move within and between States; worse --- and this is a
-fundamental flaw if we seek democracy --- this remember-a-past-table method
-does not accomodate people who over time change their mind!  We seek a system
-that is Memoryless.
-
-Fortunately, there is a way out --- a very simple system that is simultaneously
-Concentration-Unswayed, Local, and Memoryless.  In this system, the lifetime
-experience of a citizen (one engaged enough to vote) in their more than two
-dozen House elections, would be, if, say, they happen to be always in a
-minority of size one-third, that in close to one third of those elections their
-favored candidate wins.  If half of the time they are in a minority of
-size-one-third minority and the other half in a size-two-thirds majority, then
-in close to half of their lifetime elections their favorite candidate will win.
-And so forth.
-
-The system is this: select each election's winner with probability
-%proportional to votes received%, that is, randomly.  With dice as our
-turn-taking mechanism, no memory is needed.  (We, unlike 250 years ago, are a
-numerate nation.  To the worry that "Whoever controls the dice controls the
-outcome" we may answer that the metaphorical die roll shall be the joint
-responsibility of the election's Candidates, by any{|<./random-voting.html|Click here for a gentle introduction to the relevant arithmetic ideas>.|} of the many methods of randomness-aggregation,
-relying on basic arithmetic, that are not just fair but in fact
-*to-the-public-verifiably fair*.  I speak of replicable (for ballot recounts)
-and TODO)
-
-It would be understandable if one feels anxious about turn-taking.  Something
-feels %unfair% about a 60-percent majority getting their way only 60-percent of
-the time, and in particular perhaps not getting their way this year!  Here
-again, the facilitation via randomness of turn-taking establishes formal
-properties to assuage our worry.  Key is that turns are uncorrelated between
-distinct districts.  Switching viewpoint from that of single voters across all
-their years to that of single years across all their voters, we see by "Laws of
-Large Numbers" that the House in every year will have nearly proportional
-representation.  How nearly?  Say that about 50-percent of voters{|weighted, as
-usual, by voter engagement and by the ratio of each State's seats in the House
-to its population|} vote for the Star-Bellied cause.  Then we expect with
-probability 95-percent (i.e., with exceptions only every forty years) less than
-4.7 percentage-points of deviation from this quantity.
-# --- 45.3 to 54.7 percent --- in the House.
-For comparison, this once-in-forty-year deviation under the turn-taking system
-is a bit smaller than the current system's typical deviation of 6.3
-percentage-points over the past 20
-years.{|"6.3 percentage-points" is a root-mean-square, over 10 elections, of
-the difference between national House representation fractions and national
-voting fractions, and counting only the two major parties.  Our computation of
-national voting fraction differs from a simple national sum-of-votes in two
-ways: (a) we normalize away voter engagement, so a district has the same weight
-whether its voters submitted 1000 or 100000 ballots, and (b) each district has
-the same weight; e.g.  Delaware-at-large (population 1.0 million) and
-Wyoming-at-large (population 0.6 million) both have weight one.  We count
-candidates who officially affiliate with Democrats or Republicans, and no
-others.  When an election has multiple candidates of the same party, we sum their votes.
-We merge all parties with "Democrat" in their name (e.g. Minnesota's DFL), and
-analogously with "Republican" (no party counts as both).  I used
-<https://electionlab.mit.edu/data|the MIT election lab's data>.|}
-#   2024   1.1 -   1.1
-#   2022   2.1 -   1.9
-#   2020  -2.3 -  -4.3
-#   2018  -8.3 - -11.6
-#   2016  10.8 -   0.0
-#   2014  13.6 -   4.0
-#   2012   7.8 -  -1.7
-#   2010  11.3 -   4.9
-#   2008 -18.0 - -14.4
-#   2006  -7.1 - -12.6
+# !!! FACTIONALISM
 #
-#   0.0, 0.2, 2.0, 3.3, 10.8, 9.6, 9.5, 6.4, -3.6, 5.5
-#   6.308724118235001
-
-We could eliminate very unpopular candidates by imposing a threshold before
-consideration for turn-taking.  This may assuage fears of some Horrible Fascist
-Minority gaining a few seats among the House's many hundreds.  Such fear is the
-typical anti-populist fear that is the bass line to the praise, which Blue
-voters give during Red eras and Red voters give during Blue eras, of indirect
-democracy with checks and balances.  And indeed, not just the moat between "few
-seats" and "a majority of seats" but also our bicameral system (the House by
-itself cannot make law) give strong answer to the fear.  Still, requiring a low
-threshold does little to erode the benefits listed and may calm the anxious
-mind.  So we pick a fraction --- as in our discussion of the Senate, 1/5 has
-among various small fractions the benefit of aesthetic unity.  Another way it
-phrase it is: if your candidate is so unpopular that it'd take longer on
-average than the time between censuses for their turn to come, then they are
-too unpopular to be considered.  This is because 5 House elections occur
-between consecutive censuses.
-
-#Contrast to the standard threshold quoted to define egregious gerrymandering,
-#namely deviations of more than 3.5-percent{|This is a threshold on *efficiency
-#gaps*.  If in each State the voters split 50-50 Star-Plain, and if the
-#resulting House was 46.5-53.5 Star-Plain, then the national efficiency gap would be|}
-
-#the House is a stage for expression, not
-#wise consensus.
-
-#Recalling the Bicameral theme, and that the House has
-#almost no power by itself, whether or not it is diverse and zany.  For, checking
-#the House is the Senate.  So, how about the Senate?
-
-!!!! Overall
-
-Zooming out to our Bicameral theme: each seat of the House is a stage for
-expression, not wise consensus.  We further this ideal via
-@MemorylessTurnTaking@, which fixes gerrymandering, and due to LawOfLargeNumbers
-faithfully reflects the electorate's makeup, and gives voice to minorities ---
-those we strongly agree with and those we strongly disagree with.  Meanwhile,
-the Senate is the great moderator.  We further this ideal by @GroupNomination@
-and @SingleTransferableVote@, the first installing a subtle moderating force
-toward State autonomy and the second a mechanism that helps moderate candidates
---- those that unexcitingly unite supermajorities rather than intensely dazzle
-mere pluralities --- to win.
-
-This pair of changes to how Representatives and Senators are elected has the
-pleasant property of political balance, for, as I gather, proportional House
-representation is considered a Blue cause, and State influence over the Senate
-a Red one.  (Aside: to be honest, I don't understand why.  Gerrymandering{|by
-which e.g. Maryland has hurt Red voters and North Carolina has hurt Blue
-voters, such effects
-<https://isps.yale.edu/news/blog/2023/06/partisan-gerrymandering-mostly-cancels-out-at-national-level-study-shows|by some metrics roughly canceling nationally>|} hurts both
-Blue and Red voters and, more importantly, should offend the republican
-sensibilities of every American.  As for the Senate as protector of local
-democratic self-government: #among the small States there are both many Blue
-and many Red States and, more importantly, the erosion of the power of States
-to self-regulate{|e.g. Blue voters may object that 2005's PLCAA enfeebles local
-democratic regulation of guns, or that judges confirmed by a modern Senate may,
-in interpreting the Comstock Act, prevent local democratic processes from
-ensuring abortion pill access; meanwhile, Red voters may object that 2010's ACA
-disables local democratic processes from determining how to balance the health
-of children against other costly projects|} has in this century been negatively
-felt and much protested by both the Red and the Blue.)
-
-*ELECTION TO THE SENATE* --- The State Legislature shall, in the May before the
-election, nominate a number of candidates, with any group of one fifth of its
-legislators duly sworn permitted to nominate one candidate; but no two groups
-shall overlap.  And from these candidates, the people of the State shall by
-@SingleTransferableVote@ elect their Senator.  That is: each voter shall rank
-one or more candidates, and so long as multiple Candidates remain, that
-Candidate shall be eliminated who is, according to the voters' rankings of the
-Candidates yet un-eliminated, the first choice of the fewest voters; the
-remaining Candidate shall win.
-
-*ELECTION TO THE HOUSE* --- The people of the State shall by
-@MemorylessTurnTaking@ elect their Representatives.  That is: the State
-Legislature having determined one district for each seat, each voter shall
-select one candidate; the district's winner shall be chosen, from among the
-plurality candidate and all candidates receiving one fifth of all votes, with
-probability proportional to votes received, and this randomness shall be
-independent of all other elections.
-
-
-
-!!! LOOPHOLES
-
-!!! FACTIONALISM
-
-Whether or not this scenario is likely is irrelevant; when grave stakes
-are placed, as how lottery winnings can fracture a family.  A good Constitution
-should amplify small amounts of good faith, and such prisoner's dilemmas erode
-such purpose.
-
+# Whether or not this scenario is likely is irrelevant; when grave stakes
+# are placed, as how lottery winnings can fracture a family.  A good Constitution
+# should amplify small amounts of good faith, and such prisoner's dilemmas erode
+# such purpose.
+#
 
 
 
@@ -394,10 +120,11 @@ the Senate.  These seats shall be divided as evenly as may be into 3 classes,
 with one class elected, in November of each even year, to a term of 6 years
 that shall begin at noon on the 3rd day of the following January.
 
-No Senator shall serve more than 20 consecutive years.{|One might say that
-learning on the job is essential; but it is also important to make space for
-voters to learn by comparing different alternatives.|} No person shall serve as
-Senator without having attained 30 years of age, or while holding any Office
+No Senator shall serve more than 20 consecutive years.
+#{|One might say that learning on the job is essential; but it is also important
+#to make space for voters to learn by comparing different alternatives.|}
+No person shall serve as
+Senator without having attained 30 years of age, or while holding any office
 under the United States.
 
 
@@ -407,27 +134,23 @@ election, nominate a number of candidates, with any group of one fifth of its
 legislators duly sworn permitted to nominate one candidate; but no two groups
 shall overlap.  And from these candidates, the people of the State shall by
 @SingleTransferableVote@ elect their Senator.  That is: each voter shall rank
-one or more candidates, and so long as multiple Candidates remain, that Candidate
-shall be eliminated who is, according to the voters' rankings of the Candidates
-yet un-eliminated, the first choice of the fewest voters; the remaining Candidate
+one or more candidates, and so long as multiple candidates remain, that candidate
+shall be eliminated who is, according to the voters' rankings of the candidates
+yet un-eliminated, the first choice of the fewest voters; the remaining candidate
 shall win.
-#And from these candidates, the people of the State
-#shall by @Approval Voting@ elect their Senator.  That is: each voter shall vote
-#for one or more candidates, and that candidate receiving the most votes shall
-#win.
 
 
 
 *STRUCTURE AND TERMS OF THE HOUSE* --- The House of Representatives shall have
-625 seats, or a larger number as the Congress may by Law provide.  Each State,
+625 seats, or a larger number as the Congress may by law provide.  Each State,
 and the incorporated Territories as one Whole, shall be entitled a number of
-seats as proportional as may be to their number of Citizens, but at least 2
+seats as proportional as may be to their number of citizens, but at least 2
 seats each.  Representatives shall be elected, in November of each even year,
 to a term of 2 years that shall shall begin at noon on the 3rd day of the
 following January.
 
 No person shall serve as Representative without having attained 25 years of
-age, or while holding any Office under the United States.
+age, or while holding any office under the United States.
 
 
 
@@ -441,12 +164,12 @@ independent of all other elections.
 
 
 
-*MANNER OF ELECTION* --- Each State shall by Law determine the place within
+*MANNER OF ELECTION* --- Each State shall by law determine the place within
 their State, and specify the aforementioned time and manner, of elections to
-the Senate and the House; but the Congress may by uniform Law make or alter
+the Senate and the House; but the Congress may by uniform law make or alter
 such regulations.
 
-Each State may by Law propose an alternative method for immediately
+Each State may by law propose an alternative method for immediately
 upcoming elections to the Senate or the House --- that is, an alternative to
 @Approval Voting@ or @MemorylessTurnTaking@ --- which with the consent of
 Congress shall for those elections in that State take effect.  But no such
@@ -454,8 +177,8 @@ proposal shall occur until 3 years after ratification of this section.
 
 
 
-*REMOVAL* --- Each Chamber{|The old Constitution uses "House", and this
-revision uses "Chamber", for the same concept.  I made this substitution
+*REMOVAL* --- Each Chamber{|The old-and-actual Constitution uses "House", and
+this revision uses "Chamber", for the same concept.  I made this substitution
 throughout, to avoid confusion: "House" now refers only to the House of
 Representatives.|} shall be the judge of the elections, returns, and
 qualifications of its own members.  Either Chamber may, with the concurrence of
@@ -488,8 +211,8 @@ the session of their respective Chambers, and in going to and returning from
 the same.
 
 The Congress shall assemble at least once in every year; they shall first
-assemble TODO
-
+assemble on the first day of their term, unless they shall by law appoint a
+different day.
 
 
 *INFORMATION FLOW* ---  Each Chamber shall keep a journal of its
@@ -558,14 +281,15 @@ propose or concur with amendments as on other bills.
 requiring the concurrence of one Chamber alone (and not of the President),
 shall upon the required votes in Congress take effect.
 
-But every other Act of Congress shall,{|This Constitution nowhere
-requires "2/3 of each Chamber and the President's approval" or (besides
-adjournment) "approval of each Chamber but not the
-President".  These extra -stringent or -lax forms
-one might want for critical parameters (e.g. to prevent Court-packing or to prevent biasing of Amendment-ratification via State-splitting) or for "mere" procedure (e.g.
-adjournment).  With no such forms, we need not refine the phrase "every other Act".|}  before it take effect, be presented to the President of the
-United States.  If he approve it, he shall sign it and the Act shall take
-effect.
+But every other Act of Congress shall,{|This Constitution nowhere requires "2/3
+of each Chamber and the President's approval" or (besides adjournment)
+"approval of each Chamber but not the President".  These extra -stringent or
+-lax forms one might want for critical parameters (e.g. to prevent
+Court-packing or to prevent biasing of Amendment-ratification via
+State-splitting) or for "mere" procedure (e.g.  adjournment).  With no such
+forms, we need not refine the phrase "every other Act".|}  before it take
+effect, be presented to the President of the United States.  If he approve it,
+he shall sign it and the Act shall take effect.
 
 But if not, he shall return the Act, with his objections, to the Senate and the
 House, both of which shall enter the objections at large on their journal and
@@ -575,11 +299,10 @@ of both Chambers shall be determined by "yeas" and "nays", and the names of the
 persons voting for and against the Act shall be entered on the journal of each
 Chamber respectively.
 
-If such Act shall not be returned by the President within 12 days{|equivalent to
-10 days excluding Sundays|} after it shall have been presented to him, the same
-shall take effect, in like manner as if he had signed it, unless the Congress
-by their adjournment prevent its return, in which case the Act shall not take
-effect.
+If such Act shall not be returned by the President within 10 days (excluding
+Sundays) after it shall have been presented to him, the same shall take effect,
+in like manner as if he had signed it, unless the Congress by their adjournment
+prevent its return, in which case the Act shall not take effect.
 
 *FILIBUSTER* --- An Act of Congress whose constitutionality relies on the
 General Welfare Clause, or on any but a strictest reasonable construction of
@@ -589,12 +312,11 @@ and an "expansive" act shall pass the Senate only with the approval of three
 fifths of Senators duly sworn.
 
 A group of more than two fifths of Senators present may, while voting "Nay",
-affix to an Act a signed argument that that act is "expansive".  Thereupon, the
-act shall take effect only if the President, on the basis of constitutional
+affix to an Act a signed argument that that Act is "expansive".  Thereupon, the
+Act shall take effect only if the President, on the basis of constitutional
 text alone and not the public good, believes the argument to be flawed and
 signs with the Act an attestation to and explanation of this belief.  The
-Courts of the United States shall prioritize such laws for judicial review.
-
+Courts of the United States shall prioritize such Acts for judicial review.
 
 
 
@@ -604,12 +326,13 @@ Courts of the United States shall prioritize such laws for judicial review.
 
 *ENUMERATED POWERS* --- The Congress shall have power:
 
-To provide for the general Welfare of the United States;
+To provide for the general welfare of the United States;
 
-To regulate Commerce among the several States, and with Foreign Powers and the
+To regulate commerce among the several States, and with Foreign Powers and the
 Indian Tribes; but the transportation or importation into any State, Territory,
 or possession of the United States of intoxicating liquors,{|Here, by the way,
-would a tidy place to strengthen State-wise powers of gun control, by writing
+would be a tidy place to strengthen State-wise powers of gun control, by
+writing
 %arms or intoxicating liquors%.|} for delivery or use therein in violation of
 the laws thereof, shall be prohibited;
 
@@ -626,7 +349,7 @@ provide and maintain a navy, to make rules for the government and regulation of
 the land and naval forces, and to provide for organizing, arming, and
 disciplining the militia, and for governing such part of them as may be
 employed in the service of the United States, reserving to the States
-respectively the appointment of Officers and the authority of training the
+respectively the appointment of officers and the authority of training the
 militia according to a discipline the Congress shall be law prescribe;
 
 To define and punish piracies and felonies committed on the high seas, and
@@ -646,35 +369,33 @@ exercise like authority over the Federal District (not exceeding ten miles
 square) that shall by cession of particular States and the acceptance of
 Congress become the seat of government of the United States;
 
-To define the executive Departments, whose purpose shall be to execute the laws
-of the United States, and to define their hierarchy of Officers, with each
-Department having one principal Officer; and
+To define the executive departments, whose purpose shall be to execute the laws
+of the United States, and to define their hierarchy of officers, with each
+department having one principal officer; and
 
 To make all laws which shall be necessary and proper for carrying into
 execution the foregoing powers, and all other powers vested by this
-Constitution in the Government of the United States, or in any Department or
-Officer thereof.
+Constitution in the Government of the United States, or in any department or
+officer thereof.
 
 
 
-
-*IMPEACHMENT* --- The House shall, have sole power to impeach, and shall do so
-by simple majority.  The Senate shall have sole power to try all Impeachments;
-when sitting for this purpose, each Senator shall be on Oath or Affirmation.
-When the President or Vice President is tried, the Chief Justice shall preside.
-And no person shall be convicted without the concurrence of two thirds of
-Senators present.
+*IMPEACHMENT* --- The House shall have sole power to impeach.  The Senate shall
+have sole power to try all impeachments; when sitting for this purpose, each
+Senator shall be on oath or affirmation.  When the President or Vice President
+is tried, the Chief Justice shall preside.  And no person shall be convicted
+without the concurrence of two thirds of Senators present.
 
 Judgement in cases of impeachment shall not extend further than to removal from
-Office, and disqualification to hold and enjoy any Office of honor, trust, or
+office, and disqualification to hold and enjoy any office of honor, trust, or
 profit under the United States; but the party convicted shall nevertheless be
 liabla and subject to indictment, trial, judgement, and punishment, according
 to law.
 
-The President, Vice President, and all civil Officers of the United States
-shall be removed from Office on Impeachment for and Conviction of: Treason,
-Bribery, or other high Crimes and Misdemeanors, or for permanent inability to
-discharge the powers and duties of their Office.
+The President, Vice President, and all civil officers of the United States
+shall be removed from office on impeachment for and conviction of: treason,
+bribery, or other high crimes and misdemeanors, or for permanent inability to
+discharge the powers and duties of their office.
 
 
 
@@ -702,35 +423,36 @@ years of age.
 
 
 *ELECTION* --- The People shall elect the President and Vice President by
-@Hierarchical Approval Voting@,{|In plain approval voting, each person
-votes for one or more Candidates, and whichever Candidate gets most votes wins.
-Approval voting is the most natural and simple voting system I know: a voter
-considers each Candidate and answers "yes" or "no".  Our currently standard
-system of "select-one plurality voting" is a variant of approval voting where
-each voter is constrained to say "yes" at most once; this constraint leads to
-severe "spoiler" effects that disincentivize the People from forming diverse
-sets of parties.  Instead of compromising coalitions forming by constitutional
-means, topic-by-topic, within Congress, they are formed by the vagaries of two
-big extra-constitutional organizations.|}
-as follows.  Candidates shall run in
-pairwise-disjoint Groups of at least three.  Each Voter shall select one or
-more Groups and one or more Candidates.  The Group with most votes shall win;
-within the winning Group, the Candidate with most votes shall become President
-and the Candidate with the second most votes shall become Vice President.
+@Hierarchical Approval Voting@,{|In plain approval voting, each voter votes for
+one or more candidates, and the candidate with most votes wins.  Each voter
+considers each candidate and simply answers "yes" or "no"; I know no simpler or
+more natural voting system.  Our currently standard system, "select-one
+plurality voting", is a variant of approval voting where each voter is
+constrained to say "yes" at most once; this constraint leads to severe
+"spoiler" effects that disincentivize the People from forming diverse sets of
+parties.  Instead of compromising coalitions forming by constitutional means,
+topic-by-topic, within Congress, they are formed pre-election by the vagaries
+of two big extra-constitutional organizations.|}
+as follows.  Candidates shall run in pairwise-disjoint groups of at least
+three.  Each voter shall select one or more candidates and one or more groups.
+The group with most votes shall win; within the winning group, the candidate
+with most votes shall become President and the candidate with the second most
+votes shall become Vice President.
 
 In these elections, a voter from a State entitled \(R\) many Representatives,
 or from the incorporated Territories that as a whole are entitled \(R\) many
-Representatives, shall be counted with weight \(1+2/R\).
+Representatives, shall be counted with weight \(1+2/R\).{|TODO: mention layers
+of electoral college|}
 
-No Group in the election shall contain multiple Candidates from the same State.
-Each Candidate in a Group shall be a Citizen of the United States and shall by
-the time of Inauguration have attained at least thirty five years.
+No group in the election shall contain multiple candidates from the same State.
+Each candidate in a group shall be a citizen of the United States and shall by
+the time of inauguration have attained at least thirty five years.
 
 
 
 *SUCCESSION* --- The Legislature of each State shall by law determine a method
 by which, based only on the presidential votes of the people of that State and
-on the recommendations of the Candidates, a slate of Emergency Electors --- as
+on the recommendations of the candidates, a slate of Emergency Electors --- as
 many as the State is entitled Senators and Representatives --- is selected.
 
 Should the role of President Elect become vacant, the Vice President Elect
@@ -742,13 +464,13 @@ Should the role of Vice President Elect become vacant, the President Elect
 shall appoint a Vice President with the consent of both Chambers of Congress.
 
 Should the Presidency be vacated, the Vice President if any shall become
-President; but if both Offices be vacant, then a principal Officer of an
-executive Department shall become President, according to an order of
+President; but if both offices be vacant, then a principal officer of an
+executive department shall become President, according to an order of
 succession as the Congress shall by law provide.
 
 Should the Vice Presidency be vacated, the President shall appoint a Vice
 President with the consent of both Chambers of Congress; and until then a
-principal Officer of an executive Department, according to an order of
+principal officer of an executive department, according to an order of
 succession as the Congress shall by law provide, shall be Acting Vice
 President.
 
@@ -756,21 +478,21 @@ President.
 
 *INCAPACITY* --- In the following two paragraphs, "to declare formally" shall
 mean "to transmit to the President and Vice President and the Leaders of the
-Senate and House a written Declaration"; and "to be incapacitated" shall mean
+Senate and House a written declaration"; and "to be incapacitated" shall mean
 "to be unable to discharge the powers and duties of the Presidency".
 
 When the President, or the Vice President with the assent of a majority of
-principal Officers of the executive Departments, declares formally that the
+principal officers of the executive departments, declares formally that the
 President is incapacitated, the Vice President shall become Acting President.
 Thereafter, when the President declares formally that he is not incapacitated,
 the President shall resume the powers and duties of the Presidency.
 
 But if in response to the President's latter declaration the Vice President,
-with the assent of a majority of principal Officers, declares formally that the
+with the assent of a majority of principal officers, declares formally that the
 President is incapacitated, the Congress shall, within 21 days after receipt of
-the Vice President's latter Declaration, decide the issue: if two thirds of
+the Vice President's latter declaration, decide the issue: if two thirds of
 each Chamber determines the President to be incapacitated, the President shall
-be removed from Office; otherwise, the President shall resume the powers and
+be removed from office; otherwise, the President shall resume the powers and
 duties of the Presidency.
 
 
@@ -808,22 +530,22 @@ from time to time.
 
 
 *FAITHFULLY EXECUTE* --- The President shall take care to faithfully execute
-the Laws of the United States.
+the laws of the United States.
 
 
 
 *APPOINTMENT TO EXECUTIVE OFFICES* --- The President shall, with the advice and
-consent of a simple majority of the Senate, appoint the principal Officers of
-the executive Departments.  The President may with the consent of the Vice
-President{|to aid 25th|} remove a principal Officer.
+consent of a simple majority of the Senate, appoint the principal officers of
+the executive departments.  The President may with the consent of the Vice
+President{|to aid 25th|} remove a principal officer.
 
-Each inferior Officer of the executive Departments shall be appointed EITHER by
+Each inferior officer of the executive departments shall be appointed EITHER by
 the President with the advice and consent of a simple majority of the Senate,
-OR by the Department's principal Officer, OR for a repeatable term of no longer
+OR by the department's principal officer, OR for a repeatable term of no longer
 than 7 years by the Courts of Law, as the Congress shall by law prescribe.  The
-President may for any reason remove an inferior Officer appointed by the first
+President may for any reason remove an inferior officer appointed by the first
 method; and may remove an inferior officer appointed by the second or third
-method, respectively, with the consent of the principal Officer or of the
+method, respectively, with the consent of the principal officer or of the
 Courts of Law.
 
 
@@ -882,23 +604,24 @@ selected by a majority of voting Justices, shall be the Chief Justice of the
 United States.
 
 In May of each odd year, the most senior Justice shall retire from the Supreme
-Court.  This and other vacancies shall be filled by @Whittling@, as follows.
-First, a list of candidates shall be compiled by adjoining, to the \(C+1\) many
-Judges of the Courts of Appeals who do not explicitly decline, at most \(5\)
-Candidates of the President's choice.  Second, the \(S\) many Senators shall
-distribute points among the Candidates; but no Senator shall give more than
-\(C\) points and no Candidate shall receive more than \(S\) points.  Third,
-with the finalists being those candidates receiving strictly fewer than \(S\)
-points, the most senior finalist, or a finalist of the President's choosing,
-shall be appointed to the Supreme Court.  The first, second, and third steps
-shall respectively conclude within 60, 120, and 180 days after vacancy.
+Court.  This and other vacancies shall be filled by @Whittling@,{|TODO:
+note precedent in articles of confederation|} as follows.  First, a list of
+candidates shall be compiled by adjoining, to the \(C+1\) many Judges of the
+Courts of Appeals who do not explicitly decline, at most \(5\) candidates of
+the President's choice.  Second, the \(S\) many Senators shall distribute
+points among the candidates; but no Senator shall give more than \(C\) points
+and no candidate shall receive more than \(S\) points.  Third, with the
+finalists being those candidates receiving strictly fewer than \(S\) points,
+the most senior finalist, or a finalist of the President's choosing, shall be
+appointed to the Supreme Court.  The first, second, and third steps shall
+respectively conclude within \(60\), \(120\), and \(180\) days after vacancy.
 
-The preceding two paragraphs shall take effect only 20 years after ratification
-of this section.
+The preceding two paragraphs shall take effect only \(20\) years after
+ratification of this section.
 
 
 
-*COURTS OF APPEALS* --- The Courts of Appeals shall in total have 180 seats,
+*COURTS OF APPEALS* --- The Courts of Appeals shall in total have \(180\) seats,
 and the Congress shall by law specify the structure of these Courts, and
 partition their jurisdictions.
 
@@ -911,8 +634,8 @@ Third, a disjoint group of two fifths of Senators duly sworn may nominate a
 second alternative candidate from among the Judges of the United States; and
 Fourth, the Senate shall, by simple majority, choose either the original pair
 or the alternative candidate(s) to fill the vacancies.  The first, second,
-third, and fourth steps shall respectively conclude within 60, 120, 180, and
-240 days after vacancy.
+third, and fourth steps shall respectively conclude within \(60\), \(120\),
+\(180\), and \(240\) days after vacancy.
 
 
 
@@ -925,14 +648,14 @@ of three fifths of Senators duly sworn.
 
 
 *TENURE* --- The Judges of United States shall during good behavior hold their
-Offices until retirement (or death or resignation or impeachment for high
+offices until retirement (or death or resignation or impeachment for high
 Crimes and Misdemeanors), during which their compensation shall not decrease.
 And the Congress shall pass no law that compels retirement of Judges.  The
 Congress shall by law prescribe standards of integrity, uniform through all the
 Courts of the United States, to be administered by the Courts themselves.  A
-person having served 20 years as a Judge or Justice of the United States shall
-upon retirement earn a pension equal to their compensation should they not have
-retired.
+person having served \(20\) years as a Judge or Justice of the United States
+shall upon retirement earn a pension equal to their compensation should they
+not have retired.
 
 
 
@@ -948,8 +671,8 @@ Constitution.{|This, the power of JUDICIAL REVIEW, is "implicit" in the old cons
 
 *ENUMERATED JURISDICTIONS* --- The judicial power shall moreover extend:
 
-To all cases, in law and equity, arising under this Constitution, the Laws of
-the United States, and Treaties made under their authority;
+To all cases, in law and equity, arising under this Constitution, the laws of
+the United States, and treaties made under their authority;
 
 To controversies to which the United States shall be a party;
 
@@ -957,12 +680,12 @@ To controversies between two or more States;
 
 To controversies between one or more States and a Foreign State;
 
-To controversies commenced or prosecuted by a State against Citizens of another
-State or incorporated Territory, or against Citizens or Subjects of a Foreign
-State, but not commenced or prosecuted against a State by Citizens of another
-State or incorporated Territory, or by Citizens or Subjects of a Foreign State;
+To controversies commenced or prosecuted by a State against citizens of another
+State or incorporated Territory, or against citizens or subjects of a Foreign
+State, but not commenced or prosecuted against a State by citizens of another
+State or incorporated Territory, or by citizens or subjects of a Foreign State;
 
-To controversies between Citizens of the same State claiming lands under grants
+To controversies between citizens of the same State claiming lands under grants
 of different States;
 
 To all cases affecting ambassadors and other public ministers and consuls; and
@@ -978,7 +701,8 @@ the Supreme Court shall take appeals from the Courts of Appeals, which shall
 take appeals from the further inferior Courts; such appellate jurisdiction
 shall pertain both to law and to fact.  But Congress may by Law extend the
 original jurisdiction of the Supreme Court, or make exceptions and regulations
-to the hierarchy of appeals.{|TODO|}
+to the hierarchy of appeals.
+#{|TODO|}
 
 
 
@@ -1072,23 +796,24 @@ crime.
 Full Faith and Credit shall be given in each State to the public Acts, Records,
 and judicial Proceedings of every other State.  And the Congress may by general
 Laws prescribe the Manner in which such Acts, Records, and Proceedings shall be
-proved, and {|WHAT|} the effect thereof.
+proved, and the effect thereof.
+# TODO: better understand last clause
 
 
 
-*PROHIBITIONS TO THE STATES* --- No State shall enter into any Treaty,
-Alliance, or Confederation.  And no State shall, without the consent of
-Congress, enter into any Agreement or Compact with another State, or with a
-Foreign Power, or engage in War unless actually invaded or in such imminent
-Danger as will not admit of delay.
+*PROHIBITIONS TO THE STATES* --- No State shall enter into any treaty,
+alliance, or confederation.  And no State shall, without the consent of
+Congress, enter into any agreement or compact with another State, or with a
+Foreign Power, or engage in war unless actually invaded or in such imminent
+danger as will not admit of delay.
 
-No State shall coin Money, or emit Bills of Credit, or make any Thing but gold
-and silver coin a tender in payment of debts; or make any Law impairing the
+No State shall coin money, or emit bills of credit, or make any thing but gold
+and silver coin a tender in payment of debts; or make any law impairing the
 obligation of contracts.  And no State shall, without the consent of Congress,
 lay any imposts or duties on imports or exports, except what may be absolutely
-necessary for executing its inspection Laws; and the net produce of all such
+necessary for executing its inspection laws; and the net produce of all such
 duties and imposts shall be for the use of the treasury of the United State;
-and all such Laws shall be subject to the revision and control of the Congress.
+and all such laws shall be subject to the revision and control of the Congress.
 
 No State shall, without the consent of Congress, keep troops, or keep ships of
 war in time of peace, or lay any duty of tonnage.
@@ -1114,11 +839,11 @@ provisions of this section.
 
 
 
-*SUPREMACY* --- This Constitution, and the Laws of the United States which
-shall be made in pursuance thereof; and all Treaties made, or which shall be
-made, under the Authority of the United States, shall be the supreme Law of the
-Land; and the Judges in every State shall be bound thereby, any Thing in the
-Constitution of Laws of any State to the Contrary notwithstanding.
+*SUPREMACY* --- This Constitution, and the laws of the United States which
+shall be made in pursuance thereof; and all treaties made, or which shall be
+made, under the authority of the United States, shall be the supreme law of the
+land; and the Judges in every State shall be bound thereby, any thing in the
+constitution or laws of any State to the contrary notwithstanding.
 
 
 
@@ -1131,7 +856,7 @@ the People.
 
 
 *OATH* --- The Legislators, Electors for President and Vice President,
-executive Officers and judicial Officers, both of the United States and of the
+executive officers and judicial officers, both of the United States and of the
 several States, shall be bound by oath or affirmation to support this
 Constitution.
 
@@ -1142,13 +867,12 @@ States, and will to the best of my ability preserve, protect, and defend the
 Constitution of the United States.
 
 And no person shall be Legislator, or Elector of President and Vice-President,
-or hold any Office, civil or miltary, under the United States or under any
+or hold any office, civil or miltary, under the United States or under any
 State, who, having previously taken an oath or affirmation as required by this
 section to support the Constitution of the United States, shall have engaged in
 insurrection or rebellion against the same or given aid or comfort to the
 enemies thereof.  But the Congress may, by a vote of two thirds of each
 Chamber, remove such disability.
-
 
 
 
@@ -1161,31 +885,32 @@ adopted once nationally proposed then within seven years ratified by three
 fourths of States.  If after those seven years, three times as many States have
 ratified as have explicitly rejected, then the amendment shall be adopted.
 
-Ratification by the States shall occur by one of two methods as specified in
-the Proposal: by ordinary law, or by popular referendum by simple majority.
-
 National proposal shall occur by one of two methods: by two thirds of each
 Chamber of Congress, or by a National Convention called by the States.
+
+Ratification by the States shall occur by one of two methods as specified in
+the proposal: by ordinary law, or by popular referendum by simple majority.
 
 
 
 *NATIONAL CONVENTION* --- A National Convention shall be called on application
 of two thirds the States, as transmitted in one signed document to the
 President.  To this Convention, each State shall be entitled two Delegates,
-elected by @Pair Voting@ as follows.  Each voter, selecting one or more
-candidates, shall be construed as approving any pair of candidates with at
-least one selected candidate; then the most approved pair of candidates shall
-win.  The Delegates shall convene for at most one year, whereupo the convention
-shall dissolve.  An amendment shall be proposed only with two thirds of votes
-with each Delegate entitled as many votes as their State is entitled
-Representatives; and simultaneously with two thirds of votes with each Delegate
-entitled one vote.
+elected by @PairVoting@ as follows.  Each voter shall select one or more
+candidates, and that pair of candidates shall win that, among all pairs,
+overlaps the selections of the greatest number of voters.
+# Each voter, selecting one or more candidates, shall be construed as approving
+# any pair of candidates with at least one selected candidate; then the most
+# approved pair of candidates shall win.
+The Delegates shall convene for at most one year.  An amendment shall be
+proposed only with two thirds of votes in two senses simultaneously: with each
+Delegate entitled as many votes as their State is entitled Representatives, and
+with each Delegate entitled one vote.
 
 
 
-*RESTRICTION* --- But no State shall, without its consent, be deprived of its
-equal suffrage in the Senate.
-
+*HISTORICAL RESTRICTION* --- But no State shall, without its consent, be
+deprived of its equal suffrage in the Senate.
 
 
 
@@ -1204,7 +929,7 @@ to petition the Government for a redress of grievances.
 *RELIGION* --- Neither the United States nor any State shall make any law
 respecting an establishment of religion; or prohibit the free exercise of
 religion.  No religious test shall ever be required as a qualification to any
-Office or public Trust under the United States or any State.
+office or public trust under the United States or any State.
 
 
 
@@ -1222,14 +947,22 @@ of the people to be secure in their persons, houses, papers, and effects,
 against unreasonable searches and seizures.  And no warrants shall issue, but
 upon probable cause, supported by oath or affirmation, and particularly
 describing the place to be searched, and the persons or things to be seized.
-And no soldier shall in time of peace be quartered in any house, without
-consent of the owner; nor in time of war, but in a manner the Congress may by
-law prescribe.
+And the United States{|Amendment 3 is not incorporated against the States.|}
+shall shall in time of peace quarter no soldier in any house, without consent
+of the owner; nor in time of war, but in a manner the Congress may by law
+prescribe.
 
 
 
 *ARMS* --- A well regulated militia being necessary to the security of a free
 State, the right of the People to keep and bear arms shall not be infringed.
+
+
+
+*HABEAS* --- The privilege of the writ of %habeas corpus% shall not be
+suspended by the United States or any State, except in cases of rebellion or
+invasion for which the publc safety may require such suspension, and in no
+other cases and for no longer duration.
 
 
 
@@ -1264,19 +997,16 @@ servitude, or of sex, or of failure to pay any poll tax or other tax, or of
 age.
 The Congress shall have power to enforce this paragraph by law.
 
-#The right of Citizens of the United States, who are eighteen years of age or
+#The right of citizens of the United States, who are eighteen years of age or
 #older, to vote in the elections of Senators, Representatives, and for President
 #and Vice President, shall not be denied or abridged.
 
 
 
-
 *NOBILITY* --- No title of nobility shall be granted by the United States or by
-any State; nor shall any person holding any Office of profit or trust under
+any State; nor shall any person holding any office of profit or trust under
 them, without the consent of the Congress, accept of any present, emolument,
 office, or title, of any kind whatever, from any Foreign State.
-
-
 
 
 
@@ -1284,7 +1014,7 @@ office, or title, of any kind whatever, from any Foreign State.
 
 
 
-*RIGHTS OF THE ACCUSED* --- In all criminal prosecutions, the accused shall
+*RIGHTS OF THE ACCUSED* --- In all criminal prosecutions the accused shall
 enjoy: the right to a speedy and public trial, by an impartial jury of the
 State and district wherein the crime shall have been committed, which district
 shall have previously been ascertained by law; the right to be informed of the
@@ -1292,8 +1022,8 @@ nature and cause of the accusation; the right to be confronted with the
 witnesses against him; the right to have compulsory process for obtaining
 witnesses in his favor; and the right to have the assistance of counsel for his
 defence.  Nor shall any person be subject for the same offence to be twice put
-in jeopardy of life or limb; nor be deprived of life, liberty, or property,
-without due process of law.
+in jeopardy of life or limb; nor be compelled to be a witness against himself;
+nor be deprived of life, liberty, or property, without due process of law.
 
 
 
@@ -1301,19 +1031,29 @@ without due process of law.
 impeachment, shall be by jury; and such trial shall be held in the State where
 the said crimes shall have been committed, but when not committed within any
 one State the trial shall be at such place or places as the Congress may by law
-have previously directed.  Moreover, no person shall be held to answer for a
-capital or otherwise infamous crime, unless on a presentment or indictment of a
-grand jury, except in cases arising in the land or naval forces, or in the
-militia, when in actual service in time or War or public danger.
+have previously directed.  Moreover, no person shall be held by the United
+States{|This part of Amendment 5 is not incorporated against the States|} to answer
+for a capital or otherwise infamous crime, unless on a presentment or
+indictment of a grand jury, except in cases arising in the land or naval
+forces, or in the militia, when in actual service in time or War or public
+danger.
 
 
 
-*JURY TRIAL FOR SUITS AT COMMON LAW* --- In suits at common law, where the
-value in controversy shall exceed a certain threshold, which shall be 20
-dollars or a value uniform throughout the United States as the Congress shall
-have previously by law defined, the right of trial by jury shall be preserved,
-and no fact tried by jury shall be otherwise re-examined in any Court of the
-United States than according to the rules of the common law.
+*JURY TRIAL FOR SUITS AT COMMON LAW* --- In suits at common law before the
+Courts of the United States,{|Amendment 7 is not incorporated against the
+States.|} where the value in controversy shall exceed 20 dollars{|In the late
+1700s, 20 dollars was a lot: on the order of months of wages; as prices
+inflated over 250 years, this Amendment became stronger and stronger, until now
+it protects the right to a jury trial (in suits at common law) in nearly
+absolute terms.|}
+#a certain threshold, which shall be 20 dollars or a value uniform throughout
+#the United States as the Congress shall have previously by law defined,{|This
+#hardcoded value is in modern terms negligible.  A con of allowing Congress to
+#change this value|}
+the right of trial by jury
+shall be preserved, and no fact tried by jury shall be otherwise re-examined in
+any Court of the United States than according to the rules of the common law.
 
 
 
@@ -1338,8 +1078,6 @@ the person attainted.
     *Author*    ---  %Title%                         ---  Year
 
  TODO cite MIT election lab
-
- TODO
 
 
 
