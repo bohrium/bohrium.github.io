@@ -8,16 +8,17 @@
 
 Below is a fantasy: a re-factoring and bug-fix of the US Constitution.  It is
 as much wish fulfillment as it is science-fiction speculation.  The underlying
-sci-fi narrative is that this new US Constitution is, by one or many
-applications of the current Article 5, sometime in the few years after 2026
-ratified.
+sci-fi narrative is that this new-and-revised US Constitution is, by one or
+many applications of the current Article 5, sometime in the few years after
+2026 ratified.
 
 Scroll down to *Article 0* for the good stuff.  Before then are some
 extra-textual remarks.
 
 !!! Style of Changes
 
-The changes are roughly of 5 kinds, which arranged from least to most radical are:
+The changes are roughly of 5 kinds, which arranged from least to most radical
+are:
 # {|
 # \[
 # \begin{align}
@@ -31,12 +32,13 @@ Capitalization to modern standards;
 #
 ORGANIZATION, to group related provisions under titled sections and to remove
 provisions no longer in effect;{|for instance, integrating amendments
-into the body, and deleting provisions whose sole purpose was to protect Slavery|}
+into the body, and deleting provisions whose sole purpose was to protect
+Slavery|}
 #
 CODIFICATION, to license or mandate, in text, structual conventions already
-deeply in place but not written in the old-and-actual Constitution;{|e.g. the practice of
-judicial review, or the incorporation to the States of parts of the Bill of
-Rights|}
+deeply in place but not written in the old-and-actual Constitution;{|e.g. the
+practice of judicial review, or the incorporation to the States of parts of the
+Bill of Rights|}
 #
 DISAMBIGUATION, to supply concrete procedure for those exceptional cases where
 no procedure is written;{|such as who
@@ -44,7 +46,8 @@ can suspend habeas corpus, or how a State may legally secede, or by what method
 delegates to a constitutional convention shall be elected|}
 #
 MODIFICATION, to create new provisions, or to remove old ones, in a local
-manner so as to adhere to the global framework of the old-and-actual Constitution.
+manner so as to adhere to the global framework of the old-and-actual
+Constitution.
 
 Of course, even clerical and organizational changes alter meaning: an abstract
 noun may carry different force depending on its Capitalization; an old spelling
@@ -53,9 +56,9 @@ words;{|insure Tranquility vs ensure Tranquility|} provisions now inactive may,
 by negative information or by parallel, help scope and structure active ones;
 and provisions gain meaning from their groupings and headings.  An interpreter
 both historically informed and committed to public textual meaning would, after
-this new Constitution be ratified, have to somehow ascertain how much of that
-public textual meaning contains a modern understanding of the historical
-meaning.  So even these most minor changes have content.
+this new-and-revised Constitution be ratified, have to somehow ascertain how
+much of that public textual meaning contains a modern understanding of the
+historical meaning.  So even these most minor changes have content.
 
 Conversely, I argue that even the proposed modifications and disambiguations
 amount to small alterations of structure.  I and probably most who think
@@ -76,13 +79,13 @@ reason, in essence conservative.
 !!! Content of Changes
 
 Having remarked above on form and purpose, I turn now to content.  The more
-major changes mainly concern three ideas:
-stronger <./bicameralism.html|BICAMERALISM>, including fixing of gerrymandering
-in the House and greater moderation in the Senate; the closing of LOOPHOLES,
-such as how indecisive algorithms empower politicians in proportion to how willing
-they are to break norms, and protecting numbers like Supreme Court size that
-right now are too easy to change; and the undermining of those old incentives
-toward FACTIONALISM.  Click on those three big words for much more detail!
+major changes mainly concern three ideas: stronger
+<./bicameralism.html|BICAMERALISM>, including fixing of gerrymandering in the
+House and greater moderation in the Senate; the closing of LOOPHOLES;{| such as
+how indecisive algorithms empower politicians in proportion to how willing they
+are to break norms, and protecting numbers like Supreme Court size that right
+now are too easy to change|} and the undermining of the old incentives toward
+FACTIONALISM.  Click on those three big words for much more detail!
 
 # ELEGANCE TODO
 
@@ -100,16 +103,24 @@ toward FACTIONALISM.  Click on those three big words for much more detail!
 
 !! Article 0
 
+
+
 We the People of the United States, in order to form a more perfect Union,
 establish Justice, ensure domestic Tranquility, provide for the common Defense,
 promote the general Welfare, and secure the Blessings of Liberty to ourselves
 and our posterity, do ordain and establish this Constitution for the United
 States of America.
 
+
+
 !! Article 1
+
+
 
 The legislative power of the United States shall be vested in a Congress of the
 United States, which shall consist of a Senate and a House of Representatives.
+
+
 
 !!! Selection
 
@@ -132,12 +143,12 @@ under the United States.
 *ELECTION TO THE SENATE* --- The State Legislature shall, in the May before the
 election, nominate a number of candidates, with any group of one fifth of its
 legislators duly sworn permitted to nominate one candidate; but no two groups
-shall overlap.  And from these candidates, the people of the State shall by
+shall overlap.  And from these candidates, the People of the State shall by
 @SingleTransferableVote@ elect their Senator.  That is: each voter shall rank
-one or more candidates, and so long as multiple candidates remain, that candidate
-shall be eliminated who is, according to the voters' rankings of the candidates
-yet un-eliminated, the first choice of the fewest voters; the remaining candidate
-shall win.
+one or more candidates, and so long as multiple candidates remain, that
+candidate shall be eliminated who is, according to the voters' rankings of the
+candidates yet un-eliminated, the first choice of the fewest voters; the
+remaining candidate shall win.
 
 
 
@@ -146,7 +157,7 @@ shall win.
 and the incorporated Territories as one Whole, shall be entitled a number of
 seats as proportional as may be to their number of citizens, but at least 2
 seats each.  Representatives shall be elected, in November of each even year,
-to a term of 2 years that shall shall begin at noon on the 3rd day of the
+to a term of 2 years that shall begin at noon on the 3rd day of the
 following January.
 
 No person shall serve as Representative without having attained 25 years of
@@ -154,7 +165,7 @@ age, or while holding any office under the United States.
 
 
 
-*ELECTION TO THE HOUSE* --- The people of the State shall by
+*ELECTION TO THE HOUSE* --- The People of the State shall by
 @MemorylessTurnTaking@ elect their Representatives.  That is: the State
 Legislature having determined one district for each seat, each voter shall
 select one candidate; the district's winner shall be chosen, from among the
@@ -164,7 +175,7 @@ independent of all other elections.
 
 
 
-*MANNER OF ELECTION* --- Each State shall by law determine the place within
+*MANNER OF ELECTION* --- Each State shall by law determine the places within
 their State, and specify the aforementioned time and manner, of elections to
 the Senate and the House; but the Congress may by uniform law make or alter
 such regulations.
@@ -173,7 +184,7 @@ Each State may by law propose an alternative method for immediately
 upcoming elections to the Senate or the House --- that is, an alternative to
 @Approval Voting@ or @MemorylessTurnTaking@ --- which with the consent of
 Congress shall for those elections in that State take effect.  But no such
-proposal shall occur until 3 years after ratification of this section.
+proposal shall occur until *3 years* after ratification of this section.
 
 
 
@@ -215,6 +226,7 @@ assemble on the first day of their term, unless they shall by law appoint a
 different day.
 
 
+
 *INFORMATION FLOW* ---  Each Chamber shall keep a journal of its
 proceedings, and from time to time publish the same, excepting such parts as may
 in their judgement require secrecy; and the yeas and nays of the members of
@@ -230,39 +242,38 @@ the SUBPOENA power, is "implicit" in the old Constitution.|}
 
 
 
-*RULES* --- Each Chamber may determine the rules of its proceedings, and punish
-its members for disorderly behavior
+*RULES* --- Each Chamber may by simple majority determine the rules of its
+proceedings, and punish its members for disorderly behavior.
 
 
 
 *LEADERS* --- The three Leaders of each Chamber shall by uniform monthly
 rotation take turns to preside over the Chamber and %a fortiori% to schedule
-the Chamber's business,
+the Chamber's business.
 
 Each Chamber shall from its members choose its three Leaders by
-@Group Selection@, as follows.  Any group of more than one fourth of the
+@GroupSelection@, as follows.  Any group of more than one fourth of the
 Chamber's members duly sworn may choose one Leader, and no member shall belong
 to more than one such group.  Upon vacancy among the Leaders, or with the
 signatures of a majority of the Chamber's members duly sworn, the three Leaders
-shall be re-selected.  Each Chamber shall by simple majority adopt and amend
-its Rules.
+shall be re-selected.
 
 
 
 *PRESIDENT OF THE SENATE* --- But the Vice President shall, when present in the
 Senate Chamber, preside over the Senate.  The Vice President shall break ties
-when the Senators be evenly divided.  
+when the Senate is evenly divided.  
 
 
 
-*COMPENSATION* --- The Senators and Representatives shall receive a
-compensation for their services, as Congress shall ascertain by law.  But no
-law, varying the compensation for the services of the Senators and
-Representatives, shall take effect, until an election of Representatives shall
-have intervened.  And no Senator or Representative shall, during the time for
-which he was elected, be appointed to any civil office under the authority of
-the United States, which shall have been created, or the emoluments whereof
-shall have been increased during such time.
+*COMPENSATION* --- The Senators and Representatives shall at stated times
+receive a compensation for their services, which Congress shall ascertain by
+law; but no law, varying the compensation for the services of the Senators and
+Representatives, shall take effect until an ordinary election of
+Representatives shall have intervened.  And no Senator or Representative shall,
+during the term to which he was elected, be appointed to any civil office under
+the authority of the United States, which shall have been created, or the
+emoluments whereof shall have been increased during such time.
 
 
 
@@ -270,9 +281,9 @@ shall have been increased during such time.
 
 
 *BICAMERAL PASSAGE* --- An Act of Congress --- whether bill, order, resolution,
-or vote --- shall, unless otherwise stated by this Constitution, require both
-simple majority of Representatives present and a simple majority{|But see
-FILIBUSTER paragraphs below.|} of Senators present.
+or other vote --- shall, unless otherwise stated by this Constitution, require
+both a simple majority of Representatives present and a simple majority{|But
+see FILIBUSTER paragraphs below.|} of Senators present.
 
 All bills for raising revenue shall originate in the House; but the Senate may
 propose or concur with amendments as on other bills.
@@ -304,19 +315,23 @@ Sundays) after it shall have been presented to him, the same shall take effect,
 in like manner as if he had signed it, unless the Congress by their adjournment
 prevent its return, in which case the Act shall not take effect.
 
+
+
 *FILIBUSTER* --- An Act of Congress whose constitutionality relies on the
 General Welfare Clause, or on any but a strictest reasonable construction of
 the Interstate Commerce Clause, or on any but a strictest reasonable
-construction of the Necessary and Proper Clause, shall be called "expansive",
-and an "expansive" act shall pass the Senate only with the approval of three
+construction of the Necessary and Proper Clause, shall be called "%expansive%",
+and an "%expansive%" act shall pass the Senate only with the approval of three
 fifths of Senators duly sworn.
 
-A group of more than two fifths of Senators present may, while voting "Nay",
-affix to an Act a signed argument that that Act is "expansive".  Thereupon, the
-Act shall take effect only if the President, on the basis of constitutional
+But should the Senate regard an Act to be not "%expansive%", nevertheless a
+group of more than two fifths of Senators present may, while voting "Nay",
+affix to an Act a signed argument that that Act is "%expansive%".  Thereupon,
+the Act shall take effect only if the President, on the basis of constitutional
 text alone and not the public good, believes the argument to be flawed and
 signs with the Act an attestation to and explanation of this belief.  The
-Courts of the United States shall prioritize such Acts for judicial review.
+Courts of the United States shall prioritize Acts that so pass for judicial
+review.
 
 
 
@@ -332,9 +347,8 @@ To regulate commerce among the several States, and with Foreign Powers and the
 Indian Tribes; but the transportation or importation into any State, Territory,
 or possession of the United States of intoxicating liquors,{|Here, by the way,
 would be a tidy place to strengthen State-wise powers of gun control, by
-writing
-%arms or intoxicating liquors%.|} for delivery or use therein in violation of
-the laws thereof, shall be prohibited;
+writing %arms or intoxicating liquors%.|} for delivery or use therein in
+violation of the laws thereof, shall be prohibited;
 
 To lay and collect, in a manner uniform throughout the United States, duties,
 imposts, excises, and taxes, including taxes on incomes from whatever source
@@ -370,8 +384,8 @@ square) that shall by cession of particular States and the acceptance of
 Congress become the seat of government of the United States;
 
 To define the executive departments, whose purpose shall be to execute the laws
-of the United States, and to define their hierarchy of officers, with each
-department having one principal officer; and
+of the United States, and to define their hierarchy of officers;{|with each
+department having one principal officer|} and
 
 To make all laws which shall be necessary and proper for carrying into
 execution the foregoing powers, and all other powers vested by this
@@ -389,7 +403,7 @@ without the concurrence of two thirds of Senators present.
 Judgement in cases of impeachment shall not extend further than to removal from
 office, and disqualification to hold and enjoy any office of honor, trust, or
 profit under the United States; but the party convicted shall nevertheless be
-liabla and subject to indictment, trial, judgement, and punishment, according
+liable and subject to indictment, trial, judgement, and punishment, according
 to law.
 
 The President, Vice President, and all civil officers of the United States
@@ -423,7 +437,7 @@ years of age.
 
 
 *ELECTION* --- The People shall elect the President and Vice President by
-@Hierarchical Approval Voting@,{|In plain approval voting, each voter votes for
+@GroupApprovalVoting@,{|In plain approval voting, each voter votes for
 one or more candidates, and the candidate with most votes wins.  Each voter
 considers each candidate and simply answers "yes" or "no"; I know no simpler or
 more natural voting system.  Our currently standard system, "select-one
@@ -451,7 +465,7 @@ the time of inauguration have attained at least thirty five years.
 
 
 *SUCCESSION* --- The Legislature of each State shall by law determine a method
-by which, based only on the presidential votes of the people of that State and
+by which, based only on the presidential votes of the People of that State and
 on the recommendations of the candidates, a slate of Emergency Electors --- as
 many as the State is entitled Senators and Representatives --- is selected.
 
@@ -476,32 +490,33 @@ President.
 
 
 
-*INCAPACITY* --- In the following two paragraphs, "to declare formally" shall
+*INCAPACITY* --- In the following two paragraphs, "%declare%" shall
 mean "to transmit to the President and Vice President and the Leaders of the
-Senate and House a written declaration"; and "to be incapacitated" shall mean
-"to be unable to discharge the powers and duties of the Presidency".
+Senate and House a written declaration"; and "%incapacitated%" shall mean
+"unable to discharge the powers and duties of the Presidency"; and
+"%assent%" shall mean "the signed assent of a majority of the principal
+(or acting principal) officers of the executive departments".
 
-When the President, or the Vice President with the assent of a majority of
-principal officers of the executive departments, declares formally that the
+When the President, or the Vice President with assent, declares that the
 President is incapacitated, the Vice President shall become Acting President.
-Thereafter, when the President declares formally that he is not incapacitated,
+Thereafter, when the President declares that he is not incapacitated,
 the President shall resume the powers and duties of the Presidency.
 
 But if in response to the President's latter declaration the Vice President,
-with the assent of a majority of principal officers, declares formally that the
-President is incapacitated, the Congress shall, within 21 days after receipt of
-the Vice President's latter declaration, decide the issue: if two thirds of
-each Chamber determines the President to be incapacitated, the President shall
-be removed from office; otherwise, the President shall resume the powers and
-duties of the Presidency.
+with assent, declares that the President is incapacitated, the
+Congress shall, within 21 days after receipt of the Vice President's latter
+declaration, decide the issue: if two thirds of each Chamber determines the
+President to be incapacitated, the President shall be removed from office;
+otherwise, the President shall resume the powers and duties of the Presidency.
 
 
 !!! Procedure
 
 
 
-*COMPENSATION* --- The President and Vice President shall, at stated times,
-receive for their services a compensation, which shall neither be increased
+*COMPENSATION* --- The President and Vice President shall at stated times
+receive a compensation for their services, which Congress shall ascertain by law.
+which shall neither be increased
 nor diminished during the period for which they shall have been elected; and
 they shall not received within that period any other emolument from the United
 States or any of them.
@@ -509,9 +524,9 @@ States or any of them.
 
 
 *INFORMING CONGRESS* --- The President shall from time to time give to the
-Congress information on the State of the Union, and recommend to their
+Congress information on the state of the Union, and recommend to their
 consideration such measures as he shall judge necessary and expedient.  He may,
-on extra-ordinary occasions, convene both Houses, or either of them, and in
+on extra-ordinary occasions, convene both Chambers, or either of them, and in
 case of disagreement between them with respect to the time of adjournment he
 may adjourn them to such time as he shall think proper.
 
@@ -542,11 +557,12 @@ President{|to aid 25th|} remove a principal officer.
 Each inferior officer of the executive departments shall be appointed EITHER by
 the President with the advice and consent of a simple majority of the Senate,
 OR by the department's principal officer, OR for a repeatable term of no longer
-than 7 years by the Courts of Law, as the Congress shall by law prescribe.  The
-President may for any reason remove an inferior officer appointed by the first
-method; and may remove an inferior officer appointed by the second or third
-method, respectively, with the consent of the principal officer or of the
-Courts of Law.
+than 14 years{|Example: Congress might create a 7-seat governing body with one
+seat replaced every 2 years.|} by the Courts of Law, as the Congress shall by
+law prescribe.  The President may for any reason remove an inferior officer
+appointed by the first method; and may remove an inferior officer appointed by
+the second or third method, respectively, with the consent of the principal
+officer or of the Courts of Law.
 
 
 
@@ -558,29 +574,28 @@ President once ratified by two thirds of Senators present.
 
 
 
-*WAR POWERS* --- The President shall be commander of the militia of the United
-States.
+*POWERS IN WAR AND EMERGENCY* --- The President shall be commander of the
+militia of the United States.
 
-The President, if engaging in violent Conflict not explicitly and specifically
+The President, if engaging in violent conflict not explicitly and specifically
 scoped within a declaration of war or other act of Congress, shall within 72
 hours alert the Leaders of the Senate and of the House, and shall, unless by
 unanimous consent of the Leaders of the Senate, within an additional 72 hours
-cease the conflict; and either way, the Leaders shall report on the conflict to
+cease the conflict; in either case, the Leaders shall report on the conflict to
 the Congress, which may then by a simple majority in each Chamber regulate or
 cease the conflict.
 
+The President shall have power, with the assent of the Congress, to suspend the
+privilege of the writ of %habeas corpus%.{|And see Article 6, which further
+limits this privilege to: "in cases of rebellion or invasion for which the
+publc safety may require such suspension, and in no other cases and for no
+longer duration."|}
 
 
-*HABEAS* --- The President shall have power, with the assent of the Congress,
-to suspend the privilege of the writ of %habeas corpus%, in cases of rebellion
-or invasion for which the publc saferty may require such suspension, and in no
-other cases and for no longer duration.
 
-
-
-*PARDON POWER* --- The President may propose reprieves or pardons for offenses
-against the United States, except in cases of impeachment, which once signed by
-more than one third of Senators present shall be granted.
+*PARDON POWER* --- The President may, except in cases of impeachment, propose
+reprieves or pardons for offenses against the United States, shall be
+granted once signed by more than one third of Senators duly sworn.
 
 
 
@@ -599,63 +614,90 @@ several Courts of Appeals, and further inferior Courts.
 
 *SUPREME COURT* --- The Supreme Court shall have 10 seats; the most senior 9
 Justices shall be voting Justices and the remaining Justice shall not vote
-except in cases of absence or recusal.  The most senior Justice, or a Justice
-selected by a majority of voting Justices, shall be the Chief Justice of the
-United States.
+except in cases of absence or recusal.  The most senior Justice, or else a
+Justice selected by a majority of voting Justices, shall be the Chief Justice
+of the United States.
 
 In May of each odd year, the most senior Justice shall retire from the Supreme
-Court.  This and other vacancies shall be filled by @Whittling@,{|TODO:
-note precedent in articles of confederation|} as follows.  First, a list of
+Court.  This and other vacancies shall be filled by @Whittling@,{|TODO: note
+precedent in articles of confederation|} as follows.  First, a list of
 candidates shall be compiled by adjoining, to the \(C+1\) many Judges of the
 Courts of Appeals who do not explicitly decline, at most \(5\) candidates of
 the President's choice.  Second, the \(S\) many Senators shall distribute
-points among the candidates; but no Senator shall give more than \(C\) points
-and no candidate shall receive more than \(S\) points.  Third, with the
-finalists being those candidates receiving strictly fewer than \(S\) points,
-the most senior finalist, or a finalist of the President's choosing, shall be
-appointed to the Supreme Court.  The first, second, and third steps shall
-respectively conclude within \(60\), \(120\), and \(180\) days after vacancy.
+points among the candidates; but no Senator shall give in total more than \(C\)
+points and no candidate shall receive in total more than \(S\) points.  Third,
+with the finalists being those candidates receiving strictly fewer than \(S\)
+points, the most senior finalist, or a finalist of the President's choosing,
+shall be appointed to the Supreme Court.  These three steps shall respectively
+conclude within \(60\), \(120\), and \(180\) days after vacancy.
 
-The preceding two paragraphs shall take effect only \(20\) years after
+The preceding two paragraphs shall take effect only *10 years* after
 ratification of this section.
 
-
-
-*COURTS OF APPEALS* --- The Courts of Appeals shall in total have \(180\) seats,
-and the Congress shall by law specify the structure of these Courts, and
-partition their jurisdictions.
-
-
-Vacancies shall be filled in pairs, as follows.  First, the President shall
-nominate a pair of candidates.  Second, the President's pair shall be appointed
-unless a group two fifths of Senators duly sworn nominate one alternative
-Candidate from among the Judges of the United States.  In the latter case:
-Third, a disjoint group of two fifths of Senators duly sworn may nominate a
-second alternative candidate from among the Judges of the United States; and
-Fourth, the Senate shall, by simple majority, choose either the original pair
-or the alternative candidate(s) to fill the vacancies.  The first, second,
-third, and fourth steps shall respectively conclude within \(60\), \(120\),
-\(180\), and \(240\) days after vacancy.
+The Supreme Court shall decide cases by simple majority.
 
 
 
-*FURTHER INFERIOR COURTS* --- The Congress shall by law erect further inferior
-Courts.
+*COURTS OF APPEALS* --- The Courts of Appeals shall in total have \(180\)
+seats.  On petition by the Chief Justice the Congress shall by law specify
+the structure and jurisdictions of these Courts.
+
+Vacancies shall be filled in pairs, by @PairAppointment@, as follows.  First,
+the President shall nominate a pair of candidates.  Second, the President's
+pair shall be appointed unless a group two fifths of Senators duly sworn
+nominate one alternative Candidate from among the Judges of the United States.
+In the latter case: Third, a disjoint group of two fifths of Senators duly
+sworn may nominate a second alternative candidate from among the Judges of the
+United States; and Fourth, the Senate shall, by simple majority, choose either
+the original pair or the alternative candidate(s).  These four steps shall
+respectively conclude within \(45\), \(90\), \(135\), and \(180\) days after
+vacancy.
+
+Each Court of Appeals shall have at least \(6\) seats and shall decide cases in
+panels by simple majority.  And each panel, except when the Court decides
+otherwise,{|e.g. the Court may decide to hear a case %en banc%|} shall consist
+of three Judges selected in random rotation.
+
+
+
+*FURTHER INFERIOR COURTS* --- On petition by the Chief Justice, the Congress
+shall by law erect or dismantle further inferior Courts, but no seat shall be
+removed until the retirement of its occupant.
 
 The President shall appoint Judges of these Courts with the advice and consent
 of three fifths of Senators duly sworn.
 
+Each inferior Court shall have at least \(3\) seats.  And each case, except
+when the Court decides otherwise, shall be heard by one Judge selected in
+random rotation.
 
 
-*TENURE* --- The Judges of United States shall during good behavior hold their
-offices until retirement (or death or resignation or impeachment for high
-Crimes and Misdemeanors), during which their compensation shall not decrease.
-And the Congress shall pass no law that compels retirement of Judges.  The
-Congress shall by law prescribe standards of integrity, uniform through all the
-Courts of the United States, to be administered by the Courts themselves.  A
-person having served \(20\) years as a Judge or Justice of the United States
-shall upon retirement earn a pension equal to their compensation should they
-not have retired.
+
+*TENURE* --- The Judges and Justices of the United States shall during good
+behavior hold their offices until retirement (or death or resignation or
+impeachment), and the Congress shall pass no law that compels or incentivizes
+such retirement.
+
+In times of severe burden a Court of the United States may invite a former
+Judge or Justice, retired from the same Court or a higher Court, to share this
+workload.{|c.f. senior status|} On petition by the Chief Justice the Congress
+shall by law determine compensation for, and otherwise regulate, this work.
+
+On petition by the Chief Justice the Congress shall by law prescribe standards
+of integrity, uniform through all the Courts of the United States, to be
+administered by the Courts themselves.{|c.f. Bharat (India), where judges of
+the supreme court select their successors.|}
+
+
+
+*COMPENSATION* --- The Judges and Justices shall at stated times receive a
+compensation for their services, which Congress shall ascertain by law; and
+this compensation shall neither decrease nor, except by a rule uniform through
+uniform the Courts of the United States, increase.  A person having served
+\(30\) years as a Judge or Justice of the United States shall upon retirement
+earn a pension equal to their compensation they would have earned should they
+not have retired; and on petition by the Chief Justice the Congress may by law
+provide for pensions in other cases.
 
 
 
@@ -665,7 +707,8 @@ not have retired.
 
 *JUDICIAL REVIEW* --- The judicial power shall include the power to review the
 actions of the United States and of any State as to their pursuance to this
-Constitution.{|This, the power of JUDICIAL REVIEW, is "implicit" in the old constitution.|}
+Constitution.{|This, the power of JUDICIAL REVIEW, is "implicit" in the old
+constitution.|}
 
 
 
@@ -694,15 +737,14 @@ To all cases of admiralty and maritime jurisdiction.
 
 
 
-*ORIGINAL JURISDICTION* --- In all cases in which a State shall be party, and
-in all cases affecting ambassadors and other public ministers and consuls, the
-Supreme Court shall have original jurisdiction.  In all other cases mentioned,
-the Supreme Court shall take appeals from the Courts of Appeals, which shall
-take appeals from the further inferior Courts; such appellate jurisdiction
-shall pertain both to law and to fact.  But Congress may by Law extend the
-original jurisdiction of the Supreme Court, or make exceptions and regulations
-to the hierarchy of appeals.
-#{|TODO|}
+*APPEAL STRUCTURE* --- In all cases in which a State shall be party, and in all
+cases affecting ambassadors and other public ministers and consuls, the Supreme
+Court shall have original jurisdiction.  In all other cases mentioned, the
+Supreme Court shall take appeals from the Courts of Appeals, which shall take
+appeals from the further inferior Courts, and such appellate jurisdiction shall
+pertain both to law and to fact.  But on petition by the Chief Justice the
+Congress may by law extend or restrict the original jurisdiction of the Supreme
+Court, or make exceptions and regulations to the hierarchy of appeals.{|TODO|}
 
 
 
@@ -740,8 +782,8 @@ all, naturalization takes years, so why should Statehood not?): three
 consecutive elections is the minimum needed to guarantee that the President,
 and every seat in the Congress, undergo intervening elections, and hence that
 the People, upon recognizing the beginnings of Ohio's Prohibition Coup, can
-stop it at the ballot box.|}  But for 20 years after the ratification of this
-paragraph, the Congress may by ordinary law grant Statehood to Puerto Rico or
+stop it at the ballot box.|}  But for *20 years* after the ratification of this
+section, the Congress may by ordinary law grant Statehood to Puerto Rico or
 to the Federal District.{|In a long-standing issue, only marginally improved by
 Amendment 23, there are now 4 million Americans in those two Territories denied
 representation in Congress and other dignities of Statehood.  One way forward
@@ -755,11 +797,11 @@ save health or life, both currently effect).|}
 the Federal District so long as the latter is not a State.
 
 The incorporated Territories shall as one whole be entitled to as many
-Representatives in the House, and as many presidential Electors, as if they
+Representatives in the House, and as many Emergency Electors, as if they
 were one State.  The Congress shall by law determine the time, place, and
 manner of elections in these incorporated Territories.
 
-The Congress shall by Law make all needful rules and regulations respecting the
+The Congress shall by law make all needful rules and regulations respecting the
 territory or other property belonging to the United States.
 
 
@@ -769,12 +811,12 @@ territory or other property belonging to the United States.
 
 
 *STATE GOVERNMENT* --- The United States shall guarantee to every State in this
-Union a Republican Form of Government.
+Union a republican form of government.
 
 
 
 *PROTECTION* --- The United States shall protect each State in this Union
-against Invasion, and on application of the Legislature thereof, or of the
+against invasion, and on application of the Legislature thereof, or of the
 Executive when the Legislature cannot be convened, against domestic violence.
 
 
@@ -782,20 +824,21 @@ Executive when the Legislature cannot be convened, against domestic violence.
 *FREE AND SYMMETRICAL MOVEMENT AND TRADE* --- No preference shall be given by
 any regulation of commerce or revenue to the ports of one State over those of
 another; nor shall vessels bound to, or from, one State be obliged to enter,
-clear, or pay duties in another.  Nor shall No Tax or Duty shall be laid, by
-the United States or any State, on Articles exported from any State;
+clear, or pay duties in another.  Nor shall any tax or duty shall be laid, by
+the United States or any State, on articles exported from any State;{|Note that
+this is qualified by the prohibition regarding illegal intoxicating liquors.|}
 
 
 
-*OBLIGATIONS OF THE STATES* --- A Person charged in any State with Treason,
-Felony, or other Crime, who shall flee from Justice, and be found in another
-State, shall on demand of the executive Authority of the State from which he
+*OBLIGATIONS OF THE STATES* --- A person charged in any State with treason,
+felony, or other crime, who shall flee from justice, and be found in another
+State, shall on demand of the executive authority of the State from which he
 fled, be delivered up, to be removed to the State having jurisdiction of the
 crime.
 
-Full Faith and Credit shall be given in each State to the public Acts, Records,
-and judicial Proceedings of every other State.  And the Congress may by general
-Laws prescribe the Manner in which such Acts, Records, and Proceedings shall be
+Full faith and credit shall be given in each State to the public acts, records,
+and judicial proceedings of every other State.  And the Congress may by general
+laws prescribe the manner in which such acts, records, and proceedings shall be
 proved, and the effect thereof.
 # TODO: better understand last clause
 
@@ -848,7 +891,7 @@ constitution or laws of any State to the contrary notwithstanding.
 
 
 *RIGHTS RESERVED* --- But the enumeration in the Constitution of certain rights
-shall not be construed to deny or disparage others retained by the people.  And
+shall not be construed to deny or disparage others retained by the People.  And
 the powers not delegated to the United States by the Constitution are reserved
 to the States, or if they be prohibited by the Constitution to the States, to
 the People.
@@ -883,13 +926,15 @@ Chamber, remove such disability.
 *AMENDMENT PROCESS IN GENERAL* --- an amendment to this Constitution shall be
 adopted once nationally proposed then within seven years ratified by three
 fourths of States.  If after those seven years, three times as many States have
-ratified as have explicitly rejected, then the amendment shall be adopted.
+explicitly ratified as have explicitly rejected, then the amendment shall be
+adopted.
 
 National proposal shall occur by one of two methods: by two thirds of each
 Chamber of Congress, or by a National Convention called by the States.
 
-Ratification by the States shall occur by one of two methods as specified in
-the proposal: by ordinary law, or by popular referendum by simple majority.
+The decision by the States, to explicitly ratify or explicitly reject, shall
+occur by one of two methods as specified in the proposal: by ordinary law, or
+by simple majority in a popular referendum.
 
 
 
@@ -898,14 +943,15 @@ of two thirds the States, as transmitted in one signed document to the
 President.  To this Convention, each State shall be entitled two Delegates,
 elected by @PairVoting@ as follows.  Each voter shall select one or more
 candidates, and that pair of candidates shall win that, among all pairs,
-overlaps the selections of the greatest number of voters.
+overlaps the selections of the greatest number of voters.  The Delegates shall
+convene for at most one year.  An amendment shall be proposed only with two
+thirds of votes in two senses simultaneously: with each Delegate entitled as
+many votes as their State is entitled Representatives, and with each Delegate
+entitled one vote.
+
 # Each voter, selecting one or more candidates, shall be construed as approving
 # any pair of candidates with at least one selected candidate; then the most
 # approved pair of candidates shall win.
-The Delegates shall convene for at most one year.  An amendment shall be
-proposed only with two thirds of votes in two senses simultaneously: with each
-Delegate entitled as many votes as their State is entitled Representatives, and
-with each Delegate entitled one vote.
 
 
 
@@ -921,7 +967,7 @@ deprived of its equal suffrage in the Senate.
 
 
 *SPEECH* --- Neither the United States nor any State shall abridge the freedom
-of speech or of the press, or the right of the people peacably to assemble and
+of speech or of the press, or the right of the People peacably to assemble and
 to petition the Government for a redress of grievances.
 
 
@@ -943,7 +989,7 @@ attainder.
 
 
 *PRIVACY* --- Neither the United States nor any State shall violate the right
-of the people to be secure in their persons, houses, papers, and effects,
+of the People to be secure in their persons, houses, papers, and effects,
 against unreasonable searches and seizures.  And no warrants shall issue, but
 upon probable cause, supported by oath or affirmation, and particularly
 describing the place to be searched, and the persons or things to be seized.
